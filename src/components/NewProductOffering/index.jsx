@@ -2,6 +2,7 @@
 import React, { useEffect } from 'react';
 import Navbar from '../NewHome/SmallHome/components/Navbar';
 import Work from '../NewHome/SmallHome/components/Work';
+import Work1 from '../NewHome/SmallHome/components/Work1';
 import Footer from '../NewHome/SmallHome/components/Footer';
 import Specialised from './Specialised';
 import MarketplaceExpert from './MarketplaceExpert';
@@ -27,7 +28,8 @@ export default function index() {
         <MarketplaceExpert />
         <Specialised />
       </div>
-      <Work />
+      {/* <Work /> */}
+      <Work1 />
       <Footer />
     </div>
   );

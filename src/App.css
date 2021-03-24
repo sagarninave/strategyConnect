@@ -184,3 +184,10 @@
 .service-panel:hover{
   border:1px solid #3B3A97;
 }
+
+.giff{
+  margin: auto;
+  display: block;
+  width: 80%;
+}
+

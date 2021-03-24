@@ -4,6 +4,8 @@ import 'react-lazy-load-image-component/src/effects/blur.css';
 import { Link } from 'react-router-dom';
 import marketplaceexperts from '../../../../../assets/img/MarketplaceExperts.png';
 import productservice from '../../../../../assets/img/ProductService.png';
+import gift1 from '../../../../../assets/img/gift1.gif';
+import gift2 from '../../../../../assets/img/gift2.gif';
 import './service.css';
 
 export default function index() {
@@ -104,6 +106,13 @@ export default function index() {
           </div>
         </div>
       </div>
+
+      <div>
+        <img className="giff" src={gift1} alt="GIf" />
+      </div>
+      {/* <div>
+        <img className="giff" src={gift2} alt="GIf" />
+      </div> */}
     </>
   );
 }

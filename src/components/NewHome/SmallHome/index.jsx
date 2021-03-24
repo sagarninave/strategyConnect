@@ -9,6 +9,7 @@ const Drive = loadable(() => import('./components/Drive'));
 const Specialised = loadable(() => import('./components/Specialised'));
 const Refined = loadable(() => import('./components/Refined'));
 const Work = loadable(() => import('./components/Work'));
+const Work1 = loadable(() => import('./components/Work1'));
 const Service = loadable(() => import('./components/Service'));
 const Connect = loadable(() => import('./components/Connect'));
 const Footer = loadable(() => import('./components/Footer'));
@@ -26,7 +27,8 @@ function SmallHome({ industryData }) {
       {/* <Drive /> */}
       {/* <Specialised /> */}
       {/* <SpecialSmall /> */}
-      <Work />
+      {/* <Work /> */}
+      <Work1 />
       <Refined />
       {/* <Connect /> */}
       {/* <LatestUpdates /> */}

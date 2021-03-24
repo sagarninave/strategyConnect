@@ -2,9 +2,9 @@
 import React, { useEffect } from 'react';
 import Navbar from '../NewHome/SmallHome/components/Navbar';
 import Work from '../NewHome/SmallHome/components/Work';
+import Work1 from '../NewHome/SmallHome/components/Work1';
 import Footer from '../NewHome/SmallHome/components/Footer';
 import OurStory from './OurStory';
-import OurValues from './OurValues';
 
 export default function index() {
   useEffect(() => {
@@ -25,7 +25,8 @@ export default function index() {
       <div className="xl:px-32 px-0">
         <OurStory />
       </div>
-      <Work />
+      {/* <Work /> */}
+      <Work1 />
       <Footer />
     </div>
   );
