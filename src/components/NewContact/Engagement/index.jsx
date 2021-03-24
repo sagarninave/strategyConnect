@@ -11,28 +11,25 @@ function Engagement() {
         <p className="text-sm grey-text mt-2 text-center">
           It takes less than a minute
         </p>
-
-        {/* <div className="p-2 rounded-md border-2 lg:w-56" style={{width:"256px", height:"80px"}}> */}
-          <button className="text-white purple lg:w-48 w-full flex items-center mx-auto lg:mt-14 mt-8 justify-between border-none focus:outline-none py-2 rounded px-5">
-            <img src={phone} loading="lazy" alt="phone-white" className="" />
-            <p className="relative ">Phone Call</p>
-            <p />
+        <div className="p-2 pl-2 mt-32 pt-0 rounded-md border-2 ml-16 mr-16" style={{ width: "11.4rem", margin: 'auto', marginTop: ' 25px' }}>
+          <button type="submit" className="text-white purple lg:w-40 w-full flex items-center mt-2 mr-2 justify-between border-none focus:outline-none py-2 px-7 rounded px-5">
+            <img src={phone} loading="lazy" alt="phone-white" className="contactBtn" />
+            <p className="relativeContact ">Phone Call</p>
           </button>
-        {/* </div> */}
-        {/* <div className="p-2 rounded-md border-2 lg:w-56" style={{width:"256px", height:"80px"}}> */}
-          <button className="text-white purple lg:w-48 w-full flex items-center mx-auto mt-5 justify-between border-none focus:outline-none py-2 rounded px-5">
-            <img src={chat} loading="lazy" alt="phone-white" className="" />
-            <p className="relative">Chat</p>
-            <p />
+        </div>
+        <div className="p-2 pl-2 mt-32 pt-0 rounded-md border-2 ml-16 mr-16" style={{ width: "11.4rem", margin: 'auto', marginTop: ' 25px' }}>
+          <button type="submit" className="text-white purple lg:w-40 w-full flex items-center mt-2 mr-2 justify-between border-none focus:outline-none py-2 px-7 rounded px-5">
+            <img src={chat} loading="lazy" alt="phone-white" className="contactBtn" />
+            <p className="relativeContact ">Chat</p>
           </button>
-        {/* </div> */}
-        {/* <div className="p-2 rounded-md border-2 lg:w-56" style={{width:"256px", height:"80px"}}> */}
-          <button className="text-white purple lg:w-48 w-full flex items-center mx-auto mt-5 justify-between border-none focus:outline-none py-2 rounded px-5">
-            <img src={whats} loading="lazy" alt="phone-white" className="" />
-            <p className="relative">Whatsapp</p>
-            <p/>
+        </div>
+        
+        <div className="p-2 pl-2 mt-32 pt-0 rounded-md border-2 ml-16 mr-16" style={{ width: "11.4rem", margin: 'auto', marginTop: ' 25px' }}>
+          <button type="submit" className="text-white purple lg:w-40 w-full flex items-center mt-2 mr-2 justify-between border-none focus:outline-none py-2 px-7 rounded px-5">
+            <img src={whats} loading="lazy" alt="phone-white" className="contactBtn" />
+            <p className="relativeContact ">Whatsapp</p>
           </button>
-        {/* </div> */}
+        </div>
       </div>
       <div className="h-96 w-0.5 hidden lg:block bg-gray-100" />
       <div className="mx-auto flex  flex-col  padding_top_border lg:border-none px-8 lg:px-0 lg:mt-0  justify-center items-center">
@@ -72,10 +69,11 @@ function Engagement() {
           placeholder="Message *"
           rows="5"
         />
-
-        <button className="text-white purple w-48 text-center mt-5 border-none focus:outline-none py-2 rounded px-5">
-          <p className="relative">Let’s Connect</p>
-        </button>
+        <div className="p-2 pl-2 mt-32 pt-0 rounded-md border-2 ml-16 mr-16" style={{ width: "11.4rem", margin: 'auto', marginTop: ' 25px' }}>
+          <button type="submit" className="text-white purple lg:w-40 w-full flex items-center mt-2 mr-2 justify-between border-none focus:outline-none py-2 px-7 rounded px-5">
+            <p className="relativeContact ">Let’s Connect</p>
+          </button>
+        </div>
       </div>
     </div>
   );

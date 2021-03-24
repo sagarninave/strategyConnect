@@ -191,3 +191,14 @@
   width: 80%;
 }
 
+.contactBtn{
+  position: relative;
+  left: -12px;
+}
+.relativeContact{
+  position: relative;
+  text-align: center;
+  margin: auto;
+  display: block;
+}
+
