@@ -29,7 +29,7 @@ function App() {
       <Route exact path="/oldhome" component={Home} />
       <Route path="/oldabout" component={About} />
       <Route path="/oldcontact" component={Contact} />
-      <Route path="/oldclient" component={Clients} />
+      <Route path="/client" component={Clients} />
       <Route path="/caseStudy" component={CaseStudy} />
       <Route path="/oldxaas" component={Xaas} />
       <Route path="/approach" component={MainApproach} />
@@ -42,11 +42,11 @@ function App() {
       <Route exact path="/" component={NewHome} />
       <Route path="/about" component={NewAbout} />
       <Route path="/contact" component={NewContact} />
-      <Route path="/productOffering" component={NewProductOffering} />
-      <Route path="/businessPlanning" component={NewBusinessPlanning} />
-      <Route path="/financeModeling" component={NewFinanceModeling} />
-      <Route path="/goToMarketStrategy" component={NewGoToMarketStrategy} />
-      <Route path="/marketPlaceExpert" component={NewMarketplaceExpert} />
+      <Route path="/product-offering" component={NewProductOffering} />
+      <Route path="/business-planning" component={NewBusinessPlanning} />
+      <Route path="/finance-modeling" component={NewFinanceModeling} />
+      <Route path="/go-to-market-strategy" component={NewGoToMarketStrategy} />
+      <Route path="/market-place-expert" component={NewMarketplaceExpert} />
       
     </BrowserRouter>
   );

@@ -21,7 +21,7 @@ function Index() {
         ref={carouselRef}
         style={{ backgroundColor: "#fff", paddingTop:"30px", paddingBottom:"40px"}}
         enableAutoPlay
-        autoPlaySpeed={2000}
+        autoPlaySpeed={4000}
         onNextEnd={(nextItemObject, currentPageIndex) => {
           if (nextItemObject.index === imgList.length-1 && currentPageIndex === imgList.length-1) {
             setTimeout(() => {

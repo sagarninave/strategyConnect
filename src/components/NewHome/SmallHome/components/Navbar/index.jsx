@@ -61,7 +61,7 @@ export default function Navbar() {
           <NavLink to="/about" activeClassName="selected">About Us</NavLink>
         </li>
         <li className="no-underline text-base text-black hover:text-gray-500  cursor-pointer">
-          <NavLink to="/productOffering" activeClassName="selected">Our Offerings</NavLink>
+          <NavLink to="/product-offering" activeClassName="selected">Our Offerings</NavLink>
         </li>
         <li className="no-underline text-base text-black hover:text-gray-500  cursor-pointer">
           <NavLink to="/contact" activeClassName="selected">Contact Us</NavLink>

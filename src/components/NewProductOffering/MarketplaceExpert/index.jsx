@@ -32,7 +32,7 @@ function index() {
 
       <div className="p-2 pl-2 mt-10 pt-0 mx-auto rounded-md border-2 lg:my-8" style={{width:"10.2rem"}}>
         <button className="text-white purple lg:w-36 w-full flex items-center mt-2 mr-2 justify-between border-none focus:outline-none py-2 pl-10 px-7 rounded">
-          <Link to="/marketPlaceExpert"> 
+          <Link to="/market-place-expert"> 
             <p className="relative">Subscribe</p>
           </Link> 
         </button>
