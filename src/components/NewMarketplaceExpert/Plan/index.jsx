@@ -1,0 +1,161 @@
+import React from 'react';
+import ExpertOne from '../../../assets/img/MarketExpert-1.png';
+import ExpertTwo from '../../../assets/img/MarketExpert-2.png';
+import ExpertThree from '../../../assets/img/MarketExpert-3.png';
+import ExpertFour from '../../../assets/img/Expertslogo.png';
+function index() {
+  return (
+    <>
+      <div className="centerImages">
+        <img src={ExpertOne} className="imagesOne items-end" alt="Expert"></img>
+        <img src={ExpertTwo} className="imagesTwo" alt="Expert"></img>
+        <img src={ExpertThree} className="imagesOne items-end" alt="Expert"></img>
+      </div>
+      <hr className="hr" />
+      {/* Simple, transparent pricing */}
+
+      <div className="pb-10 pt-14">
+        <p className="text-center xl:text-2xl text-2xl font-bold">
+          Simple, transparent pricing
+        </p>
+        <p className="font-medium text-lg xl:w-10/12 w-11/12 mx-auto light_grey grey-text mt-2 text-center font-thin">
+          No contracts. No surprise fees.
+        </p>
+        <img src={ExpertFour} className="imagesFour" alt="Expert"></img>
+      </div>
+
+      <div className="pt-0 flex lg:mb-0 mb-12 justify-between">
+        
+        <div className="flex flex-col items-center content-center">
+          <div className="boxAnalytics2">
+            <p className="text-lg md:text-2xl font-bold text-center leading-10" 
+               style={{borderBottom: '1px solid #B1B5B9', 
+               marginBottom: '15px', 
+               padding: '9px 0px'
+               }}>
+                 Plan - 1
+            </p>
+            <ul>
+              <li className="font14 text-center text-lg light_grey grey-text font-medium">  Get started for</li>
+              <li className="font14 text-center font-semibold mt-4"> <span>$</span><span className="bigName">12</span></li>
+              <li className="font14 makeEnquery rounded-sm">Make Enquery</li>
+            </ul>
+            <ul>
+              <li className="font14">
+                <span className="tick"></span> Self-Service Audit Documnet</li>
+              <li className="font14">
+                <p>
+                  <span className="tick"></span>
+                  One Hour Additional Lagal Advice 
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Credit
+                </p>
+              </li>
+              <li className="font14">
+                <p className="light_grey grey-text">
+                  <span className="tick"></span>
+                  30-Minute Audit Review &  <br/>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Legal Advice
+              </p>
+              </li>
+              <li className="font14">
+                <p className="light_grey grey-text">
+                  <span className="tick"></span>
+                  Training Video Access Enclude
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div className="flex flex-col items-center content-center">
+          <div className="boxAnalytics2 text-white" style={{ background: '#38369a'}}>
+            <p className="text-lg md:text-2xl font-bold text-center leading-10" 
+               style={{borderBottom: '1px solid #B1B5B9', 
+               marginBottom: '15px', 
+               padding: '9px 0px'
+               }}>
+                 Plan - 2
+            </p>            
+            <ul>
+              <li className="font14 text-center text-lg font-medium">  Get started for</li>
+              <li className="font14 text-center font-semibold mt-4"> <span>$</span><span className="bigName">24</span></li>
+              <li className="font14 makeEnquery rounded-sm" style={{ border: '1px solid #fff' }}>Make Enquery</li>
+            </ul>
+            <ul>
+              <li className="font14">
+                <span className="tick" style={{
+                borderBottom: ' 3px solid #fff',
+                borderRight: '3px solid #fff'
+              }}></span> Self-Service Audit Documnet</li>
+              <li className="font14">
+                <p>
+                  <span className="tick" style={{
+                borderBottom: ' 3px solid #fff',
+                borderRight: '3px solid #fff'
+              }}></span>
+                  One Hour Additional Lagal Advice 
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Credit
+                </p>
+              </li>
+              <li className="font14">
+                <p>
+                  <span className="tick" style={{
+                borderBottom: ' 3px solid #fff',
+                borderRight: '3px solid #fff'
+              }}></span>
+                  30-Minute Audit Review &  <br/>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Legal Advice
+              </p>
+              </li>
+              <li className="font14">
+
+              <p className="light_grey grey-text">
+                <span className="tick" style={{
+                borderBottom: ' 3px solid #fff',
+                borderRight: '3px solid #fff'
+              }}></span>
+                  Training Video Access Enclude
+              </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div className="flex flex-col items-center content-center">
+          <div className="boxAnalytics2">
+            <p className="text-lg md:text-2xl font-bold leading-10" style={{ borderBottom: '1px solid #B1B5B9', marginBottom: '15px', padding: '9px 0px', textAlign: 'center' }}>Plan - 3</p>
+            <ul>
+              <li className="font14 text-center text-lg light_grey grey-text font-medium">  Get started for</li>
+              <li className="font14 text-center font-semibold mt-4"> <span>$</span><span className="bigName">36</span></li>
+              <li className="font14 makeEnquery rounded-sm">Make Enquery</li>
+            </ul>
+            <ul>
+              <li className="font14">
+                <span className="tick"></span> Self-Service Audit Documnet</li>
+              <li className="font14">
+                <p>
+                  <span className="tick"></span>
+                  One Hour Additional Lagal Advice 
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Credit
+                </p>
+              </li>
+              <li className="font14">
+                <p>
+                  <span className="tick"></span>
+                  30-Minute Audit Review &  <br/>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Legal Advice
+              </p>
+              </li>
+              <li className="font14">
+                <p>
+                  <span className="tick"></span>
+                  Training Video Access Enclude
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}
+
+export default index;

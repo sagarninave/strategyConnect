@@ -1,0 +1,491 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400&display=swap');
+* {
+  font-family: 'Nunito Sans', sans-serif;
+}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+h1,
+h2,
+p,
+h3,
+h4,
+h5 {
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+.pale {
+  background-color: rgba(242, 245, 248, 0.8);
+  border: 1.5px solid #e0e3e7;
+  border-radius: 5px;
+}
+
+li {
+  a {
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+.w_border {
+  border: 1.5px solid #e0e3e7;
+}
+
+.active_purple {
+  color: #38369a;
+  position: relative;
+  top: 4px;
+  padding-bottom: 18px;
+  border-bottom: 3px solid #38369a;
+}
+.inactive_purple {
+  color: #707376;
+  position: relative;
+  top: 4px;
+  padding-bottom: 18px;
+  border-bottom: 3px solid #ffffff00;
+}
+
+.p-bg {
+  background: linear-gradient(
+    177.3deg,
+    rgba(47, 61, 172, 0) 33.41%,
+    rgba(47, 61, 172, 0.8) 89.84%
+  );
+  opacity: 0.7;
+}
+
+.active_padding {
+  border: 2px solid #38369a;
+  border-radius: 10px;
+}
+.white_padding {
+  border: 2px solid #b1afe5;
+  border-radius: 10px;
+}
+
+.normal {
+  padding-bottom: 12px;
+}
+.grey-text {
+  color: #707376;
+}
+.grey-text-dark {
+  color: #3b3e41;
+}
+
+.bigLap {
+  height: 918px;
+}
+
+.topborder {
+  border-top: 1px solid #d1d4d857;
+}
+.navbarCont {
+  background: #f2f5f8;
+}
+
+.purple,
+.purple_re {
+  background: #38369a;
+}
+
+.purple_light {
+  background-color: rgba(177, 175, 229, 0.2);
+}
+
+.purple_bl {
+  background: rgba(239, 239, 250, 1);
+}
+
+.splice {
+  background-image: url('./assets/img/slash.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.refined-bg {
+  background: #f2f5f8;
+}
+.refined-border {
+  border: 2.5px solid #f2f5f81e;
+  border-radius: 20px;
+  max-height: 248px;
+  max-width: 280px;
+}
+
+.purple_text {
+  color: #38369a;
+}
+
+.footer_border {
+  padding-bottom: 24px;
+  border-bottom: 0.5px solid #3b3e41;
+}
+
+.right-divide-line {
+  border-right: 0.5px solid #3b3e41;
+}
+.footer-top-line {
+  border-top: 0.5px solid #3b3e41;
+  margin-top: 8px;
+  padding-top: 8px;
+}
+.tech-top-line {
+  border-top: 0.5px solid #3b3e41;
+  margin-top: 28px;
+  padding-top: 29px;
+}
+.research-top {
+  border-top: 0.8px solid #e0e3e7;
+  padding-top: 16px;
+}
+.top-divide-line {
+  border-top: 0.5px solid #44484b85;
+}
+.light-divide-line {
+  border-top: 0.5px solid #d1d4d8;
+}
+.light-divide-line2 {
+  border-top: 0.5px solid #e0e3e7;
+}
+.border-grey-top {
+  border-top: 0.8px solid #e0e3e732;
+}
+
+.switchBg {
+  height: 600px;
+  width: 70%;
+  background-image: url('./assets/img/boredBlue.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  // height: 919.02px;
+}
+
+.grey-background {
+  background: rgba(224, 227, 231, 0.3);
+}
+
+// specialised screen
+
+.small_specialised {
+  height: 300px;
+  width: 90%;
+  // border: 1px solid red;
+  margin: 30px auto;
+  background-image: url('./assets/img/smallDot.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+@media screen and (min-width: 600px) {
+  .small_specialised {
+    display: none;
+  }
+}
+
+// about scren
+
+.our-light-bg {
+  background-color: #e0e3e750;
+  // max-height: 1090px;
+}
+
+.ruby_img {
+  height: 577px;
+}
+
+// contact screen
+
+// padding top of mobile
+
+.padding_top_border {
+  border-top: 0.6px solid #d1d4d8a6;
+}
+
+.redBorder {
+  border: 2px solid red;
+}
+.greenBorder {
+  border: 2px solid green;
+}
+
+.tyler-opacity {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.btn-opacity {
+  background-color: rgba(10, 10, 10, 0.4);
+}
+
+// map
+
+.map {
+  background-image: url('./assets/img/map.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.hidescroll_bar::-webkit-scrollbar {
+  display: none;
+}
+
+.matrix {
+  filter: drop-shadow(1px 0px 10px rgba(0, 0, 0, 0.1));
+}
+
+.border-top-thin {
+  border-top: 1px solid #d1d4d863;
+  padding-top: 30px;
+  margin-top: 28px;
+}
+
+.switch-wrap-inactive {
+  background: #70737607;
+  border: 1px solid #0000000c;
+  padding: 7px 8px;
+  border-radius: 5px;
+}
+.switch-wrap-active {
+  background: rgba(227, 250, 139, 0.15);
+  border: 1px solid rgba(152, 186, 18, 0.25);
+  padding: 7px 8px;
+  border-radius: 5px;
+}
+
+// textinput styling
+
+.inactive-textInput {
+  border: 1px solid #d1d4d8;
+  border-radius: 5px;
+  padding: 10px 20px;
+}
+.active-textInput {
+  border: 1px solid #38369a;
+  border-radius: 5px;
+  padding: 10px 20px;
+}
+.error-textInput {
+  border: 1px solid #db3b3b;
+  border-radius: 5px;
+  padding: 10px 20px;
+}
+
+// hidding scrrolbars
+.hideScroll::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.hideScroll {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.footerBorder {
+  border-top: 4px solid #e0e3e7;
+}
+.greenFooterBorder {
+  border-top: 4px solid #98ba12;
+  background-color: #98ba1213;
+}
+.react-date-picker {
+  .react-date-picker__wrapper {
+    border: none;
+  }
+}
+
+// progress bar
+
+.progress {
+  width: 100%;
+  height: 14px;
+  line-height: 0;
+  font-size: 0.75rem;
+  background-color: #e0e3e7;
+  border-radius: 25px;
+}
+.progress,
+.progress-bar {
+  display: flex;
+  border-radius: 25px;
+  overflow: hidden;
+}
+
+.bg-info {
+  background-color: #98ba12, 100% !important;
+}
+
+.progress-bar-striped {
+  background-image: linear-gradient(
+    45deg,
+    hsla(0, 0%, 100%, 0.15) 25%,
+    transparent 0,
+    transparent 50%,
+    hsla(0, 0%, 100%, 0.15) 0,
+    hsla(0, 0%, 100%, 0.15) 75%,
+    transparent 0,
+    transparent
+  );
+  background-size: 1rem 1rem;
+}
+
+.progress-bar {
+  flex-direction: column;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  background-color: #98ba12;
+  transition: width 0.6s ease;
+}
+
+.progress,
+.progress-bar {
+  display: flex;
+  overflow: hidden;
+}
+
+@media screen and(max-width:760px) {
+  .progress {
+    height: 7.94px;
+  }
+}
+
+.all {
+  transition: all 0.25s ease;
+}
+
+.customTool {
+  color: black !important;
+  background-color: white !important;
+  border: 1px solid rgb(197, 190, 190) !important;
+  box-shadow: 0px 3px 60px -36px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 0px 3px 60px -36px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 3px 60px -36px rgba(0, 0, 0, 0.75);
+  &.place-top {
+    &:after {
+      border-top-color: white !important;
+      border-top-style: solid !important;
+      border-top-width: 6px !important;
+    }
+  }
+}
+
+.oneP {
+  color: white;
+  height: 28px;
+  width: 28px;
+  background: #38369a;
+  border-radius: 50%;
+}
+.divOneP {
+  border: 6px solid #38369a23;
+  border-radius: 50%;
+}
+.twoP {
+  color: black;
+  height: 28px;
+  width: 28px;
+  background: #d1d4d8;
+  border-radius: 50%;
+}
+.threeP {
+  color: white;
+  height: 28px;
+  width: 28px;
+  background: #01cf09;
+  border-radius: 50%;
+}
+
+div.sxl {
+  span {
+    width: 100%;
+    img {
+      object-fit: cover;
+    }
+  }
+}
+.lineFour {
+  left: 2.5px;
+}
+.lineFive {
+  left: -290px;
+  width: auto;
+}
+.play {
+  padding-top: 40px;
+}
+.fourBlue {
+  max-width: 358px;
+}
+
+// .minColor {
+//   width: 16rem;
+// }
+
+// @media screen and(max-width: 640px) {
+//   .minColor {
+//     width: 100%;
+//   }
+// }
+// @media screen and(min-width: 1024px) {
+//   .minColor {
+//     width: 21rem;
+//   }
+// }
+@media screen and(min-width: 1020px) and (max-width: 1270px) {
+  .play {
+    padding-top: 70px;
+  }
+  .fourBlue {
+    max-width: 258px;
+  }
+}
+
+@media screen and(min-width: 1300px) {
+  .plaY {
+    padding-top: 204px;
+  }
+}
+.tallLine {
+  width: 40%;
+}
+
+@media screen and(min-width: 1200px) and (max-width: 1300px) {
+  .caseW {
+    width: 334px;
+  }
+  .lineOne {
+    height: 800px;
+  }
+  .lineTwo {
+    height: 961px;
+  }
+  .lineThree {
+    left: 5px;
+  }
+  .lineFour {
+    height: 850px;
+    left: 8.5px;
+  }
+  .lineFive {
+    left: -247px;
+    width: 500px;
+    top: -11px;
+  }
+
+  .tallLine {
+    width: 38%;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .caseW {
+    width: 24rem;
+  }
+}
+
