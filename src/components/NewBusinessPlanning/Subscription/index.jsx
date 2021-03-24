@@ -47,7 +47,6 @@ function Subscription() {
 
   return (
     <div>
-      {/* Easy subscription Plan */}
       <div className="pb-10 pt-14">
         <p className="text-center xl:text-2xl text-2xl font-bold">
           Easy subscriptions plans
@@ -96,7 +95,6 @@ function Subscription() {
                 <p className="relative">Make Enquiry</p>
               </button>
             </div>
-            {/* <button className="btnButton">Make Enquiry</button> */}
           </div>
         </div>
         <div className="flex flex-col items-center content-center">
@@ -133,11 +131,9 @@ function Subscription() {
                 <p className="relative">Make Enquiry</p>
               </button>
             </div>
-            {/* <button className="btnButton">Make Enquiry</button> */}
           </div>
         </div>
       </div>
-
 
       <div className="flex  lg:mb-0 mb-12 justify-between" style={{ padding: '5rem 0rem' }}>
         <div className="flex flex-col items-center content-center">
@@ -179,7 +175,6 @@ function Subscription() {
                 <p className="relative">Make Enquiry</p>
               </button>
             </div>
-            {/* <button className="btnButton">Make Enquiry</button> */}
           </div>
         </div>
         <div className="flex flex-col items-center content-center">
@@ -227,11 +222,9 @@ function Subscription() {
                 <p className="relative">Make Enquiry</p>
               </button>
             </div>
-            {/* <button className="btnButton">Make Enquiry</button> */}
           </div>
         </div>
       </div>
-
 
       <div className="px-auto pt-0">
         <p className="sm:text-2xl lg:text-2xl text-black font-semibold text-center mx-auto lg:w-11/12 xl:w-11/12 sm:w-11/12 w-11/12">
@@ -248,6 +241,9 @@ function Subscription() {
       </div>
 
       <div>
+
+        {/* Modal first */}
+
         <Modal
           isOpen={modalIsOpen}
           onAfterOpen={afterOpenModal}
@@ -274,8 +270,7 @@ function Subscription() {
             <input type="text" id="Organisation" placeholder="Organisation Name" />
             <input type="text" id="Email" placeholder="Email ID" />
             <input type="text" id="Phone" placeholder="Phone Number" />
-            <textarea placeholder="Message"></textarea>
-            {/* <button type="submit" className="btnButton">Submit</button> */}
+            <textarea placeholder="Message" rows="4"></textarea>
             <div className="p-2 pl-2 mt-32 pt-0 rounded-md border-2 ml-16 mr-16" style={{ width: "11.4rem", margin: 'auto', marginTop: ' 25px' }}>
               <button type="submit" className="text-white purple lg:w-40 w-full flex items-center mt-2 mr-2 justify-between border-none focus:outline-none py-2 px-7 rounded">
                 <p className="relative" style={{ margin: 'auto' }}>Submit</p>
@@ -313,8 +308,7 @@ function Subscription() {
             <input type="text" id="Phone Number" placeholder="Phone Number" />
             <input type="text" id="Industry" placeholder="Industry" />
             <input type="text" id="Project Title" placeholder="Project Title" />
-            <textarea placeholder="Project Description"></textarea>
-            {/* <button type="submit" className="btnButton">Submit</button> */}
+            <textarea placeholder="Project Description" rows="4"></textarea>
             <div className="p-2 pl-2 mt-32 pt-0 rounded-md border-2 ml-16 mr-16" style={{ width: "11.4rem", margin: 'auto', marginTop: ' 25px' }}>
               <button type="submit" className="text-white purple lg:w-40 w-full flex items-center mt-2 mr-2 justify-between border-none focus:outline-none py-2 px-7 rounded">
                 <p className="relative" style={{ margin: 'auto' }}>Submit</p>
