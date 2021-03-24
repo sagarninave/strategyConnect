@@ -2,11 +2,11 @@
   "files": {
     "static/js/0.3f231167.chunk.js": "/static/js/0.3f231167.chunk.js",
     "static/js/0.3f231167.chunk.js.map": "/static/js/0.3f231167.chunk.js.map",
-    "main.css": "/static/css/main.1292ef53.chunk.css",
-    "main.js": "/static/js/main.814673be.chunk.js",
-    "main.js.map": "/static/js/main.814673be.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.0a21a1ff.js",
-    "runtime-main.js.map": "/static/js/runtime-main.0a21a1ff.js.map",
+    "main.css": "/static/css/main.5fb7a8b6.chunk.css",
+    "main.js": "/static/js/main.2eaf3b9c.chunk.js",
+    "main.js.map": "/static/js/main.2eaf3b9c.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.f0cddb77.js",
+    "runtime-main.js.map": "/static/js/runtime-main.f0cddb77.js.map",
     "static/css/3.156a4770.chunk.css": "/static/css/3.156a4770.chunk.css",
     "static/js/3.27b83798.chunk.js": "/static/js/3.27b83798.chunk.js",
     "static/js/3.27b83798.chunk.js.map": "/static/js/3.27b83798.chunk.js.map",
@@ -19,8 +19,8 @@
     "static/js/7.786d7dce.chunk.js": "/static/js/7.786d7dce.chunk.js",
     "static/js/7.786d7dce.chunk.js.map": "/static/js/7.786d7dce.chunk.js.map",
     "static/css/8.ad2b0482.chunk.css": "/static/css/8.ad2b0482.chunk.css",
-    "static/js/8.bc6af3ef.chunk.js": "/static/js/8.bc6af3ef.chunk.js",
-    "static/js/8.bc6af3ef.chunk.js.map": "/static/js/8.bc6af3ef.chunk.js.map",
+    "static/js/8.337a4b95.chunk.js": "/static/js/8.337a4b95.chunk.js",
+    "static/js/8.337a4b95.chunk.js.map": "/static/js/8.337a4b95.chunk.js.map",
     "static/css/9.f7a47778.chunk.css": "/static/css/9.f7a47778.chunk.css",
     "static/js/9.0c631f05.chunk.js": "/static/js/9.0c631f05.chunk.js",
     "static/js/9.0c631f05.chunk.js.map": "/static/js/9.0c631f05.chunk.js.map",
@@ -34,8 +34,8 @@
     "static/js/13.27dae2f1.chunk.js.map": "/static/js/13.27dae2f1.chunk.js.map",
     "static/js/14.4ca06184.chunk.js": "/static/js/14.4ca06184.chunk.js",
     "static/js/14.4ca06184.chunk.js.map": "/static/js/14.4ca06184.chunk.js.map",
-    "static/js/15.6b5daafd.chunk.js": "/static/js/15.6b5daafd.chunk.js",
-    "static/js/15.6b5daafd.chunk.js.map": "/static/js/15.6b5daafd.chunk.js.map",
+    "static/js/15.dca4d633.chunk.js": "/static/js/15.dca4d633.chunk.js",
+    "static/js/15.dca4d633.chunk.js.map": "/static/js/15.dca4d633.chunk.js.map",
     "static/js/16.1617dcd0.chunk.js": "/static/js/16.1617dcd0.chunk.js",
     "static/js/16.1617dcd0.chunk.js.map": "/static/js/16.1617dcd0.chunk.js.map",
     "static/js/17.597eb4d1.chunk.js": "/static/js/17.597eb4d1.chunk.js",
@@ -44,7 +44,7 @@
     "static/css/3.156a4770.chunk.css.map": "/static/css/3.156a4770.chunk.css.map",
     "static/css/8.ad2b0482.chunk.css.map": "/static/css/8.ad2b0482.chunk.css.map",
     "static/css/9.f7a47778.chunk.css.map": "/static/css/9.f7a47778.chunk.css.map",
-    "static/css/main.1292ef53.chunk.css.map": "/static/css/main.1292ef53.chunk.css.map",
+    "static/css/main.5fb7a8b6.chunk.css.map": "/static/css/main.5fb7a8b6.chunk.css.map",
     "static/js/3.27b83798.chunk.js.LICENSE.txt": "/static/js/3.27b83798.chunk.js.LICENSE.txt",
     "static/media/(PO)businesplanning.01d89604.png": "/static/media/(PO)businesplanning.01d89604.png",
     "static/media/(PO)gotomarket.e0646192.png": "/static/media/(PO)gotomarket.e0646192.png",
@@ -316,10 +316,10 @@
     "static/media/zoho-logo.f8a1d783.svg": "/static/media/zoho-logo.f8a1d783.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.0a21a1ff.js",
+    "static/js/runtime-main.f0cddb77.js",
     "static/css/3.156a4770.chunk.css",
     "static/js/3.27b83798.chunk.js",
-    "static/css/main.1292ef53.chunk.css",
-    "static/js/main.814673be.chunk.js"
+    "static/css/main.5fb7a8b6.chunk.css",
+    "static/js/main.2eaf3b9c.chunk.js"
   ]
 }
