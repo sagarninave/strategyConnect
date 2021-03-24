@@ -37,10 +37,10 @@
   }
 }
 
-
-
 /* businsess, finance go to market */
+
 /* model */
+
 /* market expert */
 
 .btnButton {
@@ -64,12 +64,12 @@
   margin: 0px 9px;
 }
 
-.font14{
+.font14 {
   font-size: 15px;
   line-height: 30px;
 }
 
-.boxAnalytics{
+.boxAnalytics {
   border: 1px solid rgb(177, 181, 185);
   padding: 14px;
   width: 360px;
@@ -77,18 +77,18 @@
   border-radius: 10px
 }
 
-.inputFormModal{
+.inputFormModal {
   border: 1px solid gray;
   padding: 4px;
   border-radius: 4px;
   width: 100%;
 }
 
-.floatRight{
+.floatRight {
   float: right;
 }
 
-.formInline {  
+.formInline {
   display: flex;
   flex-flow: row wrap;
   align-items: center;
@@ -104,7 +104,7 @@
 }
 
 .formInline textarea {
-  width:100%;
+  width: 100%;
   margin: 16px 6px;
   padding: 10px;
   vertical-align: middle;
@@ -112,34 +112,34 @@
   border: 1px solid #ddd!important;
 }
 
-.centerImages{
+.centerImages {
   display: flex;
   justify-content: center;
   align-items: baseline;
 }
 
-.centerImages img{
- margin: 30px;
+.centerImages img {
+  margin: 30px;
 }
 
-.imagesOne{
+.imagesOne {
   height: 150px;
 }
 
-.imagesTwo{
+.imagesTwo {
   height: 200px;
 }
 
-.imagesFour{
+.imagesFour {
   margin: auto;
   margin-top: 25px;
 }
 
-.boxAnalytics2{
+.boxAnalytics2 {
   border: 1px solid rgb(177, 181, 185);
   padding: 14px;
   width: 311px;
-  height:523;
+  height: 523;
   min-height: 470px;
   border-radius: 10px;
   margin-bottom: 3rem;
@@ -151,7 +151,7 @@
   transition: 0.4s;
 } */
 
-.makeEnquery{
+.makeEnquery {
   border: 1px solid #38369A;
   width: 150px;
   text-align: center;
@@ -160,45 +160,58 @@
   margin-top: 16px;
 }
 
-
-.bigName{
+.bigName {
   font-size: 30px;
 }
 
-.selected{
-  font-weight:bold;
+.selected {
+  font-weight: bold;
 }
 
-.ReactModal__Overlay--after-open{
+.ReactModal__Overlay--after-open {
   background: rgb(0 0 0 / 51%)!important;
 }
 
-.hr{
+.hr {
   margin-top: -30px;
 }
 
-.service-panel{
+.service-panel {
   border: 1px solid #E8F2FA;
 }
 
-.service-panel:hover{
-  border:1px solid #3B3A97;
+.service-panel:hover {
+  border: 1px solid #3B3A97;
 }
 
-.giff{
+.giff {
   margin: auto;
   display: block;
   width: 80%;
 }
 
-.contactBtn{
+.contactBtn {
   position: relative;
   left: -12px;
 }
-.relativeContact{
+
+.relativeContact {
   position: relative;
   text-align: center;
   margin: auto;
   display: block;
 }
 
+.text-justify {
+  text-align: justify;
+}
+
+.whiteBg {
+  background: #fff;
+  color: #38369a;
+  font-weight: bold;
+}
+.mgTB10{
+  margin-top: 10px!important;
+  margin-bottom: 10px!important;
+}
