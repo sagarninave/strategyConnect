@@ -19,13 +19,13 @@ export default function index() {
           The simplest solutions for your systems
         </p>
         <p className="text-lg text-black text-center mx-auto font-semibold mt-16">
-          we are working on a suite of tools to managing complex systems easier, for everyone. we can’t <br />
+          We are working on a suite of tools to managing complex systems easier, for everyone. We can’t <br />
           wait to hear what you think.
         </p>
       </div>
       <div className="xl:px-32 px-0">
-        <Specialised />
         <MarketplaceExpert />
+        <Specialised />
       </div>
       <Work />
       <Footer />

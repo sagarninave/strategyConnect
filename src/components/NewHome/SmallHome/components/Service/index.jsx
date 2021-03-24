@@ -19,8 +19,8 @@ export default function index() {
 
       <div style={{ backgroundColor: "#fff" }}
         className="borderhover flex lg:py-14 lg:pt-4 py-16 lg:px-32 px-8 justify-between refined-bg md:mt-10 xl:mt-0 mt-0 items-center">
-        <div style={{ width: '511px', height: '507px', border: "1px solid #E8F2FA" }}
-          className="flip-card flex-1 p-5 pr-4 mr-16 rounded-md cursor-pointer">
+        <div style={{ width: '511px', height: '507px'}}
+          className="flip-card flex-1 p-5 pr-4 mr-16 rounded-md cursor-pointer service-panel">
           <div style={{ backgroundColor: "#E8F2FA", height: '100%' }}
             className="flip-card-inner flex-1 hidden lg:flex rounded-md justify-center">
             <div className="flip-card-front flex-1 text-center text-center item-center mt-32">
@@ -57,8 +57,8 @@ export default function index() {
           </div>
         </div>
 
-        <div style={{ width: '511px', height: '507px', border: "1px solid #E8F2FA" }}
-          className="flip-card flex-1 p-5 pr-4 mr-16 rounded-md cursor-pointer">
+        <div style={{ width: '511px', height: '507px'}}
+          className="flip-card flex-1 p-5 pr-4 mr-16 rounded-md cursor-pointer service-panel">
           <div style={{ backgroundColor: "#E8F2FA", height: '100%' }}
             className="flip-card-inner flex-1 hidden lg:flex rounded-md justify-center">
             <div className="flip-card-front flex-1 text-center text-center item-center mt-32">

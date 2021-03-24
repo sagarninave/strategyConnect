@@ -176,3 +176,11 @@
 .hr{
   margin-top: -30px;
 }
+
+.service-panel{
+  border: 1px solid #E8F2FA;
+}
+
+.service-panel:hover{
+  border:1px solid #3B3A97;
+}

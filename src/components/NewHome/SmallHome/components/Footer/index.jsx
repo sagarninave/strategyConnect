@@ -138,7 +138,7 @@ function index() {
         >
           <p className="text-base hidden lg:flex font-semi-bold">Contact Us</p>
           <ul className="flex flex-col">
-            <li className="no-underline grey-text text-sm  text-left md:mt-4 mt-8 flex font-thin">
+            <li className="no-underline grey-text text-sm mb-4 text-left md:mt-4 mt-8 flex font-thin">
               <img
                 src={location}
                 loading="lazy"

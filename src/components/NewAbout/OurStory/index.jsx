@@ -10,8 +10,10 @@ function index() {
       <p className="text-xl text-center uppercase black-text">Our Story</p>
 
       <div className="flex item-center relative lg:mt-5 mr-1.5 lg:mr-0">
-        <div style={{ borderColor: "#2EC4EA", width: "431px", height: "282px", overflow:"hidden" }} className="rounded-md border-2 p-6">
-          <img src={boys} style={{height:"auto"}} loading="lazy" alt="boys" className="h-full w-full lg:h-full h-20 ml-2.5 lg:ml-0" />
+        <div style={{ borderColor: "#2EC4EA", width: "431px", height: "304px", overflow:"hidden" }} 
+             className="rounded-md border-2 p-6 pb-10">
+          <img src={boys} style={{height:"auto"}} loading="lazy" alt="boys" 
+               className="h-full w-full lg:h-full h-20 ml-2.5 lg:ml-0 mb-4" />
         </div>
         <div className="flex justify-between ml-4 lg:ml-4 lg:w-6/12 w-44">
           <p className="text-lg grey-text leading-7 ml-20 w-full hidden lg:flex">

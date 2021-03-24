@@ -25,8 +25,6 @@ export default function index() {
       <div className="xl:px-32 px-0">
         <OurStory />
       </div>
-
-      {/* <OurValues /> */}
       <Work />
       <Footer />
     </div>

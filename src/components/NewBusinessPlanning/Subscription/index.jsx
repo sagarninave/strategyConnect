@@ -278,8 +278,7 @@ function Subscription() {
             <input type="text" id="Organisation" placeholder="Organisation Name" />
             <input type="text" id="Email" placeholder="Email ID" />
             <input type="text" id="Phone" placeholder="Phone Number" />
-            <input type="text" id="Industryy" placeholder="Industry" />
-            <input type="text" id="Project" placeholder="Project Title" />
+            <textarea placeholder="Message"></textarea>
             <button type="submit" className="btnButton">Submit</button>
           </form>
         </Modal>
@@ -313,7 +312,7 @@ function Subscription() {
             <input type="text" id="Phone Number" placeholder="Phone Number" />
             <input type="text" id="Industry" placeholder="Industry" />
             <input type="text" id="Project Title" placeholder="Project Title" />
-            <textarea placeholder="Description"></textarea>
+            <textarea placeholder="Project Description"></textarea>
             <button type="submit" className="btnButton">Submit</button>
           </form>
         </Modal>

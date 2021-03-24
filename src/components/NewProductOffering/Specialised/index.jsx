@@ -38,7 +38,7 @@ export default function index() {
           </p>
           <div className="p-2 pl-2 mt-5 pt-0 rounded-md border-2" style={{width:"10.2rem"}}>
             <button className="text-white purple lg:w-36 w-full flex items-center mt-2 mr-2 justify-between border-none focus:outline-none py-2 px-7 rounded">
-              <Link to="/businessplanning"> 
+              <Link to="/businessPlanning"> 
                 <p className="relative">Get Started</p> 
               </Link>
             </button>
@@ -57,7 +57,7 @@ export default function index() {
           </p>
           <div className="p-2 pl-2 mt-5 pt-0 rounded-md border-2" style={{width:"10.2rem"}}>
             <button className="text-white purple lg:w-36 w-full flex items-center mt-2 mr-2 justify-between border-none focus:outline-none py-2 px-7 rounded">
-              <Link to="/financemodeling"> 
+              <Link to="/financeModeling"> 
                 <p className="relative">Get Started</p> 
               </Link>
             </button>
@@ -94,7 +94,7 @@ export default function index() {
           </p>
           <div className="p-2 pl-2 mt-5 pt-0 rounded-md border-2" style={{width:"10.2rem"}}>
             <button className="text-white purple lg:w-36 w-full flex items-center mt-2 mr-2 justify-between border-none focus:outline-none py-2 px-7 rounded">
-              <Link to="/gotomarketstrategy"> 
+              <Link to="/goToMarketStrategy"> 
                 <p className="relative">Get Started</p> 
               </Link>
             </button>
