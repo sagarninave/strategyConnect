@@ -147,12 +147,12 @@ function index() {
               />
               <span>
                 <p className="ml-6 w-64 lg:w-48 xl:w-80">
-                  8th Floor, #145 The Offices 4, One Central Dubai World Trade
-                  Center, Dubai, UAE.
+                  Feed Speed FZ LL, TwoFour54,
+                  Abu Dhabi.
                 </p>
-                <p className="ml-6 w-80 hidden xl:block footer-top-line">
+                {/* <p className="ml-6 w-80 hidden xl:block footer-top-line">
                   8 The Greens, Dover, Delaware 19901, USA.
-                </p>
+                </p> */}
               </span>
             </li>
             <li className="no-underline grey-text text-sm flex  md:mt-4 mt-8 text-left font-thin">
