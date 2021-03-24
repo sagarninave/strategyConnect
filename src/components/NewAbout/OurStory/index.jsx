@@ -1,7 +1,7 @@
 import React from 'react';
 import boys from '../../../assets/img/g-boy.png';
-import shubham from '../../../assets/img/shubham1.jpg';
-import haninder from '../../../assets/img/haninder1.jpg';
+import shubham from '../../../assets/img/Shubham.png';
+import haninder from '../../../assets/img/Haninder.png';
 
 function index() {
   return (

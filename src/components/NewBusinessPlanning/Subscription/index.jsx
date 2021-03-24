@@ -78,7 +78,7 @@ function Subscription() {
               <li className="font14 mb-4">
                 <p className="leading-6" style={{ color: "#5C5B5B" }}>
                   <span className="tick"></span>
-                  Identifying unique valuepreposition and
+                  Identifying unique value preposition and
                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;market positioning.
                 </p>
               </li>
@@ -93,10 +93,10 @@ function Subscription() {
             </ul>
             <div className="p-2 pl-2 mt-20 pt-0 rounded-md border-2 ml-16 mr-16" style={{ width: "11.4rem" }}>
               <button onClick={openModal} className="text-white purple lg:w-40 w-full flex items-center mt-2 mr-2 justify-between border-none focus:outline-none py-2 px-7 rounded">
-                <p className="relative">Make Enquery</p>
+                <p className="relative">Make Enquiry</p>
               </button>
             </div>
-            {/* <button className="btnButton">Make Enquery</button> */}
+            {/* <button className="btnButton">Make Enquiry</button> */}
           </div>
         </div>
         <div className="flex flex-col items-center content-center">
@@ -130,10 +130,10 @@ function Subscription() {
             </ul>
             <div className="p-2 pl-2 mt-32 pt-0 rounded-md border-2 ml-16 mr-16" style={{ width: "11.4rem" }}>
               <button onClick={openModal} className="text-white purple lg:w-40 w-full flex items-center mt-2 mr-2 justify-between border-none focus:outline-none py-2 px-7 rounded">
-                <p className="relative">Make Enquery</p>
+                <p className="relative">Make Enquiry</p>
               </button>
             </div>
-            {/* <button className="btnButton">Make Enquery</button> */}
+            {/* <button className="btnButton">Make Enquiry</button> */}
           </div>
         </div>
       </div>
@@ -162,8 +162,8 @@ function Subscription() {
               <li className="font14 mb-4">
                 <p className="leading-6" style={{ color: "#5C5B5B" }}>
                   <span className="tick"></span>
-                    Assessing organization growth
-                  </p>
+                    Assessing technology readiness
+                </p>
               </li>
               <li className="font14 mb-4">
                 <p className="leading-6" style={{ color: "#5C5B5B" }}>
@@ -176,10 +176,10 @@ function Subscription() {
             </ul>
             <div className="p-2 pl-2 mt-24 pt-0 rounded-md border-2 ml-16 mr-16" style={{ width: "11.4rem" }}>
               <button onClick={openModal} className="text-white purple lg:w-40 w-full flex items-center mt-2 mr-2 justify-between border-none focus:outline-none py-2 px-7 rounded">
-                <p className="relative">Make Enquery</p>
+                <p className="relative">Make Enquiry</p>
               </button>
             </div>
-            {/* <button className="btnButton">Make Enquery</button> */}
+            {/* <button className="btnButton">Make Enquiry</button> */}
           </div>
         </div>
         <div className="flex flex-col items-center content-center">
@@ -224,10 +224,10 @@ function Subscription() {
             </ul>
             <div className="p-2 pl-2 mt-20 pt-0 rounded-md border-2 ml-16 mr-16" style={{ width: "11.4rem" }}>
               <button onClick={openModal} className="text-white purple lg:w-40 w-full flex items-center mt-2 mr-2 justify-between border-none focus:outline-none py-2 px-7 rounded">
-                <p className="relative">Make Enquery</p>
+                <p className="relative">Make Enquiry</p>
               </button>
             </div>
-            {/* <button className="btnButton">Make Enquery</button> */}
+            {/* <button className="btnButton">Make Enquiry</button> */}
           </div>
         </div>
       </div>
@@ -237,16 +237,6 @@ function Subscription() {
         <p className="sm:text-2xl lg:text-2xl text-black font-semibold text-center mx-auto lg:w-11/12 xl:w-11/12 sm:w-11/12 w-11/12">
           Couldn't find what you were looking for?
         </p>
-        {/* <div style={{width:"10.3rem", marginLeft:"20%"}} 
-             className="rounded-md border-2 lg:w-11/12 xl:w-11/12 sm:w-11/12 w-11/12 p-2 pl-2 mt-5 pt-0" >
-          <button onClick={openModal2} 
-            className="text-white purple lg:w-36 w-full flex items-center mt-2 justify-between border-none focus:outline-none py-2 px-7 rounded">
-              <p className="relative">Customize</p> 
-          </button>
-        </div> */}
-        {/* <button className="btnButton" onClick={openModal2}>
-          Customize
-        </button> */}
         <div className="p-2 pl-2 mt-32 pt-0 rounded-md border-2 ml-16 mr-16" style={{ width: "11.4rem", margin: 'auto', marginTop: ' 25px' }}>
           <button onClick={openModal2} className="text-white purple lg:w-40 w-full flex items-center mt-2 mr-2 justify-between border-none focus:outline-none py-2 px-7 rounded">
             <p className="relative" style={{ margin: 'auto' }}>Customize</p>
@@ -264,6 +254,7 @@ function Subscription() {
           onRequestClose={closeModal}
           style={customStyles}
           contentLabel="Example Modal"
+          preventScroll={false}
         >
           <div>
             <h4 className="text-lg md:text-2xl font-bold leading-10 text-center">
@@ -285,11 +276,11 @@ function Subscription() {
             <input type="text" id="Phone" placeholder="Phone Number" />
             <textarea placeholder="Message"></textarea>
             {/* <button type="submit" className="btnButton">Submit</button> */}
-            <div className="p-2 pl-2 mt-32 pt-0 rounded-md border-2 ml-16 mr-16" style={{width:"11.4rem",margin: 'auto',marginTop:' 25px'}}>
-                <button type="submit" className="text-white purple lg:w-40 w-full flex items-center mt-2 mr-2 justify-between border-none focus:outline-none py-2 px-7 rounded">
-                    <p className="relative" style={{margin:'auto'}}>Submit</p> 
-                </button>
-              </div>
+            <div className="p-2 pl-2 mt-32 pt-0 rounded-md border-2 ml-16 mr-16" style={{ width: "11.4rem", margin: 'auto', marginTop: ' 25px' }}>
+              <button type="submit" className="text-white purple lg:w-40 w-full flex items-center mt-2 mr-2 justify-between border-none focus:outline-none py-2 px-7 rounded">
+                <p className="relative" style={{ margin: 'auto' }}>Submit</p>
+              </button>
+            </div>
           </form>
         </Modal>
 
@@ -324,11 +315,11 @@ function Subscription() {
             <input type="text" id="Project Title" placeholder="Project Title" />
             <textarea placeholder="Project Description"></textarea>
             {/* <button type="submit" className="btnButton">Submit</button> */}
-            <div className="p-2 pl-2 mt-32 pt-0 rounded-md border-2 ml-16 mr-16" style={{width:"11.4rem",margin: 'auto',marginTop:' 25px'}}>
-                <button type="submit" className="text-white purple lg:w-40 w-full flex items-center mt-2 mr-2 justify-between border-none focus:outline-none py-2 px-7 rounded">
-                    <p className="relative" style={{margin:'auto'}}>Submit</p> 
-                </button>
-              </div>
+            <div className="p-2 pl-2 mt-32 pt-0 rounded-md border-2 ml-16 mr-16" style={{ width: "11.4rem", margin: 'auto', marginTop: ' 25px' }}>
+              <button type="submit" className="text-white purple lg:w-40 w-full flex items-center mt-2 mr-2 justify-between border-none focus:outline-none py-2 px-7 rounded">
+                <p className="relative" style={{ margin: 'auto' }}>Submit</p>
+              </button>
+            </div>
           </form>
         </Modal>
       </div>

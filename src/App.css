@@ -170,6 +170,11 @@
 
 .ReactModal__Overlay--after-open {
   background: rgb(0 0 0 / 51%)!important;
+  z-index:9999
+}
+
+.ReactModal__Body--open {
+  overflow-y: hidden;
 }
 
 .hr {

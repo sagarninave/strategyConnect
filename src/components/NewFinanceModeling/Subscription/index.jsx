@@ -59,7 +59,7 @@ function Subscription() {
 
       <div className="pt-8 flex  lg:mb-0 mb-12 justify-between">
         <div className="flex flex-col items-center content-center">
-          <div className="boxAnalytics" style={{height:"500px"}}>
+          <div className="boxAnalytics" style={{ height: "500px" }}>
             <p className="text-lg md:text-2xl font-bold leading-10"
               style={{
                 borderBottom: '1px solid #B1B5B9',
@@ -67,148 +67,148 @@ function Subscription() {
               }}>
               Revenue and <br /> cost projections</p>
             <ul>
-              <li className="font14 mb-4"> 
-                <p className="leading-6" style={{color:"#5C5B5B"}}> 
-                  <span className="tick"></span> 
-                  Identify revenue drivers and cost streams                   
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;through primary and secondary research 
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;and do financial projections for income and 
+              <li className="font14 mb-4">
+                <p className="leading-6" style={{ color: "#5C5B5B" }}>
+                  <span className="tick"></span>
+                  Identify revenue drivers and cost streams
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;through primary and secondary research
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;and do financial projections for income and
                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;expenses
                 </p>
               </li>
               <li className="font14 mb-4">
-                <p className="leading-6" style={{color:"#5C5B5B"}}> 
+                <p className="leading-6" style={{ color: "#5C5B5B" }}>
                   <span className="tick"></span>
-                  Refining the operating expenses as per 
+                  Refining the operating expenses as per
                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;the scale of the business
                 </p>
               </li>
               <li className="font14 mb-4">
-                <p className="leading-6" style={{color:"#5C5B5B"}}> 
+                <p className="leading-6" style={{ color: "#5C5B5B" }}>
                   <span className="tick"></span>
                   Estimating the capital expenditure
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;essential for running the business 
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;essential for running the business
                 </p>
               </li>
             </ul>
-            <div className="p-2 pl-2 mt-20 pt-0 rounded-md border-2 ml-16 mr-16" style={{width:"11.4rem"}}>
+            <div className="p-2 pl-2 mt-20 pt-0 rounded-md border-2 ml-16 mr-16" style={{ width: "11.4rem" }}>
               <button onClick={openModal} className="text-white purple lg:w-40 w-full flex items-center mt-2 mr-2 justify-between border-none focus:outline-none py-2 px-7 rounded">
-                  <p className="relative">Make Enquery</p> 
+                <p className="relative">Make Enquiry</p>
               </button>
             </div>
-            {/* <button className="btnButton">Make Enquery</button> */}
+            {/* <button className="btnButton">Make Enquiry</button> */}
           </div>
         </div>
         <div className="flex flex-col items-center content-center">
-          <div className="boxAnalytics" style={{height:"500px"}}>
+          <div className="boxAnalytics" style={{ height: "500px" }}>
             <p className="text-lg md:text-2xl font-bold leading-10"
               style={{ borderBottom: '1px solid #B1B5B9', marginBottom: '15px', padding: '9px 0px' }}>
-              Financial <br/> Statements
+              Financial <br /> Statements
               </p>
-              <ul>
-                <li className="font14 mb-4"> 
-                  <p className="leading-6" style={{color:"#5C5B5B"}}> 
-                    <span className="tick"></span> 
-                    Preparing Profit and Loss statements, 
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Balance Sheets and Cash Flow 
+            <ul>
+              <li className="font14 mb-4">
+                <p className="leading-6" style={{ color: "#5C5B5B" }}>
+                  <span className="tick"></span>
+                    Preparing Profit and Loss statements,
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Balance Sheets and Cash Flow
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Statements.
                   </p>
-                </li>
-                <li className="font14 mb-4">
-                  <p className="leading-6" style={{color:"#5C5B5B"}}> 
-                    <span className="tick"></span>
-                    Identifying business KPIs, financial ratios 
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;and unit economics, presented through 
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;visually appealing infographics                  
+              </li>
+              <li className="font14 mb-4">
+                <p className="leading-6" style={{ color: "#5C5B5B" }}>
+                  <span className="tick"></span>
+                    Identifying business KPIs, financial ratios
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;and unit economics, presented through
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;visually appealing infographics
                   </p>
-                </li>
-              </ul>
-              <div className="p-2 pl-2 mt-36 pt-0 rounded-md border-2 ml-16 mr-16" style={{width:"11.4rem"}}>
-                <button onClick={openModal} className="text-white purple lg:w-40 w-full flex items-center mt-2 mr-2 justify-between border-none focus:outline-none py-2 px-7 rounded">
-                    <p className="relative">Make Enquery</p> 
-                </button>
-              </div>
-            {/* <button className="btnButton">Make Enquery</button> */}
+              </li>
+            </ul>
+            <div className="p-2 pl-2 mt-36 pt-0 rounded-md border-2 ml-16 mr-16" style={{ width: "11.4rem" }}>
+              <button onClick={openModal} className="text-white purple lg:w-40 w-full flex items-center mt-2 mr-2 justify-between border-none focus:outline-none py-2 px-7 rounded">
+                <p className="relative">Make Enquiry</p>
+              </button>
+            </div>
+            {/* <button className="btnButton">Make Enquiry</button> */}
           </div>
         </div>
       </div>
 
       <div className="flex  lg:mb-0 mb-12 justify-between" style={{ padding: '5rem 0rem' }}>
         <div className="flex flex-col items-center content-center">
-          <div className="boxAnalytics" style={{height:"500px"}}>
+          <div className="boxAnalytics" style={{ height: "500px" }}>
             <p className="text-lg md:text-2xl font-bold leading-10"
               style={{ borderBottom: '1px solid #B1B5B9', marginBottom: '15px', padding: '9px 0px' }}>
-              Business valuations <br/> and sensitivity analysis
+              Business valuations <br /> and sensitivity analysis
             </p>
-              <ul>
-                <li className="font14 mb-4"> 
-                  <p className="leading-6" style={{color:"#5C5B5B"}}> 
-                    <span className="tick"></span> 
-                    Company valuation through discounted 
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cash flow method, EBITDA multiples and 
+            <ul>
+              <li className="font14 mb-4">
+                <p className="leading-6" style={{ color: "#5C5B5B" }}>
+                  <span className="tick"></span>
+                    Company valuation through discounted
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cash flow method, EBITDA multiples and
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;through ROI and other investment-
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;related metrics.
                   </p>
-                </li>
-                <li className="font14 mb-4">
-                  <p className="leading-6" style={{color:"#5C5B5B"}}> 
-                    <span className="tick"></span>
-                    Undertaking sensitivity analysis to <br/> 
+              </li>
+              <li className="font14 mb-4">
+                <p className="leading-6" style={{ color: "#5C5B5B" }}>
+                  <span className="tick"></span>
+                    Undertaking sensitivity analysis to <br />
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;assess “what-if” scenarios and measure
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;the impact of input assumptions.
                   </p>
-                </li>
-              </ul>
-              <div className="p-2 pl-2 mt-32 pt-0 rounded-md border-2 ml-16 mr-16" style={{width:"11.4rem"}}>
-                <button onClick={openModal} className="text-white purple lg:w-40 w-full flex items-center mt-2 mr-2 justify-between border-none focus:outline-none py-2 px-7 rounded">
-                    <p className="relative">Make Enquery</p> 
-                </button>
-              </div>
-            {/* <button className="btnButton">Make Enquery</button> */}
+              </li>
+            </ul>
+            <div className="p-2 pl-2 mt-32 pt-0 rounded-md border-2 ml-16 mr-16" style={{ width: "11.4rem" }}>
+              <button onClick={openModal} className="text-white purple lg:w-40 w-full flex items-center mt-2 mr-2 justify-between border-none focus:outline-none py-2 px-7 rounded">
+                <p className="relative">Make Enquiry</p>
+              </button>
+            </div>
+            {/* <button className="btnButton">Make Enquiry</button> */}
           </div>
         </div>
         <div className="flex flex-col items-center content-center">
-          <div className="boxAnalytics" style={{height:"500px"}}>
+          <div className="boxAnalytics" style={{ height: "500px" }}>
             <p className="text-lg md:text-2xl font-bold leading-10"
               style={{ borderBottom: '1px solid #B1B5B9', marginBottom: '15px', padding: '9px 0px' }}>
               Creating a scalable <br /> financial model structure
             </p>
             <ul>
-              <li className="font14 mb-4"> 
-                <p className="leading-6" style={{color:"#5C5B5B"}}> 
-                  <span className="tick"></span> 
-                  Preparing easy to understand model <br/>
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;flow using videos with professional  <br/>
+              <li className="font14 mb-4">
+                <p className="leading-6" style={{ color: "#5C5B5B" }}>
+                  <span className="tick"></span>
+                  Preparing easy to understand model <br />
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;flow using videos with professional  <br />
                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;voice-overs
                 </p>
               </li>
               <li className="font14 mb-4">
-                <p className="leading-6" style={{color:"#5C5B5B"}}> 
+                <p className="leading-6" style={{ color: "#5C5B5B" }}>
                   <span className="tick"></span>
                   Evaluating unit economics
                 </p>
               </li>
               <li className="font14 mb-4">
-                <p className="leading-6" style={{color:"#5C5B5B"}}> 
+                <p className="leading-6" style={{ color: "#5C5B5B" }}>
                   <span className="tick"></span>
                   Preparing an index for the model
                 </p>
               </li>
               <li className="font14 mb-4">
-                <p className="leading-6" style={{color:"#5C5B5B"}}> 
+                <p className="leading-6" style={{ color: "#5C5B5B" }}>
                   <span className="tick"></span>
-                    Creating a modular structure of the  <br/>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;model to allow for addition/removal of a  <br/>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;business units and geographies 
+                    Creating a modular structure of the  <br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;model to allow for addition/removal of a  <br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;business units and geographies
                 </p>
               </li>
             </ul>
-            <div className="p-2 pl-2 mt-16 pt-0 rounded-md border-2 ml-16 mr-16" style={{width:"11.4rem"}}>
+            <div className="p-2 pl-2 mt-16 pt-0 rounded-md border-2 ml-16 mr-16" style={{ width: "11.4rem" }}>
               <button onClick={openModal} className="text-white purple lg:w-40 w-full flex items-center mt-2 mr-2 justify-between border-none focus:outline-none py-2 px-7 rounded">
-                  <p className="relative">Make Enquery</p> 
+                <p className="relative">Make Enquiry</p>
               </button>
             </div>
-            {/* <button className="btnButton">Make Enquery</button> */}
+            {/* <button className="btnButton">Make Enquiry</button> */}
           </div>
         </div>
       </div>
@@ -247,7 +247,7 @@ function Subscription() {
         >
           <div>
             <h4 className="text-lg md:text-2xl font-bold leading-10 text-center">
-              Kickstart Engagement 
+              Kickstart Engagement
               <span className="floatRight">
                 <button onClick={closeModal}>
                   <AiOutlineCloseCircle />
@@ -265,11 +265,11 @@ function Subscription() {
             <input type="text" id="Phone" placeholder="Phone Number" />
             <textarea placeholder="Message"></textarea>
             {/* <button type="submit" className="btnButton">Submit</button> */}
-            <div className="p-2 pl-2 mt-32 pt-0 rounded-md border-2 ml-16 mr-16" style={{width:"11.4rem",margin: 'auto',marginTop:' 25px'}}>
-                <button type="submit" className="text-white purple lg:w-40 w-full flex items-center mt-2 mr-2 justify-between border-none focus:outline-none py-2 px-7 rounded">
-                    <p className="relative" style={{margin:'auto'}}>Submit</p> 
-                </button>
-              </div>
+            <div className="p-2 pl-2 mt-32 pt-0 rounded-md border-2 ml-16 mr-16" style={{ width: "11.4rem", margin: 'auto', marginTop: ' 25px' }}>
+              <button type="submit" className="text-white purple lg:w-40 w-full flex items-center mt-2 mr-2 justify-between border-none focus:outline-none py-2 px-7 rounded">
+                <p className="relative" style={{ margin: 'auto' }}>Submit</p>
+              </button>
+            </div>
           </form>
         </Modal>
 
@@ -284,15 +284,15 @@ function Subscription() {
         >
           <div>
             <h4 className="text-lg md:text-2xl font-bold leading-10 text-center">
-            Project Information 
+              Project Information
             <span className="floatRight">
-              <button onClick={closeModal2}>
-                <AiOutlineCloseCircle />
-              </button>
-            </span>
+                <button onClick={closeModal2}>
+                  <AiOutlineCloseCircle />
+                </button>
+              </span>
             </h4>
             <p className="font-semibold text-md mt-3 xl:w-10/12 w-11/12 mx-auto light_grey grey-text text-center font-thin">
-            Lets talk about everything.
+              Lets talk about everything.
             </p>
           </div>
           <form class="formInline">
@@ -304,11 +304,11 @@ function Subscription() {
             <input type="text" id="Project Title" placeholder="Project Title" />
             <textarea placeholder="Project Description"></textarea>
             {/* <button type="submit" className="btnButton">Submit</button> */}
-            <div className="p-2 pl-2 mt-32 pt-0 rounded-md border-2 ml-16 mr-16" style={{width:"11.4rem",margin: 'auto',marginTop:' 25px'}}>
-                <button type="submit" className="text-white purple lg:w-40 w-full flex items-center mt-2 mr-2 justify-between border-none focus:outline-none py-2 px-7 rounded">
-                    <p className="relative" style={{margin:'auto'}}>Submit</p> 
-                </button>
-              </div>
+            <div className="p-2 pl-2 mt-32 pt-0 rounded-md border-2 ml-16 mr-16" style={{ width: "11.4rem", margin: 'auto', marginTop: ' 25px' }}>
+              <button type="submit" className="text-white purple lg:w-40 w-full flex items-center mt-2 mr-2 justify-between border-none focus:outline-none py-2 px-7 rounded">
+                <p className="relative" style={{ margin: 'auto' }}>Submit</p>
+              </button>
+            </div>
           </form>
         </Modal>
       </div>

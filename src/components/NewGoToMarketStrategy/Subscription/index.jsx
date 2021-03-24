@@ -78,7 +78,7 @@ function Subscription() {
               <li className="font14 mb-4">
                 <p className="leading-6" style={{color:"#5C5B5B"}}> 
                   <span className="tick"></span>
-                  Identifying unique valuepreposition and 
+                  Identifying unique value preposition and 
                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;market positioning.
                 </p>
               </li>
@@ -94,10 +94,10 @@ function Subscription() {
             
             <div className="p-2 pl-2 mt-20 pt-0 rounded-md border-2 ml-16 mr-16" style={{width:"11.4rem"}}>
               <button onClick={openModal} className="text-white purple lg:w-40 w-full flex items-center mt-2 mr-2 justify-between border-none focus:outline-none py-2 px-7 rounded">
-                  <p className="relative">Make Enquery</p> 
+                  <p className="relative">Make Enquiry</p> 
               </button>
             </div>
-            {/* <button className="btnButton">Make Enquery</button> */}
+            {/* <button className="btnButton">Make Enquiry</button> */}
           </div>
         </div>
       </div>

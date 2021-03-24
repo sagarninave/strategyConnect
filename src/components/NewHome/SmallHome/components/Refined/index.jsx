@@ -47,7 +47,7 @@ export default function index() {
       <div style={{ backgroundColor: "#fff" }} className="flex lg:py-1 py-8 lg:px-16 px-8 justify-between refined-bg md:mt-0 xl:mt-0 mt-0 items-center">
         <div className="flex-1 mr-32">
           <p className="lg:text-3xl text-lg text-center lg:text-left font-bold">
-            <Link to="/finance-modeling">Financial Modelling </Link>
+            <Link to="/finance-modeling">Financial Modeling </Link>
           </p>
           <p className="font-medium text-base lg:text-xl  lg:w-11/12 text-center lg:text-left mx-auto lg:mx-0 grey-text mt-10 font-thin">
             A summary of a company’s expenses and earnings

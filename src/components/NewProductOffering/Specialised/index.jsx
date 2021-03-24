@@ -12,7 +12,7 @@ export default function index() {
       <div style={{backgroundColor:"#fff"}} className="flex lg:py-8 lg:pb-0 py-8 lg:px-16 px-8 justify-between refined-bg md:mt-0 xl:mt-0 mt-0 items-center">
         <div className="flex-1 lg:flex justify-center">
            <p className="lg:text-4xl text-lg text-center mt-6 lg:text-left font-bold">
-            We specialise in          
+            We Specialised In          
           </p>
         </div>
       </div>
@@ -49,7 +49,7 @@ export default function index() {
       <div style={{backgroundColor:"#fff"}} className="flex mb-10 lg:mb-10 lg:py-1 py-8 lg:px-16 px-8 justify-between refined-bg md:mt-0 xl:mt-0 mt-0 items-center">
         <div className="flex-1 mr-0 lg:-mt-16 justify-start">
           <p className="lg:text-3xl text-lg text-center lg:text-left font-bold">
-            Financial Modelling
+            Financial Modeling
           </p>
           <p className="font-medium text-base lg:text-xl-lg lg:w-11/12 text-center lg:text-left mx-auto lg:mx-0 grey-text mt-5 font-thin">
             We Create an exhaustive and easy to use 
@@ -86,7 +86,7 @@ export default function index() {
         </div>
         <div className="flex-1 ml-28 lg:-mt-16">
           <p className="lg:text-3xl text-lg text-center lg:text-left font-bold">
-            Go-to-market strategy
+            Go-To-Market Strategy
           </p>
           <p className="font-medium text-base lg:text-lg lg:w-full text-center lg:text-left mx-auto lg:mx-0 grey-text mt-5 font-thin">
             We uncover deep insights that can help your business 

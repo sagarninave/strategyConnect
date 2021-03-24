@@ -16,7 +16,7 @@ export default function index() {
       <Navbar />
       <div>
         <p className="sm:text-3xl lg:text-5xl font-semibold text-center lg:w-11/12 xl:w-11/12 sm:w-8/12 w-11/12 mx-auto sm:mt-32 mt-20">
-          We empower businesses and prepare them for <br/> scalable success
+          We Empower Businesses And Prepare Them For <br/> Scalable Success
         </p>
         <p className="text-sm grey-text text-center mx-auto font-semibold mt-4">
           With streamlined advisory services

@@ -20,7 +20,7 @@ function index() {
           style={{ width: "100%", height: "244px" }} />
 
         <p className="text-3xl px-8 text-black text-left mx-auto font-semibold mt-10">
-          Experts on demand
+          Experts On Demand
         </p>
         <p className="text-lg px-8 text-#5C5B5B-50 text-left mt-6">
           Access our database of experts and get 5 short calls for free.

@@ -15,7 +15,7 @@ export default function index() {
       <Navbar />
       <div style={{ backgroundColor: "#F0EFF7", height: "440px" }} className="px-auto sm:pt-32 pt-20">
         <p className="sm:text-5xl lg:text-5xl text-black font-semibold text-center mx-auto lg:w-11/12 xl:w-11/12 sm:w-11/12 w-11/12">
-          Go-to-market strategy
+          Go-To-Market Strategy
         </p>
         <p className="text-lg text-black text-center mx-auto font-semibold mt-4">
           We uncover deep insights that can help your business fast track <br/>
