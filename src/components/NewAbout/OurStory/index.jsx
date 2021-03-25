@@ -41,12 +41,12 @@ function index() {
 
       <p className="text-xl mt-6 text-center uppercase black-text">FOUNDING TEAM</p>
 
-      <div className="flex justify-between relative lg:mt-8 lg:w-9/12 mx-auto">
+      <div className="flex justify-between relative lg:mt-8  mx-auto">
         <div className="flex-1 justify-start pr-0 lg:w-6/12 w-44">
-          <div style={{ backgroundColor: "#fff", width:"431px"}} 
+          <div style={{ backgroundColor: "#fff"}} 
               className="rounded-md mr-20">
-            <div style={{ borderColor: "#2EC4EA", width: "431px", height: "282px" }}
-                className="rounded-md border-2 p-6">
+            <div style={{ borderColor: "#2EC4EA",  }}
+                className="rounded-md border-2 p-6 imgRes">
               <img src={shubham} loading="lazy" alt="boys" className="h-full w-full lg:h-full" />
             </div>
             <p className="text-xl mt-6 text-center black-text">Shubham</p>
@@ -61,10 +61,10 @@ function index() {
           </div>
         </div>
         <div className="flex-1 pr-0 lg:w-6/12 w-44">
-          <div style={{ backgroundColor: "#fff", width:"431px", float:"left"}} 
+          <div style={{ backgroundColor: "#fff", width:"", float:"right"}} 
               className="rounded-md ml-20 justify-between">
-            <div style={{ borderColor: "#2EC4EA", width: "431px", height: "282px" }}
-              className="rounded-md border-2 p-6">
+            <div style={{ borderColor: "#2EC4EA", }}
+              className="rounded-md border-2 p-6 imgRes">
               <img src={haninder} loading="lazy" alt="haninder" className="h-full w-full lg:h-full" />
             </div>
             <p className="text-xl mt-6 text-center black-text">Haninder</p>
