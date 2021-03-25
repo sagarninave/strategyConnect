@@ -125,63 +125,13 @@ export default function Navbar() {
                   onClick={() => setVisibleSidebar(false)}
                   className="text-lg font-bold text-white mt-4"
                 >
-                  <Link to="/approach"> Approach</Link>
+                  <Link to="/about">About us</Link>
                 </li>
-                <li className="no-underline text-lg mt-4 font-bold text-white flex items-center cursor-pointer">
-                  <p
-                    onClick={() => {
-                      setShowSmallVertical(!showSmallVertical);
-                    }}
-                  >
-                    Verticals
-                  </p>
-                  <img src={arrDown} alt="arrDown" className="ml-3" />
-                </li>
-                <ul
-                  className={`pl-4 ${showSmallVertical ? 'block' : 'hidden'}`}
-                >
-                  <li
-                    onClick={() => setVisibleSidebar(false)}
-                    className="text-lg font-bold text-white mt-4"
-                  >
-                    <Link to="/coming-soon">Health-tech</Link>
-                  </li>
-                  <li
-                    onClick={() => setVisibleSidebar(false)}
-                    className="text-lg font-bold text-white mt-4"
-                  >
-                    <Link to="/xaas">XaaS</Link>
-                  </li>
-                  <li
-                    onClick={() => setVisibleSidebar(false)}
-                    className="text-lg font-bold text-white mt-4"
-                  >
-                    <Link to="/coming-soon">Artificial intelligence</Link>
-                  </li>
-                  <li
-                    onClick={() => setVisibleSidebar(false)}
-                    className="text-lg font-bold text-white mt-4"
-                  >
-                    <Link to="/coming-soon">E-commerce</Link>
-                  </li>
-                  <li
-                    onClick={() => setVisibleSidebar(false)}
-                    className="text-lg font-bold text-white mt-4"
-                  >
-                    <Link to="/coming-soon">Ed-tech</Link>
-                  </li>
-                  <li
-                    onClick={() => setVisibleSidebar(false)}
-                    className="text-lg font-bold text-white mt-4"
-                  >
-                    <Link to="/caseStudy">All Case Studies</Link>
-                  </li>
-                </ul>
                 <li
                   onClick={() => setVisibleSidebar(false)}
                   className="text-lg font-bold text-white mt-4"
                 >
-                  <Link to="/about">About us</Link>
+                  <Link to="/contact">Contact us</Link>
                 </li>
               </ul>
 

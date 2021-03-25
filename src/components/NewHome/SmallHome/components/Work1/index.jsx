@@ -199,7 +199,7 @@ export default function index() {
 
   return (
     <div className="mt-20 pb-20">
-      <p className="text-center xl:text-4xl text-2xl font-bold">We Are Proud</p>
+      <p className="text-center xl:text-4xl text-2xl font-bold">We are Proud</p>
       <p className="font-semibold text-lg xl:w-10/12 w-11/12 mx-auto light_grey grey-text mt-4 text-center mt-6 font-thin">
         We are a trusted consulting service provider to around 150 clients from
         around the globe. Our clients range from startups and small business to

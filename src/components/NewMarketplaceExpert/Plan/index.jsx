@@ -38,7 +38,6 @@ function index() {
             <ul>
               <li className="font14 text-center text-lg light_grey grey-text font-medium">  Get started for</li>
               <li className="font14 text-center font-semibold mt-4"> <span>$</span><span className="bigName">12</span></li>
-              {/* <li className="font14 makeEnquery rounded-sm">Make Enquiry</li> */}
               <div className="p-2 pl-2 mt-32 pt-0 rounded-md border-2 ml-16 mr-16 mgTB10" style={{width:"11.4rem",margin: 'auto',}}>
                 <button type="submit" className="text-white purple lg:w-40 w-full flex items-center mt-2 mr-2 justify-between border-none focus:outline-none py-2 px-7 rounded">
                     <p className="relative" style={{margin:'auto'}}>Make Enquiry</p> 
@@ -51,7 +50,7 @@ function index() {
               <li className="font14">
                 <p>
                   <span className="tick"></span>
-                  One Hour Additional Lagal Advice 
+                  One Hour Additional Legal Advice 
                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Credit
                 </p>
               </li>
@@ -83,7 +82,6 @@ function index() {
             <ul>
               <li className="font14 text-center text-lg font-medium">  Get started for</li>
               <li className="font14 text-center font-semibold mt-4"> <span>$</span><span className="bigName">24</span></li>
-              {/* <li className="font14 makeEnquery rounded-sm" style={{ border: '1px solid #fff' }}>Make Enquiry</li> */}
               <div className="p-2 pl-2 mt-32 pt-0 rounded-md border-2 ml-16 mr-16 mgTB10" style={{width:"11.4rem",margin: 'auto',}}>
                 <button type="submit" className="text-white whiteBg lg:w-40 w-full flex items-center mt-2 mr-2 justify-between border-none focus:outline-none py-2 px-7 rounded">
                     <p className="relative" style={{margin:'auto'}}>Make Enquiry</p> 
@@ -148,7 +146,7 @@ function index() {
               <li className="font14">
                 <p>
                   <span className="tick"></span>
-                  One Hour Additional Lagal Advice 
+                  One Hour Additional Legal Advice 
                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Credit
                 </p>
               </li>

@@ -110,15 +110,22 @@ function index() {
             <li className="no-underline text-white lg:grey-text  hover:text-gray-300 cursor-pointer text-sm text-left lg:mt-0 mt-2 mr-8 lg:mr-0 font-thin">
               <Link to="/">Home</Link>
             </li>
+            <li className="no-underline text-white lg:grey-text text-sm text-left cursor-pointer hover:text-gray-300 lg:mt-3 mt-2 mr-8 lg:mr-0 font-thin">
+              <Link to="/about">About Us</Link>
+            </li>
+            <li className="no-underline text-white lg:grey-text text-sm text-left cursor-pointer hover:text-gray-300 lg:mt-3 mt-2 mr-8 lg:mr-0 font-thin">
+              <Link to="/product-offering">Our Offerings</Link>
+            </li>
             <li className="no-underline text-white lg:grey-text text-sm hover:text-gray-300 cursor-pointer text-left lg:mt-3 mt-2 mr-8 lg:mr-0 font-thin">
               <Link to="/approach">Approach</Link>
             </li>
             <li className="no-underline text-white lg:grey-text text-sm text-left cursor-pointer hover:text-gray-300 lg:mt-3 mt-2 mr-8 lg:mr-0 font-thin">
-              <Link to="/caseStudy">Case Studies</Link>
-            </li>
+              <Link to="/case-study">Case Studies</Link>
+            </li> 
             <li className="no-underline text-white lg:grey-text text-sm text-left cursor-pointer hover:text-gray-300 lg:mt-3 mt-2 mr-8 lg:mr-0 font-thin">
-              <Link to="/about">About Us</Link>
+              <Link to="/contact">Contact Us</Link>
             </li>
+            
             {/* <li className="no-underline text-white lg:grey-text text-sm text-left cursor-pointer hover:text-gray-300 lg:mt-3 mt-2 mr-8 lg:mr-0 font-thin">
               <Link to="/freelancer">Join as Freelncer</Link>
             </li>

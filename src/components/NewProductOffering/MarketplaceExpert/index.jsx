@@ -13,20 +13,17 @@ function index() {
         </div>
       </div>
 
-      <div style={{ width: "503px", height: "488px", border: "1px solid #707070" }}
+      <div style={{ width: "480px", height: "430px", border: "1px solid #707070" }}
         className="mt-16 mx-auto flex-1 items-center rounded-md mb-6">
         <img src={Marketplacepakage} loading="lazy" alt="Marketplacepakage"
           className="w-full rounded-md"
           style={{ width: "100%", height: "244px" }} />
 
         <p className="text-3xl px-8 text-black text-left mx-auto font-semibold mt-10">
-          Experts On Demand
+          Experts on Demand
         </p>
         <p className="text-lg px-8 text-#5C5B5B-50 text-left mt-6">
           Access our database of experts and get 5 short calls for free.
-        </p>
-        <p className="text-lg px-8 text-#5C5B5B-50 text-left mt-6">
-          Price starting at $12 / per month
         </p>
       </div>
 

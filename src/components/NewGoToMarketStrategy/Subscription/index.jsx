@@ -49,7 +49,7 @@ function Subscription() {
     <div>
       <div className="pb-10 pt-14">
         <p className="text-center xl:text-2xl text-2xl font-bold">
-          Easy subscriptions plans
+          Easy Subscriptions Plans
         </p>
         <p className="font-medium text-md xl:w-10/12 w-11/12 mx-auto light_grey grey-text mt-2 text-center font-thin">
           No contracts. No surprise fees.

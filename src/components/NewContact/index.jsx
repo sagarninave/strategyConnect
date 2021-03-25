@@ -14,7 +14,7 @@ function Contact() {
     <div>
       <Navbar />
       <h1 className="lg:text-3xl text-xl text-center font-semibold mt-20 lg:px-48 px-4">
-        Get in touch with us
+        Get in Touch With Us
       </h1>
       <p className="text-sm grey-text text-center mt-2 lg:px-48 px-4">
         Let’s scale your brand, together

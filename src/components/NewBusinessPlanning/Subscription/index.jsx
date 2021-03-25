@@ -49,7 +49,7 @@ function Subscription() {
     <div>
       <div className="pb-10 pt-14">
         <p className="text-center xl:text-2xl text-2xl font-bold">
-          Easy subscriptions plans
+          Easy Subscriptions Plans
         </p>
         <p className="font-medium text-md xl:w-10/12 w-11/12 mx-auto light_grey grey-text mt-2 text-center font-thin">
           No contracts. No surprise fees.
@@ -101,7 +101,7 @@ function Subscription() {
           <div className="boxAnalytics" style={{ height: "500px" }}>
             <p className="text-lg md:text-2xl font-bold leading-10"
               style={{ borderBottom: '1px solid #B1B5B9', marginBottom: '15px', padding: '9px 0px' }}>
-              Business <br /> traction analysis
+              Business <br /> Traction Analysis
               </p>
             <ul>
               <li className="font14 mb-4">
@@ -140,7 +140,7 @@ function Subscription() {
           <div className="boxAnalytics" style={{ height: "500px" }}>
             <p className="text-lg md:text-2xl font-bold leading-10"
               style={{ borderBottom: '1px solid #B1B5B9', marginBottom: '15px', padding: '9px 0px' }}>
-              Operational <br />  viability</p>
+              Operational <br />  Viability</p>
             <ul>
               <li className="font14 mb-4">
                 <p className="leading-6" style={{ color: "#5C5B5B" }}>
@@ -181,7 +181,7 @@ function Subscription() {
           <div className="boxAnalytics" style={{ height: "500px" }}>
             <p className="text-lg md:text-2xl font-bold leading-10"
               style={{ borderBottom: '1px solid #B1B5B9', marginBottom: '15px', padding: '9px 0px' }}>
-              Financial viability <br />  & planning
+              Financial Viability <br />  & Planning
             </p>
             <ul>
               <li className="font14 mb-4">

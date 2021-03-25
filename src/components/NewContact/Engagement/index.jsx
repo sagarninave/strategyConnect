@@ -33,7 +33,7 @@ function Engagement() {
       </div>
       <div className="h-96 w-0.5 hidden lg:block bg-gray-100" />
       <div className="mx-auto flex  flex-col  padding_top_border lg:border-none px-8 lg:px-0 lg:mt-0  justify-center items-center">
-        <p className="text-2xl text-center font-semibold">Send us a message</p>
+        <p className="text-2xl text-center font-semibold">Send Us a Message</p>
         <p className="text-sm grey-text text-center mt-2">
           A member of our team will get back to you shortly.
         </p>

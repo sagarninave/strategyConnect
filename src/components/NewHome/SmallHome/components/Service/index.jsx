@@ -37,24 +37,28 @@ export default function index() {
                 Product Services
               </p>
             </div>
-            <div className="flip-card-back font-medium text-lg text-center divide-y divide-teal-400 divide-y-8 p-2">
-              <p className="my-2 mt-2 font-semibold">
-                Projects are done in a faster and cheaper manner where on-demand teams of consultants are <br />
-                assigned to each project.
+            <div className="flip-card-back font-medium text-lg text-center p-4">
+              <p className="my-2 mt-2 font-semibold" 
+                 style={{borderBottom:"2px solid #D7D5E8", paddingBottom:"10px"}}>
+                Projects are done in a faster and cheaper manner where on-demand teams of 
+                consultants are assigned to each project.
               </p>
-              <p className="my-2 mt-2">
-                <span className="font-semibold">
-                  How can people buy the service: 
-                </span> <br />
-                Clients do request for a call on the website and <br />
-                SC will develop a proposal for them</p>
-              <p className="my-2 mt-2">
-                <span className="font-semibold">
-                  How do customers use the service: 
-                </span> <br />
-                At the end of the engagement, customer will <br />
-                receive the studies in the form of PowerPoint, <br />
-                word doc or excel documents.</p>
+              <hr style={{border:'2px solid #D7D5E8', width:"70%", margin:'auto'}}/>
+              <p className="my-2 mt-2 text-center font-semibold"
+                 style={{borderBottom:"2px solid #D7D5E8", paddingBottom:"10px", paddingTop:"5px"}}>
+                How can people buy the service:  <br/>
+                <span className="font-medium text-justify">
+                  Clients do request for a call on the website and SC will develop a proposal for them
+                </span> 
+              </p>
+              <p className="my-2 mt-2 text-center font-semibold"
+                style={{paddingTop:"5px"}}>
+                How do customers use the service: <br/>
+                <span className="font-medium text-justify">
+                  At the end of the engagement, customer will receive the studies in the form of 
+                  PowerPoint, word doc or excel documents.
+                </span> 
+              </p>
             </div>
           </div>
         </div>
@@ -72,35 +76,44 @@ export default function index() {
                 src={marketplaceexperts}
               />
               <p className="mt-2 text-base text-3xl font-semibold">
-              Marketplace Experts
+                Marketplace Experts
               </p>
             </div>
-            <div className="flip-card-back font-medium text-lg text-center divide-y divide-y-8 p-2">
-              <p className="my-2 mt-2 font-semibold">
+            <div className="flip-card-back font-medium text-lg text-center p-4">
+              <p className="my-2 mt-2 font-semibold" 
+                 style={{borderBottom:"2px solid #D7D5E8", paddingBottom:"10px"}}>
                 On-demand calls billed on an hourly basis
               </p>
-              <p className="my-2 mt-2">
-                <span className="font-semibold">
-                  How can people buy the service: 
-                </span> <br />
-                Users pay a subscription fee to get full access to <br/>
-                the consultants so that they can book with them.
+
+              <p className="my-2 mt-2 text-center font-semibold"
+                 style={{borderBottom:"2px solid #D7D5E8", paddingBottom:"10px", paddingTop:"5px"}}>
+                How can people buy the service: <br/>
+                <span className="font-medium text-justify">
+                Users pay a subscription fee to get full access to the consultants so that they can
+                book with them.
+                </span> 
               </p>
 
-              <p className="my-2 mt-2">
-                Users pay an hourly rate fee to when doing a call <br/> with consultants.
+              <p className="my-2 mt-2 text-center font-semibold"
+                 style={{borderBottom:"2px solid #D7D5E8", paddingBottom:"10px", paddingTop:"5px"}}>
+                <span className="font-medium text-justify">
+                  Users pay an hourly rate fee to when doing a call <br/> with consultants.
+                </span> 
               </p>
 
-              <p className="my-2 mt-2">
-                <span className="font-semibold">
-                  How do customers use the service: 
-                </span> <br />
-                They get an account with access to the database <br/>
-                of consultants
+              <p className="my-2 mt-2 text-center font-semibold"
+                 style={{borderBottom:"2px solid #D7D5E8", paddingBottom:"10px", paddingTop:"5px"}}>
+                How do customers use the service: <br/>
+                <span className="font-medium text-justify">
+                  They get an account with access to the database of consultants
+                </span> 
               </p>
 
-              <p className="my-2 mt-2">
-                Customers can book a call and pay for it using the <br/> website.  
+              <p className="my-2 mt-2 text-center font-semibold"
+                 style={{paddingTop:"5px"}}>
+                <span className="font-medium text-justify">
+                  Customers can book a call and pay for it using the website.
+                </span> 
               </p>
             </div>
           </div>
@@ -110,9 +123,6 @@ export default function index() {
       <div>
         <img className="giff" src={gift1} alt="GIf" />
       </div>
-      {/* <div>
-        <img className="giff" src={gift2} alt="GIf" />
-      </div> */}
     </>
   );
 }
