@@ -15,8 +15,8 @@ function index() {
           <img src={boys} style={{height:"auto"}} loading="lazy" alt="boys" 
                className="h-full w-full lg:h-full h-20 ml-2.5 lg:ml-0 mb-4" />
         </div>
-        <div className="flex justify-between ml-4 lg:ml-4 lg:w-6/12 w-44">
-          <p className="text-lg grey-text leading-7 ml-20 w-full hidden lg:flex text-justify">
+        <div className="flex-1 justify-end pt-0 pl-14 pr-0 lg:w-6/12 w-44">
+          <p className="text-lg grey-text leading-7 w-full hidden lg:flex text-justify">
             The idea for Strategy Connect germinated as a discussion between Haninder and Shubham when they
             discovered in their respective work environments that many organizations are suffering from issues
             around CRM implementations, Performace Marketing intiatives, Last Mile Logistics management. This
@@ -26,14 +26,14 @@ function index() {
         </div>
       </div>
 
-      <p className="text-lg lg:pr-24 relative lg:mt-11 lg:leading-7 pr-4 lg:pr-0 leading-6 grey-text text-justify">
+      <p className="relative grey-text w-full text-justify text-lg lg:pr-0 lg:mt-11 lg:leading-7">
         Shubham and Haninder got started with XXX company, helping them pair with right team of professionals
         from outside the GCC based on their networks in India, Pakistan, Lebanon and Egypt - highly experienced,
         top quality talent assembled on-demand and customized for the project needs. It was a great success and
         they never looked back!
       </p>
 
-      <p className="lg:pr-24 te:block text-lg lg:leading-7 relative pr-4 lg:pr-0 leading-6 grey-text mt-6 text-justify">
+      <p className="relative grey-text w-full text-justify text-lg lg:pr-0 lg:mt-11 lg:leading-7">
         Rapid growth ensued, with many more companies signing up for different project needs and different
         length of projects and team sizes. This prompted automation, procedural compliance and reporting
         standardization at Strategy Connect.
@@ -41,41 +41,42 @@ function index() {
 
       <p className="text-xl mt-6 text-center uppercase black-text">FOUNDING TEAM</p>
 
-      <div className="flex item-center relative lg:mt-5">
-        <div style={{ backgroundColor: "#fff", width:"431px"}} className="rounded-md mr-20">
-          <div style={{ borderColor: "#2EC4EA", width: "431px", height: "282px" }}
-            className="rounded-md border-2 p-6">
-            <img src={shubham} loading="lazy" alt="boys" className="h-full w-full lg:h-full" />
+      <div className="flex justify-between relative lg:mt-8 lg:w-9/12 mx-auto">
+        <div className="flex-1 justify-start pr-0 lg:w-6/12 w-44">
+          <div style={{ backgroundColor: "#fff", width:"431px"}} 
+              className="rounded-md mr-20">
+            <div style={{ borderColor: "#2EC4EA", width: "431px", height: "282px" }}
+                className="rounded-md border-2 p-6">
+              <img src={shubham} loading="lazy" alt="boys" className="h-full w-full lg:h-full" />
+            </div>
+            <p className="text-xl mt-6 text-center black-text">Shubham</p>
+            <p className="text-lg grey-text  p-4 ml-4 leading-7 w-full lg:flex text-justify">
+              Former VP (Operations) at Namshi.com, <br/>
+              one of the biggest online Fashion Retailer <br/>
+              in the MENA region, who led a team of <br/>
+              100 to build operations for Namshi <br/>
+              spanning across UAE, KSA and the rest of <br/> 
+              GCC
+            </p>
           </div>
-          
-          <p className="text-xl mt-6 text-center black-text">Shubham</p>
-
-          <p className="text-lg grey-text  p-4 ml-4 leading-7 w-full lg:flex text-justify">
-            Former VP (Operations) at Namshi.com, <br/>
-            one of the biggest online Fashion Retailer <br/>
-            in the MENA region, who led a team of <br/>
-            100 to build operations for Namshi <br/>
-            spanning across UAE, KSA and the rest of <br/> 
-            GCC
-          </p>
         </div>
-
-        <div style={{ backgroundColor: "#fff", width:"431px", float:"left"}} className="rounded-md ml-20">
-          <div style={{ borderColor: "#2EC4EA", width: "431px", height: "282px" }}
-            className="rounded-md border-2 p-6">
-            <img src={haninder} loading="lazy" alt="haninder" className="h-full w-full lg:h-full" />
+        <div className="flex-1 pr-0 lg:w-6/12 w-44">
+          <div style={{ backgroundColor: "#fff", width:"431px", float:"left"}} 
+              className="rounded-md ml-20 justify-between">
+            <div style={{ borderColor: "#2EC4EA", width: "431px", height: "282px" }}
+              className="rounded-md border-2 p-6">
+              <img src={haninder} loading="lazy" alt="haninder" className="h-full w-full lg:h-full" />
+            </div>
+            <p className="text-xl mt-6 text-center black-text">Haninder</p>
+            <p className="text-lg grey-text  p-4 ml-4 leading-7 w-full lg:flex text-justify">
+              Former VP (Operations) at Namshi.com, <br/>
+              one of the biggest online Fashion Retailer <br/>
+              in the MENA region, who led a team of <br/>
+              100 to build operations for Namshi <br/>
+              spanning across UAE, KSA and the rest of<br/> 
+              GCC
+            </p>
           </div>
-
-          <p className="text-xl mt-6 text-center black-text">Haninder</p>
-
-          <p className="text-lg grey-text  p-4 ml-4 leading-7 w-full lg:flex text-justify">
-            Former VP (Operations) at Namshi.com, <br/>
-            one of the biggest online Fashion Retailer <br/>
-            in the MENA region, who led a team of <br/>
-            100 to build operations for Namshi <br/>
-            spanning across UAE, KSA and the rest of<br/> 
-            GCC
-          </p>
         </div>
       </div>
     </div >
