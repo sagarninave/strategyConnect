@@ -38,21 +38,19 @@ export default function index() {
               </p>
             </div>
             <div className="flip-card-back font-medium text-lg text-center p-4">
-              <p className="my-2 mt-2 font-semibold" 
-                 style={{borderBottom:"2px solid #D7D5E8", paddingBottom:"10px"}}>
+              <p className="my-2 mt-2 pb-2 font-semibold">
                 Projects are done in a faster and cheaper manner where on-demand teams of 
                 consultants are assigned to each project.
               </p>
-              <hr style={{border:'2px solid #D7D5E8', width:"70%", margin:'auto'}}/>
-              <p className="my-2 mt-2 text-center font-semibold"
-                 style={{borderBottom:"2px solid #D7D5E8", paddingBottom:"10px", paddingTop:"5px"}}>
+              <hr style={{border:'1px solid #D7D5E8', width:"70%", margin:'auto'}}/>
+              <p className="my-2 mt-3 pb-2 text-center font-semibold">
                 How can people buy the service:  <br/>
                 <span className="font-medium text-justify">
                   Clients do request for a call on the website and SC will develop a proposal for them
                 </span> 
               </p>
-              <p className="my-2 mt-2 text-center font-semibold"
-                style={{paddingTop:"5px"}}>
+              <hr style={{border:'1px solid #D7D5E8', width:"70%", margin:'auto'}}/>
+              <p className="my-2 mt-3 text-center font-semibold">
                 How do customers use the service: <br/>
                 <span className="font-medium text-justify">
                   At the end of the engagement, customer will receive the studies in the form of 
@@ -80,37 +78,32 @@ export default function index() {
               </p>
             </div>
             <div className="flip-card-back font-medium text-lg text-center p-4">
-              <p className="my-2 mt-2 font-semibold" 
-                 style={{borderBottom:"2px solid #D7D5E8", paddingBottom:"10px"}}>
+              <p className="my-2 mt-2 font-semibold">
                 On-demand calls billed on an hourly basis
               </p>
-
-              <p className="my-2 mt-2 text-center font-semibold"
-                 style={{borderBottom:"2px solid #D7D5E8", paddingBottom:"10px", paddingTop:"5px"}}>
+              <hr style={{border:'1px solid #D7D5E8', width:"70%", margin:'auto'}}/>
+              <p className="my-2 mt-2 text-center font-semibold">
                 How can people buy the service: <br/>
                 <span className="font-medium text-justify">
                 Users pay a subscription fee to get full access to the consultants so that they can
                 book with them.
                 </span> 
               </p>
-
-              <p className="my-2 mt-2 text-center font-semibold"
-                 style={{borderBottom:"2px solid #D7D5E8", paddingBottom:"10px", paddingTop:"5px"}}>
+              <hr style={{border:'1px solid #D7D5E8', width:"70%", margin:'auto'}}/>
+              <p className="my-2 mt-2 text-center font-semibold">
                 <span className="font-medium text-justify">
                   Users pay an hourly rate fee to when doing a call <br/> with consultants.
                 </span> 
               </p>
-
-              <p className="my-2 mt-2 text-center font-semibold"
-                 style={{borderBottom:"2px solid #D7D5E8", paddingBottom:"10px", paddingTop:"5px"}}>
+              <hr style={{border:'1px solid #D7D5E8', width:"70%", margin:'auto'}}/>
+              <p className="my-2 mt-2 text-center font-semibold">
                 How do customers use the service: <br/>
                 <span className="font-medium text-justify">
                   They get an account with access to the database of consultants
                 </span> 
               </p>
-
-              <p className="my-2 mt-2 text-center font-semibold"
-                 style={{paddingTop:"5px"}}>
+              <hr style={{border:'1px solid #D7D5E8', width:"70%", margin:'auto'}}/>
+              <p className="my-2 mt-2 text-center font-semibold">
                 <span className="font-medium text-justify">
                   Customers can book a call and pay for it using the website.
                 </span> 
