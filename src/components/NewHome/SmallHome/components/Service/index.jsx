@@ -1,12 +1,9 @@
 import React from 'react';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
-import { Link } from 'react-router-dom';
 import marketplaceexperts from '../../../../../assets/img/MarketplaceExperts.png';
 import productservice from '../../../../../assets/img/ProductService.png';
-import gift1 from '../../../../../assets/img/gift1.gif';
-import gift2 from '../../../../../assets/img/gift2.gif';
-import './service.css';
+import gift3 from '../../../../../assets/img/gift3.gif';
 
 export default function index() {
   return (
@@ -114,7 +111,7 @@ export default function index() {
       </div>
 
       <div>
-        <img className="giff" src={gift1} alt="GIf" />
+        <img className="giff" src={gift3} alt="GIf" />
       </div>
     </>
   );

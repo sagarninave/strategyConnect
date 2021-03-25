@@ -1,7 +1,7 @@
 import React from 'react';
 import boys from '../../../assets/img/g-boy.png';
-import shubham from '../../../assets/img/Shubham.png';
-import haninder from '../../../assets/img/Haninder.png';
+import shubham from '../../../assets/img/Shubham1.png';
+import haninder from '../../../assets/img/Haninder1.png';
 
 function index() {
   return (
@@ -50,13 +50,18 @@ function index() {
               <img src={shubham} loading="lazy" alt="boys" className="h-full w-full lg:h-full" />
             </div>
             <p className="text-xl mt-6 text-center black-text">Shubham</p>
-            <p className="text-lg grey-text  p-4 ml-4 leading-7 w-full lg:flex text-justify">
+            {/* <p className="text-lg grey-text  p-4 ml-4 leading-7 w-full lg:flex text-justify">
               Former VP (Operations) at Namshi.com, <br/>
               one of the biggest online Fashion Retailer <br/>
               in the MENA region, who led a team of <br/>
               100 to build operations for Namshi <br/>
               spanning across UAE, KSA and the rest of <br/> 
               GCC
+            </p> */}
+            <p className="text-lg grey-text p-4 px-8 leading-7 w-full lg:flex text-justify">
+              Former VP (Operations) at Namshi.com, one of the biggest online Fashion Retailer 
+              in the MENA region, who led a team of 100 to build operations for Namshi 
+              spanning across UAE, KSA and the rest of GCC
             </p>
           </div>
         </div>
@@ -68,13 +73,18 @@ function index() {
               <img src={haninder} loading="lazy" alt="haninder" className="h-full w-full lg:h-full" />
             </div>
             <p className="text-xl mt-6 text-center black-text">Haninder</p>
-            <p className="text-lg grey-text  p-4 ml-4 leading-7 w-full lg:flex text-justify">
+            {/* <p className="text-lg grey-text  p-4 ml-4 leading-7 w-full lg:flex text-justify">
               Former VP (Operations) at Namshi.com, <br/>
               one of the biggest online Fashion Retailer <br/>
               in the MENA region, who led a team of <br/>
               100 to build operations for Namshi <br/>
               spanning across UAE, KSA and the rest of<br/> 
               GCC
+            </p> */}
+            <p className="text-lg grey-text p-4 px-8 leading-7 w-full lg:flex text-justify">
+              Former VP (Operations) at Namshi.com, one of the biggest online Fashion Retailer 
+              in the MENA region, who led a team of 100 to build operations for Namshi 
+              spanning across UAE, KSA and the rest of GCC
             </p>
           </div>
         </div>
