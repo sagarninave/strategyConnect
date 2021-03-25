@@ -71,13 +71,13 @@ function Subscription() {
                   <span className="tick"></span>
                   Assessment of market scenario including
                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;customer segmentation, target customer
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;personas and market size estimation.
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;personas, and market size estimation.
                 </p>
               </li>
               <li className="font14 mb-4">
                 <p className="leading-6" style={{ color: "#5C5B5B" }}>
                   <span className="tick"></span>
-                  Identifying unique value preposition and
+                  Identifying unique value proposition and
                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;market positioning.
                 </p>
               </li>
@@ -115,14 +115,14 @@ function Subscription() {
               <li className="font14 mb-4">
                 <p className="leading-6" style={{ color: "#5C5B5B" }}>
                   <span className="tick"></span>
-                    Highlighting key customer(s) acquired
+                    Highlighting key customer(s) acquired.
                   </p>
               </li>
               <li className="font14 mb-4">
                 <p className="leading-6" style={{ color: "#5C5B5B" }}>
                   <span className="tick"></span>
                     Underlining revenue and customer
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;growth trends
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;growth trends.
                   </p>
               </li>
             </ul>
@@ -152,13 +152,13 @@ function Subscription() {
               <li className="font14 mb-4">
                 <p className="leading-6" style={{ color: "#5C5B5B" }}>
                   <span className="tick"></span>
-                    Assessing organization growth
+                    Assessing organization growth.
                   </p>
               </li>
               <li className="font14 mb-4">
                 <p className="leading-6" style={{ color: "#5C5B5B" }}>
                   <span className="tick"></span>
-                    Assessing technology readiness
+                    Assessing technology readiness.
                 </p>
               </li>
               <li className="font14 mb-4">
@@ -166,7 +166,7 @@ function Subscription() {
                   <span className="tick"></span>
                     Addressing cost optimization through
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;outsourcing and creative procurement
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;strategies
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;strategies.
                   </p>
               </li>
             </ul>
@@ -187,25 +187,25 @@ function Subscription() {
               <li className="font14 mb-4">
                 <p className="leading-6" style={{ color: "#5C5B5B" }}>
                   <span className="tick"></span>
-                  Evaluating key financial ratios
+                  Evaluating key financial ratios.
                 </p>
               </li>
               <li className="font14 mb-4">
                 <p className="leading-6" style={{ color: "#5C5B5B" }}>
                   <span className="tick"></span>
-                  Evaluating unit economics
+                  Evaluating unit economics.
                 </p>
               </li>
               <li className="font14 mb-4">
                 <p className="leading-6" style={{ color: "#5C5B5B" }}>
                   <span className="tick"></span>
-                  Assessing cost of customer acquisition
+                  Assessing the cost of customer acquisition.
                 </p>
               </li>
               <li className="font14 mb-4">
                 <p className="leading-6" style={{ color: "#5C5B5B" }}>
                   <span className="tick"></span>
-                  Creating cash flow growth scenarios
+                  Creating cash flow growth scenarios.
                 </p>
               </li>
               <li className="font14 mb-4">
@@ -213,7 +213,7 @@ function Subscription() {
                   <span className="tick"></span>
                   Developing comprehensive 3 to 5-year
                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;growth roadmap with clearly defined
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;milestones
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;milestones.
                 </p>
               </li>
             </ul>

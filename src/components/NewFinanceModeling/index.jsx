@@ -18,7 +18,7 @@ export default function index() {
           Financial Modeling
         </p>
         <p className="text-lg text-black text-center mx-auto font-semibold mt-4">
-          We create an exhaustive and easy to use financial model that can <br/> 
+          We create an exhaustive and easy to use a financial model that can <br/> 
           scale with your business
         </p>
       </div>

@@ -86,7 +86,7 @@ export default function index() {
         </div>
         <div className="flex-1 ml-28 lg:-mt-16">
           <p className="lg:text-3xl text-lg text-center lg:text-left font-bold">
-            Go-To Market Strategy
+            Go-To-Market Strategy
           </p>
           <p className="font-medium text-base lg:text-lg lg:w-full text-center lg:text-left mx-auto lg:mx-0 grey-text mt-5 font-thin">
             We uncover deep insights that can help your business 

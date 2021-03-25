@@ -72,13 +72,13 @@ function Subscription() {
                   <span className="tick"></span> 
                   Assessment of market scenario including 
                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;customer segmentation, target customer 
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;personas and market size estimation.                
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;personas, and market size estimation.                
                 </p>
               </li>
               <li className="font14 mb-4">
                 <p className="leading-6" style={{color:"#5C5B5B"}}> 
                   <span className="tick"></span>
-                  Identifying unique value preposition and 
+                  Identifying unique value proposition and 
                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;market positioning.
                 </p>
               </li>
@@ -87,7 +87,7 @@ function Subscription() {
                   <span className="tick"></span>
                   Identifying competitor segmentation by 
                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;product offering, price, customer focus,<br/>
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;geography and traction. 
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;geography, and traction. 
                 </p>
               </li>
             </ul>

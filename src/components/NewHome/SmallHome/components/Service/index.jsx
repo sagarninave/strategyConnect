@@ -46,15 +46,15 @@ export default function index() {
               <p className="my-2 mt-3 pb-2 text-center font-semibold">
                 How can people buy the service:  <br/>
                 <span className="font-medium text-justify">
-                  Clients do request for a call on the website and SC will develop a proposal for them
+                  Clients do request  a call on the website and SC will develop a proposal for them
                 </span> 
               </p>
               <hr style={{border:'1px solid #D7D5E8', width:"70%", margin:'auto'}}/>
               <p className="my-2 mt-3 text-center font-semibold">
                 How do customers use the service: <br/>
                 <span className="font-medium text-justify">
-                  At the end of the engagement, customer will receive the studies in the form of 
-                  PowerPoint, word doc or excel documents.
+                  At the end of the engagement, customers will receive the studies in the form of 
+                  PowerPoint, word doc, or excel documents.
                 </span> 
               </p>
             </div>
@@ -85,7 +85,7 @@ export default function index() {
               <p className="my-2 mt-2 text-center font-semibold">
                 How can people buy the service: <br/>
                 <span className="font-medium text-justify">
-                Users pay a subscription fee to get full access to the consultants so that they can
+                Users pay a subscription fee  get full access to the consultants so that they can
                 book with them.
                 </span> 
               </p>
