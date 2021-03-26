@@ -20,12 +20,11 @@ export default function index() {
       </div>
       <Link to="/business-planning">
         <div style={{ backgroundColor: "#fff" }} className="flex lg:py-8 py-8 lg:px-16 px-8 justify-start refined-bg md:mt-0 xl:mt-0 mt-0 items-center">
-          <div className="flex hidden lg:flex lg:justify-start">
+          <div className="flex  lg:flex lg:justify-start">
             <LazyLoadImage
               alt={BusinessPlanning}
               effect="blur"
-              style={{ height: '15rem', flexGrow: 1 }}
-              className="hidden lg:flex h-96 flex-initial"
+              className=" lg:flex bussinessImg flex-initial"
               src={BusinessPlanning}
             />
           </div>
@@ -55,12 +54,11 @@ export default function index() {
                 calculate the impact of a future event or decision.
             </p>
           </div>
-          <div className="flex hidden lg:flex  justify-end">
+          <div className="flex  lg:flex  justify-end">
             <LazyLoadImage
               alt={FinancialModeling}
               effect="blur"
-              style={{ height: '15rem', flexGrow: 1 }}
-              className="hidden lg:flex h-96 flex-1"
+              className=" lg:flex bussinessImg flex-1"
               src={FinancialModeling}
             />
           </div>
@@ -70,12 +68,11 @@ export default function index() {
       <Link to="/go-to-market-strategy">
         <div style={{ backgroundColor: "#fff" }}
           className="flex lg:py-1 py-8 lg:px-16 px-8 justify-between refined-bg md:mt-5 xl:mt-5 mt-5 mb-10 items-center">
-          <div className="flex hidden lg:flex  justify-start">
+          <div className="flex  lg:flex  justify-start">
             <LazyLoadImage
               alt={GoToMarketPlanning}
               effect="blur"
-              style={{ height: '15rem', flexGrow: 1 }}
-              className="hidden lg:flex h-96 flex-1"
+              className=" lg:flex bussinessImg flex-1"
               src={GoToMarketPlanning}
             />
           </div>

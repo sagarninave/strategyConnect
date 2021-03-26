@@ -19,7 +19,7 @@ function Index() {
     <div>
       <Carousel
         ref={carouselRef}
-        style={{ backgroundColor: "#fff", paddingTop:"30px", paddingBottom:"40px"}}
+       className="marginSlider"
         enableAutoPlay
         autoPlaySpeed={4000}
         onNextEnd={(nextItemObject, currentPageIndex) => {
