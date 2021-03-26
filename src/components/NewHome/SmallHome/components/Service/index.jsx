@@ -89,7 +89,7 @@ export default function index() {
               <hr style={{border:'1px solid #D7D5E8', width:"70%", margin:'auto'}}/>
               <p className="my-2 mt-2 text-center font-semibold">
                 <span className="font-medium text-justify">
-                  Users pay an hourly rate fee to when doing a call <br/> with consultants.
+                  Users pay an hourly rate fee to when doing a call with consultants.
                 </span> 
               </p>
               <hr style={{border:'1px solid #D7D5E8', width:"70%", margin:'auto'}}/>
