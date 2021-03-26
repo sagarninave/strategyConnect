@@ -22,7 +22,7 @@ export default function index() {
           With streamlined advisory services
         </p>
       </div>
-      <div className="xl:px-32 px-0">
+      <div className="px-5 lg:px-32 xl:px-32 px-0">
         <OurStory />
       </div>
       {/* <Work /> */}
