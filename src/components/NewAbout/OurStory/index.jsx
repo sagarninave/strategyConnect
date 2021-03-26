@@ -37,14 +37,14 @@ function index() {
         </div>
       </div>
 
-      <p className="relative grey-text w-full text-left lg:text-justify text-lg lg:pr-0 lg:mt-11 lg:leading-7">
+      <p className="text-lg grey-text w-full text-justify px-4 py-4 lg:pt-5 lg:px-0 lg:leading-7">
         Shubham and Haninder got started with XXX company, helping them pair with the right team of professionals
         from outside the GCC based on their networks in India, Pakistan, Lebanon, and Egypt - highly experienced,
         top-quality talent assembled on-demand and customized for the project needs. It was a great success and
         they never looked back!
       </p>
 
-      <p className="relative grey-text w-full text-left lg:text-justify text-lg lg:pr-0 lg:mt-11 lg:leading-7">
+      <p className="text-lg grey-text w-full text-justify px-4 pb-4 lg:pt-5 lg:px-0 lg:leading-7">
         Rapid growth ensued, with many more companies signing up for different project needs and different
         lengths of projects and team sizes. This prompted automation, procedural compliance, and reporting
         standardization at Strategy Connect.
