@@ -6,10 +6,10 @@ import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 function index() {
   return (
-    <div style={{ backgroundColor: "#F3F8FC" }} className="xl:pt-4 py-7 lg:mt-24 mt-10 mb-10 lg:p-10">
-      <p className="text-xl text-center uppercase black-text">Our Story</p>
-      <div className="flex justify-between relative lg:mt-8  mx-auto">
-        <div className="flex-1 justify-start pr-0 lg:w-6/12 w-44">
+    <div style={{ backgroundColor: "#F3F8FC" }} className="mt-5 pt-5 lg:p-10">
+      <p className="text-sm lg:text-lg pb-3 lg:pb-0 text-center uppercase black-text">Our Story</p>
+      <div className="flex justify-between relative lg:mt-8 mx-auto">
+        <div className="flex-1 justify-start pr-0 lg:w-6/12 w-44 hidden lg:block xl:block">
           <div style={{ backgroundColor: "#fff"}} className="rounded-md mr-20">
             <div style={{ borderColor: "#2EC4EA" }} className="rounded-md border-2 p-6 pb-0 imgRes">
               <LazyLoadImage
@@ -25,26 +25,26 @@ function index() {
           </div>
         </div>
         <div className="flex-1 pr-0 lg:w-6/12 w-44">
-          <div className="rounded-md justify-between">
-            <p className="text-lg grey-text p-0 leading-7 w-full lg:flex text-justify">
-            The idea for Strategy Connect germinated as a discussion between Haninder and Shubham when they
-            discovered in their respective work environments that many organizations are suffering from issues
-            around CRM implementations, Performace Marketing initiatives, Last Mile Logistics management. This
-            was especially true for startups and  SMEs in the MENA region as they found it difficult to get
-            matched with the right talent at affordable prices.
+          <div className="rounded-md justify-between mx-4 lg:p-0">
+            <p className="text-lg grey-text leading-7 w-full lg:flex text-justify">
+              The idea for Strategy Connect germinated as a discussion between Haninder and Shubham when they
+              discovered in their respective work environments that many organizations are suffering from issues
+              around CRM implementations, Performace Marketing initiatives, Last Mile Logistics management. This
+              was especially true for startups and  SMEs in the MENA region as they found it difficult to get
+              matched with the right talent at affordable prices.
             </p>
           </div>
         </div>
       </div>
 
-      <p className="relative grey-text w-full text-justify text-lg lg:pr-0 lg:mt-11 lg:leading-7">
+      <p className="relative grey-text w-full text-left lg:text-justify text-lg lg:pr-0 lg:mt-11 lg:leading-7">
         Shubham and Haninder got started with XXX company, helping them pair with the right team of professionals
         from outside the GCC based on their networks in India, Pakistan, Lebanon, and Egypt - highly experienced,
         top-quality talent assembled on-demand and customized for the project needs. It was a great success and
         they never looked back!
       </p>
 
-      <p className="relative grey-text w-full text-justify text-lg lg:pr-0 lg:mt-11 lg:leading-7">
+      <p className="relative grey-text w-full text-left lg:text-justify text-lg lg:pr-0 lg:mt-11 lg:leading-7">
         Rapid growth ensued, with many more companies signing up for different project needs and different
         lengths of projects and team sizes. This prompted automation, procedural compliance, and reporting
         standardization at Strategy Connect.
