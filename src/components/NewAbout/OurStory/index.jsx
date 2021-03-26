@@ -70,7 +70,7 @@ function OurStory() {
 
       <p className="text-sm lg:text-xl lg:mt:6 text-center uppercase black-text">FOUNDING TEAM</p>
 
-      <div className="founder-desktop flex justify-between relative lg:mt-8 mx-auto">
+      <div className="flex mobile justify-between relative lg:mt-8  mx-auto">
         <div className="flex-1 justify-start pr-0 lg:w-6/12 w-44">
           <div style={{ backgroundColor: "#fff" }}
             className="rounded-md mr-20">
