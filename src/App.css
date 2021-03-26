@@ -314,7 +314,10 @@
     padding: 12px;
   }
   .minHeightBussiness{
-    height: 600px;
+    height: 690px;
+  }
+  .p-5{
+    padding: 0px;
   }
 }
 
