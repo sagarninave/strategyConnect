@@ -46,7 +46,7 @@ function index() {
             </ul>
             <ul>
               <li className="font14">
-                <span className="tick"></span> Self-Service Audit Documnet</li>
+                <span className="tick"></span> Self-Service Audit Document</li>
               <li className="font14">
                 <p>
                   <span className="tick"></span>
@@ -64,7 +64,7 @@ function index() {
               <li className="font14">
                 <p className="light_grey grey-text">
                   <span className="tick"></span>
-                  Training Video Access Enclude
+                  Training Video Access Include
                 </p>
               </li>
             </ul>
@@ -93,7 +93,7 @@ function index() {
                 <span className="tick" style={{
                 borderBottom: ' 3px solid #fff',
                 borderRight: '3px solid #fff'
-              }}></span> Self-Service Audit Documnet</li>
+              }}></span> Self-Service Audit Document</li>
               <li className="font14">
                 <p>
                   <span className="tick" style={{
@@ -121,7 +121,7 @@ function index() {
                 borderBottom: ' 3px solid #fff',
                 borderRight: '3px solid #fff'
               }}></span>
-                  Training Video Access Enclude
+                  Training Video Access Include
               </p>
               </li>
             </ul>

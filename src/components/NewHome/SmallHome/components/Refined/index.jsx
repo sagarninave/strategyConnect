@@ -51,7 +51,7 @@ export default function index() {
             </p>
               <p className="font-medium text-base lg:text-xl  lg:w-11/12 text-center lg:text-left mx-auto lg:mx-0 grey-text mt-10 font-thin">
                 A summary of a company’s expenses and earnings
-                in the form of a spreadsheet that can be used to
+                in the form of a spreadsheet  can be used to
                 calculate the impact of a future event or decision.
             </p>
           </div>
@@ -81,7 +81,7 @@ export default function index() {
           </div>
           <div className="flex-1 ml-32">
             <p className="lg:text-3xl text-lg text-center lg:text-left font-bold">
-              Go-To Market Planning
+              Go-To-Market Planning
             </p>
             <p className="font-medium text-base lg:text-xl  lg:w-11/12 text-center lg:text-left mx-auto lg:mx-0 grey-text mt-10 font-thin">
               A marketing plan that documents the goals, objectives,

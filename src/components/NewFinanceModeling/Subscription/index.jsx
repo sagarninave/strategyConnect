@@ -73,21 +73,21 @@ function Subscription() {
                   Identify revenue drivers and cost streams
                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;through primary and secondary research
                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;and do financial projections for income and
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;expenses
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;expenses.
                 </p>
               </li>
               <li className="font14 mb-4">
                 <p className="leading-6" style={{ color: "#5C5B5B" }}>
                   <span className="tick"></span>
                   Refining the operating expenses as per
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;the scale of the business
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;the scale of the business.
                 </p>
               </li>
               <li className="font14 mb-4">
                 <p className="leading-6" style={{ color: "#5C5B5B" }}>
                   <span className="tick"></span>
                   Estimating the capital expenditure
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;essential for running the business
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;essential for running the business.
                 </p>
               </li>
             </ul>
@@ -110,16 +110,16 @@ function Subscription() {
                 <p className="leading-6" style={{ color: "#5C5B5B" }}>
                   <span className="tick"></span>
                     Preparing Profit and Loss statements,
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Balance Sheets and Cash Flow
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Balance Sheets. and Cash Flow
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Statements.
                   </p>
               </li>
               <li className="font14 mb-4">
                 <p className="leading-6" style={{ color: "#5C5B5B" }}>
                   <span className="tick"></span>
-                    Identifying business KPIs, financial ratios
+                    Identifying business KPIs, financial ratios,
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;and unit economics, presented through
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;visually appealing infographics
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;visually appealing infographics.
                   </p>
               </li>
             </ul>
@@ -138,7 +138,7 @@ function Subscription() {
           <div className="boxAnalytics" style={{ height: "500px" }}>
             <p className="text-lg md:text-2xl font-bold leading-10"
               style={{ borderBottom: '1px solid #B1B5B9', marginBottom: '15px', padding: '9px 0px' }}>
-              Business Valuations <br /> and Sensitivity Analysis
+              Business Valuations <br /> and Sensitivity Analysis.
             </p>
             <ul>
               <li className="font14 mb-4">
@@ -171,27 +171,27 @@ function Subscription() {
           <div className="boxAnalytics" style={{ height: "500px" }}>
             <p className="text-lg md:text-2xl font-bold leading-10"
               style={{ borderBottom: '1px solid #B1B5B9', marginBottom: '15px', padding: '9px 0px' }}>
-              Creating a Scalable <br /> Financial Model Structure
+              Creating a Scalable <br /> Financial Model Structure.
             </p>
             <ul>
               <li className="font14 mb-4">
                 <p className="leading-6" style={{ color: "#5C5B5B" }}>
                   <span className="tick"></span>
-                  Preparing easy to understand model <br />
+                  Preparing easy  understand the model <br />
                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;flow using videos with professional  <br />
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;voice-overs
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;voice-overs.
                 </p>
               </li>
               <li className="font14 mb-4">
                 <p className="leading-6" style={{ color: "#5C5B5B" }}>
                   <span className="tick"></span>
-                  Evaluating unit economics
+                  Evaluating unit economics.
                 </p>
               </li>
               <li className="font14 mb-4">
                 <p className="leading-6" style={{ color: "#5C5B5B" }}>
                   <span className="tick"></span>
-                  Preparing an index for the model
+                  Preparing an index for the model.
                 </p>
               </li>
               <li className="font14 mb-4">
@@ -199,7 +199,7 @@ function Subscription() {
                   <span className="tick"></span>
                     Creating a modular structure of the  <br />
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;model to allow for addition/removal of a  <br />
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;business units and geographies
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;business units and geographies.
                 </p>
               </li>
             </ul>
