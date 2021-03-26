@@ -314,10 +314,22 @@
     padding: 12px;
   }
   .minHeightBussiness{
-    height: 690px;
+    height: 480px;
   }
   .p-5{
     padding: 0px;
+  }
+  .mobile{
+    display: block!important;
+  }
+  .mr-20{
+    margin-right: 0px;
+  }
+  .ml-20{
+    margin-left: 0px;
+  }
+  .w-44{
+    width: 100%;
   }
 }
 
