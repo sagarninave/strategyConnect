@@ -269,6 +269,7 @@
 }
 
 @media only screen and (max-width:480px) {
+
   .px-8 {
     padding-left: 4px;
     padding-right: 4px;
