@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import Modal from 'react-modal';
 import { AiOutlineCloseCircle } from "react-icons/ai";
+import { useFormik } from 'formik';
+import * as Yup from 'yup';
 
 const customStyles = {
   content: {
@@ -44,6 +46,57 @@ function Subscription() {
   function closeModal2() {
     setIsOpen2(false);
   }
+
+  const formik = useFormik({
+    initialValues: {
+      name: '',
+      email: '',
+      phone: '',
+      message: '',
+      organization: '',
+    },
+    validationSchema: Yup.object({
+      name: Yup.string()
+        // .max(15, 'Must be 15 characters or less')
+        .required('Name is required'),
+      email: Yup.string().email('Invalid email address').required('Required'),
+      phone: Yup.string().required('Phone is required'),
+      message: Yup.string().required('Message is required'),
+      organization: Yup.string().required('Organization is required'),
+    }),
+    onSubmit: values => {
+      console.log("VAVVAVVAVA", values)
+      alert(JSON.stringify(values, null, 2));
+    },
+  });
+
+
+  const formikSecond = useFormik({
+    initialValues: {
+      name: '',
+      email: '',
+      phone: '',
+      message: '',
+      industry: '',
+      projectTitle: '',
+      projectDiscription: '',
+    },
+    validationSchema: Yup.object({
+      name: Yup.string()
+        // .max(15, 'Must be 15 characters or less')
+        .required('Name is required'),
+      email: Yup.string().email('Invalid email address').required('Required'),
+      phone: Yup.string().required('Phone is required'),
+      message: Yup.string().required('Message is required'),
+      industry: Yup.string().required('Industry is required'),
+      projectTitle: Yup.string().required('Project Title Discription is required'),
+      projectDiscription: Yup.string().required('Project Discription Discription is required'),
+    }),
+    onSubmitSecond: values => {
+      console.log("VAVVAVVAVA", values)
+      alert(JSON.stringify(values, null, 2));
+    },
+  });
 
   return (
     <div>
@@ -265,12 +318,46 @@ function Subscription() {
               It takes less than a minute
             </p>
           </div>
-          <form class="formInline">
-            <input type="text" id="namee" placeholder="Name" />
-            <input type="text" id="Organisation" placeholder="Organisation Name" />
-            <input type="text" id="Email" placeholder="Email ID" />
-            <input type="text" id="Phone" placeholder="Phone Number" />
-            <textarea placeholder="Message" rows="4"></textarea>
+          <form class="formInline" onSubmit={formik.handleSubmit}>
+            <input type="text" id="namee"
+              placeholder="Name"
+              name="name"
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+              value={formik.values.name}
+            />
+            {/* {formik.touched.name && formik.errors.name ? (
+      <div>{formik.errors.name}</div>
+    ) : null} */}
+            <input type="text"
+              placeholder="Organisation Name"
+              id="Organisation"
+              name="organization"
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+              value={formik.values.organization}
+
+            />
+            <input type="text"
+              id="Email"
+              name="email"
+              placeholder="Email ID"
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+              value={formik.values.email}
+            />
+            <input type="text" id="Phone" placeholder="Phone Number"
+              name="phone"
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+              value={formik.values.phone}
+            />
+            <textarea placeholder="Message" rows="4"
+              name="message"
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+              value={formik.values.message}
+            ></textarea>
             <div className="p-2 pl-2 mt-32 pt-0 rounded-md border-2 ml-16 mr-16" style={{ width: "11.4rem", margin: 'auto', marginTop: ' 25px' }}>
               <button type="submit" className="text-white purple lg:w-40 w-full flex items-center mt-2 mr-2 justify-between border-none focus:outline-none py-2 px-7 rounded">
                 <p className="relative" style={{ margin: 'auto' }}>Submit</p>
@@ -301,14 +388,44 @@ function Subscription() {
               Lets talk about everything.
             </p>
           </div>
-          <form class="formInline">
-            <input type="text" id="name" placeholder="Name" />
-            <input type="text" id="Organisation Name" placeholder="Organisation Name" />
-            <input type="text" id="Email ID" placeholder="Email ID" />
-            <input type="text" id="Phone Number" placeholder="Phone Number" />
-            <input type="text" id="Industry" placeholder="Industry" />
-            <input type="text" id="Project Title" placeholder="Project Title" />
-            <textarea placeholder="Project Description" rows="4"></textarea>
+          <form class="formInline" onSubmit={formikSecond.handleSubmit}>
+            <input type="text" id="name" placeholder="Name"
+              name="name"
+              onChange={formikSecond.handleChange}
+              onBlur={formikSecond.handleBlur}
+              value={formikSecond.values.name}
+            />
+            <input type="text" id="Organisation Name"
+              placeholder="Organisation Name"
+              name="organization"
+              onChange={formikSecond.handleChange}
+              onBlur={formikSecond.handleBlur}
+              value={formikSecond.values.organization} />
+            <input type="text" id="Email ID" placeholder="Email ID"
+              name="email"
+              onChange={formikSecond.handleChange}
+              onBlur={formikSecond.handleBlur}
+              value={formikSecond.values.email} />
+            <input type="text" id="Phone Number" placeholder="Phone Number"
+              name="phone"
+              onChange={formikSecond.handleChange}
+              onBlur={formikSecond.handleBlur}
+              value={formikSecond.values.phone} />
+            <input type="text" id="Industry" placeholder="Industry"
+              name="industry"
+              onChange={formikSecond.handleChange}
+              onBlur={formikSecond.handleBlur}
+              value={formikSecond.values.industry} />
+            <input type="text" id="Project Title" placeholder="Project Title"
+              name="projectTitle"
+              onChange={formikSecond.handleChange}
+              onBlur={formikSecond.handleBlur}
+              value={formikSecond.values.projectTitle} />
+            <textarea placeholder="Project Description" rows="4"
+              name="projectDiscrioption"
+              onChange={formikSecond.handleChange}
+              onBlur={formikSecond.handleBlur}
+              value={formikSecond.values.projectDiscrioption}></textarea>
             <div className="p-2 pl-2 mt-32 pt-0 rounded-md border-2 ml-16 mr-16" style={{ width: "11.4rem", margin: 'auto', marginTop: ' 25px' }}>
               <button type="submit" className="text-white purple lg:w-40 w-full flex items-center mt-2 mr-2 justify-between border-none focus:outline-none py-2 px-7 rounded">
                 <p className="relative" style={{ margin: 'auto' }}>Submit</p>

@@ -2,8 +2,32 @@ import React from 'react';
 import phone from '../../../assets/img/phone-white.svg';
 import chat from '../../../assets/img/chat-white.svg';
 import whats from '../../../assets/img/whatsWhite.svg';
+import { useFormik } from 'formik';
+import * as Yup from 'yup';
 
 function Engagement() {
+  const formik = useFormik({
+    initialValues: {
+      name: '',
+      email: '',
+      phone: '',
+      message: '',
+      organization: '',
+    },
+    validationSchema: Yup.object({
+      name: Yup.string()
+        // .max(15, 'Must be 15 characters or less')
+        .required('Name is required'),
+      email: Yup.string().email('Invalid email address').required('Required'),
+      phone: Yup.string().required('Phone is required'),
+      message: Yup.string().required('Message is required'),
+      organization: Yup.string().required('Organization is required'),
+    }),
+    onSubmit: values => {
+      console.log("VAVVAVVAVA",values)
+      alert(JSON.stringify(values, null, 2));
+    },
+  });
   return (
     <div className="flex lg:flex-row flex-col lg:my-20 my-10 justify-between  xl:px-28">
       <div className="mx-auto lg:w-96">
@@ -23,7 +47,7 @@ function Engagement() {
             <p className="relativeContact ">Chat</p>
           </button>
         </div>
-        
+
         <div className="p-2 pl-2 mt-32 pt-0 rounded-md border-2 ml-16 mr-16" style={{ width: "11.4rem", margin: 'auto', marginTop: ' 25px' }}>
           <button type="submit" className="text-white purple lg:w-40 w-full flex items-center mt-2 mr-2 justify-between border-none focus:outline-none py-2 px-7 rounded px-5">
             <img src={whats} loading="lazy" alt="phone-white" className="contactBtn" />
@@ -37,43 +61,70 @@ function Engagement() {
         <p className="text-sm grey-text text-center mt-2">
           A member of our team will get back to you shortly.
         </p>
+        <form onSubmit={formik.handleSubmit}>
+          <div className="flex items-center mt-14">
+            <input
+              type="text"
+              className="border focus:outline-none border-gray-300 py-2 lg:px-6 px-2 rounded w-2/4 mr-2 text-sm"
+              placeholder="Name *"
+              id="name"
+              name="name"
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+              value={formik.values.name}
+            />
+            {/* {formik.touched.name && formik.errors.name ? (
+              <label>{formik.errors.name}</label>
+            ) : null} */}
+            <input
+              type="text"
+              className="border focus:outline-none border-gray-300 py-2 lg:px-6 px-2 rounded w-2/4 text-sm"
+              placeholder="Organisation Name *"
+              id="organization"
+              name="organization"
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+              value={formik.values.organization}
+            />
+            
+          </div>
 
-        <div className="flex items-center mt-14">
-          <input
-            type="text"
-            className="border focus:outline-none border-gray-300 py-2 lg:px-6 px-2 rounded w-2/4 mr-2 text-sm"
-            placeholder="Name *"
-          />
-          <input
-            type="text"
-            className="border focus:outline-none border-gray-300 py-2 lg:px-6 px-2 rounded w-2/4 text-sm"
-            placeholder="Organisation Name *"
-          />
-        </div>
+          <div className="flex items-center mt-4">
+            <input
+              type="text"
+              className="border focus:outline-none border-gray-300 py-2  lg:px-6 px-2 rounded w-2/4 mr-2 text-sm"
+              placeholder="Email *"
+              name="email"
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+              value={formik.values.email}
+            />
+            <input
+              type="text"
+              className="border focus:outline-none border-gray-300 py-2 lg:px-6 px-2 rounded w-2/4 text-sm"
+              placeholder="Phone Number *"
+              name="phone"
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+              value={formik.values.phone}
+            />
+          </div>
 
-        <div className="flex items-center mt-4">
-          <input
-            type="text"
-            className="border focus:outline-none border-gray-300 py-2  lg:px-6 px-2 rounded w-2/4 mr-2 text-sm"
-            placeholder="Email *"
+          <textarea
+            className="border focus:outline-none border-gray-300 w-full py-2 lg:px-6 px-2 rounded mt-4 text-sm"
+            placeholder="Message *"
+            rows="5"
+            name="message"
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+              value={formik.values.message}
           />
-          <input
-            type="text"
-            className="border focus:outline-none border-gray-300 py-2 lg:px-6 px-2 rounded w-2/4 text-sm"
-            placeholder="Phone Number *"
-          />
-        </div>
-
-        <textarea
-          className="border focus:outline-none border-gray-300 w-full py-2 lg:px-6 px-2 rounded mt-4 text-sm"
-          placeholder="Message *"
-          rows="5"
-        />
-        <div className="p-2 pl-2 mt-32 pt-0 rounded-md border-2 ml-16 mr-16" style={{ width: "11.4rem", margin: 'auto', marginTop: ' 25px' }}>
-          <button type="submit" className="text-white purple lg:w-40 w-full flex items-center mt-2 mr-2 justify-between border-none focus:outline-none py-2 px-7 rounded px-5">
-            <p className="relativeContact ">Let’s Connect</p>
-          </button>
-        </div>
+          <div className="p-2 pl-2 mt-32 pt-0 rounded-md border-2 ml-16 mr-16" style={{ width: "11.4rem", margin: 'auto', marginTop: ' 25px' }}>
+            <button type="submit" className="text-white purple lg:w-40 w-full flex items-center mt-2 mr-2 justify-between border-none focus:outline-none py-2 px-7 rounded px-5">
+              <p className="relativeContact ">Let’s Connect</p>
+            </button>
+          </div>
+        </form>
       </div>
     </div>
   );
