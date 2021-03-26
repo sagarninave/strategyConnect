@@ -29,14 +29,14 @@ function index() {
   });
   return (
     <footer className="bg-black xl:px-16 2xl:px-32 px-8 ">
-      <div className="flex flex-col lg:flex-row justify-between items-center  pt-9 bg-black">
+      <div className="flex  flex-col lg:flex-row justify-between items-center  pt-9 bg-black">
         {/* column one */}
-        <div className="flex  md:mr-8 lg:flex-col justify-between   relative lg:top-4 w-full lg:w-auto ">
+        <div className="flex mobile  md:mr-8 lg:flex-col justify-between   relative lg:top-4 w-full lg:w-auto ">
           <Link
             to="/"
             className={`${
               dimensions.width < 640 ? '' : 'footer_border'
-            } flex items-center cursor-pointer  lg:-mt-12`}
+            } flex  items-center cursor-pointer  lg:-mt-12`}
           >
             <img
               src={logo}
@@ -45,9 +45,7 @@ function index() {
               className="h-6 w-6 cursor-pointer"
             />
             <p
-              className={`nunito text-white text-base ml-1.5 font-bold relative top-0.5 cursor-pointer ${
-                dimensions.width < 640 ? 'hidden' : ''
-              }`}
+              className={`nunito text-white text-base ml-1.5 font-bold relative top-0.5 cursor-pointer`}
             >
               StrategyConnect
             </p>
@@ -58,27 +56,28 @@ function index() {
           </p>
 
           <div
-            className={`flex items-center relative w-2/5 lg:w-auto justify-between mt-4  ${
+            className={`flex items-center relative w60 w-2/5 lg:w-auto justify-between mt-4  ${
               dimensions.width < 640 ? '-top-2' : ''
             }`}
           >
+            <span className="showMobile text-base text-white"> Social Media</span>
             <img
               src={linkedin}
               loading="lazy"
               alt="linkedIn"
-              className="cursor-pointer"
+              className="cursor-pointer mr-f-20"
             />
             <img
               src={twitter}
               loading="lazy"
               alt="twitter"
-              className="cursor-pointer"
+              className="cursor-pointer mr-f-20"
             />
             <img
               src={medium}
               loading="lazy"
               alt="medium"
-              className="cursor-pointer"
+              className="cursor-pointer mr-f-20"
             />
           </div>
 
@@ -104,6 +103,7 @@ function index() {
             Website
           </p>
 
+          <span className="showMobile text-base text-white"> Website</span>
           <ul
             className={`flex  flex-row lg:flex-col w-72   lg:w-auto mt-4 lg:mt-0  lg:justify-between mx-auto flex-wrap`}
           >
@@ -144,6 +144,7 @@ function index() {
           } lg:pr-10 2xl:pr-20 xl:pr-10  relative top-2 -left-5 lg:h-56 `}
         >
           <p className="text-base hidden lg:flex font-semi-bold">Contact Us</p>
+          <span className="showMobile text-base text-white"> Contact Us</span>
           <ul className="flex flex-col">
             <li className="no-underline grey-text text-sm mb-4 text-left md:mt-4 mt-8 flex font-thin">
               <img
