@@ -16,10 +16,10 @@ export default function index() {
         </div>
       </div>
 
-      <div style={{ backgroundColor: "#fff" }}
-        className="borderhover flex lg:py-14 lg:pt-4 py-16 lg:px-32 px-8 justify-between refined-bg md:mt-10 xl:mt-0 mt-0 items-center">
+      <div style={{ backgroundColor: "#fff"}} 
+        className="borderhover flex justify-between w:9/12 refined-bg mt-10 lg:mt-0 xl:mt-0 lg:pt-4 px-8 lg:px-32 ">
         <div 
-          className="flip-card flex-1 minHeightBussiness p-5 pr-4 mr-16 rounded-md cursor-pointer service-panel">
+          className="flip-card flex-1 minHeightBussiness p-5 mr-5 rounded-md cursor-pointer service-panel">
           <div style={{ backgroundColor: "#E8F2FA", height: '100%' }}
             className="flip-card-inner flex-1  lg:flex rounded-md justify-center">
             <div className="flip-card-front flex-1 text-center text-center item-center mt-32">
@@ -34,7 +34,7 @@ export default function index() {
                 Product Services
               </p>
             </div>
-            <div className="flip-card-back font-medium text-lg text-center p-4">
+            <div className="flip-card-back font-medium text-base text-center p-4 xl:p-8">
               <p className="my-2 mt-2 pb-2 font-semibold">
                 Projects are done in a faster and cheaper manner where on-demand teams of 
                 consultants are assigned to each project.
@@ -59,7 +59,7 @@ export default function index() {
         </div>
 
         <div 
-          className="flip-card flex-1 p-5 minHeightBussiness pr-4 mr-16 rounded-md cursor-pointer service-panel">
+          className="float-left flip-card flex-1 p-5 ml-5 minHeightBussiness rounded-md cursor-pointer service-panel">
           <div style={{ backgroundColor: "#E8F2FA", height: '100%' }}
             className="flip-card-inner flex-1  lg:flex rounded-md justify-center">
             <div className="flip-card-front flex-1 text-center text-center item-center mt-32">
@@ -74,7 +74,7 @@ export default function index() {
                 Marketplace Experts
               </p>
             </div>
-            <div className="flip-card-back font-medium text-lg text-center p-4">
+            <div className="flip-card-back font-medium text-base text-center p-4 xl:p-8">
               <p className="my-2 mt-2 font-semibold">
                 On-demand calls billed on an hourly basis
               </p>
