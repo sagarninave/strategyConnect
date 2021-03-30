@@ -25,7 +25,7 @@ function OurStory() {
 
   return (
     <div style={{ backgroundColor: "#F3F8FC" }} className="mt-5 py-5 lg:p-10">
-      <p className="text-sm lg:text-lg pb-3 lg:pb-0 text-center uppercase black-text">Our Story</p>
+      <p className="aboutstory1920 text-sm lg:text-lg pb-3 lg:pb-0 text-center uppercase black-text">Our Story</p>
       <div className="flex justify-between relative lg:mt-8 mx-auto">
         <div className="flex-1 justify-start pr-0 lg:w-6/12 w-44 hidden lg:block xl:block">
           <div style={{ backgroundColor: "#fff" }} className="rounded-md mr-20">
@@ -44,7 +44,7 @@ function OurStory() {
         </div>
         <div className="flex-1 pr-0 lg:w-6/12 w-44">
           <div className="rounded-md justify-between mx-4 lg:p-0">
-            <p className="text-lg grey-text leading-7 w-full lg:flex text-justify">
+            <p className="aboutstorypara1920 text-lg grey-text leading-7 w-full lg:flex text-justify">
               The idea for Strategy Connect germinated as a discussion between Haninder and Shubham when they
               discovered in their respective work environments that many organizations are suffering from issues
               around CRM implementations, Performace Marketing initiatives, Last Mile Logistics management. This
@@ -55,20 +55,20 @@ function OurStory() {
         </div>
       </div>
 
-      <p className="text-lg grey-text w-full text-justify px-4 py-4 lg:pt-5 lg:px-0 lg:leading-7">
+      <p className="aboutstorypara1920 aboutstoryparatwo1920 text-lg grey-text w-full text-justify px-4 py-4 lg:pt-5 lg:px-0 lg:leading-7">
         Shubham and Haninder got started with XXX company, helping them pair with the right team of professionals
         from outside the GCC based on their networks in India, Pakistan, Lebanon, and Egypt - highly experienced,
         top-quality talent assembled on-demand and customized for the project needs. It was a great success and
         they never looked back!
       </p>
 
-      <p className="text-lg grey-text w-full text-justify px-4 pb-4 lg:pt-5 lg:px-0 lg:leading-7">
+      <p className="aboutstorypara1920 aboutstoryparathree1920 text-lg grey-text w-full text-justify px-4 pb-4 lg:pt-5 lg:px-0 lg:leading-7">
         Rapid growth ensued, with many more companies signing up for different project needs and different
         lengths of projects and team sizes. This prompted automation, procedural compliance, and reporting
         standardization at Strategy Connect.
       </p>
 
-      <p className="text-sm lg:text-xl lg:mt:6 text-center uppercase black-text">FOUNDING TEAM</p>
+      <p className="aboutstory1920 text-sm lg:text-xl lg:mt:6 text-center uppercase black-text">FOUNDING TEAM</p>
 
       <div className="flex mobile justify-between relative lg:mt-8  mx-auto">
         <div className="flex-1 justify-start pr-0 lg:w-6/12 w-44">
@@ -79,7 +79,7 @@ function OurStory() {
               <img src={shubham} loading="lazy" alt="boys" className="h-full w-full lg:h-full" />
             </div>
             <p className="text-xl mt-6 text-center black-text">Shubham</p>
-            <p className="text-lg grey-text p-4 px-8 leading-7 w-full lg:flex text-justify">
+            <p className="aboutstorypara1920 text-lg grey-text p-4 px-8 leading-7 w-full lg:flex text-justify">
               Former VP (Operations) at Namshi.com, one of the biggest online Fashion Retailer
               in the MENA region, who led a team of 100 to build operations for Namshi
               spanning across UAE, KSA and the rest of GCC
@@ -94,7 +94,7 @@ function OurStory() {
               <img src={haninder} loading="lazy" alt="haninder" className="h-full w-full lg:h-full" />
             </div>
             <p className="text-xl mt-6 text-center black-text">Haninder</p>
-            <p className="text-lg grey-text p-4 px-8 leading-7 w-full lg:flex text-justify">
+            <p className="aboutstorypara1920 text-lg grey-text p-4 px-8 leading-7 w-full lg:flex text-justify">
               Former VP (Operations) at Namshi.com, one of the biggest online Fashion Retailer
               in the MENA region, who led a team of 100 to build operations for Namshi
               spanning across UAE, KSA and the rest of GCC
@@ -104,7 +104,7 @@ function OurStory() {
       </div>
 
       {/* mobile */}
-        <div className="relative founder-mobile bg-white rounded-md w-9/12 mt-2 mb-4 pb-10 mx-auto">
+        {/* <div className="relative founder-mobile bg-white rounded-md w-9/12 mt-2 mb-4 pb-10 mx-auto">
           <div style={{ borderColor: "#2EC4EA" }} className="rounded-md border-2 p-6">
             <img src={shubham} loading="lazy" alt="boys" className="h-full w-full lg:h-full" />
           </div>
@@ -125,8 +125,7 @@ function OurStory() {
             in the MENA region, who led a team of 100 to build operations for Namshi
             spanning across UAE, KSA and the rest of GCC
           </p>
-        </div>
-
+        </div> */}
     </div>
   );
 }

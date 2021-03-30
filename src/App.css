@@ -288,6 +288,26 @@
   .customisepara{
     font-size:1.5rem
   }
+  .heading1920{
+    font-size: 3.25rem
+  }
+  .subheading1920{
+    font-size: 1.8rem;
+    padding:15 0;
+  }
+  .aboutstory1920 {
+    font-size:1.8rem;
+  }
+  .aboutstorypara1920 {
+    font-size:1.8rem;
+    line-height:3rem;
+  }
+  .aboutstoryparatwo1920{
+    margin-top:1rem
+  }
+  .aboutstoryparathree1920{
+    margin-bottom:1rem
+  }
 }
 
 @media only screen and (max-width:480px) {

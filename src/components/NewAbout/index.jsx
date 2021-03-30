@@ -15,10 +15,10 @@ export default function index() {
     <div>
       <Navbar />
       <div>
-        <p className="mt-10 lg:mt-20 xl:mt-20 text-xl lg:text-5xl xl:text-5xl font-semibold text-center w-full lg:w-8/12 xl:w-8/12 mx-auto ">
+        <p className="heading1920 mt-10 lg:mt-20 xl:mt-20 text-xl lg:text-5xl xl:text-5xl font-semibold text-center w-full lg:w-8/12 xl:w-8/12 mx-auto ">
           We Empower Businesses and Prepare Them for Scalable Success
         </p>
-        <p className="text-sm grey-text text-center mx-auto font-semibold mt-4">
+        <p className="subheading1920 text-sm grey-text text-center mx-auto font-semibold mt-4">
           With streamlined advisory services
         </p>
       </div>
