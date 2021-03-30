@@ -34,7 +34,7 @@ export default function index() {
                 Product Services
               </p>
             </div>
-            <div className="flip-card-back font-medium text-base text-center p-4 xl:p-8">
+            <div className="service-text flip-card-back font-medium text-base text-center p-4 xl:p-8">
               <p className="my-2 mt-2 pb-2 font-semibold">
                 Projects are done in a faster and cheaper manner where on-demand teams of 
                 consultants are assigned to each project.
@@ -74,7 +74,7 @@ export default function index() {
                 Marketplace Experts
               </p>
             </div>
-            <div className="flip-card-back font-medium text-base text-center p-4 xl:p-8">
+            <div className="service-text flip-card-back font-medium text-base text-center p-4 xl:p-8">
               <p className="my-2 mt-2 font-semibold">
                 On-demand calls billed on an hourly basis
               </p>

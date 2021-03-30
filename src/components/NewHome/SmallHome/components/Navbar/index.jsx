@@ -125,13 +125,19 @@ export default function Navbar() {
                   onClick={() => setVisibleSidebar(false)}
                   className="text-lg font-bold text-white mt-4"
                 >
-                  <Link to="/about">About us</Link>
+                  <Link to="/about">About Us</Link>
                 </li>
                 <li
                   onClick={() => setVisibleSidebar(false)}
                   className="text-lg font-bold text-white mt-4"
                 >
-                  <Link to="/contact">Contact us</Link>
+                  <Link to="/product-offering">Our Offerings</Link>
+                </li>
+                <li
+                  onClick={() => setVisibleSidebar(false)}
+                  className="text-lg font-bold text-white mt-4"
+                >
+                  <Link to="/contact">Contact Us</Link>
                 </li>
               </ul>
 

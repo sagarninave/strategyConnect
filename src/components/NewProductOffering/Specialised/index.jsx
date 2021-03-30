@@ -32,7 +32,7 @@ export default function index() {
           <p className="lg:text-3xl text-lg text-center lg:text-left font-bold mt-5 lg:mt-5 md:mt-5">
             Business Planning
           </p>
-          <p className="font-medium text-base lg:text-lg lg:w-full text-center lg:text-left mx-auto lg:mx-0 grey-text mt-5 font-thin">
+          <p className="font-medium functionalareasdesc-productoffering text-base lg:text-lg lg:w-full text-center lg:text-left mx-auto lg:mx-0 grey-text mt-5 font-thin">
             We develop a thorough business analysis that can  
             make your business investor and market-ready
           </p>
@@ -51,7 +51,7 @@ export default function index() {
           <p className="lg:text-3xl text-lg text-center lg:text-left font-bold">
             Financial Modeling
           </p>
-          <p className="font-medium text-base lg:text-xl-lg lg:w-11/12 text-center lg:text-left mx-auto lg:mx-0 grey-text mt-5 font-thin">
+          <p className="font-medium functionalareasdesc-productoffering text-base lg:text-xl-lg lg:w-11/12 text-center lg:text-left mx-auto lg:mx-0 grey-text mt-5 font-thin">
             We Create an exhaustive and easy to use 
             financial model that can scale with your business
           </p>
@@ -88,7 +88,7 @@ export default function index() {
           <p className="lg:text-3xl text-lg text-center lg:text-left font-bold">
             Go-To-Market Strategy
           </p>
-          <p className="font-medium text-base lg:text-lg lg:w-full text-center lg:text-left mx-auto lg:mx-0 grey-text mt-5 font-thin">
+          <p className="font-medium functionalareasdesc-productoffering text-base lg:text-lg lg:w-full text-center lg:text-left mx-auto lg:mx-0 grey-text mt-5 font-thin">
             We uncover deep insights that can help your business 
             fast track its entry to the market of interest.
           </p>

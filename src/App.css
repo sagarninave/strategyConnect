@@ -276,7 +276,8 @@
     justify-content: space-around;
   }
   .textinxl{
-    font-size:1.6rem
+    font-size:1.6rem;
+    line-height:2.2rem;
   }
   .offeringxltext{
     font-size:1.5rem
@@ -307,6 +308,27 @@
   }
   .aboutstoryparathree1920{
     margin-bottom:1rem
+  }
+  .functionalareasdesc{
+    font-size:2rem;
+    line-height: 2.75rem;
+  }
+  .functionalareasdesc-productoffering{
+    font-size:1.8rem;
+    line-height: 2.75rem;
+  }
+  .marketplace-heading{
+    font-size:2rem
+  }
+  .marketplace-subheading{
+    font-size:1.6rem
+  }
+  .marketplace-card-title {
+    font-size:1.5rem
+  }
+  .service-text{
+    font-size: 1.5rem;
+    line-height: 2rem; 
   }
 }
 
@@ -405,6 +427,10 @@
 
 .flip-card:hover .flip-card-inner {
   transform: rotateY(180deg);
+}
+
+.flip-card:hover .flip-card-front {
+  display:none;
 }
 
 .flip-card-front, .flip-card-back {

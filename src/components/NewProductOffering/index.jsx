@@ -34,7 +34,7 @@ export default function index() {
       <Navbar />
 
       <div style={{ backgroundColor: "#F0EFF7"}} className="px-auto h-48 lg:h-96 xl:h-96 pt-32 pt-20 lg:pt-20 xl:pt-20">
-        <p className="sm:text-5xl lg:text-5xl text-black font-semibold text-center mx-auto lg:w-11/12 xl:w-11/12 sm:w-11/12 w-11/12">
+        <p className="sm:text-5xl lg:text-5xl text-black font-semibold mt-10 text-center mx-auto lg:w-11/12 xl:w-11/12 sm:w-11/12 w-11/12">
           The Simplest Solutions for Your Systems
         </p>
         <p className="text-lg xl:text-base offeringxltext text-black text-center mx-auto font-semibold w-9/12 xl:w-9/12 mt-4">

@@ -24,7 +24,7 @@ function OurStory() {
   });
 
   return (
-    <div style={{ backgroundColor: "#F3F8FC" }} className="mt-5 py-5 lg:p-10">
+    <div style={{ backgroundColor: "#F3F8FC" }} className="mt-10 py-5 lg:p-10">
       <p className="aboutstory1920 text-sm lg:text-lg pb-3 lg:pb-0 text-center uppercase black-text">Our Story</p>
       <div className="flex justify-between relative lg:mt-8 mx-auto">
         <div className="flex-1 justify-start pr-0 lg:w-6/12 w-44 hidden lg:block xl:block">

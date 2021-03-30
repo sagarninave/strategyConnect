@@ -32,7 +32,7 @@ export default function index() {
             <p className="lg:text-3xl text-lg text-center lg:text-left font-bold">
               Business Planning
             </p>
-            <p className="font-medium text-base lg:text-xl lg:w-11/12 text-center lg:text-left mx-auto lg:mx-0 grey-text mt-10 font-thin">
+            <p className="font-medium functionalareasdesc text-base lg:text-xl lg:w-11/12 text-center lg:text-left mx-auto lg:mx-0 grey-text mt-10 font-thin">
               A presentation describing the nature of the business,
               the sales and marketing strategy, and an excel model
               giving the financial background, and containing a projected
@@ -48,7 +48,7 @@ export default function index() {
             <p className="lg:text-3xl text-lg text-center lg:text-left font-bold">
               Financial Modeling
             </p>
-              <p className="font-medium text-base lg:text-xl  lg:w-11/12 text-center lg:text-left mx-auto lg:mx-0 grey-text mt-10 font-thin">
+              <p className="font-medium functionalareasdesc text-base lg:text-xl  lg:w-11/12 text-center lg:text-left mx-auto lg:mx-0 grey-text mt-10 font-thin">
                 A summary of a company’s expenses and earnings
                 in the form of a spreadsheet  can be used to
                 calculate the impact of a future event or decision.
@@ -80,7 +80,7 @@ export default function index() {
             <p className="lg:text-3xl text-lg text-center lg:text-left font-bold">
               Go-To-Market Planning
             </p>
-            <p className="font-medium text-base lg:text-xl  lg:w-11/12 text-center lg:text-left mx-auto lg:mx-0 grey-text mt-10 font-thin">
+            <p className="font-medium functionalareasdesc text-base lg:text-xl  lg:w-11/12 text-center lg:text-left mx-auto lg:mx-0 grey-text mt-10 font-thin">
               A marketing plan that documents the goals, objectives,
               research, costs, strategies, and action needed to drive
               business for the overall company.

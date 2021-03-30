@@ -7,6 +7,7 @@ function NewHome() {
   useEffect(() => {
     document.title = 'StrategyConnect | NewHome';
     window.scrollTo(0, 0);
+    console.log(navigator)
   }, []);
 
   return (
