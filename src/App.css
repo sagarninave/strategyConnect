@@ -226,17 +226,25 @@
   width: "431px";
   height: "282px"
 }
-.marginSlider{
+
+.marginSlider {
   background-color: rgb(255, 255, 255);
   padding-top: 30px;
   padding-bottom: 40px;
 }
-.bussinessImg{
+
+.bussinessImg {
   height: 15rem;
   flex-grow: 1
 }
-.minHeightBussiness{
-  width: 511px; height: 507px;
+
+.minHeightBussiness {
+  width: 511px;
+  height: 507px;
+}
+
+.showMobile {
+  display: none;
 }
 
 @media screen and (min-width: 800px) and (max-width: 1280px) {}
@@ -289,48 +297,64 @@
     padding-top: 4px;
     padding-bottom: 4px;
   }
-  .marginSlider{
+  .marginSlider {
     background-color: rgb(255, 255, 255);
     padding-top: 10px;
     padding-bottom: 10px;
   }
-  .mr-16{
-    margin-right:4px
+  .mr-16 {
+    margin-right: 4px
   }
-  .pr-4{
+  .pr-4 {
     padding-right: 4px;
   }
-  .text-3xl{
-    font-size:1.5rem
+  .text-3xl {
+    font-size: 1.5rem
   }
-  .ml-32{
-    margin-left:4px
+  .ml-32 {
+    margin-left: 4px
   }
-  .mr-32{
-    margin-right:4px
+  .mr-32 {
+    margin-right: 4px
   }
-  .bussinessImg{
+  .bussinessImg {
     height: 150px;
     flex-grow: 1;
     padding: 12px;
   }
-  .minHeightBussiness{
+  .minHeightBussiness {
     height: 480px;
   }
-  .p-5{
+  .p-5 {
     padding: 0px;
   }
-  .mobile{
+  .mobile {
     display: block!important;
   }
-  .mr-20{
+  .mr-20 {
     margin-right: 0px;
   }
-  .ml-20{
+  .ml-20 {
     margin-left: 0px;
   }
-  .w-44{
+  .w-44 {
     width: 100%;
+  }
+  .showMobile {
+    display: block;
+    margin-top: 15px;
+  }
+  .mr-f-20 {
+    margin-right: 20px;
+  }
+  .w60 {
+    width: 90%;
+  }
+  .w-72 {
+    width: 100%;
+  }
+  .mt-8 {
+    margin-top: 1rem;
   }
 }
 
