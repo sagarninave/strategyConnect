@@ -112,7 +112,7 @@ function Subscription() {
       <div className="pt-8 flex  lg:mb-0 mb-12 justify-between">
         <div className="flex flex-col items-center content-center">
           <div className="boxAnalytics" style={{ height: "500px" }}>
-            <p className="text-lg md:text-2xl font-bold leading-10"
+            <p className="text-lg cardHeading md:text-2xl font-bold leading-10"
               style={{
                 borderBottom: '1px solid #B1B5B9',
                 marginBottom: '15px', padding: '9px 0px'
@@ -143,7 +143,8 @@ function Subscription() {
                 </p>
               </li>
             </ul>
-            <div className="p-2 pl-2 mt-20 pt-0 rounded-md border-2 ml-16 mr-16" style={{ width: "11.4rem" }}>
+            <div className="p-2 pl-2 pt-0 rounded-md border-2 ml-16 mr-16" 
+                 style={{ width: "11.4rem", position:"absolute", bottom:15}}>              
               <button onClick={openModal} className="text-white purple lg:w-40 w-full flex items-center mt-2 mr-2 justify-between border-none focus:outline-none py-2 px-7 rounded">
                 <p className="relative">Make Enquiry</p>
               </button>
@@ -152,7 +153,7 @@ function Subscription() {
         </div>
         <div className="flex flex-col items-center content-center">
           <div className="boxAnalytics" style={{ height: "500px" }}>
-            <p className="text-lg md:text-2xl font-bold leading-10"
+            <p className="text-lg cardHeading md:text-2xl font-bold leading-10"
               style={{ borderBottom: '1px solid #B1B5B9', marginBottom: '15px', padding: '9px 0px' }}>
               Business <br /> Traction Analysis
               </p>
@@ -179,7 +180,8 @@ function Subscription() {
                   </p>
               </li>
             </ul>
-            <div className="p-2 pl-2 mt-32 pt-0 rounded-md border-2 ml-16 mr-16" style={{ width: "11.4rem" }}>
+            <div className="p-2 pl-2 pt-0 rounded-md border-2 ml-16 mr-16" 
+                 style={{ width: "11.4rem", position:"absolute", bottom:15}}>              
               <button onClick={openModal} className="text-white purple lg:w-40 w-full flex items-center mt-2 mr-2 justify-between border-none focus:outline-none py-2 px-7 rounded">
                 <p className="relative">Make Enquiry</p>
               </button>
@@ -191,7 +193,7 @@ function Subscription() {
       <div className="flex  lg:mb-0 mb-12 justify-between" style={{ padding: '5rem 0rem' }}>
         <div className="flex flex-col items-center content-center">
           <div className="boxAnalytics" style={{ height: "500px" }}>
-            <p className="text-lg md:text-2xl font-bold leading-10"
+            <p className="text-lg cardHeading md:text-2xl font-bold leading-10"
               style={{ borderBottom: '1px solid #B1B5B9', marginBottom: '15px', padding: '9px 0px' }}>
               Operational <br />  Viability</p>
             <ul>
@@ -223,8 +225,9 @@ function Subscription() {
                   </p>
               </li>
             </ul>
-            <div className="p-2 pl-2 mt-24 pt-0 rounded-md border-2 ml-16 mr-16" style={{ width: "11.4rem" }}>
-              <button onClick={openModal} className="text-white purple lg:w-40 w-full flex items-center mt-2 mr-2 justify-between border-none focus:outline-none py-2 px-7 rounded">
+            <div className="p-2 pl-2 pt-0 rounded-md border-2 ml-16 mr-16" 
+                 style={{ width: "11.4rem", position:"absolute", bottom:15}}>
+                <button onClick={openModal} className="text-white purple lg:w-40 w-full flex items-center mt-2 mr-2 justify-between border-none focus:outline-none py-2 px-7 rounded">
                 <p className="relative">Make Enquiry</p>
               </button>
             </div>
@@ -232,7 +235,7 @@ function Subscription() {
         </div>
         <div className="flex flex-col items-center content-center">
           <div className="boxAnalytics" style={{ height: "500px" }}>
-            <p className="text-lg md:text-2xl font-bold leading-10"
+            <p className="text-lg cardHeading md:text-2xl font-bold leading-10"
               style={{ borderBottom: '1px solid #B1B5B9', marginBottom: '15px', padding: '9px 0px' }}>
               Financial Viability <br />  & Planning
             </p>
@@ -270,7 +273,8 @@ function Subscription() {
                 </p>
               </li>
             </ul>
-            <div className="p-2 pl-2 mt-20 pt-0 rounded-md border-2 ml-16 mr-16" style={{ width: "11.4rem" }}>
+            <div className="p-2 pl-2 pt-0 rounded-md border-2 ml-16 mr-16" 
+                 style={{ width: "11.4rem", position:"absolute", bottom:15}}>
               <button onClick={openModal} className="text-white purple lg:w-40 w-full flex items-center mt-2 mr-2 justify-between border-none focus:outline-none py-2 px-7 rounded">
                 <p className="relative">Make Enquiry</p>
               </button>
@@ -288,7 +292,7 @@ function Subscription() {
             <p className="relative" style={{ margin: 'auto' }}>Customize</p>
           </button>
         </div>
-        <p className="text-lg light_grey grey-text text-gray text-center mx-auto font-medium mt-5 mb-12">
+        <p className="text-lg customisepara light_grey grey-text text-gray text-center mx-auto font-medium mt-5 mb-12">
           Customize as per your need.
         </p>
       </div>
@@ -306,7 +310,7 @@ function Subscription() {
           preventScroll={false}
         >
           <div>
-            <h4 className="text-lg md:text-2xl font-bold leading-10 text-center">
+            <h4 className="text-lg cardHeading md:text-2xl font-bold leading-10 text-center">
               Kickstart Engagement
               <span className="floatRight">
                 <button onClick={closeModal}>
@@ -376,7 +380,7 @@ function Subscription() {
           contentLabel="Example Modal"
         >
           <div>
-            <h4 className="text-lg md:text-2xl font-bold leading-10 text-center">
+            <h4 className="text-lg cardHeading md:text-2xl font-bold leading-10 text-center">
               Project Information
             <span className="floatRight">
                 <button onClick={closeModal2}>

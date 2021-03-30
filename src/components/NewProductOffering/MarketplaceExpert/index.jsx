@@ -13,16 +13,16 @@ function index() {
         </div>
       </div>
 
-      <div style={{ width: "480px", height: "430px", border: "1px solid #707070" }}
-        className="mt-16 mx-auto flex-1 items-center rounded-md mb-6">
+      <div style={{height: "auto", border: "1px solid #707070" }}
+        className="mt-16 w-2/5 mx-auto rounded-md mb-6 pb-6">
         <img src={Marketplacepakage} loading="lazy" alt="Marketplacepakage"
           className="w-full rounded-md"
-          style={{ width: "100%", height: "244px" }} />
+          style={{ width: "100%", height: "auto" }} />
 
         <p className="text-3xl px-8 text-black text-left mx-auto font-semibold mt-10">
           Experts on Demand
         </p>
-        <p className="text-lg px-8 text-#5C5B5B-50 text-left mt-6">
+        <p className="textinxl text-lg lg:text-lg lg:text-base px-8 text-#5C5B5B-50 text-left mt-6">
           Access our database of experts and get 5 short calls for free.
         </p>
       </div>
