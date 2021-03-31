@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function index() {
   return (
-    <div className=" sm:hidden flex flex-col mt-10 px-5 pb-8">
+    <div className="sm:hidden flex flex-col mt-10 px-5 pb-8">
       <p className="text-base font-semibold text-center">
         Get the latest updates in your box
       </p>

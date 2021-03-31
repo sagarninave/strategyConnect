@@ -247,7 +247,12 @@
 .showMobile {
   display: none;
 }
-
+.showMobileFooter{
+  display: none;
+}
+.showDesktopFooter{
+  display: block;
+}
 @media screen and (min-width: 800px) and (max-width: 1280px) {}
 
 /* ============================================== */
@@ -398,10 +403,17 @@
   }
   .showMobile {
     display: block;
-    margin-top: 15px;
+    margin-top: 25px;
+  }
+  .showMobileFooter{
+    display: block;
+  }
+  .showDesktopFooter{
+    display: none;
   }
   .mr-f-20 {
-    margin-right: 20px;
+    margin-right: 2px;
+    margin-top: 2px;
   }
   .w60 {
     width: 90%;
