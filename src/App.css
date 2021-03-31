@@ -478,6 +478,10 @@
   .relativeContact{
     font-size: 0.7rem;
   }
+  .bottom_border {
+    margin-top: 2rem;
+    border-top: 0.6px solid #B2AFD7;
+  }
 }
 
 /* Extra Small Devices, Phones */

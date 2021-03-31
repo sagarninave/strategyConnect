@@ -56,7 +56,7 @@ function Engagement() {
         </div>
       </div>
       <div className="h-96 w-0.5 hidden lg:block bg-gray-100" />
-      <div className="mx-auto flex  flex-col  padding_top_border lg:border-none px-8 lg:px-0 lg:mt-0  justify-center items-center">
+      <div className="showInDesktop mx-auto flex flex-col lg:border-none px-8 lg:px-0 lg:mt-0  justify-center items-center">
         <p className="text-2xl text-center font-semibold">Send Us a Message</p>
         <p className="text-sm grey-text text-center mt-2">
           A member of our team will get back to you shortly.
@@ -86,7 +86,6 @@ function Engagement() {
               onBlur={formik.handleBlur}
               value={formik.values.organization}
             />
-            
           </div>
 
           <div className="flex items-center mt-4">
@@ -128,30 +127,106 @@ function Engagement() {
       </div>
 
 
+      {/* mobile message */}
+
+      <div className="showInMobile mx-auto flex flex-col lg:border-none px-8 lg:px-0 lg:mt-0  justify-center items-center">
+        <p className="text-2xl text-center font-semibold">Send Us a Message</p>
+        <p className="text-sm grey-text text-center mt-2">
+          A member of our team will get back to you shortly.
+        </p>
+        <form onSubmit={formik.handleSubmit} className="w-full">
+          <div className="flex items-center mt-4">
+            <input
+              type="text"
+              className="border focus:outline-none border-gray-300 py-2 lg:px-6 px-2 rounded w-full text-sm"
+              placeholder="Name *"
+              id="name"
+              name="name"
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+              value={formik.values.name}
+            />
+          </div>
+          <div className="flex items-center mt-4">
+            <input
+              type="text"
+              className="border focus:outline-none border-gray-300 py-2 lg:px-6 px-2 rounded w-full text-sm"
+              placeholder="Organisation Name *"
+              id="organization"
+              name="organization"
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+              value={formik.values.organization}
+            />
+          </div>
+          <div className="flex items-center mt-4">
+            <input
+              type="text"
+              className="border focus:outline-none border-gray-300 py-2 lg:px-6 px-2 rounded w-full text-sm"
+              placeholder="Email *"
+              name="email"
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+              value={formik.values.email}
+            />
+          </div>
+          <div className="flex items-center mt-4">
+            <input
+              type="text"
+              className="border focus:outline-none border-gray-300 py-2 lg:px-6 px-2 rounded w-full text-sm"
+              placeholder="Phone Number *"
+              name="phone"
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+              value={formik.values.phone}
+            />
+          </div>
+          <div className="flex items-center mt-4">
+            <textarea
+              className="border focus:outline-none border-gray-300 w-full py-2 lg:px-6 px-2 rounded text-sm"
+              placeholder="Message *"
+              rows="5"
+              name="message"
+                onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
+                value={formik.values.message}
+            />
+          </div>
+          <div className="p-2 pl-2 mt-32 pt-0 rounded-md border-2 ml-16 mr-16" style={{ width: "11.4rem", margin: 'auto', marginTop: ' 25px' }}>
+            <button type="submit" className="text-white purple lg:w-40 w-full flex items-center mt-2 mr-2 justify-between border-none focus:outline-none py-2 px-7 rounded px-5">
+              <p className="relativeContact ">Let’s Connect</p>
+            </button>
+          </div>
+        </form>
+        <hr className="bottom_border"/>
+      </div>
+
+
       {/* mobile kickstart */}
+
       <div className="flex showInMobile mt-10 mx-auto lg:w-96">
         <p className="lg:text-2xl text-xl text-center font-semibold">Kickstart M Engagement</p>
         <p className="text-sm grey-text mt-2 text-center">
           It takes less than a minute
         </p>
         <div className="flex w-full m-0"> 
-          <div className="flex-1 p-2 pl-2 mt-32 pt-0 mr-2 rounded-md border-2" 
-              style={{ width: "8rem", margin: 'auto', marginRight:"1rem", marginTop: ' 25px' }}>
-            <button type="submit" className="text-white purple lg:w-40 w-full flex items-center mt-2 mr-2 justify-between border-none focus:outline-none py-2 rounded px-2">
+          <div className="flex-1 p-1 pl-1 pt-0 mr-2 rounded-md border-2" 
+              style={{ width: "8rem", margin: 'auto', marginRight:"0.5rem", marginTop: ' 25px' }}>
+            <button type="submit" className="text-white purple lg:w-40 w-full flex items-center mt-1 mr-2 justify-between border-none focus:outline-none py-2 rounded px-2">
               <img src={phone} loading="lazy" alt="phone-white" className="contactBtn" />
               <p className="relativeContact ">Phone Call</p>
             </button>
           </div>
-          <div className="flex-1 p-2 pl-2 mt-16 pt-0 mx-2 rounded-md border-2" 
-              style={{ width: "8rem", margin: 'auto', marginleft:"1rem", marginTop: ' 25px' }}>
-            <button type="submit" className="text-white purple lg:w-40 w-full flex items-center mt-2 justify-between border-none focus:outline-none py-2 rounded px-2">
+          <div className="flex-1 p-1 pl-1 pt-0 mx-2 rounded-md border-2" 
+              style={{ width: "3rem", margin: 'auto', marginleft:"0.5rem", marginTop: ' 25px' }}>
+            <button type="submit" className="text-white purple lg:w-40 w-full flex items-center mt-1 justify-between border-none focus:outline-none py-2 rounded px-2">
               <img src={chat} loading="lazy" alt="phone-white" className="contactBtn" />
               <p className="relativeContact ">Chat</p>
             </button>
           </div>
-          <div className="flex-1 p-2 pl-2 mt-32 pt-0 ml-2 rounded-md border-2" 
-              style={{ width: "8rem", margin: 'auto', marginLeft:"1rem", marginTop: ' 25px' }}>
-            <button type="submit" className="text-white purple lg:w-40 w-full flex items-center mt-2 mr-2 justify-between border-none focus:outline-none py-2 rounded px-2">
+          <div className="flex-1 p-1 pl-1 pt-0 ml-2 rounded-md border-2" 
+              style={{ width: "8rem", margin: 'auto', marginLeft:"0.5rem", marginTop: ' 25px' }}>
+            <button type="submit" className="text-white purple lg:w-40 w-full flex items-center mt-1 mr-2 justify-between border-none focus:outline-none py-2 rounded px-2">
               <img src={whats} loading="lazy" alt="phone-white" className="contactBtn" />
               <p className="relativeContact ">Whatsapp</p>
             </button>
