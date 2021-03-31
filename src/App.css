@@ -335,6 +335,9 @@
     font-size: 1.5rem;
     line-height: 2rem; 
   }
+  .mobileServiceData{
+    background-color: #E8F2FA;
+  }
 }
 
 @media only screen and (max-width:480px) {
@@ -453,6 +456,20 @@
     width: 6rem;
     padding: 0rem 0.25rem 0.25rem 0.25rem;
     float:right;
+  }
+  .minHeightBussiness {
+    width: 115px;
+    height: 145px;
+  }
+  .service-panel {
+    border: 1px solid #E8F2FA;
+    padding:5px
+  }
+  .alignServiceItem {
+    transform: translateY(30%);
+  }
+  .serviceHeading{
+    font-size: 0.6rem;
   }
 }
 
