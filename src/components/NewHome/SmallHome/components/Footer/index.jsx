@@ -58,7 +58,7 @@ function index() {
             className={`flex items-center relative w60 w-2/5 lg:w-auto justify-between mt-4  ${dimensions.width < 640 ? '-top-2' : ''
               }`}
           >
-            <span className="showMobile text-base text-white"> Social Media</span>
+            <span className="showInMobile mt25 text-base text-white"> Social Media</span>
             <img
               src={linkedin}
               loading="lazy"
@@ -83,8 +83,8 @@ function index() {
 
         {/* column two */}
         <div
-          className={` text-white showDesktopFooter ${dimensions.width < 1040 ? '' : 'right-divide-line'
-            }  lg:pr-10  relative xl:pr-10 2xl:pr-20 lg:top-2 `}
+          className={` text-white showInDesktop ${dimensions.width < 1040 ? '' : 'right-divide-line'
+            }  lg:pr-10 relative xl:pr-10 2xl:pr-20 lg:top-2 `}
         >
           <p
             className={`text-base font-semi-bold lg:mb-2  ${dimensions.width < 640 ? 'hidden' : ''
@@ -93,7 +93,7 @@ function index() {
             Website
           </p>
 
-          <span className="showMobile text-base text-white"> Website</span>
+          <span className="showInMobile text-base text-white"> Website</span>
           <ul
             className={`flex flex-col lg:flex-col w-72 lg:w-auto mt-4 lg:mt-0 lg:justify-between mx-auto flex-wrap`}
           >
@@ -122,11 +122,11 @@ function index() {
 
         {/* column three */}
         <div
-          className={`text-white showDesktopFooter ${dimensions.width < 1040 ? '' : 'right-divide-line'} 
+          className={`text-white showInDesktop ${dimensions.width < 1040 ? '' : 'right-divide-line'} 
             lg:pr-10 2xl:pr-20 xl:pr-10  relative top-2 -left-5 lg:h-56 `}
         >
           <p className="text-base hidden lg:flex font-semi-bold">Contact Us</p>
-          <span className="showMobile text-base text-white"> Contact Us</span>
+          <span className="showInMobile text-base text-white"> Contact Us</span>
           <ul className="flex flex-col">
             <li className="no-underline grey-text text-sm mb-0 text-left md:mt-4 mt-8 flex font-thin">
               <img
@@ -162,8 +162,8 @@ function index() {
         </div>
         {/* column three */}
 
-        <div className="flex mt-10 ">
-          <div className="flex-1 showMobileFooter text-white relative w-2/5">
+        <div className="flex mt-4">
+          <div className="flex-1 showInMobile text-white relative w-2/5">
             <p className='text-base ml-2 font-semi-bold'> Website</p>
             <ul className="flex-1 mt-4 ml-2 justify-between mx-auto flex-wrap">
               <li className="no-underline text-white lg:grey-text  hover:text-gray-300 cursor-pointer text-sm text-left lg:mt-0 mt-2 font-thin">
@@ -190,7 +190,7 @@ function index() {
           {/* column two */}
 
           {/* column three */}
-          <div className="flex-1 text-white showMobileFooter relative w-3/5">
+          <div className="flex-1 text-white showInMobile relative w-3/5">
             <span className="mt-0 pt-0 text-base text-white"> Contact Us</span>
             <ul className="flex flex-col">
               <li className="no-underline text-white text-sm text-left mt-2 mb-1 flex font-thin">
