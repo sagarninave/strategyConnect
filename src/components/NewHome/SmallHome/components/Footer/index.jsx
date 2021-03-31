@@ -208,7 +208,7 @@ function index() {
                 <p className="">info@strategyconnect.co</p>
               </li>
               <li className="no-underline text-white text-sm flex mt-1 font-thin">
-                <p className="">+971 527344538</p>
+                <p className="">+971 sefsd  527344538</p>
               </li>
             </ul>
           </div>

@@ -30,7 +30,7 @@ function Engagement() {
   });
   return (
     <div className="flex lg:flex-row flex-col lg:my-20 my-10 justify-between  xl:px-28">
-      <div className="mx-auto lg:w-96">
+      <div className="showInDesktop mx-auto lg:w-96">
         <p className="lg:text-2xl text-xl text-center font-semibold">Kickstart Engagement</p>
         <p className="text-sm grey-text mt-2 text-center">
           It takes less than a minute
@@ -126,6 +126,39 @@ function Engagement() {
           </div>
         </form>
       </div>
+
+
+      {/* mobile kickstart */}
+      <div className="flex showInMobile mt-10 mx-auto lg:w-96">
+        <p className="lg:text-2xl text-xl text-center font-semibold">Kickstart M Engagement</p>
+        <p className="text-sm grey-text mt-2 text-center">
+          It takes less than a minute
+        </p>
+        <div className="flex w-full m-0"> 
+          <div className="flex-1 p-2 pl-2 mt-32 pt-0 mr-2 rounded-md border-2" 
+              style={{ width: "8rem", margin: 'auto', marginRight:"1rem", marginTop: ' 25px' }}>
+            <button type="submit" className="text-white purple lg:w-40 w-full flex items-center mt-2 mr-2 justify-between border-none focus:outline-none py-2 rounded px-2">
+              <img src={phone} loading="lazy" alt="phone-white" className="contactBtn" />
+              <p className="relativeContact ">Phone Call</p>
+            </button>
+          </div>
+          <div className="flex-1 p-2 pl-2 mt-16 pt-0 mx-2 rounded-md border-2" 
+              style={{ width: "8rem", margin: 'auto', marginleft:"1rem", marginTop: ' 25px' }}>
+            <button type="submit" className="text-white purple lg:w-40 w-full flex items-center mt-2 justify-between border-none focus:outline-none py-2 rounded px-2">
+              <img src={chat} loading="lazy" alt="phone-white" className="contactBtn" />
+              <p className="relativeContact ">Chat</p>
+            </button>
+          </div>
+          <div className="flex-1 p-2 pl-2 mt-32 pt-0 ml-2 rounded-md border-2" 
+              style={{ width: "8rem", margin: 'auto', marginLeft:"1rem", marginTop: ' 25px' }}>
+            <button type="submit" className="text-white purple lg:w-40 w-full flex items-center mt-2 mr-2 justify-between border-none focus:outline-none py-2 rounded px-2">
+              <img src={whats} loading="lazy" alt="phone-white" className="contactBtn" />
+              <p className="relativeContact ">Whatsapp</p>
+            </button>
+          </div>
+        </div>
+      </div>
+
     </div>
   );
 }

@@ -471,6 +471,13 @@
   .serviceHeading{
     font-size: 0.6rem;
   }
+  .contactBtn{
+    width: 20%!important;
+    margin-left: 15px;
+  }
+  .relativeContact{
+    font-size: 0.7rem;
+  }
 }
 
 /* Extra Small Devices, Phones */
