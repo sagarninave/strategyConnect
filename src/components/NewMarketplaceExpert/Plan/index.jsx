@@ -25,13 +25,11 @@ function index() {
       </div>
 
       {/* Plan Cards */}
-      
-      <div className="pt-0 flex lg:mb-0 mb-12 justify-between">
+      <div className="pt-8 lg:flex lg:mb-0 mb-4 justify-between">
 
         {/* Plan Cards 1 */}
-
-        <div className="flex-1 items-center content-center">
-          <div className="boxAnalytics2">
+        <div className="flex flex-col mb-8 items-center content-center">
+          <div className="boxAnalytics2 priceCardOne">
             <p className="marketplace-card-title text-lg md:text-2xl font-bold text-center leading-10" 
                style={{borderBottom: '1px solid #B1B5B9', 
                marginBottom: '15px', 
@@ -81,16 +79,15 @@ function index() {
             </ul>
           </div>
         </div>
-
+        
         {/* Plan Cards 2 */}
-
-        <div className="flex-1 items-center content-center">
+        <div className="flex flex-col items-center content-center">
           <div className="boxAnalytics2 text-white" style={{ background: '#38369a'}}>
             <p className="marketplace-card-title text-lg md:text-2xl font-bold text-center leading-10" 
-               style={{borderBottom: '1px solid #B1B5B9', 
-               marginBottom: '15px', 
-               padding: '9px 0px'
-               }}
+              style={{borderBottom: '1px solid #B1B5B9', 
+              marginBottom: '15px', 
+              padding: '9px 0px'
+              }}
             > Plan - 2 </p>            
             <ul>
               <li className="marketplace-card-title font14 text-center text-lg font-medium">
@@ -101,7 +98,7 @@ function index() {
                 <span className="bigName">24</span>
               </li>
               <div className="p-2 pl-2 mt-32 pt-0 rounded-md border-2 ml-16 mr-16 mgTB10" 
-                   style={{width:"11.4rem",margin: 'auto'}}>
+                  style={{width:"11.4rem",margin: 'auto'}}>
                 <button type="submit" className="text-white whiteBg lg:w-40 w-full flex items-center mt-2 mr-2 justify-between border-none focus:outline-none py-2 px-7 rounded">
                   <p className="relative" style={{margin:'auto'}}>
                     Make Enquiry
@@ -137,9 +134,8 @@ function index() {
           </div>
         </div>
 
-      {/* Plan Cards 3 */}
-
-        <div className="flex-1 items-center content-center">
+        {/* Plan Cards 3 */}
+        <div className="flex flex-col items-center content-center">
           <div className="boxAnalytics2">
             <p className="marketplace-card-title text-lg md:text-2xl font-bold leading-10" 
               style={{
@@ -194,6 +190,7 @@ function index() {
             </ul>
           </div>
         </div>
+      
       </div>
     </>
   );

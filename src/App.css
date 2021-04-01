@@ -342,6 +342,10 @@
 
 @media only screen and (max-width:480px) {
 
+  .priceCardOne{
+    margin-bottom:1rem;
+  }
+
   .tick{
     position: absolute;
     margin-left: -20px;
