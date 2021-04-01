@@ -176,7 +176,7 @@ export default function index() {
         </div>
         <div className="flex-1 ml-32 showInMobile">
           <p className="mobileFunctionalAreaTitle lg:text-3xl text-lg text-center lg:text-left font-bold">
-            Go-To-Market Planning
+            Go-To Market Planning
           </p>
           <p className="mobileFunctionalArea font-medium functionalareasdesc text-base lg:text-xl lg:w-11/12 text-center lg:text-left mx-auto lg:mx-0 grey-text mt-10 font-thin">
             A marketing plan that documents the goals, objectives,
