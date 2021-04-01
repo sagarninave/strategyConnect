@@ -27,6 +27,7 @@ function index() {
         </p>
       </div>
 
+      {/* Desktop Button */}
       <div className="showInDesktop p-2 pl-2 mt-10 pt-0 mx-auto rounded-md border-2 lg:my-8" style={{width:"10.2rem"}}>
         <button className="text-white purple lg:w-36 w-full flex items-center mt-2 mr-2 justify-between border-none focus:outline-none py-2 pl-10 px-7 rounded">
           <Link to="/market-place-expert"> 
@@ -35,6 +36,7 @@ function index() {
         </button>
       </div>
 
+      {/* Mobile Button */}
       <div className="showInMobile p-2 pl-2 pr-0 mt-5 pt-0 marketExpertSubscribe mx-auto rounded-md border-2">
         <button className="marketExpertSubscribeButton text-white purple justify-between border-none focus:outline-none rounded">
           <Link to="/market-place-expert">
