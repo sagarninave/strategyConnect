@@ -43,7 +43,6 @@ function Subscription() {
     };
   });
 
-
   const messageForm = useFormik({
     initialValues: {
       name: '',
@@ -466,7 +465,7 @@ function Subscription() {
             </form>
           </div>
         </Modal> : 
-        <Modal
+          <Modal
           isOpen={modalIsOpen2}
           onAfterOpen={afterOpenModal}
           onRequestClose={closeModal2}

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Modal from 'react-modal';
 import { AiOutlineCloseCircle } from "react-icons/ai";
 import { useFormik } from 'formik';
@@ -15,7 +15,81 @@ const customStyles = {
     width: '50%'
   }
 };
+
+const customMobileStyles = {
+  content: {
+    top: '50%',
+    left: '50%',
+    right: 'auto',
+    bottom: 'auto',
+    marginRight: '-50%',
+    transform: 'translate(-50%, -50%)',
+    width: '90%'
+  }
+};
+
 function Subscription() {
+
+  const [dimensions, setDimensions] = useState(window.innerWidth);
+  useEffect(() => {
+    function handleResize() {
+      setDimensions(window.innerWidth);
+    }
+
+    window.addEventListener('resize', handleResize);
+
+    return (_) => {
+      window.removeEventListener('resize', handleResize);
+    };
+  });
+  const messageForm = useFormik({
+    initialValues: {
+      name: '',
+      email: '',
+      phone: '',
+      message: '',
+      organization: '',
+    },
+    validationSchema: Yup.object({
+      name: Yup.string().required('Name is required'),
+      email: Yup.string().email('Invalid email address').required('Required'),
+      phone: Yup.string().required('Phone is required'),
+      message: Yup.string().required('Message is required'),
+      organization: Yup.string().required('Organization is required'),
+    }),
+    onSubmit: values => {
+      console.log("VAVVAVVAVA",values)
+      alert(JSON.stringify(values, null, 2));
+    },
+  });
+
+
+  const projectForm = useFormik({
+    initialValues: {
+      name: '',
+      email: '',
+      phone: '',
+      organization: '',
+      industry: '',
+      project: '',
+      projectdescription: '',
+
+    },
+    validationSchema: Yup.object({
+      name: Yup.string().required('Name is required'),
+      email: Yup.string().email('Invalid email address').required('Required'),
+      phone: Yup.string().required('Phone is required'),
+      message: Yup.string().required('Message is required'),
+      organization: Yup.string().required('Organization is required'),
+      industry: Yup.string().required('Industry is required'),
+      project: Yup.string().required('Project Title is required'),
+      projectdescription: Yup.string().required('Project Description is required'),
+    }),
+    onSubmit: values => {
+      console.log("VAVVAVVAVA",values)
+      alert(JSON.stringify(values, null, 2));
+    },
+  });
 
   const [modalIsOpen, setIsOpen] = useState(false);
   const [modalIsOpen2, setIsOpen2] = useState(false);
@@ -46,57 +120,6 @@ function Subscription() {
   function closeModal2() {
     setIsOpen2(false);
   }
-
-  const formik = useFormik({
-    initialValues: {
-      name: '',
-      email: '',
-      phone: '',
-      message: '',
-      organization: '',
-    },
-    validationSchema: Yup.object({
-      name: Yup.string()
-        // .max(15, 'Must be 15 characters or less')
-        .required('Name is required'),
-      email: Yup.string().email('Invalid email address').required('Required'),
-      phone: Yup.string().required('Phone is required'),
-      message: Yup.string().required('Message is required'),
-      organization: Yup.string().required('Organization is required'),
-    }),
-    onSubmit: values => {
-      console.log("VAVVAVVAVA", values)
-      alert(JSON.stringify(values, null, 2));
-    },
-  });
-
-
-  const formikSecond = useFormik({
-    initialValues: {
-      name: '',
-      email: '',
-      phone: '',
-      message: '',
-      industry: '',
-      projectTitle: '',
-      projectDiscription: '',
-    },
-    validationSchema: Yup.object({
-      name: Yup.string()
-        // .max(15, 'Must be 15 characters or less')
-        .required('Name is required'),
-      email: Yup.string().email('Invalid email address').required('Required'),
-      phone: Yup.string().required('Phone is required'),
-      message: Yup.string().required('Message is required'),
-      industry: Yup.string().required('Industry is required'),
-      projectTitle: Yup.string().required('Project Title Discription is required'),
-      projectDiscription: Yup.string().required('Project Discription Discription is required'),
-    }),
-    onSubmitSecond: values => {
-      console.log("VAVVAVVAVA", values)
-      alert(JSON.stringify(values, null, 2));
-    },
-  });
 
   return (
     <div>
@@ -302,146 +325,384 @@ function Subscription() {
         </p>
       </div>
 
-      <div>
+      <div className="showInDesktop">
+        {/* desktop */}
 
-        {/* Modal first */}
-
-        <Modal
-          isOpen={modalIsOpen}
-          onAfterOpen={afterOpenModal}
-          onRequestClose={closeModal}
-          style={customStyles}
-          contentLabel="Example Modal"
-          preventScroll={false}
-        >
-          <div>
-            <h4 className="text-lg cardHeading md:text-2xl font-bold leading-10 text-center">
-              Kickstart Engagement
+        { dimensions > 480 ?
+          <Modal
+            isOpen={modalIsOpen}
+            onAfterOpen={afterOpenModal}
+            onRequestClose={closeModal}
+            style={customStyles}
+            contentLabel="Example Modal"
+          >
+            <div className="mx-auto w-full lg:border-none px-8 lg:px-0 lg:mt-0  justify-center items-center">
               <span className="floatRight">
                 <button onClick={closeModal}>
-                  <AiOutlineCloseCircle />
+                  <AiOutlineCloseCircle style={{fontSize:"1.5rem"}}/>
                 </button>
               </span>
-            </h4>
-            <p className="font-semibold text-md mt-3 xl:w-10/12 w-11/12 mx-auto light_grey grey-text text-center font-thin">
+              <p className="text-2xl text-center font-semibold"> Kickstart Engagement </p>
+              
+              <p className="text-sm grey-text text-center mt-2">
+                It takes less than a minute
+              </p>
+              <form onSubmit={messageForm.handleSubmit}>
+                <div className="flex items-center mt-14">
+                  <input
+                    type="text"
+                    className="border focus:outline-none border-gray-300 py-2 lg:px-6 px-2 rounded w-2/4 mr-2 text-sm"
+                    placeholder="Name"
+                    id="name"
+                    name="name"
+                    onChange={messageForm.handleChange}
+                    onBlur={messageForm.handleBlur}
+                    value={messageForm.values.name}
+                  />
+                  <input
+                    type="text"
+                    className="border focus:outline-none border-gray-300 py-2 lg:px-6 px-2 rounded w-2/4 text-sm"
+                    placeholder="Organisation Name"
+                    id="organization"
+                    name="organization"
+                    onChange={messageForm.handleChange}
+                    onBlur={messageForm.handleBlur}
+                    value={messageForm.values.organization}
+                  />
+                </div>
+
+                <div className="flex items-center mt-4">
+                  <input
+                    type="text"
+                    className="border focus:outline-none border-gray-300 py-2  lg:px-6 px-2 rounded w-2/4 mr-2 text-sm"
+                    placeholder="Email"
+                    name="email"
+                    onChange={messageForm.handleChange}
+                    onBlur={messageForm.handleBlur}
+                    value={messageForm.values.email}
+                  />
+                  <input
+                    type="text"
+                    className="border focus:outline-none border-gray-300 py-2 lg:px-6 px-2 rounded w-2/4 text-sm"
+                    placeholder="Phone Number"
+                    name="phone"
+                    onChange={messageForm.handleChange}
+                    onBlur={messageForm.handleBlur}
+                    value={messageForm.values.phone}
+                  />
+                </div>
+
+                <textarea
+                  className="border focus:outline-none border-gray-300 w-full py-2 lg:px-6 px-2 rounded mt-4 text-sm"
+                  placeholder="Message"
+                  rows="5"
+                  name="message"
+                  onChange={messageForm.handleChange}
+                  onBlur={messageForm.handleBlur}
+                  value={messageForm.values.message}
+                />
+                <div className="p-2 pl-2 mt-32 pt-0 rounded-md border-2 ml-16 mr-16" style={{ width: "11.4rem", margin: 'auto', marginTop: ' 25px' }}>
+                  <button type="submit" className="text-white purple lg:w-40 w-full flex items-center mt-2 mr-2 justify-between border-none focus:outline-none py-2 px-7 rounded px-5">
+                    <p className="relativeContact ">Submit</p>
+                  </button>
+                </div>
+              </form>
+            </div>
+          </Modal> :
+          <Modal
+            isOpen={modalIsOpen}
+            onAfterOpen={afterOpenModal}
+            onRequestClose={closeModal}
+            style={customMobileStyles}
+            contentLabel="Example Modal"
+          >
+          <div className="mx-auto w-full lg:border-none px-8 lg:px-0 lg:mt-0  justify-center items-center">
+            <span className="floatRight">
+              <button onClick={closeModal}>
+                <AiOutlineCloseCircle style={{fontSize:"1.5rem"}}/>
+              </button>
+            </span>
+            <p className="text-2xl text-center font-semibold"> Kickstart Engagement </p>
+            <p className="text-sm grey-text text-center mt-2">
               It takes less than a minute
             </p>
+            <form onSubmit={messageForm.handleSubmit} className="w-full">
+              <div className="flex items-center mt-4">
+                <input
+                  type="text"
+                  className="border focus:outline-none border-gray-300 py-2 lg:px-6 px-2 rounded w-full text-sm"
+                  placeholder="Name"
+                  id="name"
+                  name="name"
+                  onChange={messageForm.handleChange}
+                  onBlur={messageForm.handleBlur}
+                  value={messageForm.values.name}
+                />
+              </div>
+              <div className="flex items-center mt-4">
+                <input
+                  type="text"
+                  className="border focus:outline-none border-gray-300 py-2 lg:px-6 px-2 rounded w-full text-sm"
+                  placeholder="Organisation Name"
+                  id="organization"
+                  name="organization"
+                  onChange={messageForm.handleChange}
+                  onBlur={messageForm.handleBlur}
+                  value={messageForm.values.organization}
+                />
+              </div>
+              <div className="flex items-center mt-4">
+                <input
+                  type="text"
+                  className="border focus:outline-none border-gray-300 py-2 lg:px-6 px-2 rounded w-full text-sm"
+                  placeholder="Email"
+                  name="email"
+                  onChange={messageForm.handleChange}
+                  onBlur={messageForm.handleBlur}
+                  value={messageForm.values.email}
+                />
+              </div>
+              <div className="flex items-center mt-4">
+                <input
+                  type="text"
+                  className="border focus:outline-none border-gray-300 py-2 lg:px-6 px-2 rounded w-full text-sm"
+                  placeholder="Phone Number"
+                  name="phone"
+                  onChange={messageForm.handleChange}
+                  onBlur={messageForm.handleBlur}
+                  value={messageForm.values.phone}
+                />
+              </div>
+              <div className="flex items-center mt-4">
+                <textarea
+                  className="border focus:outline-none border-gray-300 w-full py-2 lg:px-6 px-2 rounded text-sm"
+                  placeholder="Message"
+                  rows="3"
+                  name="message"
+                    onChange={messageForm.handleChange}
+                    onBlur={messageForm.handleBlur}
+                    value={messageForm.values.message}
+                />
+              </div>
+              <div className="p-2 pl-2 mt-32 pt-0 rounded-md border-2 ml-16 mr-16" style={{ width: "11.4rem", margin: 'auto', marginTop: ' 25px' }}>
+                <button type="submit" className="text-white purple lg:w-40 w-full flex items-center mt-2 mr-2 justify-between border-none focus:outline-none py-2 px-7 rounded px-5">
+                  <p className="relativeContact ">Submit</p>
+                </button>
+              </div>
+            </form>
           </div>
-          <form class="formInline" onSubmit={formik.handleSubmit}>
-            <input type="text" id="namee"
-              placeholder="Name"
-              name="name"
-              onChange={formik.handleChange}
-              onBlur={formik.handleBlur}
-              value={formik.values.name}
-            />
-            {/* {formik.touched.name && formik.errors.name ? (
-      <div>{formik.errors.name}</div>
-    ) : null} */}
-            <input type="text"
-              placeholder="Organisation Name"
-              id="Organisation"
-              name="organization"
-              onChange={formik.handleChange}
-              onBlur={formik.handleBlur}
-              value={formik.values.organization}
-
-            />
-            <input type="text"
-              id="Email"
-              name="email"
-              placeholder="Email ID"
-              onChange={formik.handleChange}
-              onBlur={formik.handleBlur}
-              value={formik.values.email}
-            />
-            <input type="text" id="Phone" placeholder="Phone Number"
-              name="phone"
-              onChange={formik.handleChange}
-              onBlur={formik.handleBlur}
-              value={formik.values.phone}
-            />
-            <textarea placeholder="Message" rows="4"
-              name="message"
-              onChange={formik.handleChange}
-              onBlur={formik.handleBlur}
-              value={formik.values.message}
-            ></textarea>
-            <div className="p-2 pl-2 mt-32 pt-0 rounded-md border-2 ml-16 mr-16" style={{ width: "11.4rem", margin: 'auto', marginTop: ' 25px' }}>
-              <button type="submit" className="text-white purple lg:w-40 w-full flex items-center mt-2 mr-2 justify-between border-none focus:outline-none py-2 px-7 rounded">
-                <p className="relative" style={{ margin: 'auto' }}>Submit</p>
-              </button>
-            </div>
-          </form>
         </Modal>
+        }     
 
-        {/* Modal second */}
-
-        <Modal
+        {/* Project */}
+        { dimensions > 480 ?
+          <Modal
           isOpen={modalIsOpen2}
           onAfterOpen={afterOpenModal2}
           onRequestClose={closeModal2}
-          style={customStyles}
+          style={dimensions > 480 ? customStyles : customMobileStyles}
           contentLabel="Example Modal"
         >
-          <div>
-            <h4 className="text-lg cardHeading md:text-2xl font-bold leading-10 text-center">
-              Project Information
+          <div className="mx-auto w-full lg:border-none px-8 lg:px-0 lg:mt-0  justify-center items-center">
             <span className="floatRight">
-                <button onClick={closeModal2}>
-                  <AiOutlineCloseCircle />
-                </button>
-              </span>
-            </h4>
-            <p className="font-semibold text-md mt-3 xl:w-10/12 w-11/12 mx-auto light_grey grey-text text-center font-thin">
-              Lets talk about everything.
-            </p>
-          </div>
-          <form class="formInline" onSubmit={formikSecond.handleSubmit}>
-            <input type="text" id="name" placeholder="Name"
-              name="name"
-              onChange={formikSecond.handleChange}
-              onBlur={formikSecond.handleBlur}
-              value={formikSecond.values.name}
-            />
-            <input type="text" id="Organisation Name"
-              placeholder="Organisation Name"
-              name="organization"
-              onChange={formikSecond.handleChange}
-              onBlur={formikSecond.handleBlur}
-              value={formikSecond.values.organization} />
-            <input type="text" id="Email ID" placeholder="Email ID"
-              name="email"
-              onChange={formikSecond.handleChange}
-              onBlur={formikSecond.handleBlur}
-              value={formikSecond.values.email} />
-            <input type="text" id="Phone Number" placeholder="Phone Number"
-              name="phone"
-              onChange={formikSecond.handleChange}
-              onBlur={formikSecond.handleBlur}
-              value={formikSecond.values.phone} />
-            <input type="text" id="Industry" placeholder="Industry"
-              name="industry"
-              onChange={formikSecond.handleChange}
-              onBlur={formikSecond.handleBlur}
-              value={formikSecond.values.industry} />
-            <input type="text" id="Project Title" placeholder="Project Title"
-              name="projectTitle"
-              onChange={formikSecond.handleChange}
-              onBlur={formikSecond.handleBlur}
-              value={formikSecond.values.projectTitle} />
-            <textarea placeholder="Project Description" rows="4"
-              name="projectDiscrioption"
-              onChange={formikSecond.handleChange}
-              onBlur={formikSecond.handleBlur}
-              value={formikSecond.values.projectDiscrioption}></textarea>
-            <div className="p-2 pl-2 mt-32 pt-0 rounded-md border-2 ml-16 mr-16" style={{ width: "11.4rem", margin: 'auto', marginTop: ' 25px' }}>
-              <button type="submit" className="text-white purple lg:w-40 w-full flex items-center mt-2 mr-2 justify-between border-none focus:outline-none py-2 px-7 rounded">
-                <p className="relative" style={{ margin: 'auto' }}>Submit</p>
+              <button onClick={closeModal2}>
+                <AiOutlineCloseCircle style={{fontSize:"1.5rem"}}/>
               </button>
-            </div>
-          </form>
+            </span>
+            <p className="text-2xl text-center font-semibold"> Project Information </p>
+            
+            <p className="text-sm grey-text text-center mt-2">
+              Lets talk about everything
+            </p>
+            <form onSubmit={projectForm.handleSubmit}>
+              <div className="flex items-center mt-14">
+                <input
+                  type="text"
+                  className="border focus:outline-none border-gray-300 py-2 lg:px-6 px-2 rounded w-2/4 mr-2 text-sm"
+                  placeholder="Name"
+                  id="name"
+                  name="name"
+                  onChange={projectForm.handleChange}
+                  onBlur={projectForm.handleBlur}
+                  value={projectForm.values.name}
+                />
+                <input
+                  type="text"
+                  className="border focus:outline-none border-gray-300 py-2 lg:px-6 px-2 rounded w-2/4 text-sm"
+                  placeholder="Organisation Name"
+                  id="organization"
+                  name="organization"
+                  onChange={projectForm.handleChange}
+                  onBlur={projectForm.handleBlur}
+                  value={projectForm.values.organization}
+                />
+              </div>
+
+              <div className="flex items-center mt-4">
+                <input
+                  type="text"
+                  className="border focus:outline-none border-gray-300 py-2  lg:px-6 px-2 rounded w-2/4 mr-2 text-sm"
+                  placeholder="Email"
+                  name="email"
+                  onChange={projectForm.handleChange}
+                  onBlur={projectForm.handleBlur}
+                  value={projectForm.values.email}
+                />
+                <input
+                  type="text"
+                  className="border focus:outline-none border-gray-300 py-2 lg:px-6 px-2 rounded w-2/4 text-sm"
+                  placeholder="Phone Number"
+                  name="phone"
+                  onChange={projectForm.handleChange}
+                  onBlur={projectForm.handleBlur}
+                  value={projectForm.values.phone}
+                />
+              </div>
+
+              <div className="flex items-center mt-4">
+                <input
+                  type="text"
+                  className="border focus:outline-none border-gray-300 py-2  lg:px-6 px-2 rounded w-2/4 mr-2 text-sm"
+                  placeholder="Industry"
+                  name="industry"
+                  onChange={projectForm.handleChange}
+                  onBlur={projectForm.handleBlur}
+                  value={projectForm.values.inustry}
+                />
+                <input
+                  type="text"
+                  className="border focus:outline-none border-gray-300 py-2 lg:px-6 px-2 rounded w-2/4 text-sm"
+                  placeholder="Project Title"
+                  name="project"
+                  onChange={projectForm.handleChange}
+                  onBlur={projectForm.handleBlur}
+                  value={projectForm.values.project}
+                />
+              </div>
+
+              <textarea
+                className="border focus:outline-none border-gray-300 w-full py-2 lg:px-6 px-2 rounded mt-4 text-sm"
+                placeholder="Project Description"
+                rows="5"
+                name="projectdescription"
+                onChange={projectForm.handleChange}
+                onBlur={projectForm.handleBlur}
+                value={projectForm.values.projectdescription}
+              />
+              <div className="p-2 pl-2 mt-32 pt-0 rounded-md border-2 ml-16 mr-16" style={{ width: "11.4rem", margin: 'auto', marginTop: ' 25px' }}>
+                <button type="submit" className="text-white purple lg:w-40 w-full flex items-center mt-2 mr-2 justify-between border-none focus:outline-none py-2 px-7 rounded px-5">
+                  <p className="relativeContact ">Submit</p>
+                </button>
+              </div>
+            </form>
+          </div>
+        </Modal> : 
+          <Modal
+          isOpen={modalIsOpen2}
+          onAfterOpen={afterOpenModal}
+          onRequestClose={closeModal2}
+          style={customMobileStyles}
+          contentLabel="Example Modal"
+        >
+          <div className="mx-auto w-full lg:border-none px-8 lg:px-0 lg:mt-0  justify-center items-center">
+            <span className="floatRight">
+              <button onClick={closeModal2}>
+                <AiOutlineCloseCircle style={{fontSize:"1.5rem"}}/>
+              </button>
+            </span>
+            <p className="text-2xl text-center font-semibold"> Project Information </p>
+            <p className="text-sm grey-text text-center mt-2">
+            Lets talk about everything
+            </p>
+            <form onSubmit={projectForm.handleSubmit} className="w-full">
+              <div className="flex items-center mt-4">
+                <input
+                  type="text"
+                  className="border focus:outline-none border-gray-300 py-2 lg:px-6 px-2 rounded w-full text-sm"
+                  placeholder="Name"
+                  id="name"
+                  name="name"
+                  onChange={projectForm.handleChange}
+                  onBlur={projectForm.handleBlur}
+                  value={projectForm.values.name}
+                />
+              </div>
+              <div className="flex items-center mt-4">
+                <input
+                  type="text"
+                  className="border focus:outline-none border-gray-300 py-2 lg:px-6 px-2 rounded w-full text-sm"
+                  placeholder="Organisation Name"
+                  id="organization"
+                  name="organization"
+                  onChange={projectForm.handleChange}
+                  onBlur={projectForm.handleBlur}
+                  value={projectForm.values.organization}
+                />
+              </div>
+              <div className="flex items-center mt-4">
+                <input
+                  type="text"
+                  className="border focus:outline-none border-gray-300 py-2 lg:px-6 px-2 rounded w-full text-sm"
+                  placeholder="Email"
+                  name="email"
+                  onChange={projectForm.handleChange}
+                  onBlur={projectForm.handleBlur}
+                  value={projectForm.values.email}
+                />
+              </div>
+              <div className="flex items-center mt-4">
+                <input
+                  type="text"
+                  className="border focus:outline-none border-gray-300 py-2 lg:px-6 px-2 rounded w-full text-sm"
+                  placeholder="Phone Number"
+                  name="phone"
+                  onChange={projectForm.handleChange}
+                  onBlur={projectForm.handleBlur}
+                  value={projectForm.values.phone}
+                />
+              </div>
+              <div className="flex items-center mt-4">
+                <input
+                  type="text"
+                  className="border focus:outline-none border-gray-300 py-2 lg:px-6 px-2 rounded w-full text-sm"
+                  placeholder="Industry"
+                  name="industry"
+                  onChange={projectForm.handleChange}
+                  onBlur={projectForm.handleBlur}
+                  value={projectForm.values.inustry}
+                />
+              </div>
+              <div className="flex items-center mt-4">
+                <input
+                  type="text"
+                  className="border focus:outline-none border-gray-300 py-2 lg:px-6 px-2 rounded w-full text-sm"
+                  placeholder="Project Title"
+                  name="project"
+                  onChange={projectForm.handleChange}
+                  onBlur={projectForm.handleBlur}
+                  value={projectForm.values.project}
+                />
+              </div>
+              <div className="flex items-center mt-4">
+                <textarea
+                  className="border focus:outline-none border-gray-300 w-full py-2 lg:px-6 px-2 rounded text-sm"
+                  placeholder="Project Description"
+                  rows="3"
+                  name="projectdescription"
+                    onChange={projectForm.handleChange}
+                    onBlur={projectForm.handleBlur}
+                    value={projectForm.values.projectdescription}
+                />
+              </div>
+              <div className="p-2 pl-2 mt-32 pt-0 rounded-md border-2 ml-16 mr-16" style={{ width: "11.4rem", margin: 'auto', marginTop: ' 25px' }}>
+                <button type="submit" className="text-white purple lg:w-40 w-full flex items-center mt-2 mr-2 justify-between border-none focus:outline-none py-2 px-7 rounded px-5">
+                  <p className="relativeContact ">Submit</p>
+                </button>
+              </div>
+            </form>
+          </div>
         </Modal>
+        }
       </div>
     </div>
   );
