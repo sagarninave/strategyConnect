@@ -57,7 +57,7 @@ function Subscription() {
         </p>
       </div>
 
-      <div className="pt-8 flex  lg:mb-0 mb-12 justify-between">
+      <div className="pt-8 flex lg:mb-0 mb-12 justify-between">
         <div className="flex flex-col items-center content-center">
           <div className="boxAnalytics" style={{ height: "500px" }}>
             <p className="text-lg md:text-2xl cardHeading font-bold leading-10"
@@ -133,7 +133,7 @@ function Subscription() {
         </div>
       </div>
 
-      <div className="flex  lg:mb-0 mb-12 justify-between" style={{ padding: '5rem 0rem' }}>
+      <div className="flex lg:mb-0 mb-12 justify-between" style={{ padding: '5rem 0rem' }}>
         <div className="flex flex-col items-center content-center">
           <div className="boxAnalytics" style={{ height: "500px" }}>
             <p className="text-lg cardHeading md:text-2xl font-bold leading-10"

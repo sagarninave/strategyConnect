@@ -109,10 +109,11 @@ function Subscription() {
         </p>
       </div>
 
-      <div className="pt-8 lg:flex lg:mb-0 mb-12 justify-between">
-        <div className="businessCardThree flex flex-col items-center content-center">
+      {/* Row 1 */}
+      <div className="pt-8 lg:flex lg:mb-0 mb-4 justify-between">
+        <div className="flex flex-col mb-8 w:7/12 items-center content-center">
           <div className="boxAnalytics">
-            <p className="text-lg cardHeading md:text-2xl font-bold leading-10"
+            <p className="text-xl lg:text-lg cardHeading md:text-2xl font-bold leading-8"
               style={{
                 borderBottom: '1px solid #B1B5B9',
                 marginBottom: '15px', padding: '9px 0px'
@@ -154,7 +155,7 @@ function Subscription() {
 
         <div className="flex flex-col items-center content-center">
           <div className="boxAnalytics">
-            <p className="text-lg cardHeading md:text-2xl font-bold leading-10"
+            <p className="text-xl lg:text-lg cardHeading md:text-2xl font-bold leading-8"
               style={{ borderBottom: '1px solid #B1B5B9', marginBottom: '15px', padding: '9px 0px' }}>
               Business <br /> Traction Analysis
               </p>
@@ -190,11 +191,12 @@ function Subscription() {
           </div>
         </div>
       </div>
-
-      <div className="lg:flex lg:mb-0 mb-12 justify-between" style={{ padding: '5rem 0rem' }}>
-        <div className="flex flex-col items-center content-center">
-          <div className="businessCardOne boxAnalytics">
-            <p className="text-lg cardHeading md:text-2xl font-bold leading-10"
+      {/* Row 1 */}
+      {/* Row 2 */}
+      <div className="pt-8 lg:flex lg:mb-0 mb-4 justify-between">
+        <div className="flex flex-col mb-8 items-center content-center">
+          <div className="boxAnalytics">
+            <p className="text-xl lg:text-lg cardHeading md:text-2xl font-bold leading-8"
               style={{ borderBottom: '1px solid #B1B5B9', marginBottom: '15px', padding: '9px 0px' }}>
               Operational <br />  Viability</p>
             <ul>
@@ -227,17 +229,17 @@ function Subscription() {
               </li>
             </ul>
             <div className="p-2 pl-2 pt-0 rounded-md border-2 ml-16 mr-16" 
-                 style={{ width: "11.4rem", position:"absolute", bottom:15}}>
-                <button onClick={openModal} className="text-white purple lg:w-40 w-full flex items-center mt-2 mr-2 justify-between border-none focus:outline-none py-2 px-7 rounded">
+                 style={{ width: "11.4rem", position:"absolute", bottom:15}}>              
+              <button onClick={openModal} className="text-white purple lg:w-40 w-full flex items-center mt-2 mr-2 justify-between border-none focus:outline-none py-2 px-7 rounded">
                 <p className="relative">Make Enquiry</p>
               </button>
             </div>
           </div>
         </div>
-        
+
         <div className="flex flex-col items-center content-center">
           <div className="boxAnalytics">
-            <p className="text-lg cardHeading md:text-2xl font-bold leading-10"
+            <p className="text-xl lg:text-lg cardHeading md:text-2xl font-bold leading-8"
               style={{ borderBottom: '1px solid #B1B5B9', marginBottom: '15px', padding: '9px 0px' }}>
               Financial Viability <br />  & Planning
             </p>
@@ -276,7 +278,7 @@ function Subscription() {
               </li>
             </ul>
             <div className="p-2 pl-2 pt-0 rounded-md border-2 ml-16 mr-16" 
-                 style={{ width: "11.4rem", position:"absolute", bottom:15}}>
+                 style={{ width: "11.4rem", position:"absolute", bottom:15}}>              
               <button onClick={openModal} className="text-white purple lg:w-40 w-full flex items-center mt-2 mr-2 justify-between border-none focus:outline-none py-2 px-7 rounded">
                 <p className="relative">Make Enquiry</p>
               </button>
@@ -284,6 +286,7 @@ function Subscription() {
           </div>
         </div>
       </div>
+      {/* Row 2 */}
 
       <div className="px-auto pt-0">
         <p className="sm:text-2xl lg:text-2xl text-black font-semibold text-center mx-auto lg:w-11/12 xl:w-11/12 sm:w-11/12 w-11/12">
