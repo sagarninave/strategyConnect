@@ -17,7 +17,7 @@ export default function index() {
         <p className="text-xl lg:text-5xl text-black font-semibold text-center mx-auto w-full lg:w-11/12 xl:w-11/12 ">
           Business Planning
         </p>
-        <p className="text-lg text-black text-center mx-auto font-semibold mt-4">
+        <p className="text-lg px-3 text-black text-center mx-auto font-semibold mt-4">
           We develop a thorough business analysis that can make your
           business investor and market-ready
         </p>

@@ -342,6 +342,11 @@
 
 @media only screen and (max-width:480px) {
 
+  .statisticImg{
+    width: 50px; 
+    height: auto;
+  }
+
   .textinxl{
     font-size:0.7rem;
     line-height:1rem;
@@ -512,7 +517,12 @@
 
 /* Extra Small Devices, Phones */
 
-@media only screen and (min-width: 480px) {}
+@media only screen and (min-width: 480px) {
+  .statisticImg{
+    width: 87px; 
+    height: auto;
+  }
+}
 
 /* service card */
 

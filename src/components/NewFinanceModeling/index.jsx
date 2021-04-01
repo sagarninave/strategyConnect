@@ -17,7 +17,7 @@ export default function index() {
           <p className="text-xl lg:text-5xl text-black font-semibold text-center mx-auto w-full lg:w-11/12 xl:w-11/12 ">
         Financial Modeling
         </p>
-        <p className="text-lg text-black text-center mx-auto font-semibold mt-4">
+        <p className="text-lg px-3 text-black text-center mx-auto font-semibold mt-4">
           We create an exhaustive and easy to use a financial model that can scale with your business
         </p>
       </div>

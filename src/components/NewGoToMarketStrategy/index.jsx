@@ -17,7 +17,7 @@ export default function index() {
         <p className="text-xl lg:text-5xl text-black font-semibold text-center mx-auto w-full lg:w-11/12 xl:w-11/12 ">
           Go-To Market Strategy
         </p>
-        <p className="text-lg text-black text-center mx-auto font-semibold mt-4">
+        <p className="text-lg px-3 text-black text-center mx-auto font-semibold mt-4">
           We uncover deep insights that can help your business fast tracK its entry to the market
           of interest. 
         </p>
