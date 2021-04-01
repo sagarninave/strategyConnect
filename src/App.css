@@ -342,6 +342,12 @@
 
 @media only screen and (max-width:480px) {
 
+  .imagesFour {
+    margin: auto;
+    margin-top: 0;
+    width:50px
+  }
+
   .priceCardOne{
     margin-bottom:1rem;
   }

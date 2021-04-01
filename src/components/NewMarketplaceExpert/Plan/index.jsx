@@ -1,26 +1,38 @@
-import React from 'react';
-import ExpertOne from '../../../assets/img/MarketExpert-1.png';
-import ExpertTwo from '../../../assets/img/MarketExpert-2.png';
-import ExpertThree from '../../../assets/img/MarketExpert-3.png';
+import React, { useState, useEffect } from 'react';
 import ExpertFour from '../../../assets/img/Expertslogo.png';
-function index() {
+import MarketExpertMobile from '../../../assets/img/MarketExpertMobile.png';
+import MarketExpertWeb from '../../../assets/img/MarketExpertWeb.png';
+function Plan() {
+
+  const [dimensions, setDimensions] = useState(window.innerWidth);
+  useEffect(() => {
+    function handleResize() {
+      setDimensions(window.innerWidth);
+    }
+
+    window.addEventListener('resize', handleResize);
+
+    return (_) => {
+      window.removeEventListener('resize', handleResize);
+    };
+  });
+
   return (
     <>
-      <div className="centerImages">
-        <img src={ExpertOne} className="imagesOne items-end" alt="Expert"></img>
-        <img src={ExpertTwo} className="imagesTwo" alt="Expert"></img>
-        <img src={ExpertThree} className="imagesOne items-end" alt="Expert"></img>
+      <div className="w:full">
+        <img src={dimensions > 480 ? MarketExpertWeb : MarketExpertMobile} alt="MarketExpert"
+             className="w-9-12 lg:w-full mx-auto mt-10 lg:mt-8 xs:mt-8 items-end" />
       </div>
-      <hr className="hr" />
-      {/* Simple, transparent pricing */}
-
-      <div className="pb-10 pt-14">
+      <div className="pb-10 pt-8">
         <p className="text-center marketplace-heading xl:text-2xl text-2xl font-bold">
           Simple, transparent pricing
         </p>
         <p className="marketplace-subheading font-medium text-lg xl:w-10/12 w-11/12 mx-auto light_grey grey-text mt-2 text-center font-thin">
           No contracts. No surprise fees.
         </p>
+      </div>
+
+      <div className="w:full">
         <img src={ExpertFour} className="imagesFour" alt="Expert"></img>
       </div>
 
@@ -196,4 +208,4 @@ function index() {
   );
 }
 
-export default index;
+export default Plan;

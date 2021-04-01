@@ -16,7 +16,7 @@ export default function index() {
         <p className="text-xl lg:text-5xl text-black font-semibold text-center mx-auto w-full lg:w-11/12 xl:w-11/12 ">
           Experts on Demand
         </p>
-        <p className="text-lg text-black text-center mx-auto font-semibold mt-4">
+        <p className="text-lg text-black text-center px-3 mx-auto font-semibold mt-4">
         Access our database of experts and get 5 short calls for free.
         </p>
       </div>
