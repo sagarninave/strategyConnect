@@ -5,8 +5,6 @@ import 'react-lazy-load-image-component/src/effects/blur.css';
 import BusinessPlanning from '../../../../../assets/img/BusinessPlanning.png';
 import GoToMarketPlanning from '../../../../../assets/img/GoToMarketPlanning.png';
 import FinancialModeling from '../../../../../assets/img/FinancialModeling.png';
-import CompetitorBenchmarking from '../../../../../assets/img/CompetitorBenchmarking.png';
-import TechProductBenchmarking from '../../../../../assets/img/TechProductBenchmarking.png';
 
 export default function index() {
   return (
@@ -150,10 +148,10 @@ export default function index() {
            className="flex lg:py-8 py-8 lg:px-16 px-8 justify-start refined-bg md:mt-0 xl:mt-0 mt-0 items-center">
         <div className="flex showInMobile lg:flex lg:justify-start">
           <LazyLoadImage
-            alt={FinancialModeling}
+            alt={GoToMarketPlanning}
             effect="blur"
             className="lg:flex bussinessImgMobile flex-initial"
-            src={FinancialModeling}
+            src={GoToMarketPlanning}
           />
         </div>
         <div className="flex-1 ml-32 showInMobile">

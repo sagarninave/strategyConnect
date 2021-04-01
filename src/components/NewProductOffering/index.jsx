@@ -32,16 +32,16 @@ export default function index() {
   return (
     <div className="m-0 p-0">
       <Navbar />
-
-      <div style={{ backgroundColor: "#F0EFF7"}} className="px-auto h-48 lg:h-96 xl:h-96 pt-32 pt-20 lg:pt-20 xl:pt-20">
-        <p className="sm:text-5xl lg:text-5xl text-black font-semibold mt-10 text-center mx-auto lg:w-11/12 xl:w-11/12 sm:w-11/12 w-11/12">
-          The Simplest Solutions for Your Systems
+      <div style={{ backgroundColor: "#F0EFF7"}} className="h-36 lg:h-96 px-auto pt-5 lg:pt-28">
+        <p className="text-xl lg:text-5xl text-black font-semibold text-center mx-auto w-full lg:w-11/12 xl:w-11/12 ">
+        The Simplest Solutions for Your Systems
         </p>
-        <p className="text-lg xl:text-base offeringxltext text-black text-center mx-auto font-semibold w-9/12 xl:w-9/12 mt-4">
-          We are working on a suite of tools to managing complex systems easier, for everyone. 
-          We can’t wait to hear what you think.        
+        <p className="text-lg text-black text-center mx-auto font-semibold mt-4">
+        We are working on a suite of tools to managing complex systems easier, for everyone. 
+          We can’t wait to hear what you think. 
         </p>
       </div>
+
       <div className="xl:px-32 px-0">
         <MarketplaceExpert />
         <Specialised />

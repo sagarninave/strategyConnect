@@ -13,13 +13,13 @@ export default function index() {
   return (
     <div className="m-0 p-0">
       <Navbar />
-      <div style={{ backgroundColor: "#F0EFF7", height: "440px" }} className="px-auto sm:pt-32 pt-20">
-        <p className="sm:text-5xl lg:text-5xl text-black font-semibold text-center mx-auto lg:w-11/12 xl:w-11/12 sm:w-11/12 w-11/12">
-          Go-To-Market Strategy
+      <div style={{ backgroundColor: "#F0EFF7"}} className="h-36 lg:h-96 px-auto pt-5 lg:pt-28">
+        <p className="text-xl lg:text-5xl text-black font-semibold text-center mx-auto w-full lg:w-11/12 xl:w-11/12 ">
+          Go-To Market Strategy
         </p>
         <p className="text-lg text-black text-center mx-auto font-semibold mt-4">
-          We uncover deep insights that can help your business fast track <br/>
-          its entry to the market of interest. 
+          We uncover deep insights that can help your business fast tracK its entry to the market
+          of interest. 
         </p>
       </div>
       <div className="xl:px-32 px-0">

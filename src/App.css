@@ -73,7 +73,7 @@
   border: 1px solid rgb(177, 181, 185);
   padding: 14px;
   width: 360px;
-  min-height: 400px;
+  min-height: 500px;
   border-radius: 10px;
   position:relative;
 }
@@ -342,6 +342,20 @@
 
 @media only screen and (max-width:480px) {
 
+  .businessBanner{
+    background-color: "#F0EFF7"; 
+    height:150px;
+  }
+  .businessHeading{
+    font-size: 1.5rem
+  }
+  .businessCardOne{
+    margin-top: -2rem;
+    margin-bottom: 3rem;
+  }
+  .businessCardThree{
+    margin-top: 3rem;
+  }
   .px-8 {
     padding-left: 4px;
     padding-right: 4px;
@@ -513,4 +527,9 @@
 
 .flip-card-back {
   transform: rotateY(180deg);
+}
+
+.businessBanner{
+  background-color: "#F0EFF7"; 
+  height: 440px;
 }
