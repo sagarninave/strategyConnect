@@ -100,7 +100,7 @@ function Subscription() {
 
   return (
     <div>
-      <div className="pb-10 pt-14">
+      <div className="pb-0 lg:pb-10 xl:pb-10 pt-5 lg:pt-14 xl:pt-14">
         <p className="businessHeading text-center xl:text-2xl text-2xl font-bold">
           Easy Subscriptions Plans
         </p>

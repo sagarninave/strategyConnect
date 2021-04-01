@@ -48,8 +48,8 @@ function Subscription() {
   return (
     <div>
       {/* Easy subscription Plan */}
-      <div className="pb-10 pt-14">
-        <p className="text-center xl:text-2xl text-2xl font-bold">
+      <div className="pb-0 lg:pb-10 xl:pb-10 pt-5 lg:pt-14 xl:pt-14">
+        <p className="businessHeading text-center xl:text-2xl text-2xl font-bold">
           Easy Subscriptions Plans
         </p>
         <p className="font-medium text-md xl:w-10/12 w-11/12 mx-auto light_grey grey-text mt-2 text-center font-thin">
