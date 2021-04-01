@@ -121,26 +121,26 @@ function Subscription() {
               Market <br /> Analysis</p>
             <ul>
               <li className="font14 mb-4">
-                <p className="leading-6" style={{ color: "#5C5B5B" }}>
+                <p className="leading-6 financeCardDesc" style={{ color: "#5C5B5B" }}>
                   <span className="tick"></span>
                   Assessment of market scenario including
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;customer segmentation, target customer
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;personas, and market size estimation.
+                  customer segmentation, target customer
+                  personas, and market size estimation.
                 </p>
               </li>
               <li className="font14 mb-4">
-                <p className="leading-6" style={{ color: "#5C5B5B" }}>
+                <p className="leading-6 financeCardDesc" style={{ color: "#5C5B5B" }}>
                   <span className="tick"></span>
                   Identifying unique value proposition and
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;market positioning.
+                  market positioning.
                 </p>
               </li>
               <li className="font14 mb-4">
-                <p className="leading-6" style={{ color: "#5C5B5B" }}>
+                <p className="leading-6 financeCardDesc" style={{ color: "#5C5B5B" }}>
                   <span className="tick"></span>
                   Identifying competitor segmentation by
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;product offering, price, customer focus,
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;geography and traction.
+                  product offering, price, customer focus,
+                  geography and traction.
                 </p>
               </li>
             </ul>
@@ -161,24 +161,24 @@ function Subscription() {
               </p>
             <ul>
               <li className="font14 mb-4">
-                <p className="leading-6" style={{ color: "#5C5B5B" }}>
+                <p className="leading-6 financeCardDesc" style={{ color: "#5C5B5B" }}>
                   <span className="tick"></span>
                     Identifying key levers of success and
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;market traction such as ARR, MRR and
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;projected growth trends.
+                    market traction such as ARR, MRR and
+                    projected growth trends.
                   </p>
               </li>
               <li className="font14 mb-4">
-                <p className="leading-6" style={{ color: "#5C5B5B" }}>
+                <p className="leading-6 financeCardDesc" style={{ color: "#5C5B5B" }}>
                   <span className="tick"></span>
                     Highlighting key customer(s) acquired.
                   </p>
               </li>
               <li className="font14 mb-4">
-                <p className="leading-6" style={{ color: "#5C5B5B" }}>
+                <p className="leading-6 financeCardDesc" style={{ color: "#5C5B5B" }}>
                   <span className="tick"></span>
                     Underlining revenue and customer
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;growth trends.
+                    growth trends.
                   </p>
               </li>
             </ul>
@@ -201,30 +201,30 @@ function Subscription() {
               Operational <br />  Viability</p>
             <ul>
               <li className="font14 mb-4">
-                <p className="leading-6" style={{ color: "#5C5B5B" }}>
+                <p className="leading-6 financeCardDesc" style={{ color: "#5C5B5B" }}>
                   <span className="tick"></span>
                     Evaluating sales channels and <br />
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;marketing strategy.
+                    marketing strategy.
                   </p>
               </li>
               <li className="font14 mb-4">
-                <p className="leading-6" style={{ color: "#5C5B5B" }}>
+                <p className="leading-6 financeCardDesc" style={{ color: "#5C5B5B" }}>
                   <span className="tick"></span>
                     Assessing organization growth.
                   </p>
               </li>
               <li className="font14 mb-4">
-                <p className="leading-6" style={{ color: "#5C5B5B" }}>
+                <p className="leading-6 financeCardDesc" style={{ color: "#5C5B5B" }}>
                   <span className="tick"></span>
                     Assessing technology readiness.
                 </p>
               </li>
               <li className="font14 mb-4">
-                <p className="leading-6" style={{ color: "#5C5B5B" }}>
+                <p className="leading-6 financeCardDesc" style={{ color: "#5C5B5B" }}>
                   <span className="tick"></span>
                     Addressing cost optimization through
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;outsourcing and creative procurement
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;strategies.
+                    outsourcing and creative procurement
+                    strategies.
                   </p>
               </li>
             </ul>
@@ -245,35 +245,35 @@ function Subscription() {
             </p>
             <ul>
               <li className="font14 mb-4">
-                <p className="leading-6" style={{ color: "#5C5B5B" }}>
+                <p className="leading-6 financeCardDesc" style={{ color: "#5C5B5B" }}>
                   <span className="tick"></span>
                   Evaluating key financial ratios.
                 </p>
               </li>
               <li className="font14 mb-4">
-                <p className="leading-6" style={{ color: "#5C5B5B" }}>
+                <p className="leading-6 financeCardDesc" style={{ color: "#5C5B5B" }}>
                   <span className="tick"></span>
                   Evaluating unit economics.
                 </p>
               </li>
               <li className="font14 mb-4">
-                <p className="leading-6" style={{ color: "#5C5B5B" }}>
+                <p className="leading-6 financeCardDesc" style={{ color: "#5C5B5B" }}>
                   <span className="tick"></span>
                   Assessing the cost of customer acquisition.
                 </p>
               </li>
               <li className="font14 mb-4">
-                <p className="leading-6" style={{ color: "#5C5B5B" }}>
+                <p className="leading-6 financeCardDesc" style={{ color: "#5C5B5B" }}>
                   <span className="tick"></span>
                   Creating cash flow growth scenarios.
                 </p>
               </li>
               <li className="font14 mb-4">
-                <p className="leading-6" style={{ color: "#5C5B5B" }}>
+                <p className="leading-6 financeCardDesc" style={{ color: "#5C5B5B" }}>
                   <span className="tick"></span>
                   Developing comprehensive 3 to 5-year
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;growth roadmap with clearly defined
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;milestones.
+                  growth roadmap with clearly defined
+                  milestones.
                 </p>
               </li>
             </ul>

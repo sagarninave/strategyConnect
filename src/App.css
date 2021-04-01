@@ -342,6 +342,14 @@
 
 @media only screen and (max-width:480px) {
 
+  .tick{
+    position: absolute;
+    margin-left: -20px;
+    margin-top: 5px;
+  }
+  .financeCardDesc{
+    padding-left: 25px;
+  }
   .statisticImg{
     width: 50px; 
     height: auto;
@@ -564,4 +572,13 @@
 .businessBanner{
   background-color: "#F0EFF7"; 
   height: 440px;
+}
+
+.tick{
+  position: absolute;
+  margin-left: -20px;
+  margin-top: 5px;
+}
+.financeCardDesc{
+  padding-left: 25px;
 }

@@ -56,7 +56,7 @@ function Subscription() {
         </p>
       </div>
 
-      <div className="pt-8 flex lg:mb-0 mb-32 justify-center">
+      <div className="pt-8 lg:pt-0 mb-8 flex lg:mb-8 xl:mb-8 justify-center">
         <div className="flex flex-col items-center content-center">
           <div className="boxAnalytics" style={{height:"500px"}}>
             <p className="text-lg cardHeading md:text-2xl font-bold leading-10"
@@ -68,26 +68,26 @@ function Subscription() {
             </p>
             <ul>
               <li className="font14 mb-4"> 
-                <p className="leading-6" style={{color:"#5C5B5B"}}> 
+                <p className="leading-6 financeCardDesc" style={{color:"#5C5B5B"}}> 
                   <span className="tick"></span> 
                   Assessment of market scenario including 
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;customer segmentation, target customer 
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;personas, and market size estimation.                
+                  customer segmentation, target customer 
+                  personas, and market size estimation.                
                 </p>
               </li>
               <li className="font14 mb-4">
-                <p className="leading-6" style={{color:"#5C5B5B"}}> 
+                <p className="leading-6 financeCardDesc" style={{color:"#5C5B5B"}}> 
                   <span className="tick"></span>
                   Identifying unique value proposition and 
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;market positioning.
+                  market positioning.
                 </p>
               </li>
               <li className="font14 mb-4">
-                <p className="leading-6" style={{color:"#5C5B5B"}}> 
+                <p className="leading-6 financeCardDesc" style={{color:"#5C5B5B"}}> 
                   <span className="tick"></span>
                   Identifying competitor segmentation by 
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;product offering, price, customer focus,<br/>
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;geography, and traction. 
+                  product offering, price, customer focus,<br/>
+                  geography, and traction. 
                 </p>
               </li>
             </ul>
@@ -102,8 +102,7 @@ function Subscription() {
         </div>
       </div>
 
-
-      <div className="px-auto pt-0 mt-32">
+      <div className="px-auto pt-0 mt-8 lg:mt-8">
         <p className="sm:text-2xl lg:text-2xl text-black font-semibold text-center mx-auto lg:w-11/12 xl:w-11/12 sm:w-11/12 w-11/12">
           Couldn't find what you were looking for?
         </p>

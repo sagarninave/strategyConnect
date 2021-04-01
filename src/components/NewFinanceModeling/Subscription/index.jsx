@@ -57,105 +57,72 @@ function Subscription() {
         </p>
       </div>
 
-      <div className="pt-8 flex lg:mb-0 mb-12 justify-between">
-        <div className="flex flex-col items-center content-center">
-          <div className="boxAnalytics" style={{ height: "500px" }}>
-            <p className="text-lg md:text-2xl cardHeading font-bold leading-10"
+      {/* Row 1 */}
+      <div className="pt-8 lg:flex lg:mb-0 mb-4 justify-between">
+        <div className="flex flex-col mb-8 w:7/12 items-center content-center">
+          <div className="boxAnalytics">
+            <p className="text-xl lg:text-lg cardHeading md:text-2xl font-bold leading-8"
               style={{
                 borderBottom: '1px solid #B1B5B9',
                 marginBottom: '15px', padding: '9px 0px'
               }}>
-              Revenue and <br /> Cost Projections</p>
-            <ul>
-              <li className="font14 mb-4">
-                <p className="leading-6" style={{ color: "#5C5B5B" }}>
-                  <span className="tick"></span>
-                  Identify revenue drivers and cost streams
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;through primary and secondary research
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;and do financial projections for income and
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;expenses.
-                </p>
-              </li>
-              <li className="font14 mb-4">
-                <p className="leading-6" style={{ color: "#5C5B5B" }}>
-                  <span className="tick"></span>
-                  Refining the operating expenses as per
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;the scale of the business.
-                </p>
-              </li>
-              <li className="font14 mb-4">
-                <p className="leading-6" style={{ color: "#5C5B5B" }}>
-                  <span className="tick"></span>
-                  Estimating the capital expenditure
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;essential for running the business.
-                </p>
-              </li>
-            </ul>
-            <div className="p-2 pl-2 pt-0 rounded-md border-2 ml-16 mr-16" 
-                 style={{ width: "11.4rem", position:"absolute", bottom:15}}>
-              <button onClick={openModal} className="text-white purple lg:w-40 w-full flex items-center mt-2 mr-2 justify-between border-none focus:outline-none py-2 px-7 rounded">
-                <p className="relative">Make Enquiry</p>
-              </button>
-            </div>
-          </div>
-        </div>
-        <div className="flex flex-col items-center content-center">
-          <div className="boxAnalytics" style={{ height: "500px" }}>
-            <p className="text-lg cardHeading md:text-2xl font-bold leading-10"
-              style={{ borderBottom: '1px solid #B1B5B9', marginBottom: '15px', padding: '9px 0px' }}>
-              Financial <br /> Statements
-              </p>
-            <ul>
-              <li className="font14 mb-4">
-                <p className="leading-6" style={{ color: "#5C5B5B" }}>
-                  <span className="tick"></span>
-                    Preparing Profit and Loss statements,
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Balance Sheets. and Cash Flow
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Statements.
-                  </p>
-              </li>
-              <li className="font14 mb-4">
-                <p className="leading-6" style={{ color: "#5C5B5B" }}>
-                  <span className="tick"></span>
-                    Identifying business KPIs, financial ratios,
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;and unit economics, presented through
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;visually appealing infographics.
-                  </p>
-              </li>
-            </ul>
-            <div className="p-2 pl-2 pt-0 rounded-md border-2 ml-16 mr-16" 
-                 style={{ width: "11.4rem", position:"absolute", bottom:15}}>
-              <button onClick={openModal} className="text-white purple lg:w-40 w-full flex items-center mt-2 mr-2 justify-between border-none focus:outline-none py-2 px-7 rounded">
-                <p className="relative">Make Enquiry</p>
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div className="flex lg:mb-0 mb-12 justify-between" style={{ padding: '5rem 0rem' }}>
-        <div className="flex flex-col items-center content-center">
-          <div className="boxAnalytics" style={{ height: "500px" }}>
-            <p className="text-lg cardHeading md:text-2xl font-bold leading-10"
-              style={{ borderBottom: '1px solid #B1B5B9', marginBottom: '15px', padding: '9px 0px' }}>
-              Business Valuations <br /> and Sensitivity Analysis.
+              Revenue and <br /> Cost Projections
             </p>
             <ul>
               <li className="font14 mb-4">
-                <p className="leading-6" style={{ color: "#5C5B5B" }}>
+                <p className="leading-6 financeCardDesc" style={{ color: "#5C5B5B" }}>
                   <span className="tick"></span>
-                    Company valuation through discounted
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cash flow method, EBITDA multiples and
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;through ROI and other investment-
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;related metrics.
+                  Identify revenue drivers and cost streams
+                  through primary and secondary research
+                  and do financial projections for income and
+                  expenses.
+                </p>
+              </li>
+              <li className="font14 mb-4">
+                <p className="leading-6 financeCardDesc" style={{ color: "#5C5B5B" }}>
+                  <span className="tick"></span>
+                  Refining the operating expenses as per
+                  the scale of the business.
+                </p>
+              </li>
+              <li className="font14 mb-4">
+                <p className="leading-6 financeCardDesc" style={{ color: "#5C5B5B" }}>
+                  <span className="tick"></span>
+                  Estimating the capital expenditure
+                  essential for running the business.
+                </p>
+              </li>
+            </ul>
+            <div className="p-2 pl-2 pt-0 rounded-md border-2 ml-16 mr-16" 
+                 style={{ width: "11.4rem", position:"absolute", bottom:15}}>              
+              <button onClick={openModal} className="text-white purple lg:w-40 w-full flex items-center mt-2 mr-2 justify-between border-none focus:outline-none py-2 px-7 rounded">
+                <p className="relative">Make Enquiry</p>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div className="flex flex-col items-center content-center">
+          <div className="boxAnalytics">
+            <p className="text-xl lg:text-lg cardHeading md:text-2xl font-bold leading-8"
+              style={{ borderBottom: '1px solid #B1B5B9', marginBottom: '15px', padding: '9px 0px' }}>
+              Financial <br /> Statements
+            </p>
+            <ul>
+              <li className="font14 mb-4">
+                <p className="leading-6 financeCardDesc" style={{ color: "#5C5B5B" }}>
+                  <span className="tick"></span>
+                    Preparing Profit and Loss statements,
+                    Balance Sheets. and Cash Flow
+                    Statements.
                   </p>
               </li>
               <li className="font14 mb-4">
-                <p className="leading-6" style={{ color: "#5C5B5B" }}>
+                <p className="leading-6 financeCardDesc" style={{ color: "#5C5B5B" }}>
                   <span className="tick"></span>
-                    Undertaking sensitivity analysis to <br />
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;assess “what-if” scenarios and measure
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;the impact of input assumptions.
+                    Identifying business KPIs, financial ratios,
+                    and unit economics, presented through
+                    visually appealing infographics.
                   </p>
               </li>
             </ul>
@@ -167,44 +134,82 @@ function Subscription() {
             </div>
           </div>
         </div>
-        <div className="flex flex-col items-center content-center">
-          <div className="boxAnalytics" style={{ height: "500px" }}>
-            <p className="text-lg cardHeading md:text-2xl font-bold leading-10"
+      </div>
+      {/* Row 1 */}
+      {/* Row 2 */}
+      <div className="pt-8 lg:flex lg:mb-0 mb-4 justify-between">
+        <div className="flex flex-col mb-8 items-center content-center">
+          <div className="boxAnalytics">
+            <p className="text-xl lg:text-lg cardHeading md:text-2xl font-bold leading-8"
               style={{ borderBottom: '1px solid #B1B5B9', marginBottom: '15px', padding: '9px 0px' }}>
-              Creating a Scalable <br /> Financial Model Structure.
+              Business Valuations <br /> and Sensitivity Analysis
             </p>
             <ul>
               <li className="font14 mb-4">
-                <p className="leading-6" style={{ color: "#5C5B5B" }}>
+                <p className="leading-6 financeCardDesc" style={{ color: "#5C5B5B" }}>
+                  <span className="tick"></span>
+                    Company valuation through discounted
+                    cash flow method, EBITDA multiples and
+                    through ROI and other investment-
+                    related metrics.
+                  </p>
+              </li>
+              <li className="font14 mb-4">
+                <p className="leading-6 financeCardDesc" style={{ color: "#5C5B5B" }}>
+                  <span className="tick"></span>
+                    Undertaking sensitivity analysis to <br />
+                    assess “what-if” scenarios and measure
+                    the impact of input assumptions.
+                  </p>
+              </li>
+            </ul>
+            <div className="p-2 pl-2 pt-0 rounded-md border-2 ml-16 mr-16" 
+                 style={{ width: "11.4rem", position:"absolute", bottom:15}}>              
+              <button onClick={openModal} className="text-white purple lg:w-40 w-full flex items-center mt-2 mr-2 justify-between border-none focus:outline-none py-2 px-7 rounded">
+                <p className="relative">Make Enquiry</p>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div className="flex flex-col items-center content-center">
+          <div className="boxAnalytics">
+            <p className="text-xl lg:text-lg cardHeading md:text-2xl font-bold leading-8"
+              style={{ borderBottom: '1px solid #B1B5B9', marginBottom: '15px', padding: '9px 0px' }}>
+              Creating a Scalable <br /> Financial Model Structure
+            </p>
+            <ul>
+              <li className="font14 mb-4">
+                <p className="leading-6 financeCardDesc" style={{ color: "#5C5B5B" }}>
                   <span className="tick"></span>
                   Preparing easy  understand the model <br />
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;flow using videos with professional  <br />
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;voice-overs.
+                  flow using videos with professional  <br />
+                  voice-overs.
                 </p>
               </li>
               <li className="font14 mb-4">
-                <p className="leading-6" style={{ color: "#5C5B5B" }}>
+                <p className="leading-6 financeCardDesc" style={{ color: "#5C5B5B" }}>
                   <span className="tick"></span>
                   Evaluating unit economics.
                 </p>
               </li>
               <li className="font14 mb-4">
-                <p className="leading-6" style={{ color: "#5C5B5B" }}>
+                <p className="leading-6 financeCardDesc" style={{ color: "#5C5B5B" }}>
                   <span className="tick"></span>
                   Preparing an index for the model.
                 </p>
               </li>
               <li className="font14 mb-4">
-                <p className="leading-6" style={{ color: "#5C5B5B" }}>
+                <p className="leading-6 financeCardDesc" style={{ color: "#5C5B5B" }}>
                   <span className="tick"></span>
                     Creating a modular structure of the  <br />
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;model to allow for addition/removal of a  <br />
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;business units and geographies.
+                    model to allow for addition/removal of a  <br />
+                    business units and geographies.
                 </p>
               </li>
             </ul>
             <div className="p-2 pl-2 pt-0 rounded-md border-2 ml-16 mr-16" 
-                 style={{ width: "11.4rem", position:"absolute", bottom:15}}>
+                 style={{ width: "11.4rem", position:"absolute", bottom:15}}>              
               <button onClick={openModal} className="text-white purple lg:w-40 w-full flex items-center mt-2 mr-2 justify-between border-none focus:outline-none py-2 px-7 rounded">
                 <p className="relative">Make Enquiry</p>
               </button>
@@ -212,6 +217,7 @@ function Subscription() {
           </div>
         </div>
       </div>
+      {/* Row 2 */}
 
       <div className="px-auto pt-0">
         <p className="sm:text-2xl lg:text-2xl text-black font-semibold text-center mx-auto lg:w-11/12 xl:w-11/12 sm:w-11/12 w-11/12">
