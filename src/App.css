@@ -342,6 +342,10 @@
 
 @media only screen and (max-width:480px) {
 
+  .textinxl{
+    font-size:0.7rem;
+    line-height:1rem;
+  }
   .businessBanner{
     background-color: "#F0EFF7"; 
     height:150px;
@@ -470,6 +474,14 @@
     width: 6rem;
     padding: 0rem 0.25rem 0.25rem 0.25rem;
     float:right;
+  }
+  .marketExpertSubscribeButton{
+    font-size: 0.6rem;
+    padding: 0.2rem 1rem 0.2rem 1.5rem
+  }
+  .marketExpertSubscribe{
+    width: 6rem;
+    padding: 0rem 0.25rem 0.25rem 0.25rem;
   }
   .minHeightBussiness {
     width: 115px;
