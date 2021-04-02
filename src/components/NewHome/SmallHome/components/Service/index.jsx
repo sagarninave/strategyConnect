@@ -185,25 +185,25 @@ export default function Service() {
 
     {
       publicCard ? 
-      <div className="showInMobile mobileServiceData w-10/12 mx-auto font-medium text-left p-8"
+      <div className="showInMobile mobileServiceData w-10/12 mx-auto font-medium text-center p-8"
         style={{ backgroundColor: "#E8F2FA" }}>
-        <p className="my-2 mt-2 font-semibold" style={{ fontSize: "0.9rem" }}>
+        <p className="my-2 mt-2 font-semibold" style={{ fontSize: "0.9rem", textAlign:"center" }}>
           Projects are done in a faster and cheaper manner where on-demand teams of
           consultants are assigned to each project.              
         </p>
         <hr style={{ border: '1px solid #D7D5E8', width: "100%", margin: 'auto' }} />
-        <p className="my-2 mt-2 font-semibold" style={{ fontSize: "0.9rem" }}>
+        <p className="my-2 mt-2 font-semibold" style={{ fontSize: "0.9rem"}}>
           How can people buy the service:  <br />
-          <span className="font-medium">
+          <span className="font-medium" style={{textAlign:"justify"}}>
             Clients do request  a call on the website and SC will develop a proposal for them
           </span>
         </p>
         <hr style={{ border: '1px solid #D7D5E8', width: "100%", margin: 'auto' }} />
 
         <hr style={{ border: '1px solid #D7D5E8', width: "100%", margin: 'auto' }} />
-        <p className="my-2 mt-2 font-semibold" style={{ fontSize: "0.9rem" }}>
+        <p className="my-2 mt-2 font-semibold" style={{ fontSize: "0.9rem", textAlign:"center"}}>
           How do customers use the service: <br />
-          <span className="font-medium">
+          <span className="font-medium"  style={{textAlign:"justify"}}>
             At the end of the engagement, customers will receive the studies in the form of
             PowerPoint, word doc, or excel documents.                
           </span>
@@ -213,7 +213,7 @@ export default function Service() {
 
     {
       marketCard ?
-      <div className="showInMobile mobileServiceData w-10/12 mx-auto font-medium text-left p-8"
+      <div className="showInMobile mobileServiceData w-10/12 mx-auto font-medium text-center p-8"
         style={{ backgroundColor: "#E8F2FA" }}>
         <p className="my-2 mt-2 font-semibold" style={{ fontSize: "0.9rem" }}>
           On-demand calls billed on an hourly basis

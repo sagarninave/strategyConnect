@@ -32,7 +32,7 @@ export default function index() {
   return (
     <div className="m-0 p-0">
       <Navbar />
-      <div style={{ backgroundColor: "#F0EFF7"}} className="h-36 lg:h-96 px-auto pb-10 pt-5 lg:pt-28">
+      <div style={{ backgroundColor: "#F0EFF7"}} className="h-40 px-3 lg:h-96 pb-10 pt-5 lg:pt-28">
         <p className="text-xl lg:text-5xl text-black font-semibold text-center mx-auto w-full lg:w-11/12 xl:w-11/12 ">
         The Simplest Solutions for Your Systems
         </p>

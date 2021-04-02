@@ -136,7 +136,7 @@ function Subscription() {
       <div className="pt-8 lg:pt-0 mb-8 flex lg:mb-8 xl:mb-8 justify-center">
         <div className="flex flex-col items-center content-center">
           <div className="boxAnalytics" style={{height:"500px"}}>
-            <p className="text-lg cardHeading md:text-2xl font-bold leading-10"
+            <p className="text-xl lg:text-lg cardHeading md:text-2xl font-bold leading-8"
               style={{
                 borderBottom: '1px solid #B1B5B9',
                 marginBottom: '15px', padding: '9px 0px'
