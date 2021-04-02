@@ -214,21 +214,21 @@ function Engagement() {
               style={{ width: "8rem", margin: 'auto', marginRight:"0.5rem", marginTop: ' 25px' }}>
             <button type="submit" className="text-white purple lg:w-40 w-full flex items-center mt-1 mr-2 justify-between border-none focus:outline-none py-2 rounded">
               <img src={phone} loading="lazy" alt="phone-white" className="contactBtn" />
-              <p className="relativeContact ">Phone Call</p>
+              <p style={{marginLeft:"-5px"}} className="relativeContact ">Phone Call</p>
             </button>
           </div>
           <div className="flex-1 p-1 pl-1 pt-0 mx-2 rounded-md border-2" 
               style={{ width: "3rem", margin: 'auto', marginleft:"0.5rem", marginTop: ' 25px' }}>
             <button type="submit" className="text-white purple lg:w-40 w-full flex items-center mt-1 justify-between border-none focus:outline-none py-2 rounded">
               <img src={chat} loading="lazy" alt="phone-white" className="contactBtn" />
-              <p style={{marginLeft:0}} className="relativeContact" >Chat</p>
+              <p style={{marginLeft:"-1px"}} className="relativeContact" >Chat</p>
             </button>
           </div>
           <div className="flex-1 p-1 pl-1 pt-0 ml-2 rounded-md border-2" 
               style={{ width: "8rem", margin: 'auto', marginLeft:"0.5rem", marginTop: ' 25px' }}>
             <button type="submit" className="text-white purple lg:w-40 w-full flex items-center mt-1 mr-2 justify-between border-none focus:outline-none py-2 rounded">
               <img src={whats} loading="lazy" alt="phone-white" className="contactBtn" />
-              <p className="relativeContact ">Whatsapp</p>
+              <p style={{marginLeft:"-5px"}}  className="relativeContact ">Whatsapp</p>
             </button>
           </div>
         </div>
