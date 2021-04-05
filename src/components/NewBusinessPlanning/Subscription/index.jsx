@@ -58,7 +58,7 @@ function Subscription() {
       organization: Yup.string().required('Organization is required'),
     }),
     onSubmit: values => {
-      console.log("VAVVAVVAVA",values)
+      console.log("business",values)
       alert(JSON.stringify(values, null, 2));
     },
   });
@@ -567,7 +567,7 @@ function Subscription() {
                   name="industry"
                   onChange={projectForm.handleChange}
                   onBlur={projectForm.handleBlur}
-                  value={projectForm.values.inustry}
+                  value={projectForm.values.industry}
                 />
                 <input
                   type="text"

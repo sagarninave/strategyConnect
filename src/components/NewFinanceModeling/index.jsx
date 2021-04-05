@@ -2,7 +2,7 @@
 import React, { useEffect } from 'react';
 import Navbar from '../NewHome/SmallHome/components/Navbar';
 import Footer from '../NewHome/SmallHome/components/Footer';
-import Statistics from './Statistics';
+import Statistics from '../NewHome/SmallHome/components/Statistics';
 import Subscription from './Subscription';
 
 export default function index() {

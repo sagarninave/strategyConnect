@@ -15,9 +15,7 @@ function Engagement() {
       organization: '',
     },
     validationSchema: Yup.object({
-      name: Yup.string()
-        // .max(15, 'Must be 15 characters or less')
-        .required('Name is required'),
+      name: Yup.string().required('Name is required'),
       email: Yup.string().email('Invalid email address').required('Required'),
       phone: Yup.string().required('Phone is required'),
       message: Yup.string().required('Message is required'),
@@ -25,7 +23,7 @@ function Engagement() {
     }),
     onSubmit: values => {
       console.log("VAVVAVVAVA",values)
-      alert(JSON.stringify(values, null, 2));
+      // alert(JSON.stringify(values, null, 2));
     },
   });
   return (
