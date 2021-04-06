@@ -266,7 +266,9 @@
 /* @media screen and (min-width: 1281px) and (max-width: 1920px) { */
 
 @media (min-width: 1920px) and (max-width: 2560px) {
-
+  .businessHeading{
+    font-size: 2rem
+  }
   .our-offerings-text{
     font-size: 4rem;
   }
@@ -282,16 +284,10 @@
     font-size:2.5rem
   }
   .mobileFunctionalAreaHeading{
-    font-size:3rem
+    font-size:3.5rem
   }
   .big-text, .market-expert-text, .specialised-text{
     font-size: 3.5rem;
-  }
-  .market-expert-text{
-    font-size: 3rem;
-  }
-  .specialised-text{
-    font-size: 3rem;
   }
   .text-xl {
     font-size: 2.25rem;
@@ -371,6 +367,9 @@
 
   .our-offerings-text{
     font-size:1.5rem
+  }
+  .market-expert-text{
+    font-size:1.25rem
   }
   .borderhover{
     display: none;
