@@ -13,10 +13,10 @@ export default function index() {
     <div className="m-0 p-0">
       <Navbar />
       <div style={{ backgroundColor: "#F0EFF7"}} className="h-36 lg:h-96 px-auto pt-5 lg:pt-28">
-        <p className="text-xl lg:text-5xl text-black font-semibold text-center mx-auto w-full lg:w-11/12 xl:w-11/12 ">
+        <p className="our-offerings-text lg:text-5xl text-black font-semibold text-center mx-auto w-full lg:w-11/12 xl:w-11/12 ">
           Experts on Demand
         </p>
-        <p className="text-lg text-black text-center px-3 mx-auto font-semibold mt-4">
+        <p className="our-offerings-sub-text text-lg px-3 text-black text-center mx-auto font-semibold mt-4">
         Access our database of experts and get 5 short calls for free.
         </p>
       </div>

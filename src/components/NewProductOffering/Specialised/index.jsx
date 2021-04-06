@@ -11,7 +11,7 @@ export default function index() {
     <>
       <div style={{ backgroundColor: "#fff" }} className="flex lg:py-8 lg:pb-0 py-8 lg:px-16 px-8 justify-between refined-bg md:mt-0 xl:mt-0 mt-0 mb-0 items-center">
         <div className="flex-1 lg:flex justify-center">
-          <p className="text-xl lg:text-4xl mt-5 mb-0 text-center lg:text-center font-bold">
+          <p className="specialised-text text-xl lg:text-4xl mt-5 mb-0 text-center lg:text-center font-bold">
           We Specialised In      
           </p>
         </div>

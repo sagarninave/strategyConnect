@@ -34,7 +34,7 @@ export default function Service() {
     <>
       <div style={{ backgroundColor: "#fff" }} className="flex lg:py-8 lg:pb-0 py-8 lg:pt-0 lg:px-16 px-8 justify-between refined-bg md:mt-0 xl:mt-0 mt-0 items-center">
         <div className="flex-1 lg:flex justify-center">
-          <p className="lg:text-4xl text-lg text-center lg:text-left font-bold">
+          <p className="big-text text-lg lg:text-4xl text-center lg:text-left font-bold">
             Services
           </p>
         </div>
@@ -134,13 +134,7 @@ export default function Service() {
         </div>
       </div>
 
-
-
-
       {/* mobile  */}
-
-
-
       <div style={{ backgroundColor: "#fff", padding: "0px 40px" }}
         className="flex justify-between w:7/12 refined-bg my-5">
         <div className="showInMobile flex-1 minHeightBussiness p-5 mr-5 rounded-md cursor-pointer service-panel">

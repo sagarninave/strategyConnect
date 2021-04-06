@@ -1,17 +1,17 @@
 import React from 'react';
-import Client1 from '../../../../../assets/img/Client1.png';
-import Consultant1 from '../../../../../assets/img/Consultant1.png';
-import Rocket from '../../../../../assets/img/rocket.png';
+import Client from '../../../../../assets/img/Clients.png';
+import Consultant from '../../../../../assets/img/Consultants.png';
+import Rocket from '../../../../../assets/img/Rocket.png';
 
 function index() {
   const imageList = [
     {
-      img: Consultant1,
+      img: Consultant,
       number: '5000+',
       text: 'Consultants',
     },
     {
-      img: Client1,
+      img: Client,
       number: '100+',
       text: 'Clients',
     },

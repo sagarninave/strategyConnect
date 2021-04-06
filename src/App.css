@@ -266,13 +266,40 @@
 /* @media screen and (min-width: 1281px) and (max-width: 1920px) { */
 
 @media (min-width: 1920px) and (max-width: 2560px) {
+
+  .our-offerings-text{
+    font-size: 4rem;
+  }
+  .our-offerings-sub-text {
+    font-size: 2rem;
+    line-height: 3rem;
+  }
+  .service-text{
+    font-size: 3.5rem;
+  }
+
+  .functional-area-items{
+    font-size:2.5rem
+  }
+  .mobileFunctionalAreaHeading{
+    font-size:3rem
+  }
+  .big-text, .market-expert-text, .specialised-text{
+    font-size: 3.5rem;
+  }
+  .market-expert-text{
+    font-size: 3rem;
+  }
+  .specialised-text{
+    font-size: 3rem;
+  }
   .text-xl {
     font-size: 2.25rem;
     line-height: 3.75rem;
   }
-  .text-lg {
-    font-size: 2.125rem;
-    line-height: 3.75rem;
+  .work-para {
+    font-size: 2rem;
+    line-height: 3rem;
   }
   .boxAnalytics {
     min-height: 546px;
@@ -342,6 +369,15 @@
 
 @media only screen and (max-width:480px) {
 
+  .our-offerings-text{
+    font-size:1.5rem
+  }
+  .borderhover{
+    display: none;
+  }
+  .service-text{
+    font-size:1.5rem
+  }
   .imagesFour {
     margin: auto;
     margin-top: 0;

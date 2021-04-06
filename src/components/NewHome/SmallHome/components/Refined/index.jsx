@@ -27,7 +27,7 @@ export default function index() {
             />
           </div>
           <div className="flex-1 ml-32 showInDesktop">
-            <p className="lg:text-3xl text-lg text-center lg:text-left font-bold">
+            <p className="functional-area-items lg:text-3xl text-lg text-center lg:text-left font-bold">
               Business Planning
             </p>
             <p className="font-medium functionalareasdesc text-base lg:text-xl lg:w-11/12 text-center lg:text-left mx-auto lg:mx-0 grey-text mt-10 font-thin">
@@ -43,7 +43,7 @@ export default function index() {
       <Link to="/finance-modeling" className="showInDesktop">
         <div style={{ backgroundColor: "#fff" }} className="flex lg:py-1 py-8 lg:px-16 px-8 justify-between refined-bg md:mt-5 xl:mt-5 mt-5 items-center">
           <div className="flex-1 mr-32 showInDesktop">
-            <p className="lg:text-3xl text-lg text-center lg:text-left font-bold">
+            <p className="functional-area-items lg:text-3xl text-lg text-center lg:text-left font-bold">
               Financial Modeling
             </p>
             <p className="font-medium functionalareasdesc text-base lg:text-xl  lg:w-11/12 text-center lg:text-left mx-auto lg:mx-0 grey-text mt-10 font-thin">
@@ -75,7 +75,7 @@ export default function index() {
             />
           </div>
           <div className="flex-1 ml-32 showInDesktop">
-            <p className="lg:text-3xl text-lg text-center lg:text-left font-bold">
+            <p className="functional-area-items lg:text-3xl text-lg text-center lg:text-left font-bold">
               Go-To-Market Planning
             </p>
             <p className="font-medium functionalareasdesc text-base lg:text-xl  lg:w-11/12 text-center lg:text-left mx-auto lg:mx-0 grey-text mt-10 font-thin">
@@ -87,6 +87,7 @@ export default function index() {
         </div>
       </Link>
 
+      {/* Mobile View */}
       <div style={{ backgroundColor: "#fff", padding: '10px' }} 
            className="flex lg:py-8 py-8 lg:px-16 px-8 justify-start refined-bg md:mt-0 xl:mt-0 mt-0 items-center">
         <div className="flex showInMobile lg:flex lg:justify-start">
