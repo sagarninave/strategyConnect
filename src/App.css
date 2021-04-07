@@ -266,6 +266,11 @@
 /* @media screen and (min-width: 1281px) and (max-width: 1920px) { */
 
 @media (min-width: 1920px) and (max-width: 2560px) {
+  .kickstart-float{
+    position: absolute;
+    right: 2rem; 
+    top: 2rem; 
+  }
   .businessHeading{
     font-size: 2rem
   }

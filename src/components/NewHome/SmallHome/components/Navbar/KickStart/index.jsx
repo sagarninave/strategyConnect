@@ -135,7 +135,7 @@ export default function KickStart(props) {
               src={dimensions.width < 640 ? xBlack : roundX}
               alt="roundX"
               loading="lazy"
-              className="cursor-pointer"
+              className="cursor-pointer kickstart-float"
               onClick={() => {
                 props.setVisible(false);
               }}
