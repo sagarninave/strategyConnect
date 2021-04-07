@@ -5,7 +5,7 @@ import { AiOutlineCloseCircle } from "react-icons/ai";
 
 const axios = require('axios');
 
-export default function KickstartEngagement(props) {
+export default function Project(props) {
   
   const customStyles = {
     content: {
@@ -33,10 +33,12 @@ export default function KickstartEngagement(props) {
 
   const [formFields, setFormFields] = useState({
     name: '',
+    organization: '',
     email: '',
     phone: '',
-    message: '',
-    organization: ''
+    industry: '',
+    project: '',
+    projectdescription: ''
   });
 
   const [dimensions, setDimensions] = useState(window.innerWidth);
@@ -60,16 +62,18 @@ export default function KickstartEngagement(props) {
 
   const onSubmit = (e) => {
     e.preventDefault();
-    console.log("kickstart", formFields)
+    console.log("Project", formFields)
   }
 
   const close = () => {
     setFormFields({
       name: '',
+      organization: '',
       email: '',
       phone: '',
-      message: '',
-      organization: ''
+      industry: '',
+      project: '',
+      projectdescription: ''
     })
     props.close();
   }
@@ -90,8 +94,8 @@ export default function KickstartEngagement(props) {
                     <AiOutlineCloseCircle style={{ fontSize: "1.5rem" }} />
                   </button>
                 </span>
-                <p className="text-2xl text-center font-semibold"> Kickstart Engagement </p>
-                <p className="text-sm grey-text text-center mt-2"> It takes less than a minute</p>
+                <p className="text-2xl text-center font-semibold"> Project Information </p>
+                <p className="text-sm grey-text text-center mt-2"> Lets talk about everything</p>
                 <form onSubmit={onSubmit}>
                   <div className="flex items-center mt-14">
                     <input
@@ -131,13 +135,31 @@ export default function KickstartEngagement(props) {
                       value={formFields.phone}
                     />
                   </div>
+                  <div className="flex items-center mt-4">
+                    <input
+                      type="text"
+                      className="border focus:outline-none border-gray-300 py-2  lg:px-6 px-2 rounded w-2/4 mr-2 text-sm"
+                      placeholder="Industry"
+                      name="industry"
+                      onChange={onHandleChange}
+                      value={formFields.industry}
+                    />
+                    <input
+                      type="text"
+                      className="border focus:outline-none border-gray-300 py-2 lg:px-6 px-2 rounded w-2/4 text-sm"
+                      placeholder="Project"
+                      name="project"
+                      onChange={onHandleChange}
+                      value={formFields.project}
+                    />
+                  </div>
                   <textarea
                     className="border focus:outline-none border-gray-300 w-full py-2 lg:px-6 px-2 rounded mt-4 text-sm"
-                    placeholder="Message"
+                    placeholder="Project Description"
                     rows="5"
-                    name="message"
+                    name="projectdescription"
                     onChange={onHandleChange}
-                    value={formFields.message}
+                    value={formFields.projectdescription}
                   />
                   <div className="p-2 pl-2 mt-32 pt-0 rounded-md border-2 ml-16 mr-16" style={{ width: "11.4rem", margin: 'auto', marginTop: ' 25px' }}>
                     <button type="submit" className="text-white purple lg:w-40 w-full flex items-center mt-2 mr-2 justify-between border-none focus:outline-none py-2 px-7 rounded px-5">
@@ -159,8 +181,8 @@ export default function KickstartEngagement(props) {
                     <AiOutlineCloseCircle style={{ fontSize: "1.5rem" }} />
                   </button>
                 </span>
-                <p className="text-2xl text-center font-semibold"> Kickstart Engagement </p>
-                <p className="text-sm grey-text text-center mt-2">It takes less than a minute</p>
+                <p className="text-2xl text-center font-semibold"> Project Information </p>
+                <p className="text-sm grey-text text-center mt-2">Lets talk about everything</p>
                 <form onSubmit={onSubmit} className="w-full">
                   <div className="flex items-center mt-4">
                     <input
@@ -205,15 +227,33 @@ export default function KickstartEngagement(props) {
                     />
                   </div>
                   <div className="flex items-center mt-4">
-                    <textarea
-                      className="border focus:outline-none border-gray-300 w-full py-2 lg:px-6 px-2 rounded text-sm"
-                      placeholder="Message"
-                      rows="3"
-                      name="message"
+                  <input
+                      type="text"
+                      className="border focus:outline-none border-gray-300 py-2  lg:px-6 px-2 rounded w-2/4 mr-2 text-sm"
+                      placeholder="Industry"
+                      name="industry"
                       onChange={onHandleChange}
-                      value={formFields.message}
+                      value={formFields.industry}
                     />
                   </div>
+                  <div className="flex items-center mt-4">
+                    <input
+                      type="text"
+                      className="border focus:outline-none border-gray-300 py-2 lg:px-6 px-2 rounded w-2/4 text-sm"
+                      placeholder="Project"
+                      name="project"
+                      onChange={onHandleChange}
+                      value={formFields.project}
+                    />
+                  </div>
+                  <textarea
+                    className="border focus:outline-none border-gray-300 w-full py-2 lg:px-6 px-2 rounded mt-4 text-sm"
+                    placeholder="Project Description"
+                    rows="5"
+                    name="projectdescription"
+                    onChange={onHandleChange}
+                    value={formFields.projectdescription}
+                  />
                   <div className="p-2 pl-2 mt-32 pt-0 rounded-md border-2 ml-16 mr-16" style={{ width: "11.4rem", margin: 'auto', marginTop: ' 25px' }}>
                     <button type="submit" className="text-white purple lg:w-40 w-full flex items-center mt-2 mr-2 justify-between border-none focus:outline-none py-2 px-7 rounded px-5">
                       <p className="relativeContact ">Submit</p>

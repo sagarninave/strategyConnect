@@ -21,7 +21,7 @@ import {
 export const getIndustries = () => (dispatch) => {
   dispatch(setIndustryLoading());
   axios
-    .get('data/generic/case_study/industry-list?limit=100')
+    .get('data/generic/industry_categorization/list?start=0&limit=371&filters={}')
     .then((res) => {
       dispatch({
         type: GET_INDUSTRIES,
@@ -36,9 +36,12 @@ export const getIndustries = () => (dispatch) => {
     });
 };
 
+
 // set industry data loading
 export const setIndustryLoading = () => {
   return {
     type: GET_INDUSTRIES_LOADING,
   };
 };
+
+

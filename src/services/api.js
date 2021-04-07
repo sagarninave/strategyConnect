@@ -1,8 +1,7 @@
 import axios from 'axios';
 
-// const baseApi = 'https://testapi.strategyconnect.co/api/';
-const baseApi = "https://dev.strategyconnect.co/api/";
-// const baseApi = "https://testplatform.strategyconnect.co/api/";
+const baseApi = 'https://testapi.strategyconnect.co/api/';
+
 const Axios = axios.create({
   baseURL: baseApi,
   headers: {
