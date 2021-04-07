@@ -1,3 +1,4 @@
+
 import React, { useRef } from 'react';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
@@ -22,20 +23,22 @@ function Index() {
 
   const desktopImgList = [who, what, why, consultants1, consultants2, consultants3]
   const mobileImgList = [mobileWho, mobileWhat, mobileWhy, mobileConsultants1, mobileConsultants2, mobileConsultants3]
-  const carouselRef = useRef(null);
+  const carouselRefDesktop = useRef(null);
+  const carouselRefMobile = useRef(null);
 
   return (
     <>
+      {/* Desktop */}
       <div className="showInDesktop">
         <Carousel
-          ref={carouselRef}
+          ref={carouselRefDesktop}
           className="marginSlider"
           enableAutoPlay
           autoPlaySpeed={4000}
           onNextEnd={(nextItemObject, currentPageIndex) => {
             if (nextItemObject.index === desktopImgList.length - 1 && currentPageIndex === desktopImgList.length - 1) {
               setTimeout(() => {
-                nextItemObject = carouselRef.current.goTo(0)
+                nextItemObject = carouselRefDesktop.current.goTo(0)
               }, 1500)
             }
           }}
@@ -57,16 +60,18 @@ function Index() {
         </Carousel>
       </div>
 
+
+      {/* mobile */}
       <div className="showInMobile">
         <Carousel
-          ref={carouselRef}
+          ref={carouselRefMobile}
           className="marginSlider"
           enableAutoPlay
           autoPlaySpeed={4000}
           onNextEnd={(nextItemObject, currentPageIndex) => {
             if (nextItemObject.index === mobileImgList.length - 1 && currentPageIndex === mobileImgList.length - 1) {
               setTimeout(() => {
-                nextItemObject = carouselRef.current.goTo(0)
+                nextItemObject = carouselRefMobile.current.goTo(0)
               }, 1500)
             }
           }}
