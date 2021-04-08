@@ -6,10 +6,10 @@ import { connect } from 'react-redux';
 import SIdeBar from './SIdeBar';
 import FIlteredCards from './FIlteredCards';
 import axios from 'axios';
-import { getCaseStudiesByProjectTag} from '../../../state/actions/caseStudyAction';
+import { getCaseStudiesByProjectTag } from '../../../state/actions/caseStudyAction';
 
-function MainCase({ caseStudy, 
-  getCaseStudiesByProjectTag 
+function MainCase({ caseStudy,
+  getCaseStudiesByProjectTag
 }) {
   const { caseStudies } = caseStudy;
   const [visibleSidebar, setVisibleSidebar] = useState(false);
@@ -27,24 +27,26 @@ function MainCase({ caseStudy,
   // });
   // console.log({ filteredIndustries });
 
-  function getProjectTags(querystring){
+  function getProjectTags(querystring) {
     console.log(querystring.length)
-    if(querystring.length === 0){
+    if (querystring.length === 0) {
       setSearchResult([])
     }
-    axios({
-      method: 'get',
-      url:`https://testapi.strategyconnect.co/api/data/generic/tag/list?filters={"name":{"$like":${querystring}}}`,
-      headers: {'x-fwd-authorization': 'test', 'Namespace':'STRATEGY'}
-    })
-      .then((res) => {
-        if(res.data.data.list && res.data.data.list.length > 0){
-          setSearchResult(res.data.data.list)
-        }
+    else {
+      axios({
+        method: 'get',
+        url: `https://testapi.strategyconnect.co/api/data/generic/tag/list?filters={"name":{"$like":${querystring}}}`,
+        headers: { 'x-fwd-authorization': 'test', 'Namespace': 'STRATEGY' }
       })
-      .catch((err) => {
-        console.log(err)
-      });
+        .then((res) => {
+          if (res.data.data.list && res.data.data.list.length > 0) {
+            setSearchResult(res.data.data.list)
+          }
+        })
+        .catch((err) => {
+          console.log(err)
+        });
+    }
   };
   console.log("Search Results", searchResult)
 
@@ -81,7 +83,7 @@ function MainCase({ caseStudy,
         </div>
         {
           searchResult.length > 0 &&
-          <div style={{ background: 'rgba(177,175,229,0.1)'}} className={`p-2 h-60 overflow-y-auto w-full ${searchResult.length === 0 ? 'hidden' : 'block'}`}>
+          <div style={{ background: 'rgba(177,175,229,0.1)' }} className={`lg:hidden p-2 h-60 overflow-y-auto w-full ${searchResult.length === 0 ? 'hidden' : 'block'}`}>
             {
               searchResult.map((item, index) => {
                 return <p key={index}
@@ -120,7 +122,7 @@ function MainCase({ caseStudy,
           breakClassName={'break-me'}
           pageCount={10}
           marginPagesDisplayed={2}
-          onPageChange={() => {}}
+          onPageChange={() => { }}
           containerClassName={
             ' justify-between light-divide-line pt-10 items-center w-full pr-12 hidden lg:flex my-8'
           }
@@ -145,4 +147,4 @@ const mapStateToProps = (state) => ({
   caseStudy: state.caseStudy,
 });
 
-export default connect(mapStateToProps, {getCaseStudiesByProjectTag})(MainCase);
+export default connect(mapStateToProps, { getCaseStudiesByProjectTag })(MainCase);

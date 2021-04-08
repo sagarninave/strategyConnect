@@ -77,24 +77,26 @@ function SIdeBar({
     },
   ];
 
-  function getProjectTags(querystring){
+  function getProjectTags(querystring) {
     console.log(querystring.length)
-    if(querystring.length === 0){
+    if (querystring.length === 0) {
       setSearchResult([])
     }
-    axios({
-      method: 'get',
-      url:`https://testapi.strategyconnect.co/api/data/generic/tag/list?filters={"name":{"$like":${querystring}}}`,
-      headers: {'x-fwd-authorization': 'test', 'Namespace':'STRATEGY'}
-    })
-      .then((res) => {
-        if(res.data.data.list && res.data.data.list.length > 0){
-          setSearchResult(res.data.data.list)
-        }
+    else {
+      axios({
+        method: 'get',
+        url: `https://testapi.strategyconnect.co/api/data/generic/tag/list?filters={"name":{"$like":${querystring}}}`,
+        headers: { 'x-fwd-authorization': 'test', 'Namespace': 'STRATEGY' }
       })
-      .catch((err) => {
-        console.log(err)
-      });
+        .then((res) => {
+          if (res.data.data.list && res.data.data.list.length > 0) {
+            setSearchResult(res.data.data.list)
+          }
+        })
+        .catch((err) => {
+          console.log(err)
+        });
+    }
   };
   console.log("Search Results", searchResult)
 
