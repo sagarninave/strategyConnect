@@ -10,6 +10,8 @@ import {
   getCaseStudiesByIndustries,
   getCaseStudiesByProjectTag,
 } from '../../../state/actions/caseStudyAction';
+import axios from 'axios';
+
 
 function SIdeBar({
   search,
@@ -30,9 +32,13 @@ function SIdeBar({
   //   const [visibleSidebar, setVisibleSidebar] = useState(false);
   const [dropOne, setDropOne] = useState(false);
   const [dropTwo, setDropTwo] = useState(false);
+  const [searchParam, setSearchParam] = useState('');
+  const [searchResult, setSearchResult] = useState([]);
+
   useEffect(() => {
     getIndustries();
   }, []);
+
   const dropItems = [
     {
       smallText: 'Industry',
@@ -71,22 +77,59 @@ function SIdeBar({
     },
   ];
 
+  function getProjectTags(querystring){
+    console.log(querystring.length)
+    if(querystring.length === 0){
+      setSearchResult([])
+    }
+    axios({
+      method: 'get',
+      url:`https://testapi.strategyconnect.co/api/data/generic/tag/list?filters={"name":{"$like":${querystring}}}`,
+      headers: {'x-fwd-authorization': 'test', 'Namespace':'STRATEGY'}
+    })
+      .then((res) => {
+        if(res.data.data.list && res.data.data.list.length > 0){
+          setSearchResult(res.data.data.list)
+        }
+      })
+      .catch((err) => {
+        console.log(err)
+      });
+  };
+  console.log("Search Results", searchResult)
+
   return (
     <div className="lg:w-3/12">
       <div className="hidden lg:block">
         <div className="border rounded border-gray-300 flex justify-between items-center p-3.5">
           <input
             type="text"
-            // value={type === 1 ? name : projectName}
-            // onChange={(e) => {
-            //   setName(e.target.value);
-            // }}
+            value={searchParam}
+            onChange={async (e) => {
+              setSearchParam(e.target.value);
+              getProjectTags(e.target.value)
+            }}
             className="border-none focus:outline-none text-base font-thin"
             placeholder="Search project"
           />
-
           <img src={search} loading="lazy" alt="search" className="" />
         </div>
+        {
+          searchResult.length > 0 &&
+          <div style={{ background: 'rgba(177,175,229,0.1)' }} className={`p-2 h-60 overflow-y-auto ${searchResult.length === 0 ? 'hidden' : 'block'}`}>
+            {
+              searchResult.map((item, index) => {
+                return <p key={index}
+                  className="text-lg font-thin mt-2 hover:text-gray-500 w-full"
+                  onClick={() => {
+                    getCaseStudiesByProjectTag(item.id);
+                  }}
+                > {item.name} </p>
+              })
+            }
+          </div>
+        }
+
         <div>
           {dropItems.map((item, i) => {
             return (
@@ -110,15 +153,14 @@ function SIdeBar({
                     src={arrDown}
                     loading="lazy"
                     alt="arrow Down"
-                    className={`${
-                      i === 0 && name.length === 0
-                        ? 'flex'
-                        : i === 1 && projectName.length !== 0
+                    className={`${i === 0 && name.length === 0
+                      ? 'flex'
+                      : i === 1 && projectName.length !== 0
                         ? 'hidden'
                         : type === 1 && i === 0
-                        ? 'hidden'
-                        : 'flex'
-                    }`}
+                          ? 'hidden'
+                          : 'flex'
+                      }`}
                   />
                 </div>
                 <div
@@ -132,25 +174,24 @@ function SIdeBar({
                     {i === 0 && name.length === 0
                       ? null
                       : i === 1 && projectName.length !== 0
-                      ? projectName
-                      : type === 1 && i === 0
-                      ? name
-                      : null}
+                        ? projectName
+                        : type === 1 && i === 0
+                          ? name
+                          : null}
                   </p>
 
                   <img
                     src={arrDown}
                     loading="lazy"
                     alt="arrow Down"
-                    className={`${
-                      i === 0 && name.length === 0
-                        ? 'hidden'
-                        : i === 1 && projectName.length !== 0
+                    className={`${i === 0 && name.length === 0
+                      ? 'hidden'
+                      : i === 1 && projectName.length !== 0
                         ? 'flex'
                         : type === 1 && i === 0
-                        ? 'flex'
-                        : 'hidden'
-                    }`}
+                          ? 'flex'
+                          : 'hidden'
+                      }`}
                   />
                 </div>
 
@@ -211,6 +252,10 @@ function SIdeBar({
         </div>
       </div>
 
+
+
+
+      {/* original */}
       <div className={`${visibleSidebar ? 'block' : 'hidden'}`}>
         <Modal
           visible={visibleSidebar}
@@ -265,10 +310,10 @@ function SIdeBar({
                         {i === 0 && name.length === 0
                           ? null
                           : i === 1 && projectName.length !== 0
-                          ? projectName
-                          : type === 1 && i === 0
-                          ? name
-                          : null}
+                            ? projectName
+                            : type === 1 && i === 0
+                              ? name
+                              : null}
                       </p>
 
                       <img
@@ -346,6 +391,7 @@ function SIdeBar({
           </div>
         </Modal>
       </div>
+
     </div>
   );
 }

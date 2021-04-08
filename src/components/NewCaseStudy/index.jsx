@@ -1,7 +1,5 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect } from 'react';
-// import Navbar from '../Home/SmallHome/components/Navbar';
-// import Footer from '../Home/SmallHome/components/Footer';
 import Navbar from '../NewHome/SmallHome/components/Navbar';
 import Footer from '../NewHome/SmallHome/components/Footer';
 import CaseHero from './CaseHero';

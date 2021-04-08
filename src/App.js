@@ -16,6 +16,7 @@ import ComingSoon from './pages/ComingSoon';
 import NewHome from './components/NewHome';
 import NewAbout from './components/NewAbout';
 import NewCaseStudy from './components/NewCaseStudy';
+import NewClients from './components/NewClients';
 import NewContact from './components/NewContact';
 import NewProductOffering from './components/NewProductOffering';
 import NewBusinessPlanning from './components/NewBusinessPlanning';
@@ -43,6 +44,7 @@ function App() {
       <Route path="/about" component={NewAbout} />
       <Route path="/contact" component={NewContact} />
       <Route path="/case-Study" component={NewCaseStudy} />
+      <Route path="/client" component={NewClients} />
       <Route path="/product-offering" component={NewProductOffering} />
       <Route path="/business-planning" component={NewBusinessPlanning} />
       <Route path="/finance-modeling" component={NewFinanceModeling} />

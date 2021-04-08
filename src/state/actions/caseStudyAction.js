@@ -1,3 +1,4 @@
+import { _colorStringFilter } from 'gsap/gsap-core';
 import axios from '../../services/api';
 
 import {

@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import EllipsisText from 'react-ellipsis-text';
 import target from '../../../assets/img/target.svg';
-import { Link } from 'react-router-dom';
+import EllipsisText from 'react-ellipsis-text';
 import { connect } from 'react-redux';
+import { getCaseStudiyItem } from '../../../state/actions/caseStudyAction';
+import { Link } from 'react-router-dom';
 
-function FIlteredCards({ caseStudy, Loading }) {
+function Interested({ caseStudy, getCaseStudiyItem }) {
   const [dimensions, setDimensions] = useState({
     width: window.innerWidth,
     height: window.innerHeight,
@@ -23,35 +24,50 @@ function FIlteredCards({ caseStudy, Loading }) {
       window.removeEventListener('resize', handleResize);
     };
   });
+  // const images = [tyler, tyler2, tyler3];
 
-  let limitCaseStudy =
-    caseStudy.length > 10 ? caseStudy.slice(0, 10) : caseStudy;
+  const scrollTop = () => {
+    window.scrollTo(0, 0);
+  };
+
+  var aValue = localStorage.getItem('industry');
+
+  let limitCase = JSON.parse(aValue).slice(0, 3);
 
   return (
-    <div className="flex flex-wrap justify-between w-full">
-      {Loading.caseStudyLoading ? (
-        <p className="text-center mx-auto my-32 text-3xl">Loading...</p>
-      ) : caseStudy.length === 0 ? (
-        <p className="text-center mx-auto my-32">No Listings Found</p>
-      ) : (
-        limitCaseStudy.map((item, i) => {
+    <div className="top-divide-line  my-20">
+      <p className="mt-10 sm:text-3xl textxl text-center lg:text-left font-bold">
+        You might be interested in
+      </p>
+      <div className="flex lg:flex-row flex-col flex-wrap justify-between items-center">
+        {limitCase.map((item, i) => {
           return (
-             <Link
-               key={item.id}
-               to={{
-                 pathname: '/client',
-                 caseId: `${item.id}`,
-               }}
-             >
-              <div className="rounded border mt-7  caseW w-full border-gray-300">
+            <Link
+              to={{
+                pathname: '/client',
+                caseId: `${item.id}`,
+              }}
+              onClick={() => {
+                getCaseStudiyItem(item.id);
+                scrollTop();
+              }}
+              // onClick={scrollTop}
+              // onClick={() => {
+              //   window.location.reload(false);
+              // }}
+            >
+              <div
+                key={i}
+                className="rounded border mt-7 xl:w-96 md:w-72 w-full border-gray-300"
+              >
                 <div className="relative">
                   <img
                     src={item.cover_image}
                     loading="lazy"
                     alt="tyler"
-                    className="lg:h-52 h-28 w-full rounded lg:w-auto"
+                    className="lg:h-52 h-28 w-full   lg:w-auto"
                   />
-                  <div className="tyler-opacity lg:h-52 h-28 absolute top-0 left-0 z-10" />
+                  <div className="tyler-opacity rounded lg:h-52 h-28 absolute top-0 left-0 z-10" />
                   <div className="flex absolute bottom-0 right-0 pr-3 pb-3">
                     {item.industries.map((indus, i) => {
                       return (
@@ -81,15 +97,13 @@ function FIlteredCards({ caseStudy, Loading }) {
                 <div className="p-4">
                   <p className="text-base font-bold">
                     <EllipsisText text={item.title} length={45} />{' '}
-                    {/* {item.title} */}
                   </p>
                   <p className="grey-text mt-2 text-sm lg:text-base font-thin">
-                    {/* {item.description} */}
                     The client is one of the leading real estate of a developers
                     with a portfolio comprising enviro...
                   </p>
 
-                  <div className="flex mt-6">
+                  <div className="flex mt-2">
                     <img
                       src={target}
                       loading="lazy"
@@ -107,16 +121,16 @@ function FIlteredCards({ caseStudy, Loading }) {
                   </div>
                 </div>
               </div>
-             </Link>
+            </Link>
           );
-        })
-      )}
+        })}
+      </div>
     </div>
   );
 }
 
 const mapStateToProps = (state) => ({
-  Loading: state.caseStudy,
+  caseStudy: state.caseStudy,
 });
 
-export default connect(mapStateToProps, {})(FIlteredCards);
+export default connect(mapStateToProps, { getCaseStudiyItem })(Interested);
