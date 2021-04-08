@@ -22,7 +22,7 @@ function Engagement() {
       organization: Yup.string().required('Organization is required'),
     }),
     onSubmit: values => {
-      console.log("VAVVAVVAVA",values)
+      console.log("VAVVAVVAVA", values)
       // alert(JSON.stringify(values, null, 2));
     },
   });
@@ -49,7 +49,11 @@ function Engagement() {
         <div className="p-2 pl-2 mt-32 pt-0 rounded-md border-2 ml-16 mr-16" style={{ width: "11.4rem", margin: 'auto', marginTop: ' 25px' }}>
           <button type="submit" className="text-white purple lg:w-40 w-full flex items-center mt-2 mr-2 justify-between border-none focus:outline-none py-2 px-7 rounded px-5">
             <img src={whats} loading="lazy" alt="phone-white" className="contactBtn" />
-            <p className="relativeContact ">Whatsapp</p>
+            <p className="relativeContact">
+              <a href="https://api.whatsapp.com/send?phone=+919990603640" target="_blank">
+                Whatsapp
+              </a>
+            </p>
           </button>
         </div>
       </div>
@@ -112,9 +116,9 @@ function Engagement() {
             placeholder="Message *"
             rows="5"
             name="message"
-              onChange={formik.handleChange}
-              onBlur={formik.handleBlur}
-              value={formik.values.message}
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
+            value={formik.values.message}
           />
           <div className="p-2 pl-2 mt-32 pt-0 rounded-md border-2 ml-16 mr-16" style={{ width: "11.4rem", margin: 'auto', marginTop: ' 25px' }}>
             <button type="submit" className="text-white purple lg:w-40 w-full flex items-center mt-2 mr-2 justify-between border-none focus:outline-none py-2 px-7 rounded px-5">
@@ -185,9 +189,9 @@ function Engagement() {
               placeholder="Message *"
               rows="5"
               name="message"
-                onChange={formik.handleChange}
-                onBlur={formik.handleBlur}
-                value={formik.values.message}
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+              value={formik.values.message}
             />
           </div>
           <div className="p-2 pl-2 mt-32 pt-0 rounded-md border-2 ml-16 mr-16" style={{ width: "11.4rem", margin: 'auto', marginTop: ' 25px' }}>
@@ -196,7 +200,7 @@ function Engagement() {
             </button>
           </div>
         </form>
-        <hr className="bottom_border"/>
+        <hr className="bottom_border" />
       </div>
 
 
@@ -207,26 +211,30 @@ function Engagement() {
         <p className="text-sm grey-text mt-2 text-center">
           It takes less than a minute
         </p>
-        <div className="flex w-full m-0"> 
-          <div className="flex-1 p-1 pl-1 pt-0 mr-2 rounded-md border-2" 
-              style={{ width: "8rem", margin: 'auto', marginRight:"0.5rem", marginTop: ' 25px' }}>
+        <div className="flex w-full m-0">
+          <div className="flex-1 p-1 pl-1 pt-0 mr-2 rounded-md border-2"
+            style={{ width: "8rem", margin: 'auto', marginRight: "0.5rem", marginTop: ' 25px' }}>
             <button type="submit" className="text-white purple lg:w-40 w-full flex items-center mt-1 mr-2 justify-between border-none focus:outline-none py-2 rounded">
               <img src={phone} loading="lazy" alt="phone-white" className="contactBtn" />
-              <p style={{marginLeft:"-5px"}} className="relativeContact ">Phone Call</p>
+              <p style={{ marginLeft: "-5px" }} className="relativeContact ">Phone Call</p>
             </button>
           </div>
-          <div className="flex-1 p-1 pl-1 pt-0 mx-2 rounded-md border-2" 
-              style={{ width: "3rem", margin: 'auto', marginleft:"0.5rem", marginTop: ' 25px' }}>
+          <div className="flex-1 p-1 pl-1 pt-0 mx-2 rounded-md border-2"
+            style={{ width: "3rem", margin: 'auto', marginleft: "0.5rem", marginTop: ' 25px' }}>
             <button type="submit" className="text-white purple lg:w-40 w-full flex items-center mt-1 justify-between border-none focus:outline-none py-2 rounded">
               <img src={chat} loading="lazy" alt="phone-white" className="contactBtn" />
-              <p style={{marginLeft:"-1px"}} className="relativeContact" >Chat</p>
+              <p style={{ marginLeft: "-1px" }} className="relativeContact" >Chat</p>
             </button>
           </div>
-          <div className="flex-1 p-1 pl-1 pt-0 ml-2 rounded-md border-2" 
-              style={{ width: "8rem", margin: 'auto', marginLeft:"0.5rem", marginTop: ' 25px' }}>
+          <div className="flex-1 p-1 pl-1 pt-0 ml-2 rounded-md border-2"
+            style={{ width: "8rem", margin: 'auto', marginLeft: "0.5rem", marginTop: ' 25px' }}>
             <button type="submit" className="text-white purple lg:w-40 w-full flex items-center mt-1 mr-2 justify-between border-none focus:outline-none py-2 rounded">
               <img src={whats} loading="lazy" alt="phone-white" className="contactBtn" />
-              <p style={{marginLeft:"-5px"}}  className="relativeContact ">Whatsapp</p>
+              <p style={{ marginLeft: "-5px" }} className="relativeContact ">
+                <a href="https://api.whatsapp.com/send?phone=+919990603640" target="_blank">
+                  Whatsapp
+              </a>
+              </p>
             </button>
           </div>
         </div>
