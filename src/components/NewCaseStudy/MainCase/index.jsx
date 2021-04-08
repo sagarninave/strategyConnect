@@ -81,7 +81,7 @@ function MainCase({ caseStudy,
         </div>
         {
           searchResult.length > 0 &&
-          <div style={{ background: 'rgba(177,175,229,0.1)' }} className={`p-2 h-60 overflow-y-auto w-full ${searchResult.length === 0 ? 'hidden' : 'block'}`}>
+          <div style={{ background: 'rgba(177,175,229,0.1)'}} className={`p-2 h-60 overflow-y-auto w-full ${searchResult.length === 0 ? 'hidden' : 'block'}`}>
             {
               searchResult.map((item, index) => {
                 return <p key={index}
