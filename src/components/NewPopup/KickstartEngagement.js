@@ -31,6 +31,7 @@ export default function KickstartEngagement(props) {
     }
   };
 
+  const [isSubmitted, setIsSubmitted] = useState(false)
   const [formFields, setFormFields] = useState({
     name: '',
     email: '',
@@ -60,10 +61,36 @@ export default function KickstartEngagement(props) {
 
   const onSubmit = (e) => {
     e.preventDefault();
-    console.log("kickstart", formFields)
+    let data = {
+      "name": formFields.name,
+      "organisation_name": formFields.organization,
+      "email": formFields.email,
+      "contact": formFields.phone,
+      "message": formFields.message,
+      "enquiry_type": props.enquiry_type
+    }
+
+    axios({
+      method: 'post',
+      url: `http://localhost:3003/api/data/generic/save-enquiry/enquiry`,
+      data: data,
+      headers: {
+        'x-fwd-authorization': 'test',
+        'Namespace': 'STRATEGY'
+      }
+    })
+      .then(result => {
+        if (result.data.meta.ok === 1 && result.data.meta.message === "Success!") {
+          setIsSubmitted(true);
+          setFormFields({name: '', email: '', phone: '', message: '', organization: ''})
+          console.log("send form response", result.data)
+        }
+        setTimeout(() => {close()}, 2000);
+      });
   }
 
   const close = () => {
+    setIsSubmitted(false);
     setFormFields({
       name: '',
       email: '',
@@ -73,6 +100,7 @@ export default function KickstartEngagement(props) {
     })
     props.close();
   }
+
   return (
     <>
       <div className="showInDesktop">
@@ -145,6 +173,9 @@ export default function KickstartEngagement(props) {
                     </button>
                   </div>
                 </form>
+                {
+                  isSubmitted && <p className="mt-4 text-center text-green-900"> Data Saved Successfully </p>
+                }
               </div>
             </Modal> :
             <Modal
@@ -220,6 +251,9 @@ export default function KickstartEngagement(props) {
                     </button>
                   </div>
                 </form>
+                {
+                  isSubmitted && <p className="mt-4 text-center text-green-900"> Data Saved Successfully </p>
+                }              
               </div>
             </Modal>
         }

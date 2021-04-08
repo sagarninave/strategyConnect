@@ -71,7 +71,7 @@ function Subscription() {
                 </p>
               </li>
             </ul>
-            <div className="p-2 pl-2 pt-0 rounded-md border-2 ml-16 mr-16" 
+            <div className="p-2 pl-2 pt-0 rounded-md border-2 ml-14 mr-14" 
                  style={{ width: "11.4rem", position:"absolute", bottom:15}}>              
               <button onClick={openModal} className="text-white purple lg:w-40 w-full flex items-center mt-2 mr-2 justify-between border-none focus:outline-none py-2 px-7 rounded">
                 <p className="relative">Make Enquiry</p>
@@ -104,7 +104,7 @@ function Subscription() {
                   </p>
               </li>
             </ul>
-            <div className="p-2 pl-2 pt-0 rounded-md border-2 ml-16 mr-16" 
+            <div className="p-2 pl-2 pt-0 rounded-md border-2 ml-14 mr-14" 
                  style={{ width: "11.4rem", position:"absolute", bottom:15}}>              
               <button onClick={openModal} className="text-white purple lg:w-40 w-full flex items-center mt-2 mr-2 justify-between border-none focus:outline-none py-2 px-7 rounded">
                 <p className="relative">Make Enquiry</p>
@@ -141,7 +141,7 @@ function Subscription() {
                   </p>
               </li>
             </ul>
-            <div className="p-2 pl-2 pt-0 rounded-md border-2 ml-16 mr-16" 
+            <div className="p-2 pl-2 pt-0 rounded-md border-2 ml-14 mr-14" 
                  style={{ width: "11.4rem", position:"absolute", bottom:15}}>              
               <button onClick={openModal} className="text-white purple lg:w-40 w-full flex items-center mt-2 mr-2 justify-between border-none focus:outline-none py-2 px-7 rounded">
                 <p className="relative">Make Enquiry</p>
@@ -186,7 +186,7 @@ function Subscription() {
                 </p>
               </li>
             </ul>
-            <div className="p-2 pl-2 pt-0 rounded-md border-2 ml-16 mr-16" 
+            <div className="p-2 pl-2 pt-0 rounded-md border-2 ml-14 mr-14" 
                  style={{ width: "11.4rem", position:"absolute", bottom:15}}>              
               <button onClick={openModal} className="text-white purple lg:w-40 w-full flex items-center mt-2 mr-2 justify-between border-none focus:outline-none py-2 px-7 rounded">
                 <p className="relative">Make Enquiry</p>
@@ -202,7 +202,7 @@ function Subscription() {
           Couldn't find what you were looking for?
         </p>
         <div style={{ width: "11.4rem", margin: 'auto', marginTop: ' 25px'}}
-            className="p-2 pl-2 mt-32 pt-0 rounded-md border-2 ml-16 mr-16">
+            className="p-2 pl-2 mt-32 pt-0 rounded-md border-2 ml-14 mr-14">
           <button onClick={openModal2} className="text-white purple lg:w-40 w-full flex items-center mt-2 mr-2 justify-between border-none focus:outline-none py-2 px-7 rounded">
             <p className="relative" style={{ margin: 'auto' }}>Customize</p>
           </button>
@@ -212,7 +212,7 @@ function Subscription() {
         </p>
       </div>
 
-      <KickstartEngagement open={modalIsOpen} close={closeModal}/>
+      <KickstartEngagement open={modalIsOpen} close={closeModal} enquiry_type="Financial Marketing"/>
       <Project open={modalIsOpen2} close={closeModal2}/>
 
     </div>
