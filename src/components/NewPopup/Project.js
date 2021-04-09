@@ -5,7 +5,7 @@ import { AiOutlineCloseCircle } from "react-icons/ai";
 import TextField from '@material-ui/core/TextField';
 import Autocomplete from '@material-ui/lab/Autocomplete';
 import { getAllIndustries } from './../../services/StartProject';
-
+import { getIndustries } from '../../state/actions/startProjectAction';
 const axios = require('axios');
 
 
@@ -154,12 +154,16 @@ export default function Project(props) {
 
   useEffect(() => {
 
-    getAllIndustries().then(result => { 
-      // console.log("industries : ", result)
-      setIndustryList(result.data.data.list)
-    });
+    // getAllIndustries().then(result => { 
+    //   // console.log("industries : ", result)
+    //   setIndustryList(result.data.data.list)
+    // });
 
-    // loadIndustries();
+    getIndustries();
+    // .then(result => { 
+    //   console.log("industries 111: ", result)
+    // });
+
 
     function handleResize() {
       setDimensions(window.innerWidth);
@@ -174,16 +178,16 @@ export default function Project(props) {
     setFormFields({ ...formFields, [e.target.name]: e.target.value })
   }
 
-  const loadIndustries = () => {
-    let res = axios({
-      method: 'get',
-      url: `https://testapi.strategyconnect.co/api/data/generic/case_study/industry-list?limit=100`,
-      headers: {'Content-Type': 'application/json', Authorization: 'test', namespace: 'WEB'}
-    })
-    res.then(x => { 
-      console.log("xxxx", x);
-    })
-  }
+  // const loadIndustries = () => {
+  //   let res = axios({
+  //     method: 'get',
+  //     url: `https://testapi.strategyconnect.co/api/data/generic/case_study/industry-list?limit=100`,
+  //     headers: {'Content-Type': 'application/json', Authorization: 'test', namespace: 'WEB'}
+  //   })
+  //   res.then(x => { 
+  //     console.log("xxxx", x);
+  //   })
+  // }
 
   const onSubmit = (e) => {
     e.preventDefault();
@@ -320,10 +324,10 @@ export default function Project(props) {
                       )}
                     /> */}
                     {/* <Autocomplete
-                      freeSolo
+                      // freeSolo
                       id="free-solo-2-demo"
                       disableClearable
-                      options={top100Films.map((option) => option.title)}
+                      options={industryList.map((option) => option.name)}
                       renderInput={(params) => (
                         <TextField
                           {...params}
@@ -333,8 +337,8 @@ export default function Project(props) {
                           InputProps={{ ...params.InputProps, type: 'search' }}
                         />
                       )}
-                    /> */}
-                    
+                    />
+                     */}
                     <input
                       type="text"
                       className="border focus:outline-none border-gray-300 py-2 lg:px-6 px-2 rounded w-2/4 text-sm"

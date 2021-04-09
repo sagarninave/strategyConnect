@@ -37,13 +37,16 @@ function Engagement() {
         <div className="p-2 pl-2 mt-32 pt-0 rounded-md border-2 ml-16 mr-16" style={{ width: "11.4rem", margin: 'auto', marginTop: ' 25px' }}>
           <button type="submit" className="text-white purple lg:w-40 w-full flex items-center mt-2 mr-2 justify-between border-none focus:outline-none py-2 px-7 rounded px-5">
             <img src={phone} loading="lazy" alt="phone-white" className="contactBtn" />
-            <p className="relativeContact ">Phone Call</p>
+            <p className="relativeContact">
+              <a href="tel:+919990603640"> Phone Call </a></p>
           </button>
         </div>
         <div className="p-2 pl-2 mt-32 pt-0 rounded-md border-2 ml-16 mr-16" style={{ width: "11.4rem", margin: 'auto', marginTop: ' 25px' }}>
           <button type="submit" className="text-white purple lg:w-40 w-full flex items-center mt-2 mr-2 justify-between border-none focus:outline-none py-2 px-7 rounded px-5">
             <img src={chat} loading="lazy" alt="phone-white" className="contactBtn" />
-            <p className="relativeContact ">Chat</p>
+            <p className="relativeContact">
+              <a href="sms:+919990603640?body=Hello Strategy Connect!">Chat</a>
+            </p>
           </button>
         </div>
 
@@ -219,14 +222,18 @@ function Engagement() {
             style={{ width: "8rem", margin: 'auto', marginRight: "0.5rem", marginTop: ' 25px' }}>
             <button type="submit" className="text-white purple lg:w-40 w-full flex items-center mt-1 mr-2 justify-between border-none focus:outline-none py-2 rounded">
               <img src={phone} loading="lazy" alt="phone-white" className="contactBtn" />
-              <p style={{ marginLeft: "-5px" }} className="relativeContact ">Phone Call</p>
+              <p style={{ marginLeft: "-5px" }} className="relativeContact ">
+                <a href="tel:+919990603640"> Phone Call </a>
+              </p>
             </button>
           </div>
           <div className="flex-1 p-1 pl-1 pt-0 mx-2 rounded-md border-2"
             style={{ width: "3rem", margin: 'auto', marginleft: "0.5rem", marginTop: ' 25px' }}>
             <button type="submit" className="text-white purple lg:w-40 w-full flex items-center mt-1 justify-between border-none focus:outline-none py-2 rounded">
               <img src={chat} loading="lazy" alt="phone-white" className="contactBtn" />
-              <p style={{ marginLeft: "-1px" }} className="relativeContact" >Chat</p>
+              <p style={{ marginLeft: "-1px" }} className="relativeContact">
+                <a href="sms:+919990603640?body=Hello Strategy Connect!">Chat</a>
+              </p>
             </button>
           </div>
           <div className="flex-1 p-1 pl-1 pt-0 ml-2 rounded-md border-2"
