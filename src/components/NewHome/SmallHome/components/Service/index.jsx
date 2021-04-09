@@ -51,10 +51,10 @@ export default function Service() {
                 alt={productservice}
                 effect="blur"
                 style={{ weight: '132px', height: '142px', flexGrow: 1 }}
-                className=" lg:flex h-96 flex-1"
+                className="service-image lg:flex h-96 flex-1"
                 src={productservice}
               />
-              <p className="mt-2 text-base text-3xl font-semibold">
+              <p className="service-heading mt-2 text-base text-3xl font-semibold">
                 Product Services
               </p>
             </div>
@@ -83,7 +83,7 @@ export default function Service() {
         </div>
 
         <div 
-          className="float-left showInDesktop flip-card flex-1 p-5 ml-5 minHeightBussiness rounded-md cursor-pointer service-panel">
+          className="flip-card showInDesktop flex-1 minHeightBussiness p-5 mr-5 rounded-md cursor-pointer service-panel">
           <div style={{ backgroundColor: "#E8F2FA", height: '100%' }}
             className="flip-card-inner flex-1  lg:flex rounded-md justify-center">
             <div className="flip-card-front flex-1 text-center text-center item-center mt-32">
@@ -91,10 +91,10 @@ export default function Service() {
                 alt={marketplaceexperts}
                 effect="blur"
                 style={{ weight: '132px', height: '142px', flexGrow: 1 }}
-                className=" lg:flex h-96 flex-1"
+                className="service-image lg:flex h-96 flex-1"
                 src={marketplaceexperts}
               />
-              <p className="mt-2 text-base text-3xl font-semibold">
+              <p className="service-heading mt-2 text-base text-3xl font-semibold">
                 Marketplace Experts
               </p>
             </div>
@@ -132,6 +132,7 @@ export default function Service() {
             </div>
           </div>
         </div>
+
       </div>
 
       {/* mobile  */}

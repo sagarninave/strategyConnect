@@ -367,6 +367,7 @@
     background-color: #E8F2FA;
   }
 }
+
 @media only screen and (max-width:480px) {
   .tab-about-us-1{
     display: none;
@@ -377,14 +378,34 @@
 }
 
 @media only screen and (min-width:768px) {
+  .bussinessImg {
+    height: 10rem;
+    flex-grow: 1
+  }
   .tab-about-us-1{
     display: block;
   }
   .tab-about-us-2{
     display: none;
   }
+  .service-image{
+    width:100px;
+    height:110px;
+  }
+  .service-heading{
+    font-size:1.5rem;
+  }
 }
 
+@media (min-width:768px) and (max-width:1020px) {
+  .service-image{
+    width:100px;
+    height:110px;
+  }
+  .service-heading{
+    font-size:1.5rem;
+  }
+}
 @media only screen and (max-width:640px) {
 
   .tab-about-us-1{
