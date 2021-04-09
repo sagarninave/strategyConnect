@@ -41,6 +41,7 @@ export default function Project(props) {
     projectdescription: ''
   });
 
+  const [isSubmitted, setIsSubmitted] = useState(false)
   const [dimensions, setDimensions] = useState(window.innerWidth);
 
   useEffect(() => {
@@ -62,10 +63,50 @@ export default function Project(props) {
 
   const onSubmit = (e) => {
     e.preventDefault();
-    console.log("Project", formFields)
+    console.log("GO TO ", formFields)
+
+    let data = {
+      "name": formFields.name,
+      "organisation_name": formFields.organization,
+      "email": formFields.email,
+      "contact": formFields.phone,
+      "message": formFields.message,
+      "enquiry_type": props.enquiry_type,
+      "industry": formFields.industry,
+      "project": formFields.project,
+      "project_description": formFields.project
+    }
+
+    console.log(data)
+    axios({
+      method: 'post',
+      url: `http://localhost:3003/api/data/generic/save-enquiry/enquiry`,
+      data: data,
+      headers: {
+        'x-fwd-authorization': 'test',
+        'Namespace': 'STRATEGY'
+      }
+    })
+      .then(result => {
+        if (result.data.meta.ok === 1 && result.data.meta.message === "Success!") {
+          setIsSubmitted(true);
+          setFormFields({
+            name: '',
+            organization: '',
+            email: '',
+            phone: '',
+            industry: '',
+            project: '',
+            projectdescription: ''
+          })
+          console.log("send form response", result.data)
+        }
+        setTimeout(() => {close()}, 2000);
+      });
   }
 
   const close = () => {
+    setIsSubmitted(false);
     setFormFields({
       name: '',
       organization: '',
@@ -167,6 +208,9 @@ export default function Project(props) {
                     </button>
                   </div>
                 </form>
+                {
+                  isSubmitted && <p className="mt-4 text-center text-green-900"> Data Saved Successfully </p>
+                }
               </div>
             </Modal> :
             <Modal
@@ -227,9 +271,9 @@ export default function Project(props) {
                     />
                   </div>
                   <div className="flex items-center mt-4">
-                  <input
+                    <input
                       type="text"
-                      className="border focus:outline-none border-gray-300 py-2  lg:px-6 px-2 rounded w-2/4 mr-2 text-sm"
+                      className="border focus:outline-none border-gray-300 py-2 lg:px-6 px-2 rounded w-full text-sm"
                       placeholder="Industry"
                       name="industry"
                       onChange={onHandleChange}
@@ -239,7 +283,7 @@ export default function Project(props) {
                   <div className="flex items-center mt-4">
                     <input
                       type="text"
-                      className="border focus:outline-none border-gray-300 py-2 lg:px-6 px-2 rounded w-2/4 text-sm"
+                      className="border focus:outline-none border-gray-300 py-2 lg:px-6 px-2 rounded w-full text-sm"
                       placeholder="Project"
                       name="project"
                       onChange={onHandleChange}
@@ -249,7 +293,7 @@ export default function Project(props) {
                   <textarea
                     className="border focus:outline-none border-gray-300 w-full py-2 lg:px-6 px-2 rounded mt-4 text-sm"
                     placeholder="Project Description"
-                    rows="5"
+                    rows="3"
                     name="projectdescription"
                     onChange={onHandleChange}
                     value={formFields.projectdescription}
@@ -258,6 +302,9 @@ export default function Project(props) {
                     <button type="submit" className="text-white purple lg:w-40 w-full flex items-center mt-2 mr-2 justify-between border-none focus:outline-none py-2 px-7 rounded px-5">
                       <p className="relativeContact ">Submit</p>
                     </button>
+                    {
+                      isSubmitted && <p className="mt-4 text-center text-green-900"> Data Saved Successfully </p>
+                    }
                   </div>
                 </form>
               </div>

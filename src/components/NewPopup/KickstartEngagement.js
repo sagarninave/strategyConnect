@@ -89,7 +89,7 @@ export default function KickstartEngagement(props) {
         if (result.data.meta.ok === 1 && result.data.meta.message === "Success!") {
           setIsSubmitted(true);
           setFormFields({name: '', email: '', phone: '', message: '', organization: ''})
-          console.log("send form response", result.data)
+          // console.log("send form response", result.data)
         }
         setTimeout(() => {close()}, 2000);
       });
