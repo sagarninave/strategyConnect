@@ -71,10 +71,10 @@ function Subscription() {
               </li>
             </ul>
             
-            <div className="p-2 pl-2 pt-0 rounded-md border-2 ml-14 mr-14" 
-                 style={{ width: "11.4rem", position:"absolute", bottom:15}}>
+            <div className="kickstart-popup-button p-2 pl-2 pt-0 rounded-md border-2"
+              style={{ width: "11.4rem", position: "absolute", bottom: 15, left:"5.5rem" }}>
               <button onClick={openModal} className="text-white purple lg:w-40 w-full flex items-center mt-2 mr-2 justify-between border-none focus:outline-none py-2 px-7 rounded">
-                <p className="relative">Make Enquiry</p> 
+                <p className="relative">Make Enquiry</p>
               </button>
             </div>
           </div>
@@ -94,7 +94,7 @@ function Subscription() {
         Customize as per your need.
         </p>
       </div>
-      
+
       {/* <div className="px-auto pt-0 mt-8 lg:mt-8">
         <p className="sm:text-2xl lg:text-2xl text-black font-semibold text-center mx-auto lg:w-11/12 xl:w-11/12 sm:w-11/12 w-11/12">
           Couldn't find what you were looking for?

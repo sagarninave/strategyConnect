@@ -37,12 +37,6 @@
   }
 }
 
-/* businsess, finance go to market */
-
-/* model */
-
-/* market expert */
-
 .btnButton {
   margin: auto;
   display: block;
@@ -144,13 +138,7 @@
   min-height: 470px;
   border-radius: 10px;
   margin-bottom: 3rem;
-  /* transition: 0.4s; */
 }
-
-/* .boxAnalytics2:hover{
-  transform: scale(1.1); 
-  transition: 0.4s;
-} */
 
 .makeEnquery {
   border: 1px solid #38369A;
@@ -254,16 +242,6 @@
   display: block;
 }
 @media screen and (min-width: 800px) and (max-width: 1280px) {}
-
-/* ============================================== */
-
-/* HDTV                                           */
-
-/*                                      1920x1080 */
-
-/* ============================================== */
-
-/* @media screen and (min-width: 1281px) and (max-width: 1920px) { */
 
 @media (min-width: 1920px) and (max-width: 2560px) {
   .kickstart-float{
@@ -378,6 +356,18 @@
   .plan-text{
     font-size: 1.3rem;
   }
+  .boxAnalytics {
+    border: 1px solid rgb(177, 181, 185);
+    padding: 14px;
+    width: auto!important;
+    min-height: 550px;
+    border-radius: 10px;
+    position:relative;
+    margin:0 20px; 
+  }
+  .kickstart-popup-button{
+    left: 7.3rem!important;
+  }
 }
 
 @media only screen and (min-width:768px) {
@@ -411,9 +401,22 @@
   .service-heading{
     font-size:1.5rem;
   }
+  .kickstart-popup-button{
+    left: 5.5rem!important;
+  }
 }
+
+@media (min-width:400px) and (max-width:600px) {
+  .kickstart-popup-button{
+    left: 7.5rem!important;
+  }
+}
+
 @media only screen and (max-width:640px) {
 
+  .kickstart-popup-button{
+    left: 4.5rem!important;
+  }
   .plan-text{
     font-size: 1.3rem;
   }
@@ -461,8 +464,8 @@
   .boxAnalytics {
     border: 1px solid rgb(177, 181, 185);
     padding: 14px;
-    width: auto;
-    min-height: 500px;
+    width: 70%;
+    min-height: 550px;
     border-radius: 10px;
     position:relative;
     margin:0 20px; 
@@ -639,6 +642,7 @@
     width: 87px; 
     height: auto;
   }
+  
 }
 
 @media (min-width: 481px) and (max-width: 2560px) {

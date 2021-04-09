@@ -70,8 +70,8 @@ function Subscription() {
                 </p>
               </li>
             </ul>
-            <div className="p-2 pl-2 pt-0 rounded-md border-2 ml-14 mr-14"
-              style={{ width: "11.4rem", position: "absolute", bottom: 15 }}>
+            <div className="kickstart-popup-button p-2 pl-2 pt-0 rounded-md border-2"
+              style={{ width: "11.4rem", position: "absolute", bottom: 15, left:"5.5rem" }}>
               <button onClick={openModal} className="text-white purple lg:w-40 w-full flex items-center mt-2 mr-2 justify-between border-none focus:outline-none py-2 px-7 rounded">
                 <p className="relative">Make Enquiry</p>
               </button>
@@ -108,8 +108,8 @@ function Subscription() {
                   </p>
               </li>
             </ul>
-            <div className="p-2 pl-2 pt-0 rounded-md border-2 ml-14 mr-14"
-              style={{ width: "11.4rem", position: "absolute", bottom: 15 }}>
+            <div className="kickstart-popup-button p-2 pl-2 pt-0 rounded-md border-2"
+              style={{ width: "11.4rem", position: "absolute", bottom: 15, left:"5.5rem" }}>
               <button onClick={openModal} className="text-white purple lg:w-40 w-full flex items-center mt-2 mr-2 justify-between border-none focus:outline-none py-2 px-7 rounded">
                 <p className="relative">Make Enquiry</p>
               </button>
@@ -154,8 +154,8 @@ function Subscription() {
                   </p>
               </li>
             </ul>
-            <div className="p-2 pl-2 pt-0 rounded-md border-2 ml-14 mr-14"
-              style={{ width: "11.4rem", position: "absolute", bottom: 15 }}>
+            <div className="kickstart-popup-button p-2 pl-2 pt-0 rounded-md border-2"
+              style={{ width: "11.4rem", position: "absolute", bottom: 15, left:"5.5rem" }}>
               <button onClick={openModal} className="text-white purple lg:w-40 w-full flex items-center mt-2 mr-2 justify-between border-none focus:outline-none py-2 px-7 rounded">
                 <p className="relative">Make Enquiry</p>
               </button>
@@ -203,8 +203,8 @@ function Subscription() {
                 </p>
               </li>
             </ul>
-            <div className="p-2 pl-2 pt-0 rounded-md border-2 ml-14 mr-14"
-              style={{ width: "11.4rem", position: "absolute", bottom: 15 }}>
+            <div className="kickstart-popup-button p-2 pl-2 pt-0 rounded-md border-2"
+              style={{ width: "11.4rem", position: "absolute", bottom: 15, left:"5.5rem" }}>
               <button onClick={openModal} className="text-white purple lg:w-40 w-full flex items-center mt-2 mr-2 justify-between border-none focus:outline-none py-2 px-7 rounded">
                 <p className="relative">Make Enquiry</p>
               </button>
@@ -219,7 +219,7 @@ function Subscription() {
         <p className="text-center xl:text-4xl text-2xl font-bold mt-4">          
         Couldn't find what you were looking for?
         </p>
-         <div className="p-2 pl-2 mt-32 pt-0 rounded-md border-2 ml-14 mr-14" style={{ width: "11.4rem", margin: 'auto', marginTop: ' 25px' }}>
+         <div className="p-2 pl-2 mt-32 pt-0 rounded-md border-2" style={{ width: "11.4rem", margin: 'auto', marginTop: ' 25px' }}>
           <button onClick={openModal2} className="text-white purple lg:w-40 w-full flex items-center mt-2 mr-2 justify-between border-none focus:outline-none py-2 px-7 rounded">
             <p className="relative" style={{ margin: 'auto' }}>Customize</p>
           </button>
@@ -233,7 +233,7 @@ function Subscription() {
         <p className="sm:text-2xl lg:text-2xl text-black font-semibold text-center mx-auto lg:w-11/12 xl:w-11/12 sm:w-11/12 w-11/12">
           Couldn't find what you were looking for?
         </p>
-        <div className="p-2 pl-2 mt-32 pt-0 rounded-md border-2 ml-14 mr-14" style={{ width: "11.4rem", margin: 'auto', marginTop: ' 25px' }}>
+        <div className="p-2 pl-2 mt-32 pt-0 rounded-md border-2" style={{ width: "11.4rem", margin: 'auto', marginTop: ' 25px' }}>
           <button onClick={openModal2} className="text-white purple lg:w-40 w-full flex items-center mt-2 mr-2 justify-between border-none focus:outline-none py-2 px-7 rounded">
             <p className="relative" style={{ margin: 'auto' }}>Customize</p>
           </button>
