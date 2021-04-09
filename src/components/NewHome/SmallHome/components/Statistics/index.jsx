@@ -24,7 +24,7 @@ function index() {
 
   return (
     <div>
-      <div className="flex pt-8 mx-5 lg:mb-12 lg:mb-0 justify-between">
+      <div className="lg:mx-56 sm:mx-32 mx-6 pt-10 topborder flex justify-between">
         {imageList.map((item) => {
           return (
             <div className="flex flex-col items-center content-center">
@@ -34,10 +34,10 @@ function index() {
                 alt="chat"
                 className="statisticImg h-6 lg:h-10 md:mt-14"
               />
-              <p className="text-lg md:text-3xl text-black font-bold  mt-2 md:mt-7 md:mb-3 leading-10">
+              <p className="text-lg md:text-2xl font-bold md:mt-7 md:mb-3 leading-10">
                 {item.number}
               </p>
-              <p className="text-lg md:text-black text-2xl font-medium text-black text-center md:mb-10 lg:leading-7 grey-text">
+              <p className="text-base font-normal text-center md:mb-10 lg:leading-7 grey-text">
                 {item.text}
               </p>
             </div>
