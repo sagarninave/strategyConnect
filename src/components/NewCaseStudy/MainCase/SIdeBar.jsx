@@ -124,6 +124,7 @@ function SIdeBar({
                 return <p key={index}
                   className="text-lg font-thin mt-2 hover:text-gray-500 w-full"
                   onClick={() => {
+                    setSearchParam(item.name);
                     getCaseStudiesByProjectTag(item.id);
                   }}
                 > {item.name} </p>

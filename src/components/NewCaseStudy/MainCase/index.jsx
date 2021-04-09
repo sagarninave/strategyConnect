@@ -48,7 +48,7 @@ function MainCase({ caseStudy,
         });
     }
   };
-  console.log("Search Results", searchResult)
+  // console.log("Search Results", searchResult)
 
   return (
     <div className="flex justify-between lg:mt-20  mt-10 xl:px-32 px-4">
@@ -89,6 +89,7 @@ function MainCase({ caseStudy,
                 return <p key={index}
                   className="text-lg font-thin mt-2 hover:text-gray-500 w-full"
                   onClick={() => {
+                    setSearchParam(item.name);
                     getCaseStudiesByProjectTag(item.id);
                   }}
                 > {item.name} </p>
