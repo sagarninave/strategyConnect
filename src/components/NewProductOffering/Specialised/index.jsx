@@ -12,29 +12,29 @@ export default function index() {
       <div style={{ backgroundColor: "#fff" }} className="flex lg:py-8 lg:pb-0 py-8 lg:px-16 px-8 justify-between refined-bg md:mt-0 xl:mt-0 mt-0 mb-0 items-center">
         <div className="flex-1 lg:flex justify-center">
           <p className="market-expert-text lg:text-4xl mt-5 mb-0 text-center lg:text-center font-bold">
-          We Specialised In      
+            We Specialised In      
           </p>
         </div>
       </div>
 
       {/* Desktop */}
 
-      <div style={{backgroundColor:"#fff"}} className="hidden lg:flex xl:flex mb-10 lg:mb-10 lg:py-8 py-8 lg:px-16 px-8 justify-start refined-bg xl:mt-10 items-center">
-        <div className="showInDesktop flex-1 hidden lg:flex lg:justify-start">
+      <div style={{backgroundColor:"#fff"}} className="hidden md:flex lg:flex xl:flex mb-10 lg:mb-10 lg:py-8 py-8 lg:px-16 px-8 justify-start refined-bg xl:mt-10 items-center">
+        <div className="showInDesktop flex-1 hidden md:flex lg:flex lg:justify-start">
           <LazyLoadImage
             alt={BusinessPlanning}
             effect="blur"
             style={{ height: '10rem', flexGrow: 1 }}
-            className="hidden lg:flex h-96 flex-initial"
+            className="hidden md:flex lg:flex h-96 flex-initial"
             src={BusinessPlanning}
           />
         </div>
 
-        <div className="showInDesktop flex-1 ml-28 lg:-mt-10">
-          <p className="lg:text-3xl text-lg text-center lg:text-left font-bold mt-5 lg:mt-5 md:mt-5">
+        <div className="showInDesktop flex-1 ml-28 md:ml-4 lg:-mt-10">
+          <p className="lg:text-3xl text-lg text-left lg:text-left font-bold mt-5 lg:mt-5 md:mt-5">
             Business Planning
           </p>
-          <p className="font-medium functionalareasdesc-productoffering text-base lg:text-lg lg:w-full text-center lg:text-left mx-auto lg:mx-0 grey-text mt-5 font-thin">
+          <p className="font-medium functionalareasdesc-productoffering text-base lg:text-lg lg:w-full text-left lg:text-left mx-auto lg:mx-0 grey-text mt-5 font-thin">
             We develop a thorough business analysis that can  
             make your business investor and market-ready
           </p>
@@ -48,12 +48,12 @@ export default function index() {
         </div>
       </div>
 
-      <div style={{backgroundColor:"#fff"}} className="hidden lg:flex xl:flex mb-10 lg:mb-10 lg:py-1 py-8 lg:px-16 px-8 justify-between refined-bg md:mt-0 xl:mt-0 mt-0 items-center">
+      <div style={{backgroundColor:"#fff"}} className="hidden md:flex lg:flex xl:flex mb-10 lg:mb-10 lg:py-1 py-8 lg:px-16 px-8 justify-between refined-bg md:mt-0 xl:mt-0 mt-0 items-center">
         <div className="showInDesktop  flex-1 mr-0 lg:-mt-16 justify-start">
-          <p className="lg:text-3xl text-lg text-center lg:text-left font-bold">
+          <p className="lg:text-3xl text-lg text-left lg:text-left font-bold">
             Financial Modeling
           </p>
-          <p className="font-medium functionalareasdesc-productoffering text-base lg:text-xl-lg lg:w-11/12 text-center lg:text-left mx-auto lg:mx-0 grey-text mt-5 font-thin">
+          <p className="font-medium functionalareasdesc-productoffering text-base lg:text-xl-lg lg:w-11/12 text-left lg:text-left mx-auto lg:mx-0 grey-text mt-5 font-thin">
             We Create an exhaustive and easy to use 
             financial model that can scale with your business
           </p>
@@ -65,32 +65,32 @@ export default function index() {
             </button>
           </div>
         </div>
-        <div className="showInDesktop flex-1 hidden lg:flex justify-end">
+        <div className="showInDesktop flex-1 hidden md:flex lg:flex text-right justify-end md:justify-end">
           <LazyLoadImage
             alt={FinancialModeling}
             effect="blur"
             style={{ height: '10rem', flexGrow: 1 }}
-            className="hidden lg:flex h-96 flex-1"
+            className="hidden md:flex lg:flex h-96 flex-1"
             src={FinancialModeling}
           />
         </div>
       </div>
 
-      <div style={{backgroundColor:"#fff"}} className="hidden lg:flex xl:flex lg:py-8 py-8 lg:pb-0 lg:px-16 px-8 justify-start refined-bg md:mt-0 xl:mt-0 mt-0 items-center">
-        <div className="showInDesktop flex-1 hidden lg:flex lg:justify-start">
+      <div style={{backgroundColor:"#fff"}} className="hidden md:flex lg:flex xl:flex lg:py-8 py-8 lg:pb-0 lg:px-16 px-8 justify-start refined-bg md:mt-0 xl:mt-0 mt-0 items-center">
+        <div className="showInDesktop flex-1 hidden md:flex lg:flex lg:justify-start">
           <LazyLoadImage
             alt={GoToMarketPlanning}
             effect="blur"
             style={{ height: '10rem', flexGrow: 1 }}
-            className="hidden lg:flex h-96 flex-initial"
+            className="hidden md:flex lg:flex h-96 flex-initial"
             src={GoToMarketPlanning}
           />
         </div>
-        <div className="showInDesktop flex-1 ml-28 lg:-mt-16">
-          <p className="lg:text-3xl text-lg text-center lg:text-left font-bold">
+        <div className="showInDesktop flex-1 ml-28 md:ml-4 lg:-mt-16">
+          <p className="lg:text-3xl text-lg text-left lg:text-left font-bold">
             Go-To-Market Strategy
           </p>
-          <p className="font-medium functionalareasdesc-productoffering text-base lg:text-lg lg:w-full text-center lg:text-left mx-auto lg:mx-0 grey-text mt-5 font-thin">
+          <p className="font-medium functionalareasdesc-productoffering text-base lg:text-lg lg:w-full text-left lg:text-left mx-auto lg:mx-0 grey-text mt-5 font-thin">
             We uncover deep insights that can help your business 
             fast track its entry to the market of interest.
           </p>

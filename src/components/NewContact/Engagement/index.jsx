@@ -28,6 +28,7 @@ function Engagement() {
   });
   return (
     <div className="flex lg:flex-row flex-col lg:my-20 my-10 justify-between  xl:px-28">
+      {/* desktop kickstart */}
       <div className="showInDesktop mx-auto lg:w-96">
         <p className="lg:text-2xl text-xl text-center font-semibold">Kickstart Engagement</p>
         <p className="text-sm grey-text mt-2 text-center">
@@ -58,6 +59,8 @@ function Engagement() {
         </div>
       </div>
       <div className="h-96 w-0.5 hidden lg:block bg-gray-100" />
+
+      {/* desktop send messsage */}
       <div className="showInDesktop mx-auto flex flex-col lg:border-none px-8 lg:px-0 lg:mt-0  justify-center items-center">
         <p className="text-2xl text-center font-semibold">Send Us a Message</p>
         <p className="text-sm grey-text text-center mt-2">
@@ -129,7 +132,7 @@ function Engagement() {
       </div>
 
 
-      {/* mobile message */}
+      {/* mobile send message */}
 
       <div className="showInMobile mx-auto flex flex-col lg:border-none px-8 lg:px-0 lg:mt-0  justify-center items-center">
         <p className="text-2xl text-center font-semibold">Send Us a Message</p>

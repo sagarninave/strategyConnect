@@ -13,7 +13,7 @@ function Contact() {
   return (
     <div>
       <Navbar />
-      <h1 className="lg:text-3xl text-xl text-center font-semibold mt-20 lg:px-48 px-4">
+      <h1 className="text-2xl lg:text-3xl text-center font-bold mt-20 lg:px-48 px-4">
         Get in Touch With Us
       </h1>
       <p className="text-sm grey-text text-center mt-2 lg:px-48 px-4">
