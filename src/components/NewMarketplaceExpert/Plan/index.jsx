@@ -24,7 +24,9 @@ function Plan() {
              className="w-9-12 lg:w-full mx-auto mt-10 lg:mt-8 xs:mt-8 items-end" />
       </div>
       <div className="pb-10 pt-8">
-        <p className="text-center marketplace-heading xl:text-2xl text-2xl font-bold">
+        {/* <p className="text-center marketplace-heading xl:text-2xl text-2xl font-bold"> */}
+
+        <p className="text-center xl:text-4xl text-2xl font-bold mt-4">          
           Simple, transparent pricing
         </p>
         <p className="marketplace-subheading font-medium text-lg xl:w-10/12 w-11/12 mx-auto light_grey grey-text mt-2 text-center font-thin">
@@ -42,17 +44,18 @@ function Plan() {
         {/* Plan Cards 1 */}
         <div className="flex flex-col mb-8 items-center content-center">
           <div className="boxAnalytics2 priceCardOne">
-            <p className="marketplace-card-title text-lg md:text-2xl font-bold text-center leading-10" 
-               style={{borderBottom: '1px solid #B1B5B9', 
-               marginBottom: '15px', 
-               padding: '9px 0px'
+            <p className="plan-text text-lg md:text-2xl font-bold text-center leading-10" 
+               style={{
+                  borderBottom: '1px solid #B1B5B9', 
+                  marginBottom: '15px', 
+                  padding: '9px 0px'
                }}
             > Plan - 1 </p>
             <ul>
-              <li className="marketplace-card-title font14 text-center text-lg light_grey grey-text font-medium">  
+              <li className="plan-text text-center text-lg light_grey grey-text font-medium">  
                 Get started for
               </li>
-              <li className="font14 text-center font-semibold mt-4"> 
+              <li className="text-center font-semibold mt-4"> 
                 <span>$</span>
                 <span className="bigName">12</span>
               </li>
@@ -64,25 +67,25 @@ function Plan() {
               </div>
             </ul>
             <ul>
-              <li className="font14">
+              <li>
                 <p className="financeCardDesc">
                   <span className="tick"></span>
                   Self-Service Audit Document
                 </p>
               </li>
-              <li className="font14">
+              <li>
                 <p className="financeCardDesc">
                   <span className="tick"></span>
                   One Hour Additional Legal Advice Credit
                 </p>
               </li>
-              <li className="font14">
+              <li>
                 <p className="financeCardDesc light_grey grey-text">
                   <span className="tick"></span>
                   30-Minute Audit Review & Legal Advice
               </p>
               </li>
-              <li className="font14">
+              <li>
                 <p className="financeCardDesc light_grey grey-text">
                   <span className="tick"></span>
                   Training Video Access Include
@@ -95,17 +98,17 @@ function Plan() {
         {/* Plan Cards 2 */}
         <div className="flex flex-col items-center content-center">
           <div className="boxAnalytics2 text-white" style={{ background: '#38369a'}}>
-            <p className="marketplace-card-title text-lg md:text-2xl font-bold text-center leading-10" 
+            <p className="plan-text text-lg md:text-2xl font-bold text-center leading-10" 
               style={{borderBottom: '1px solid #B1B5B9', 
               marginBottom: '15px', 
               padding: '9px 0px'
               }}
             > Plan - 2 </p>            
             <ul>
-              <li className="marketplace-card-title font14 text-center text-lg font-medium">
+              <li className="plan-text text-center text-lg font-medium">
                 Get started for
               </li>
-              <li className="font14 text-center font-semibold mt-4">
+              <li className="text-center font-semibold mt-4">
                 <span>$</span>
                 <span className="bigName">24</span>
               </li>
@@ -119,23 +122,23 @@ function Plan() {
               </div>
             </ul>
             <ul>
-              <li className="font14">
+              <li>
                 <p className="financeCardDesc">
                   <span className="tick activeCard"></span> Self-Service Audit Document
               </p></li>
-              <li className="font14">
+              <li>
                 <p className="financeCardDesc">
                   <span className="tick activeCard"></span>
                   One Hour Additional Legal Advice Credit
                 </p>
               </li>
-              <li className="font14">
+              <li>
                 <p className="financeCardDesc">
                   <span className="tick activeCard"></span>
                   30-Minute Audit Review & Legal Advice
               </p>
               </li>
-              <li className="font14">
+              <li>
 
               <p className="financeCardDesc light_grey grey-text">
                 <span className="tick activeCard"></span>
@@ -149,7 +152,7 @@ function Plan() {
         {/* Plan Cards 3 */}
         <div className="flex flex-col items-center content-center">
           <div className="boxAnalytics2">
-            <p className="marketplace-card-title text-lg md:text-2xl font-bold leading-10" 
+            <p className="plan-text text-lg md:text-2xl font-bold leading-10" 
               style={{
                 borderBottom: '1px solid #B1B5B9', 
                 marginBottom: '15px', 
@@ -158,10 +161,10 @@ function Plan() {
               }}
             > Plan - 3</p>
             <ul>
-              <li className="marketplace-card-title font14 text-center text-lg light_grey grey-text font-medium">  
+              <li className="plan-text text-center text-lg light_grey grey-text font-medium">  
                 Get started for
               </li>
-              <li className="font14 text-center font-semibold mt-4"> 
+              <li className="text-center font-semibold mt-4"> 
                 <span>$</span>
                 <span className="bigName">36</span>
               </li>
@@ -175,25 +178,25 @@ function Plan() {
               </div>
             </ul>
             <ul>
-              <li className="font14">
+              <li>
                 <p className="financeCardDesc">
                   <span className="tick"></span> 
                   Self-Service Audit Document
                 </p>
               </li>
-              <li className="font14">
+              <li>
                 <p className="financeCardDesc">
                   <span className="tick"></span>
                   One Hour Additional Legal Advice Credit
                 </p>
               </li>
-              <li className="font14">
+              <li>
                 <p className="financeCardDesc">
                   <span className="tick"></span>
                   30-Minute Audit Review & Legal Advice
                 </p>
               </li>
-              <li className="font14">
+              <li>
                 <p className="financeCardDesc">
                   <span className="tick"></span>
                   Training Video Access Include

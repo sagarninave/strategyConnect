@@ -36,7 +36,7 @@ export default function index() {
         <p className="our-offerings-text text-3xl lg:text-5xl text-black font-semibold text-center mx-auto w-full lg:w-11/12 xl:w-11/12 ">
         The Simplest Solutions for Your Systems
         </p>
-        <p className="our-offerings-sub-text text-lg text-black text-center w-11/12 mx-auto font-semibold mt-4 mb-4">
+        <p className="our-offerings-sub-text text-lg px-3 grey-text text-center mx-auto font-semibold mt-4">
           We are working on a suite of tools to managing complex systems easier, for everyone. 
           We can’t wait to hear what you think. 
         </p>

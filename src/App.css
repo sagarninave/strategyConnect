@@ -375,6 +375,9 @@
   .tab-about-us-2{
     display: block;
   }
+  .plan-text{
+    font-size: 1.3rem;
+  }
 }
 
 @media only screen and (min-width:768px) {
@@ -411,6 +414,9 @@
 }
 @media only screen and (max-width:640px) {
 
+  .plan-text{
+    font-size: 1.3rem;
+  }
   .tab-about-us-1{
     display: none;
   }
@@ -490,10 +496,6 @@
   }
   .p-4 {
     padding: 4px;
-  }
-  .text-lg {
-    font-size: 14px;
-    line-height: normal;
   }
   .py-8 {
     padding-top: 4px;

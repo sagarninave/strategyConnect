@@ -12,14 +12,16 @@ export default function index() {
   return (
     <div className="m-0 p-0">
       <Navbar />
-      <div style={{ backgroundColor: "#F0EFF7"}} className="h-36 lg:h-96 px-auto pt-5 lg:pt-28">
-        <p className="our-offerings-text lg:text-5xl text-black font-semibold text-center mx-auto w-full lg:w-11/12 xl:w-11/12 ">
-          Experts on Demand
+
+      <div style={{ backgroundColor: "#F0EFF7"}} className="h-40 px-3 lg:h-96 pb-14 pt-5 lg:pt-28">
+        <p className="our-offerings-text text-3xl lg:text-5xl text-black font-semibold text-center mx-auto w-full lg:w-11/12 xl:w-11/12 ">
+        Experts on Demand
         </p>
-        <p className="our-offerings-sub-text text-lg px-3 text-black text-center mx-auto font-semibold mt-4">
-        Access our database of experts and get 5 short calls for free.
+        <p className="our-offerings-sub-text text-lg px-3 grey-text text-center mx-auto font-semibold mt-4">
+        Access our database of experts and get 5 short calls for free. 
         </p>
       </div>
+     
       <div className="xl:px-32 px-0">
         <Plan />
       </div>
