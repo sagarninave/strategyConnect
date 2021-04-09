@@ -25,11 +25,12 @@ function Subscription() {
 
   return (
     <div>
-      <div className="pb-0 lg:pb-10 xl:pb-10 pt-5 lg:pt-14 xl:pt-14">
-        <p className="businessHeading text-center xl:text-2xl text-2xl font-bold">
+     
+      <div className="pb-10 pt-8">
+        <p className="text-center xl:text-4xl text-2xl font-bold mt-4">          
           Easy Subscriptions Plans
         </p>
-        <p className="font-medium text-md xl:w-10/12 w-11/12 mx-auto light_grey grey-text mt-2 text-center font-thin">
+        <p className="marketplace-subheading font-medium text-lg xl:w-10/12 w-11/12 mx-auto light_grey grey-text mt-2 text-center font-thin">
           No contracts. No surprise fees.
         </p>
       </div>
@@ -80,7 +81,21 @@ function Subscription() {
         </div>
       </div>
 
-      <div className="px-auto pt-0 mt-8 lg:mt-8">
+      <div className="pb-10 pt-8">
+        <p className="text-center xl:text-4xl text-2xl font-bold mt-4">          
+        Couldn't find what you were looking for?
+        </p>
+         <div className="p-2 pl-2 mt-32 pt-0 rounded-md border-2 ml-14 mr-14" style={{ width: "11.4rem", margin: 'auto', marginTop: ' 25px' }}>
+          <button onClick={openModal2} className="text-white purple lg:w-40 w-full flex items-center mt-2 mr-2 justify-between border-none focus:outline-none py-2 px-7 rounded">
+            <p className="relative" style={{ margin: 'auto' }}>Customize</p>
+          </button>
+        </div>
+        <p className="marketplace-subheading font-medium text-lg xl:w-10/12 w-11/12 mx-auto light_grey grey-text mt-2 text-center font-thin">
+        Customize as per your need.
+        </p>
+      </div>
+      
+      {/* <div className="px-auto pt-0 mt-8 lg:mt-8">
         <p className="sm:text-2xl lg:text-2xl text-black font-semibold text-center mx-auto lg:w-11/12 xl:w-11/12 sm:w-11/12 w-11/12">
           Couldn't find what you were looking for?
         </p>
@@ -92,7 +107,7 @@ function Subscription() {
         <p className="text-lg customisepara light_grey grey-text text-gray text-center mx-auto font-medium mt-5 mb-12">
           Customize as per your need.
         </p>
-      </div>
+      </div> */}
 
       <KickstartEngagement open={modalIsOpen} close={closeModal} enquiry_type="Go-To Market Strategy"/>
       <Project open={modalIsOpen2} close={closeModal2}/>
