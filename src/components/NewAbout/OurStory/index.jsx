@@ -70,8 +70,8 @@ function OurStory() {
 
       <p className="aboutstory1920 text-sm mb-5 lg:text-xl lg:mt:6 text-center uppercase black-text">FOUNDING TEAM</p>
 
-      <div className="flex mobile justify-between relative lg:mt-8 mx-auto">
-        <div className="flex-1 justify-start pr-0 lg:w-6/12 w-44">
+      <div className="flex justify-between relative lg:mt-8 mx-auto">
+        <div className="flex-1  tab-about-us-1  justify-start pr-0 lg:w-6/12 w-44">
           <div style={{ backgroundColor: "#fff" }}
             className="rounded-md mr-20">
             <div style={{ borderColor: "#2EC4EA", }}
@@ -86,7 +86,7 @@ function OurStory() {
                 </p>
           </div>
         </div>
-        <div className="flex-1 pr-0 lg:w-6/12 w-44">
+        <div className="flex-1  tab-about-us-1  pr-0 lg:w-6/12 w-44">
           <div style={{ backgroundColor: "#fff", width: "", float: "right" }}
             className="rounded-md ml-20 justify-between">
             <div style={{ borderColor: "#2EC4EA", }}
@@ -104,7 +104,7 @@ function OurStory() {
       </div>
 
       {/* mobile */}
-        {/* <div className="relative founder-mobile bg-white rounded-md w-9/12 mt-2 mb-4 pb-10 mx-auto">
+        <div className="relative tab-about-us-2 founder-mobile bg-white rounded-md w-9/12 mt-2 mb-4 pb-10 mx-auto">
           <div style={{ borderColor: "#2EC4EA" }} className="rounded-md border-2 p-6">
             <img src={shubham} loading="lazy" alt="boys" className="h-full w-full lg:h-full" />
           </div>
@@ -113,9 +113,9 @@ function OurStory() {
             Former VP (Operations) at Namshi.com, one of the biggest online Fashion Retailer
             in the MENA region, who led a team of 100 to build operations for Namshi
             spanning across UAE, KSA and the rest of GCC
-        </p>
+          </p>
         </div>
-        <div className="relative founder-mobile bg-white rounded-md w-9/12 mt-2 pb-10 mx-auto">
+        <div className="relative tab-about-us-2 founder-mobile bg-white rounded-md w-9/12 mt-2 pb-10 mx-auto">
           <div style={{ borderColor: "#2EC4EA" }} className="rounded-md border-2 p-6">
             <img src={haninder} loading="lazy" alt="haninder" className="h-full w-full lg:h-full" />
           </div>
@@ -125,7 +125,7 @@ function OurStory() {
             in the MENA region, who led a team of 100 to build operations for Namshi
             spanning across UAE, KSA and the rest of GCC
           </p>
-        </div> */}
+        </div>
     </div>
   );
 }

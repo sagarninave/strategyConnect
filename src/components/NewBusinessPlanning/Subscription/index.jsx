@@ -25,8 +25,18 @@ function Subscription() {
 
   return (
     <div>
+
+      {/* <div className="flex justify-between refined-bg items-center">
+        <div className="flex-1 lg:flex justify-center">
+          <p className="big-text text-lg lg:text-4xl text-center lg:text-left font-bold">
+            Easy Subscriptions Plans
+          </p>
+        </div>
+      </div>
+ */}
+
       <div className="pb-0 lg:pb-10 xl:pb-10 pt-5 lg:pt-14 xl:pt-14">
-        <p className="businessHeading text-center xl:text-2xl text-2xl font-bold">
+        <p className="businessHeading text-center  lg:text-4xl  xl:text-2xl font-bold">
           Easy Subscriptions Plans
         </p>
         <p className="font-medium text-md xl:w-10/12 w-11/12 mx-auto light_grey grey-text mt-2 text-center font-thin">
@@ -69,8 +79,8 @@ function Subscription() {
                 </p>
               </li>
             </ul>
-            <div className="p-2 pl-2 pt-0 rounded-md border-2 ml-14 mr-14" 
-                 style={{ width: "11.4rem", position:"absolute", bottom:15}}>              
+            <div className="p-2 pl-2 pt-0 rounded-md border-2 ml-14 mr-14"
+              style={{ width: "11.4rem", position: "absolute", bottom: 15 }}>
               <button onClick={openModal} className="text-white purple lg:w-40 w-full flex items-center mt-2 mr-2 justify-between border-none focus:outline-none py-2 px-7 rounded">
                 <p className="relative">Make Enquiry</p>
               </button>
@@ -107,8 +117,8 @@ function Subscription() {
                   </p>
               </li>
             </ul>
-            <div className="p-2 pl-2 pt-0 rounded-md border-2 ml-14 mr-14" 
-                 style={{ width: "11.4rem", position:"absolute", bottom:15}}>              
+            <div className="p-2 pl-2 pt-0 rounded-md border-2 ml-14 mr-14"
+              style={{ width: "11.4rem", position: "absolute", bottom: 15 }}>
               <button onClick={openModal} className="text-white purple lg:w-40 w-full flex items-center mt-2 mr-2 justify-between border-none focus:outline-none py-2 px-7 rounded">
                 <p className="relative">Make Enquiry</p>
               </button>
@@ -153,8 +163,8 @@ function Subscription() {
                   </p>
               </li>
             </ul>
-            <div className="p-2 pl-2 pt-0 rounded-md border-2 ml-14 mr-14" 
-                 style={{ width: "11.4rem", position:"absolute", bottom:15}}>              
+            <div className="p-2 pl-2 pt-0 rounded-md border-2 ml-14 mr-14"
+              style={{ width: "11.4rem", position: "absolute", bottom: 15 }}>
               <button onClick={openModal} className="text-white purple lg:w-40 w-full flex items-center mt-2 mr-2 justify-between border-none focus:outline-none py-2 px-7 rounded">
                 <p className="relative">Make Enquiry</p>
               </button>
@@ -202,8 +212,8 @@ function Subscription() {
                 </p>
               </li>
             </ul>
-            <div className="p-2 pl-2 pt-0 rounded-md border-2 ml-14 mr-14" 
-                 style={{ width: "11.4rem", position:"absolute", bottom:15}}>              
+            <div className="p-2 pl-2 pt-0 rounded-md border-2 ml-14 mr-14"
+              style={{ width: "11.4rem", position: "absolute", bottom: 15 }}>
               <button onClick={openModal} className="text-white purple lg:w-40 w-full flex items-center mt-2 mr-2 justify-between border-none focus:outline-none py-2 px-7 rounded">
                 <p className="relative">Make Enquiry</p>
               </button>
@@ -227,8 +237,8 @@ function Subscription() {
         </p>
       </div>
 
-      <KickstartEngagement open={modalIsOpen} close={closeModal} enquiry_type="Business Planning"/>
-      <Project open={modalIsOpen2} close={closeModal2}/>
+      <KickstartEngagement open={modalIsOpen} close={closeModal} enquiry_type="Business Planning" />
+      <Project open={modalIsOpen2} close={closeModal2} />
 
     </div>
   );

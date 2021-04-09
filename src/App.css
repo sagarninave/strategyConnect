@@ -367,9 +367,32 @@
     background-color: #E8F2FA;
   }
 }
-
 @media only screen and (max-width:480px) {
+  .tab-about-us-1{
+    display: none;
+  }
+  .tab-about-us-2{
+    display: block;
+  }
+}
 
+@media only screen and (min-width:768px) {
+  .tab-about-us-1{
+    display: block;
+  }
+  .tab-about-us-2{
+    display: none;
+  }
+}
+
+@media only screen and (max-width:640px) {
+
+  .tab-about-us-1{
+    display: none;
+  }
+  .tab-about-us-2{
+    display: block;
+  }
   .our-offerings-text{
     font-size:1.5rem
   }
@@ -592,6 +615,12 @@
   }
 }
 
+@media (min-width: 481px) and (max-width: 2560px) {
+  .statisticImg{
+    width: 87px; 
+    height: auto;
+  }
+}
 /* service card */
 
 .flip-card-inner {

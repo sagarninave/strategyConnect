@@ -32,14 +32,14 @@ export default function Service() {
 
   return (
     <>
-      <div style={{ backgroundColor: "#fff" }} className="flex lg:py-8 lg:pb-0 py-8 lg:pt-0 lg:px-16 px-8 justify-between refined-bg md:mt-0 xl:mt-0 mt-0 items-center">
+      <div style={{ backgroundColor: "#fff" }} className="flex lg:py-8 lg:pb-0 py-8 lg:px-16 px-8 justify-between refined-bg md:mt-0 xl:mt-0 mt-0 items-center">
         <div className="flex-1 lg:flex justify-center">
-          <p className="big-text text-lg lg:text-4xl text-center lg:text-left font-bold">
-            Services
+          <p className="mobileFunctionalAreaHeading lg:text-4xl text-lg text-center lg:text-left font-bold">
+          Services
           </p>
         </div>
       </div>
-
+      
       <div style={{ backgroundColor: "#fff"}} 
         className="borderhover flex justify-between w:9/12 refined-bg mt-10 lg:mt-0 xl:mt-0 lg:pt-4 px-8 lg:px-32 ">
         <div 
