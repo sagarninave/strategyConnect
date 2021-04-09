@@ -6,8 +6,10 @@ function Subscription() {
 
   const [modalIsOpen, setIsOpen] = useState(false);
   const [modalIsOpen2, setIsOpen2] = useState(false);
+  const [industry, setIndustry] = useState();
 
-  function openModal() {
+  function openModal(et) {
+    setIndustry(et)
     setIsOpen(true);
   }
 
@@ -73,7 +75,7 @@ function Subscription() {
             
             <div className="kickstart-popup-button p-2 pl-2 pt-0 rounded-md border-2"
               style={{ width: "11.4rem", position: "absolute", bottom: 15, left:"5.5rem" }}>
-              <button onClick={openModal} className="text-white purple lg:w-40 w-full flex items-center mt-2 mr-2 justify-between border-none focus:outline-none py-2 px-7 rounded">
+              <button onClick={() => openModal("Market Analysis")} className="text-white purple lg:w-40 w-full flex items-center mt-2 mr-2 justify-between border-none focus:outline-none py-2 px-7 rounded">
                 <p className="relative">Make Enquiry</p>
               </button>
             </div>
@@ -109,7 +111,13 @@ function Subscription() {
         </p>
       </div> */}
 
-      <KickstartEngagement open={modalIsOpen} close={closeModal} enquiry_type="Go-To Market Strategy"/>
+      <KickstartEngagement 
+        open={modalIsOpen} 
+        close={closeModal} 
+        enquiry_type="Our Offerings" 
+        industry={industry}
+      />
+
       <Project open={modalIsOpen2} close={closeModal2}/>
 
     </div>

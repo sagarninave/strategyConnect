@@ -7,6 +7,7 @@ import { formApi } from "../../services/constants";
 const axios = require('axios');
 
 export default function KickstartEngagement(props) {
+  console.log(props)
   
   const customStyles = {
     content: {
@@ -68,9 +69,13 @@ export default function KickstartEngagement(props) {
       "email": formFields.email,
       "contact": formFields.phone,
       "message": formFields.message,
-      "enquiry_type": props.enquiry_type
+      "enquiry_type": props.enquiry_type,
+      "industry": props.industry,
+      "project": "",
+      "project_description": ""
     }
 
+    console.log(data)
     axios({
       method: 'post',
       url: `http://localhost:3003/api/data/generic/save-enquiry/enquiry`,
