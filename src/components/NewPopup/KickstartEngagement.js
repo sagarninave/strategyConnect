@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import Modal from 'react-modal';
 import { AiOutlineCloseCircle } from "react-icons/ai";
 import { formApi } from "../../services/constants";
+import TextField from '@material-ui/core/TextField';
 
 const axios = require('axios');
 
@@ -127,52 +128,65 @@ export default function KickstartEngagement(props) {
                 <p className="text-2xl text-center font-semibold"> Kickstart Engagement </p>
                 <p className="text-sm grey-text text-center mt-2"> It takes less than a minute</p>
                 <form onSubmit={onSubmit}>
-                  <div className="flex items-center mt-14">
-                    <input
-                      type="text"
-                      className="border focus:outline-none border-gray-300 py-2 lg:px-6 px-2 rounded w-2/4 mr-2 text-sm"
+                  <div className="flex items-center mt-4">
+                    <TextField 
+                      id="outlined-basic" 
+                      label="Name *" 
+                      variant="outlined"  
                       placeholder="Name"
-                      id="name"
                       name="name"
                       onChange={onHandleChange}
                       value={formFields.name}
+                      className="left-text-box border focus:outline-none border-gray-300 py-2 lg:px-6 px-2 rounded w-2/4 mr-2 text-sm"
                     />
-                    <input
-                      type="text"
-                      className="border focus:outline-none border-gray-300 py-2 lg:px-6 px-2 rounded w-2/4 text-sm"
+                    <TextField 
+                      id="outlined-basic"
+                      label="Organisation Name"
+                      variant="outlined" 
                       placeholder="Organisation Name"
-                      id="organization"
                       name="organization"
                       onChange={onHandleChange}
                       value={formFields.organization}
+                      className="right-text-box border focus:outline-none border-gray-300 py-2 lg:px-6 px-2 rounded w-2/4 mr-2 text-sm"
                     />
                   </div>
                   <div className="flex items-center mt-4">
-                    <input
-                      type="text"
-                      className="border focus:outline-none border-gray-300 py-2  lg:px-6 px-2 rounded w-2/4 mr-2 text-sm"
+                    <TextField 
+                      id="outlined-basic" 
+                      label="Name *" 
+                      variant="outlined"  
                       placeholder="Email"
                       name="email"
                       onChange={onHandleChange}
                       value={formFields.email}
+                      className="left-text-box border focus:outline-none border-gray-300 py-2 lg:px-6 px-2 rounded w-2/4 mr-2 text-sm"
                     />
-                    <input
-                      type="text"
-                      className="border focus:outline-none border-gray-300 py-2 lg:px-6 px-2 rounded w-2/4 text-sm"
+                    <TextField 
+                      id="outlined-basic"
+                      label="Organisation Name"
+                      variant="outlined" 
                       placeholder="Phone Number"
                       name="phone"
                       onChange={onHandleChange}
                       value={formFields.phone}
+                      className="right-text-box border focus:outline-none border-gray-300 py-2 lg:px-6 px-2 rounded w-2/4 mr-2 text-sm"
                     />
                   </div>
-                  <textarea
-                    className="border focus:outline-none border-gray-300 w-full py-2 lg:px-6 px-2 rounded mt-4 text-sm"
-                    placeholder="Message"
-                    rows="5"
-                    name="message"
-                    onChange={onHandleChange}
-                    value={formFields.message}
-                  />
+                  <div className="flex items-center mt-4">
+                    <TextField
+                      id="outlined-static"
+                      label="Message"
+                      multiline
+                      rows={4}
+                      variant="outlined"
+                      className="mobile-full-text-width border focus:outline-none border-gray-300 w-full py-2 lg:px-6 px-2 rounded mt-8 text-sm"
+                      placeholder="Message"
+                      name="message"
+                      onChange={onHandleChange}
+                      value={formFields.message}
+                    />
+                  </div>
+
                   <div className="p-2 pl-2 mt-32 pt-0 rounded-md border-2 ml-16 mr-16" style={{ width: "11.4rem", margin: 'auto', marginTop: ' 25px' }}>
                     <button type="submit" className="text-white purple lg:w-40 w-full flex items-center mt-2 mr-2 justify-between border-none focus:outline-none py-2 px-7 rounded px-5">
                       <p className="relativeContact ">Submit</p>
@@ -200,52 +214,62 @@ export default function KickstartEngagement(props) {
                 <p className="text-sm grey-text text-center mt-2">It takes less than a minute</p>
                 <form onSubmit={onSubmit} className="w-full">
                   <div className="flex items-center mt-4">
-                    <input
-                      type="text"
-                      className="border focus:outline-none border-gray-300 py-2 lg:px-6 px-2 rounded w-full text-sm"
+                    <TextField 
+                      id="outlined-basic" 
+                      label="Name *" 
+                      variant="outlined"  
                       placeholder="Name"
-                      id="name"
                       name="name"
                       onChange={onHandleChange}
                       value={formFields.name}
+                      className="mobile-full-text-width border focus:outline-none border-gray-300 py-2 lg:px-6 px-2 rounded w-2/4 mr-2 text-sm"
                     />
                   </div>
                   <div className="flex items-center mt-4">
-                    <input
-                      type="text"
-                      className="border focus:outline-none border-gray-300 py-2 lg:px-6 px-2 rounded w-full text-sm"
+                    <TextField 
+                      id="outlined-basic"
+                      label="Organisation Name"
+                      variant="outlined" 
                       placeholder="Organisation Name"
-                      id="organization"
                       name="organization"
                       onChange={onHandleChange}
                       value={formFields.organization}
+                      className="mobile-full-text-width border focus:outline-none border-gray-300 py-2 lg:px-6 px-2 rounded w-2/4 mr-2 text-sm"
                     />
                   </div>
                   <div className="flex items-center mt-4">
-                    <input
-                      type="text"
-                      className="border focus:outline-none border-gray-300 py-2 lg:px-6 px-2 rounded w-full text-sm"
+                    <TextField 
+                      id="outlined-basic" 
+                      label="Email *" 
+                      variant="outlined"  
                       placeholder="Email"
                       name="email"
                       onChange={onHandleChange}
                       value={formFields.email}
+                      className="mobile-full-text-width border focus:outline-none border-gray-300 py-2 lg:px-6 px-2 rounded w-2/4 mr-2 text-sm"
                     />
                   </div>
                   <div className="flex items-center mt-4">
-                    <input
-                      type="text"
-                      className="border focus:outline-none border-gray-300 py-2 lg:px-6 px-2 rounded w-full text-sm"
+                    <TextField 
+                      id="outlined-basic"
+                      label="Phone Number"
+                      variant="outlined" 
                       placeholder="Phone Number"
                       name="phone"
                       onChange={onHandleChange}
                       value={formFields.phone}
+                      className="mobile-full-text-width border focus:outline-none border-gray-300 py-2 lg:px-6 px-2 rounded w-2/4 mr-2 text-sm"
                     />
                   </div>
                   <div className="flex items-center mt-4">
-                    <textarea
-                      className="border focus:outline-none border-gray-300 w-full py-2 lg:px-6 px-2 rounded text-sm"
+                    <TextField
+                      id="outlined-static"
+                      label="Message"
+                      multiline
+                      rows={4}
+                      variant="outlined"
+                      className="mobile-full-text-width border focus:outline-none border-gray-300 w-full py-2 lg:px-6 px-2 rounded mt-8 text-sm"
                       placeholder="Message"
-                      rows="3"
                       name="message"
                       onChange={onHandleChange}
                       value={formFields.message}

@@ -703,3 +703,12 @@
   border-bottom: 3px solid #fff;
   border-right: 3px solid #fff;
 }
+.left-text-box{
+  margin-right: 1rem!important;
+}
+.right-text-box{
+  margin-left: 1rem!important;
+}
+.mobile-full-text-width{
+  width:100%
+}
