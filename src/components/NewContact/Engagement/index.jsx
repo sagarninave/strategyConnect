@@ -45,7 +45,7 @@ function Engagement() {
           <button type="submit" className="text-white purple lg:w-40 w-full flex items-center mt-2 mr-2 justify-between border-none focus:outline-none py-2 px-7 rounded px-5">
             <img src={chat} loading="lazy" alt="phone-white" className="contactBtn" />
             <p className="relativeContact">
-              <a href="sms:+919990603640?body=Hello Strategy Connect!">Chat</a>
+              <a href="sms:+919990603640">Chat</a>
             </p>
           </button>
         </div>
@@ -232,7 +232,7 @@ function Engagement() {
             <button type="submit" className="text-white purple lg:w-40 w-full flex items-center mt-1 justify-between border-none focus:outline-none py-2 rounded">
               <img src={chat} loading="lazy" alt="phone-white" className="contactBtn" />
               <p style={{ marginLeft: "-1px" }} className="relativeContact">
-                <a href="sms:+919990603640?body=Hello Strategy Connect!">Chat</a>
+                <a href="sms:+919990603640">Chat</a>
               </p>
             </button>
           </div>
