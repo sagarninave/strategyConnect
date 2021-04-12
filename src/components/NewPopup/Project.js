@@ -132,8 +132,8 @@ export default function KickstartEngagement(props) {
               <AiOutlineCloseCircle style={{ fontSize: "1.5rem" }} />
             </button>
           </span>
-          <p className="text-2xl text-center font-semibold"> Kickstart Engagement </p>
-          <p className="text-sm grey-text text-center mt-2"> It takes less than a minute</p>
+          <p className="text-2xl text-center font-semibold">Project Information</p>
+          <p className="text-sm grey-text text-center mt-2"> Lets talk about everything.</p>
           <form onSubmit={onSubmit}>
 
             {/* desktop */}

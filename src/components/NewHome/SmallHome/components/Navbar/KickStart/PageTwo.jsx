@@ -74,6 +74,8 @@ const PageTwo = (props) => {
       });
   };
 
+  console.log('startProject', startProject);
+
   return (
     <div className="w-full flex-col flex items-center">
       <Formik
