@@ -3,9 +3,36 @@ import phoneCall from '../../../assets/img/phone-white.svg';
 import chat from '../../../assets/img/chat-white.svg';
 import whats from '../../../assets/img/whatsWhite.svg';
 import TextField from '@material-ui/core/TextField';
+import { makeStyles } from '@material-ui/core/styles';
+
 const axios = require('axios');
 
+const useStyles = makeStyles((theme) => ({
+  root: {
+    '& > *': {
+      margin: theme.spacing(1),
+      width: '98%',
+    },
+  },
+  rootBox: {
+    flexGrow: 1,
+  },
+  errorInput: {
+    backgroundColor: '#F2DEDE',
+    color:'red',
+    '& label':{
+      color:"red"
+    },
+    '& .MuiOutlinedInput-root':{
+      borderColor:'red'
+    }
+  },
+}));
+
 function Engagement() {
+
+  const classes = useStyles();
+  const [isSubmitted, setIsSubmitted] = useState(false)
 
   const [name, setName] = useState('');
   const [organization, setOrganization] = useState('');
@@ -116,76 +143,29 @@ function Engagement() {
       "project": "",
       "project_description": ""
     }
-    console.log("data : ", data);
-    // axios({
-    //   method: 'post',
-    //   url: `http://localhost:3003/api/data/generic/save-enquiry/enquiry`,
-    //   data: data,
-    //   headers: {
-    //     'x-fwd-authorization': 'test',
-    //     'Namespace': 'STRATEGY'
-    //   }
-    // })
-    //   .then(result => {
-    //     if (result.data.meta.ok === 1 && result.data.meta.message === "Success!") {
-    //       setIsSubmitted(true);
-    //       setName('');
-    //       setOrganization('');
-    //       setEmail('');
-    //       setPhone('');
-    //       setMessage('');
-    //       console.log("send form response", result.data)
-    //     }
-    //     setTimeout(() => { setIsSubmitted(false) }, 2000);
-    //   });
+    axios({
+      method: 'post',
+      url: `http://localhost:3003/api/data/generic/save-enquiry/enquiry`,
+      data: data,
+      headers: {
+        'x-fwd-authorization': 'test',
+        'Namespace': 'STRATEGY'
+      }
+    })
+      .then(result => {
+        if (result.data.meta.ok === 1 && result.data.meta.message === "Success!") {
+          setIsSubmitted(true);
+          setName('');
+          setOrganization('');
+          setEmail('');
+          setPhone('');
+          setMessage('');
+          // console.log("send form response", result.data)
+        }
+        setTimeout(() => { setIsSubmitted(false) }, 2000);
+      });
   }
 
-
-  const [isSubmitted, setIsSubmitted] = useState(false)
-  // const [formFields, setFormFields] = useState({
-  //   name: '',
-  //   email: '',
-  //   phone: '',
-  //   message: '',
-  //   organization: ''
-  // });
-
-  // const onHandleChange = (e) => {
-  //   setFormFields({ ...formFields, [e.target.name]: e.target.value })
-  // }
-
-  // const onSubmit = (e) => {
-  //   e.preventDefault();
-  //   let data = {
-  //     "name": formFields.name,
-  //     "organisation_name": formFields.organization,
-  //     "email": formFields.email,
-  //     "contact": formFields.phone,
-  //     "message": formFields.message,
-  //     "enquiry_type": "Contact Us",
-  //     "industry": "",
-  //     "project": "",
-  //     "project_description": ""
-  //   }
-
-  //   axios({
-  //     method: 'post',
-  //     url: `http://localhost:3003/api/data/generic/save-enquiry/enquiry`,
-  //     data: data,
-  //     headers: {
-  //       'x-fwd-authorization': 'test',
-  //       'Namespace': 'STRATEGY'
-  //     }
-  //   })
-  //     .then(result => {
-  //       if (result.data.meta.ok === 1 && result.data.meta.message === "Success!") {
-  //         setIsSubmitted(true);
-  //         setFormFields({ name: '', email: '', phone: '', message: '', organization: '' })
-  //         console.log("send form response", result.data)
-  //       }
-  //       setTimeout(() => { setIsSubmitted(false) }, 2000);
-  //     });
-  // }
   
   return (
     <div className="flex lg:flex-row flex-col lg:my-20 my-10 justify-between  xl:px-28">
@@ -195,34 +175,33 @@ function Engagement() {
         <p className="text-sm grey-text text-center mt-2">
           A member of our team will get back to you shortly.
         </p>
-        {/* <form onSubmit={onSubmit}> */}
         <form onSubmit={(e) => validateForm(e)}>
-
           {/* Deskttop */}
-
           <div className="showInDesktop">
             <div className="flex items-center mt-4">
               <TextField
                 name="name"
                 type="text"
-                placeholder={errName ? errMsgName : "Name"}
+                placeholder="Name"
                 onChange={(e) => handleChange(e)}
                 value={name}
                 id="name"
                 label={errName ? errMsgName : "Name"}
                 variant="outlined"
-                className="left-text-box border focus:outline-none border-gray-300 py-2 lg:px-6 px-2 rounded w-2/4 mr-2 text-sm"
+                data-testid="name"
+                className={`${errName && classes.errorInput} left-text-box border focus:outline-none border-gray-300 py-2 lg:px-6 px-2 rounded w-2/4 mr-2 text-sm`}
               />
               <TextField
                 name="organization"
                 type="text"
                 onChange={(e) => handleChange(e)}
                 value={organization}
-                placeholder={errOrganization ? errMsgOrganization : "Organisation Name"}
+                placeholder="Organisation Name"
                 id="organization"
                 label={errOrganization ? errMsgOrganization : "Organisation Name"}
                 variant="outlined"
-                className="right-text-box border focus:outline-none border-gray-300 py-2 lg:px-6 px-2 rounded w-2/4 mr-2 text-sm"
+                data-testid="organization"
+                className={`${errOrganization && classes.errorInput} right-text-box border focus:outline-none border-gray-300 py-2 lg:px-6 px-2 rounded w-2/4 mr-2 text-sm`}
               />
             </div>
             <div className="flex items-center mt-4">
@@ -231,23 +210,25 @@ function Engagement() {
                 type="text"
                 onChange={(e) => handleChange(e)}
                 value={email}
-                placeholder= {errEmail ? errMsgEmail : "Email"}
+                placeholder="Email"
                 id="email"
                 label={errEmail ? errMsgEmail : "Email"}
                 variant="outlined"
-                className="left-text-box border focus:outline-none border-gray-300 py-2 lg:px-6 px-2 rounded w-2/4 mr-2 text-sm"
+                data-testid="email"
+                className={`${errEmail && classes.errorInput} left-text-box border focus:outline-none border-gray-300 py-2 lg:px-6 px-2 rounded w-2/4 mr-2 text-sm`}
               />
               <TextField
                 name="phone"
                 type="text"
                 onChange={(e) => handleChange(e)}
                 value={phone}
-                placeholder= {errPhone ? errMsgPhone : "Phone Number"}
+                placeholder="Phone Number"
                 name="phone"
                 id="phone"
                 label={errPhone ? errMsgPhone : "Phone Number"}
                 variant="outlined"
-                className="right-text-box border focus:outline-none border-gray-300 py-2 lg:px-6 px-2 rounded w-2/4 mr-2 text-sm"
+                data-testid="phone"
+                className={`${errPhone && classes.errorInput} right-text-box border focus:outline-none border-gray-300 py-2 lg:px-6 px-2 rounded w-2/4 mr-2 text-sm`}
               />
             </div>
             <div className="flex items-center mt-4">
@@ -256,156 +237,94 @@ function Engagement() {
                 type="text"
                 onChange={(e) => handleChange(e)}
                 value={message}
-                placeholder={errMessage ? errMsgMessage : "Message"}
+                placeholder="Message"
                 id="message"
                 label={errMessage ? errMsgMessage : "Message"}
                 multiline
                 rows={4}
                 variant="outlined"
-                className="border focus:outline-none border-gray-300 w-full py-2 lg:px-6 px-2 rounded mt-8 text-sm"
+                data-testid="message"
+                className={`${errMessage && classes.errorInput} border focus:outline-none border-gray-300 w-full py-2 lg:px-6 px-2 rounded mt-8 text-sm`}
               />
             </div>
           </div>
-  
-
-          {/* <div className="showInDesktop">
-            <div className="flex items-center mt-4">
-              <TextField
-                name="name"
-                type="text"
-                placeholder="Name"
-                onChange={onHandleChange}
-                value={formFields.name}
-                id="name"
-                label="Name"
-                variant="outlined"
-                className="left-text-box border focus:outline-none border-gray-300 py-2 lg:px-6 px-2 rounded w-2/4 mr-2 text-sm"
-              />
-              <TextField
-                name="organization"
-                type="text"
-                onChange={onHandleChange}
-                value={formFields.organization}
-                placeholder="Organisation Name"
-                id="organization"
-                label="Organisation Name"
-                variant="outlined"
-                className="right-text-box border focus:outline-none border-gray-300 py-2 lg:px-6 px-2 rounded w-2/4 mr-2 text-sm"
-              />
-            </div>
-            <div className="flex items-center mt-4">
-              <TextField
-                name="email"
-                type="text"
-                onChange={onHandleChange}
-                value={formFields.email}
-                placeholder="Email"
-                id="email"
-                label="Email *"
-                variant="outlined"
-                className="left-text-box border focus:outline-none border-gray-300 py-2 lg:px-6 px-2 rounded w-2/4 mr-2 text-sm"
-              />
-              <TextField
-                name="phone"
-                type="text"
-                onChange={onHandleChange}
-                value={formFields.phone}
-                placeholder="Phone Number"
-                name="phone"
-                id="phone"
-                label="Phone Number"
-                variant="outlined"
-                className="right-text-box border focus:outline-none border-gray-300 py-2 lg:px-6 px-2 rounded w-2/4 mr-2 text-sm"
-              />
-            </div>
-            <div className="flex items-center mt-4">
-              <TextField
-                name="message"
-                type="text"
-                onChange={onHandleChange}
-                value={formFields.message}
-                placeholder="Message"
-                id="message"
-                label="Message"
-                multiline
-                rows={4}
-                variant="outlined"
-                className="border focus:outline-none border-gray-300 w-full py-2 lg:px-6 px-2 rounded mt-8 text-sm"
-              />
-            </div>
-          </div> */}
 
           {/* mobile */}
-          {/* <div>
+          <div>
             <div className="showInMobile flex items-center mt-4">
               <TextField
                 name="name"
                 type="text"
                 placeholder="Name"
-                onChange={onHandleChange}
-                value={formFields.name}
+                onChange={(e) => handleChange(e)}
+                value={name}
                 id="name"
-                label="Name"
+                label={errName ? errMsgName : "Name"}
                 variant="outlined"
-                className="mobile-full-text-width border focus:outline-none border-gray-300 py-2 lg:px-6 px-2 rounded w-2/4 mr-2 text-sm"
+                data-testid="name"
+                className={`${errName && classes.errorInput} mobile-full-text-width border focus:outline-none border-gray-300 py-2 lg:px-6 px-2 rounded w-2/4 mr-2 text-sm`}
               />
             </div>
             <div className="showInMobile flex items-center mt-4">
               <TextField
                 name="organization"
                 type="text"
-                onChange={onHandleChange}
-                value={formFields.organization}
+                onChange={(e) => handleChange(e)}
+                value={organization}
                 placeholder="Organisation Name"
                 id="organization"
-                label="Organisation Name"
+                label={errOrganization ? errMsgOrganization : "Organisation Name"}
                 variant="outlined"
-                className="mobile-full-text-width border focus:outline-none border-gray-300 py-2 lg:px-6 px-2 rounded w-2/4 mr-2 text-sm"
+                data-testid="organization"
+                className={`${errOrganization && classes.errorInput} mobile-full-text-width border focus:outline-none border-gray-300 py-2 lg:px-6 px-2 rounded w-2/4 mr-2 text-sm`}
               />
             </div>
             <div className="showInMobile flex items-center mt-4">
               <TextField
                 name="email"
                 type="text"
-                onChange={onHandleChange}
-                value={formFields.email}
+                onChange={(e) => handleChange(e)}
+                value={email}
                 placeholder="Email"
                 id="email"
-                label="Email *"
+                label={errEmail ? errMsgEmail : "Email"}
                 variant="outlined"
-                className="mobile-full-text-width border focus:outline-none border-gray-300 py-2 lg:px-6 px-2 rounded w-2/4 mr-2 text-sm"
+                data-testid="email"
+                className={`${errEmail && classes.errorInput} mobile-full-text-width border focus:outline-none border-gray-300 py-2 lg:px-6 px-2 rounded w-2/4 mr-2 text-sm`}
               />
             </div>
             <div className="showInMobile flex items-center mt-4">
               <TextField
                 name="phone"
                 type="text"
-                onChange={onHandleChange}
-                value={formFields.phone}
+                onChange={(e) => handleChange(e)}
+                value={phone}
                 placeholder="Phone Number"
                 name="phone"
                 id="phone"
-                label="Phone Number"
+                label={errPhone ? errMsgPhone : "Phone Number"}
                 variant="outlined"
-                className="mobile-full-text-width border focus:outline-none border-gray-300 py-2 lg:px-6 px-2 rounded w-2/4 mr-2 text-sm"
+                data-testid="phone"
+                className={`${errPhone && classes.errorInput} mobile-full-text-width border focus:outline-none border-gray-300 py-2 lg:px-6 px-2 rounded w-2/4 mr-2 text-sm`}
               />
             </div>
             <div className="showInMobile flex items-center mt-4">
               <TextField
                 name="message"
                 type="text"
-                onChange={onHandleChange}
-                value={formFields.message}
+                onChange={(e) => handleChange(e)}
+                value={message}
                 placeholder="Message"
                 id="message"
-                label="Message"
+                label={errMessage ? errMsgMessage : "Message"}
                 multiline
                 rows={4}
                 variant="outlined"
-                className="mobile-full-text-width border focus:outline-none border-gray-300 w-full py-2 lg:px-6 px-2 rounded mt-8 text-sm"
+                data-testid="message"
+                className={`${errMessage && classes.errorInput} mobile-full-text-width border focus:outline-none border-gray-300 w-full py-2 lg:px-6 px-2 rounded mt-8 text-sm`}
               />
             </div>
-          </div> */}
+          </div>
           {
             isSubmitted && <p className="mt-4 text-center text-green-900"> Data Saved Successfully </p>
           }
