@@ -151,7 +151,7 @@ export default function KickstartEngagement(props) {
               <div className="flex items-center mt-4">
                 <TextField
                   id="outlined-basic"
-                  label="Name *"
+                  label="Email *"
                   variant="outlined"
                   placeholder="Email"
                   name="email"
@@ -161,7 +161,7 @@ export default function KickstartEngagement(props) {
                 />
                 <TextField
                   id="outlined-basic"
-                  label="Organisation Name"
+                  label="Phone Number"
                   variant="outlined"
                   placeholder="Phone Number"
                   name="phone"
