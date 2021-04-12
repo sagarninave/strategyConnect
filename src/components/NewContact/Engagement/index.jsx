@@ -166,7 +166,6 @@ function Engagement() {
       });
   }
 
-  
   return (
     <div className="flex lg:flex-row flex-col lg:my-20 my-10 justify-between  xl:px-28">
       {/* desktop send messsage */}
