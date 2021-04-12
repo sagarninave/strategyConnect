@@ -75,7 +75,6 @@ export default function KickstartEngagement(props) {
       "project_description": ""
     }
 
-    console.log(data)
     axios({
       method: 'post',
       url: `${formApi}data/generic/save-enquiry/enquiry`,

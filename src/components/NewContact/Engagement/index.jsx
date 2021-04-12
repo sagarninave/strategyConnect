@@ -2,106 +2,10 @@ import React, { useState } from 'react';
 import phone from '../../../assets/img/phone-white.svg';
 import chat from '../../../assets/img/chat-white.svg';
 import whats from '../../../assets/img/whatsWhite.svg';
-
 import TextField from '@material-ui/core/TextField';
 const axios = require('axios');
 
-// import { useForm } from "react-hook-form";
-// import { yupResolver } from '@hookform/resolvers';
-// import * as Yup from 'yup';
-
 function Engagement() {
-
-  // const validationSchema = Yup.object().shape({
-  //   name: Yup.string()
-  //     .required('Name is required'),
-  //   organization: Yup.string()
-  //     .required('Organization name is required'),
-  //   email: Yup.string()
-  //     .required('Email is required')
-  //     .email('Email is invalid'),
-  //   phone: Yup.string()
-  //     .required('Phone is required'),
-  //   message: Yup.string()
-  //     .required('Message is required'),
-  // });
-
-  // const { register, handleSubmit, errors } = useForm({
-  //   resolver: yupResolver(validationSchema)
-  // });
-
-  // function onSubmit(data) {
-  //   alert('SUCCESS!! :-)\n\n' + JSON.stringify(data, null, 4));
-  // }
-
-  // const [name, setName] = useState('');
-  // const [organization, setOrganization] = useState('');
-  // const [email, setEmail] = useState('');
-  // const [phone, setPhone] = useState('');
-  // const [message, setMessage] = useState('');
-
-  // const [errName, setErrName] = React.useState(null);
-  // const [errOrganization, setErrOrganization] = React.useState(null);
-  // const [errEmail, setErrEmail] = React.useState(null);
-  // const [errPhone, setErrPhone] = React.useState(null);
-  // const [errMessage, setErrMessage] = React.useState(null);
-
-  // const [values, setValues] = React.useState({
-  //   name: "",
-  //   organization: "",
-  //   email: "",
-  //   phone: "",
-  //   message: "",
-  // });
-
-  // const handleChange = name => event => {
-  //   if (name == 'name') {
-  //     setName(event.target.value);
-  //   } else if (name == 'organization') {
-  //     setOrganization(event.target.value);
-  //   } else if (name == 'email') {
-  //     setEmail(event.target.value);
-  //   } else if (name == 'phone') {
-  //     setPhone(event.target.value);
-  //   } else if (name == 'message') {
-  //     setMessage(event.target.value);
-  //   }
-  //   setErrName(false);
-  //   setErrOrganization(false);
-  //   setErrEmail(false);
-  //   setErrPhone(false);
-  //   setErrMessage(false);
-  //   setValues({ ...values, [name]: event.target.value });
-  // }
-
-  // const validateForm = async e => {
-  //   setErrMsg(null)
-  //   let checkEmail = /^\w+([\.-]?\w+)+@\w+([\.:]?\w+)+(\.[a-zA-Z0-9]{2,3})+$/;
-  //   let passwordCheck = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$.!%*?&]{8,}$/
-  //   e.preventDefault()
-  //   if (values.first_name == '') {
-  //     setErrFirstName(true);
-  //     setErrMsg('First Name Required');
-  //   } else if (values.last_name == '') {
-  //     setErrLastName(true);
-  //     setErrMsg('Last Name Required');
-  //   } else if (values.email == '') {
-  //     setErrEmail(true);
-  //     setErrMsg('E-mail Required');
-  //   } else if (!checkEmail.test(values.email)) {
-  //     setErrEmail(true);
-  //     setErrMsg('Email format must be like yourname@example.com');
-  //   } else if (values.pwd == '') {
-  //     setErrPassword(true);
-  //     setErrMsg('Password Required');
-  //   } else if (!passwordCheck.test(values.pwd)) {
-  //     setErrPassword(true);
-  //     setErrMsg('Password does not meet the criterion.');
-  //   } else if (values.pwd.includes(values.email)) {
-  //     setErrPassword(true);
-  //     setErrMsg('Password must not contain your email.');
-  //   } 
-  // }
 
   const [isSubmitted, setIsSubmitted] = useState(false)
   const [formFields, setFormFields] = useState({
@@ -130,7 +34,6 @@ function Engagement() {
       "project_description": ""
     }
 
-    console.log(data)
     axios({
       method: 'post',
       url: `http://localhost:3003/api/data/generic/save-enquiry/enquiry`,
@@ -162,7 +65,6 @@ function Engagement() {
 
           {/* Deskttop */}
           <div className="showInDesktop">
-
             <div className="flex items-center mt-4">
               <TextField
                 name="name"
@@ -228,7 +130,6 @@ function Engagement() {
               />
             </div>
           </div>
-
 
           {/* mobile */}
           <div>
@@ -350,7 +251,6 @@ function Engagement() {
           </div>
         </div>
       </div>
-
     </div>
   );
 }
