@@ -4,6 +4,7 @@ import chat from '../../../assets/img/chat-white.svg';
 import whats from '../../../assets/img/whatsWhite.svg';
 import TextField from '@material-ui/core/TextField';
 import { makeStyles } from '@material-ui/core/styles';
+import { formApi } from '../../../services/constants';
 
 const axios = require('axios');
 
@@ -13,9 +14,6 @@ const useStyles = makeStyles((theme) => ({
       margin: theme.spacing(1),
       width: '98%',
     },
-  },
-  rootBox: {
-    flexGrow: 1,
   },
   errorInput: {
     backgroundColor: '#F2DEDE',
@@ -82,12 +80,13 @@ function Engagement() {
 
   const validateForm = async e => {
     let checkEmail = /^\w+([\.-]?\w+)+@\w+([\.:]?\w+)+(\.[a-zA-Z0-9]{2,3})+$/;
+    let checkPhone = /^[0-9]+$/
     e.preventDefault()
-    if (values.name == '' &&
-      values.organization == '' &&
-      values.email == '' &&
-      values.phone == '' &&
-      values.message == '') {
+    if (values.name === '' &&
+      values.organization === '' &&
+      values.email === '' &&
+      values.phone === '' &&
+      values.message === '') {
       setErrName(true);
       setErrOrganization(true);
       setErrEmail(true);
@@ -99,39 +98,42 @@ function Engagement() {
       setErrMsgPhone('Phone Required');
       setErrMsgMessage("Message Required");
 
-    } else if (values.name == '') {
+    } else if (values.name === '') {
       setErrName(true);
       setErrMsgName('Name Required');
-    } else if (values.organization == '') {
+    } else if (values.organization === '') {
       setErrOrganization(true);
       setErrMsgOrganization('Organization Required');
-    } else if (values.email == '') {
+    } else if (values.email === '') {
       setErrEmail(true);
       setErrMsgEmail('Email Required');
     } else if (!checkEmail.test(values.email)) {
       setErrEmail(true);
       setErrMsgEmail('Invalid Email');
-    } else if (values.phone == '') {
+    } else if (values.phone === '') {
       setErrPhone(true);
       setErrMsgPhone('Phone Required');
+    } else if (!checkPhone.test(values.phone)) {
+      setErrPhone(true);
+      setErrMsgPhone('Invalid Phone');
     } else if (values.phone.includes(values.name)) {
       setErrPhone(true);
       setErrMsgPhone('Contain Name');
     } else if (values.phone.includes(values.organization)) {
       setErrPhone(true);
-      setErrMsgPhone('Contain Oranization');
+      setErrMsgPhone('Contain Organization');
     }    else if (values.phone.includes(values.email)) {
       setErrPhone(true);
       setErrMsgPhone('Contain Email');
-    }else if (values.message == '') {
+    }else if (values.message === '') {
       setErrMessage(true);
       setErrMsgMessage('Message Required');
     } else {
-      signUpUser();
+      submitContact();
     }
   }
 
-  const signUpUser = () => {
+  const submitContact = () => {
     let data = {
       "name": values.name,
       "organisation_name": values.organization,
@@ -145,7 +147,7 @@ function Engagement() {
     }
     axios({
       method: 'post',
-      url: `http://localhost:3003/api/data/generic/save-enquiry/enquiry`,
+      url: `${formApi}data/generic/save-enquiry/enquiry`,
       data: data,
       headers: {
         'x-fwd-authorization': 'test',
