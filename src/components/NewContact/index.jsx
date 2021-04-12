@@ -21,7 +21,6 @@ function Contact() {
       </p>
       <Engagement />
       <Address />
-      {/* <LatestUpdates /> */}
       <Footer />
     </div>
   );

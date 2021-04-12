@@ -5,6 +5,7 @@
   "dependencies": {
     "@craco/craco": "^6.0.0",
     "@emotion/react": "^11.1.4",
+    "@hookform/resolvers": "^0.1.1",
     "@loadable/component": "^5.14.1",
     "@material-ui/core": "^4.11.3",
     "@material-ui/lab": "^4.0.0-alpha.57",
@@ -27,6 +28,7 @@
     "react-elastic-carousel": "^0.9.5",
     "react-ellipsis-text": "^1.2.1",
     "react-floaterjs": "^1.0.6",
+    "react-hook-form": "^6.8.6",
     "react-icons": "^4.2.0",
     "react-lazy-load-image-component": "^1.5.1",
     "react-loading-overlay": "^1.0.1",
