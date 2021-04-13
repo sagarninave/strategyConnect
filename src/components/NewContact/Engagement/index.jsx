@@ -116,6 +116,12 @@ function Engagement() {
     } else if (!checkPhone.test(values.phone)) {
       setErrPhone(true);
       setErrMsgPhone('Invalid Phone');
+    } else if (values.phone.length < 10) {
+      setErrPhone(true);
+      setErrMsgPhone('Minimum 10 Digits');
+    } else if (values.phone.length > 10) {
+      setErrPhone(true);
+      setErrMsgPhone('Maximum 10 Digits');
     } else if (values.phone.includes(values.name)) {
       setErrPhone(true);
       setErrMsgPhone('Contain Name');
@@ -349,7 +355,7 @@ function Engagement() {
             <button type="submit" className="text-white purple lg:w-40 w-full flex items-center mt-1 mr-2 border-none focus:outline-none py-2 rounded">
               <img src={phoneCall} loading="lazy" alt="phone-white" className="contactBtn" />
               <p style={{ marginLeft: "-5px" }} className="relativeContact">
-                <a href="tel:+919990603640" > Phone Call </a>
+                <a href="tel:+971527344538" > Phone Call </a>
               </p>
             </button>
           </div>
@@ -358,7 +364,7 @@ function Engagement() {
             <button type="submit" className="text-white purple lg:w-40 w-full flex items-center mt-1 border-none focus:outline-none py-2 rounded">
               <img src={chat} loading="lazy" alt="phone-white" className="contactBtn" />
               <p style={{ marginLeft: "-1px" }} className="relativeContact">
-                <a href="sms:+919990603640" > Chat </a>
+                <a href="sms:+971527344538" > Chat </a>
               </p>
             </button>
           </div>
@@ -367,7 +373,7 @@ function Engagement() {
             <button type="submit" className="text-white purple lg:w-40 w-full flex items-center mt-1 mr-2 border-none focus:outline-none py-2 rounded">
               <img src={whats} loading="lazy" alt="phone-white" className="contactBtn" />
               <p style={{ marginLeft: "-5px" }} className="relativeContact ">
-                <a href="https://api.whatsapp.com/send?phone=+919990603640" target="_blank">
+                <a href="https://api.whatsapp.com/send?phone=+971527344538" target="_blank">
                   Whatsapp
               </a>
               </p>

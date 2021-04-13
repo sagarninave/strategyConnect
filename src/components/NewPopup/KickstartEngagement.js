@@ -140,6 +140,12 @@ export default function KickstartEngagement(props) {
     } else if (!checkPhone.test(values.phone)) {
       setErrPhone(true);
       setErrMsgPhone('Invalid Phone');
+    } else if (values.phone.length < 10) {
+      setErrPhone(true);
+      setErrMsgPhone('Minimum 10 Digits');
+    } else if (values.phone.length > 10) {
+      setErrPhone(true);
+      setErrMsgPhone('Maximum 10 Digits');
     } else if (values.phone.includes(values.name)) {
       setErrPhone(true);
       setErrMsgPhone('Contain Name');
