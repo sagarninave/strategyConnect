@@ -188,7 +188,7 @@ export default function Project(props) {
     } else if (values.phoneCode === '' || values.phoneCode === null || values.phoneCode === undefined) {
       setErrPhoneCode(true);
       setErrMsgPhoneCode('Phone Code Required');
-    }else if (values.industry === '') {
+    } else if (values.industry === '') {
       setErrIndustry(true);
       setErrMsgIndustry('Industry Required');
     } else if (values.projectTitle === '') {
@@ -228,7 +228,7 @@ export default function Project(props) {
       .then(result => {
         if (result.data.meta.ok === 1 && result.data.meta.message === "Success!") {
           setIsSubmitted(true);
-          
+
           setValues({ ...values, name: '' });
           setValues({ ...values, organization: '' });
           setValues({ ...values, email: '' });
@@ -551,22 +551,6 @@ export default function Project(props) {
                   />
                 </div>
               </div>
-
-              {/* <div className="showInMobile flex items-center mt-4">
-                <TextField
-                  name="phone"
-                  type="text"
-                  onChange={(e) => handleChange(e)}
-                  value={phone}
-                  placeholder="Phone Number"
-                  name="phone"
-                  id="phone"
-                  label={errPhone ? errMsgPhone : "Phone Number"}
-                  variant="outlined"
-                  data-testid="phone"
-                  className={`${errPhone && classes.errorInput} mobile-full-text-width border focus:outline-none border-gray-300 py-2 lg:px-6 px-2 rounded w-2/4 mr-2 text-sm`}
-                />
-              </div> */}
               <div className="showInMobile flex items-center mt-4">
                 <TextField
                   name="industry"
