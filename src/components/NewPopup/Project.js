@@ -5,10 +5,6 @@ import TextField from '@material-ui/core/TextField';
 import { makeStyles } from '@material-ui/core/styles';
 import { formApi, baseApi } from '../../services/constants';
 import { country } from './country';
-import Autocomplete from '@material-ui/lab/Autocomplete';
-import Select from '@material-ui/core/Select';
-import InputLabel from '@material-ui/core/InputLabel';
-import MenuItem from '@material-ui/core/MenuItem';
 
 const axios = require('axios');
 
@@ -232,6 +228,16 @@ export default function Project(props) {
       .then(result => {
         if (result.data.meta.ok === 1 && result.data.meta.message === "Success!") {
           setIsSubmitted(true);
+          
+          setValues({ ...values, name: '' });
+          setValues({ ...values, organization: '' });
+          setValues({ ...values, email: '' });
+          setValues({ ...values, phone: '' });
+          setValues({ ...values, phoneCode: '' });
+          setValues({ ...values, industry: '' });
+          setValues({ ...values, projectTitle: '' });
+          setValues({ ...values, projectDescription: '' });
+
           setName('');
           setOrganization('');
           setEmail('');
@@ -240,7 +246,16 @@ export default function Project(props) {
           setIndustry('');
           setProjectTitle('');
           setProjectDescription('');
-          console.log("send form response", result.data)
+          
+          setErrName(false);
+          setErrOrganization(false);
+          setErrEmail(false);
+          setErrPhone(false);
+          setErrPhoneCode(false);
+          setErrIndustry(false);
+          setErrProjectTitle(false);
+          setErrProjectDescription(false);
+          // console.log("send form response", result.data)
         }
         setTimeout(() => { close() }, 2000);
       });
@@ -311,10 +326,6 @@ export default function Project(props) {
   }
 
   // console.log('industryList', industryList)
-  console.log('Values', values);
-  console.log('phone error', errPhoneCode);
-  console.log('phone error message ', errMsgPhoneCode);
-  
 
   return (
     <>
@@ -507,7 +518,41 @@ export default function Project(props) {
                   className={`${errEmail && classes.errorInput} mobile-full-text-width border focus:outline-none border-gray-300 py-2 lg:px-6 px-2 rounded w-2/4 mr-2 text-sm`}
                 />
               </div>
+
               <div className="showInMobile flex items-center mt-4">
+                <div className="flex mobile-full-text-width justif-between focus:outline-none border-gray-300 py-2 rounded w-2/4 text-sm">
+                  <select 
+                    name="phoneCode"
+                    value={phoneCode}
+                    onChange={(e) => handleChange(e)}
+                    className={`${errPhoneCode && classes.errorInput} flex-1 country`} 
+                  >
+                    <option> Code </option>
+                    {
+                      country.sort().map((item, index) => {
+                        return <option
+                          key={index}
+                          value={item.code + ' (' + item.dial_code + ')'}
+                        > {item.name} </option>
+                      })
+                    }
+                  </select>
+                  <TextField
+                    name="phone"
+                    type="text"
+                    onChange={(e) => handleChange(e)}
+                    value={phone}
+                    placeholder="Phone Number"
+                    id="phone"
+                    label={errPhone ? errMsgPhone : "Phone Number"}
+                    variant="outlined"
+                    data-testid="phone"
+                    className={`${errPhone && classes.errorInput}`}
+                  />
+                </div>
+              </div>
+
+              {/* <div className="showInMobile flex items-center mt-4">
                 <TextField
                   name="phone"
                   type="text"
@@ -521,7 +566,7 @@ export default function Project(props) {
                   data-testid="phone"
                   className={`${errPhone && classes.errorInput} mobile-full-text-width border focus:outline-none border-gray-300 py-2 lg:px-6 px-2 rounded w-2/4 mr-2 text-sm`}
                 />
-              </div>
+              </div> */}
               <div className="showInMobile flex items-center mt-4">
                 <TextField
                   name="industry"
