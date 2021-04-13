@@ -5,6 +5,7 @@ import { AiOutlineCloseCircle } from "react-icons/ai";
 import TextField from '@material-ui/core/TextField';
 import { makeStyles } from '@material-ui/core/styles';
 import { formApi } from '../../services/constants';
+import { country } from './country';
 
 const axios = require('axios');
 
@@ -60,18 +61,21 @@ export default function KickstartEngagement(props) {
   const [organization, setOrganization] = useState('');
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
+  const [phoneCode, setPhoneCode] = useState('');
   const [message, setMessage] = useState('');
 
   const [errName, setErrName] = useState(null);
   const [errOrganization, setErrOrganization] = useState(null);
   const [errEmail, setErrEmail] = useState(null);
   const [errPhone, setErrPhone] = useState(null);
+  const [errPhoneCode, setErrPhoneCode] = useState(false);
   const [errMessage, setErrMessage] = useState(null);
 
   const [errMsgName, setErrMsgName] = useState(null);
   const [errMsgOrganization, setErrMsgOrganization] = useState(null);
   const [errMsgEmail, setErrMsgEmail] = useState(null);
   const [errMsgPhone, setErrMsgPhone] = useState(null);
+  const [errMsgPhoneCode, setErrMsgPhoneCode] = useState(null);
   const [errMsgMessage, setErrMsgMessage] = useState(null);
 
   const [values, setValues] = useState({
@@ -79,6 +83,7 @@ export default function KickstartEngagement(props) {
     organization: "",
     email: "",
     phone: "",
+    phoneCode: "",
     message: "",
   });
 
@@ -91,6 +96,8 @@ export default function KickstartEngagement(props) {
       setEmail(event.target.value);
     } else if (event.target.name === 'phone') {
       setPhone(event.target.value);
+    } else if (event.target.name === 'phoneCode') {
+      setPhoneCode(event.target.value);
     } else if (event.target.name === 'message') {
       setMessage(event.target.value);
     }
@@ -99,6 +106,7 @@ export default function KickstartEngagement(props) {
     setErrOrganization(false);
     setErrEmail(false);
     setErrPhone(false);
+    setErrPhoneCode(false);
     setErrMessage(false);
   }
 
@@ -110,18 +118,20 @@ export default function KickstartEngagement(props) {
       values.organization === '' &&
       values.email === '' &&
       values.phone === '' &&
+      values.phoneCode === '' &&
       values.message === '') {
       setErrName(true);
       setErrOrganization(true);
       setErrEmail(true);
       setErrPhone(true);
+      setErrPhoneCode(true);
       setErrMessage(true);
       setErrMsgName('Name Required');
       setErrMsgOrganization('Organization Required');
       setErrMsgEmail('Email Required');
       setErrMsgPhone('Phone Required');
+      setErrMsgPhoneCode('Phone Code Required');
       setErrMsgMessage("Message Required");
-
     } else if (values.name === '') {
       setErrName(true);
       setErrMsgName('Name Required');
@@ -152,10 +162,13 @@ export default function KickstartEngagement(props) {
     } else if (values.phone.includes(values.organization)) {
       setErrPhone(true);
       setErrMsgPhone('Contain Organization');
-    }    else if (values.phone.includes(values.email)) {
+    } else if (values.phone.includes(values.email)) {
       setErrPhone(true);
       setErrMsgPhone('Contain Email');
-    }else if (values.message === '') {
+    } else if (values.phoneCode === '' || values.phoneCode === null || values.phoneCode === undefined) {
+      setErrPhoneCode(true);
+      setErrMsgPhoneCode('Phone Code Required');
+    } else if (values.message === '') {
       setErrMessage(true);
       setErrMsgMessage('Message Required');
     } else {
@@ -169,13 +182,14 @@ export default function KickstartEngagement(props) {
       "organisation_name": values.organization,
       "email": values.email,
       "contact": values.phone,
+      "country_code": values.phoneCode,
       "message": values.message,
-      "enquiry_type": props.enquiry_type,
-      "industry": props.industry,
+      "enquiry_type": "Contact Us",
+      "industry": "",
       "project": "",
       "project_description": ""
     }
-
+    // console.log(data)
     axios({
       method: 'post',
       url: `${formApi}data/generic/save-enquiry/enquiry`,
@@ -188,14 +202,30 @@ export default function KickstartEngagement(props) {
       .then(result => {
         if (result.data.meta.ok === 1 && result.data.meta.message === "Success!") {
           setIsSubmitted(true);
+
           setName('');
           setOrganization('');
           setEmail('');
           setPhone('');
+          setPhoneCode('');
           setMessage('');
-          console.log("send form response", result.data)
+
+          setValues({ ...values, name: '' });
+          setValues({ ...values, organization: '' });
+          setValues({ ...values, email: '' });
+          setValues({ ...values, phone: '' });
+          setValues({ ...values, phoneCode: '' });
+          setValues({ ...values, message: '' });
+
+          setErrName(false);
+          setErrOrganization(false);
+          setErrEmail(false);
+          setErrPhone(false);
+          setErrPhoneCode(false);
+          setErrMessage(false);
+          // console.log("send form response", result.data)
         }
-        setTimeout(() => { close() }, 2000);
+        setTimeout(() => { setIsSubmitted(false) }, 2000);
       });
   }
 
@@ -204,7 +234,23 @@ export default function KickstartEngagement(props) {
     setOrganization('');
     setEmail('');
     setPhone('');
+    setPhoneCode('');
     setMessage('');
+
+    setValues({ ...values, name: '' });
+    setValues({ ...values, organization: '' });
+    setValues({ ...values, email: '' });
+    setValues({ ...values, phone: '' });
+    setValues({ ...values, phoneCode: '' });
+    setValues({ ...values, message: '' });
+
+    setErrName(false);
+    setErrOrganization(false);
+    setErrEmail(false);
+    setErrPhone(false);
+    setErrPhoneCode(false);
+    setErrMessage(false);
+    
     setIsSubmitted(false);
     props.close();
   }
@@ -279,19 +325,36 @@ export default function KickstartEngagement(props) {
                   data-testid="email"
                   className={`${errEmail && classes.errorInput} left-text-box border focus:outline-none border-gray-300 py-2 lg:px-6 px-2 rounded w-2/4 mr-2 text-sm`}
                 />
-                <TextField
-                  name="phone"
-                  type="text"
-                  onChange={(e) => handleChange(e)}
-                  value={phone}
-                  placeholder="Phone Number"
-                  name="phone"
-                  id="phone"
-                  label={errPhone ? errMsgPhone : "Phone Number"}
-                  variant="outlined"
-                  data-testid="phone"
-                  className={`${errPhone && classes.errorInput} right-text-box border focus:outline-none border-gray-300 py-2 lg:px-6 px-2 rounded w-2/4 mr-2 text-sm`}
-                />
+                <div className="flex right-text-box justif-between focus:outline-none border-gray-300 py-2 rounded w-2/4 text-sm">
+                  <select 
+                    name="phoneCode"
+                    value={phoneCode}
+                    onChange={(e) => handleChange(e)}
+                    className={`${errPhoneCode && classes.errorInput} flex-1 country`} 
+                  >
+                    <option> Code </option>
+                    {
+                      country.sort().map((item, index) => {
+                        return <option
+                          key={index}
+                          value={item.code + ' (' + item.dial_code + ')'}
+                        > {item.name} </option>
+                      })
+                    }
+                  </select>
+                  <TextField
+                    name="phone"
+                    type="text"
+                    onChange={(e) => handleChange(e)}
+                    value={phone}
+                    placeholder="Phone Number"
+                    id="phone"
+                    label={errPhone ? errMsgPhone : "Phone Number"}
+                    variant="outlined"
+                    data-testid="phone"
+                    className={`${errPhone && classes.errorInput}`}
+                  />
+                </div>
               </div>
               <div className="flex items-center mt-4">
                 <TextField
@@ -356,19 +419,36 @@ export default function KickstartEngagement(props) {
                 />
               </div>
               <div className="showInMobile flex items-center mt-4">
-                <TextField
-                  name="phone"
-                  type="text"
-                  onChange={(e) => handleChange(e)}
-                  value={phone}
-                  placeholder="Phone Number"
-                  name="phone"
-                  id="phone"
-                  label={errPhone ? errMsgPhone : "Phone Number"}
-                  variant="outlined"
-                  data-testid="phone"
-                  className={`${errPhone && classes.errorInput} mobile-full-text-width border focus:outline-none border-gray-300 py-2 lg:px-6 px-2 rounded w-2/4 mr-2 text-sm`}
-                />
+                <div className="flex mobile-full-text-width justif-between focus:outline-none border-gray-300 py-2 rounded w-2/4 text-sm">
+                  <select 
+                    name="phoneCode"
+                    value={phoneCode}
+                    onChange={(e) => handleChange(e)}
+                    className={`${errPhoneCode && classes.errorInput} flex-1 country`} 
+                  >
+                    <option> Code </option>
+                    {
+                      country.sort().map((item, index) => {
+                        return <option
+                          key={index}
+                          value={item.code + ' (' + item.dial_code + ')'}
+                        > {item.name} </option>
+                      })
+                    }
+                  </select>
+                  <TextField
+                    name="phone"
+                    type="text"
+                    onChange={(e) => handleChange(e)}
+                    value={phone}
+                    placeholder="Phone Number"
+                    id="phone"
+                    label={errPhone ? errMsgPhone : "Phone Number"}
+                    variant="outlined"
+                    data-testid="phone"
+                    className={`${errPhone && classes.errorInput}`}
+                  />
+                </div>
               </div>
               <div className="showInMobile flex items-center mt-4">
                 <TextField
