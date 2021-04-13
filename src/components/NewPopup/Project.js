@@ -3,10 +3,14 @@ import Modal from 'react-modal';
 import { AiOutlineCloseCircle } from "react-icons/ai";
 import TextField from '@material-ui/core/TextField';
 import { makeStyles } from '@material-ui/core/styles';
-import { formApi } from '../../services/constants';
+import { formApi, baseApi } from '../../services/constants';
+import { country } from './country';
+import Autocomplete from '@material-ui/lab/Autocomplete';
+import Select from '@material-ui/core/Select';
+import InputLabel from '@material-ui/core/InputLabel';
+import MenuItem from '@material-ui/core/MenuItem';
 
 const axios = require('axios');
-
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -17,17 +21,17 @@ const useStyles = makeStyles((theme) => ({
   },
   errorInput: {
     backgroundColor: '#F2DEDE',
-    color:'red',
-    '& label':{
-      color:"red"
+    color: 'red',
+    '& label': {
+      color: "red"
     },
-    '& .MuiOutlinedInput-root':{
-      borderColor:'red'
+    '& .MuiOutlinedInput-root': {
+      borderColor: 'red'
     }
   },
 }));
 
-export default function KickstartEngagement(props) {
+export default function Project(props) {
 
   const customStyles = {
     content: {
@@ -60,22 +64,25 @@ export default function KickstartEngagement(props) {
   const [organization, setOrganization] = useState('');
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
+  const [phoneCode, setPhoneCode] = useState('');
   const [industry, setIndustry] = useState('');
   const [projectTitle, setProjectTitle] = useState('');
   const [projectDescription, setProjectDescription] = useState('');
 
-  const [errName, setErrName] = useState(null);
-  const [errOrganization, setErrOrganization] = useState(null);
-  const [errEmail, setErrEmail] = useState(null);
-  const [errPhone, setErrPhone] = useState(null);
-  const [errIndustry, setErrIndustry] = useState(null);
-  const [errProjectTitle, setErrProjectTitle] = useState(null);
-  const [errProjectDescription, setErrProjectDescription] = useState(null);
+  const [errName, setErrName] = useState(false);
+  const [errOrganization, setErrOrganization] = useState(false);
+  const [errEmail, setErrEmail] = useState(false);
+  const [errPhone, setErrPhone] = useState(false);
+  const [errPhoneCode, setErrPhoneCode] = useState(false);
+  const [errIndustry, setErrIndustry] = useState(false);
+  const [errProjectTitle, setErrProjectTitle] = useState(false);
+  const [errProjectDescription, setErrProjectDescription] = useState(false);
 
   const [errMsgName, setErrMsgName] = useState(null);
   const [errMsgOrganization, setErrMsgOrganization] = useState(null);
   const [errMsgEmail, setErrMsgEmail] = useState(null);
   const [errMsgPhone, setErrMsgPhone] = useState(null);
+  const [errMsgPhoneCode, setErrMsgPhoneCode] = useState(null);
   const [errMsgIndustry, setErrMsgIndustry] = useState(null);
   const [errMsgProjectTitle, setErrMsgProjectTitle] = useState(null);
   const [errMsgProjectDescription, setErrMsgProjectDescription] = useState(null);
@@ -85,10 +92,11 @@ export default function KickstartEngagement(props) {
     organization: "",
     email: "",
     phone: "",
+    phoneCode: "",
     message: "",
-    industry:"",
-    projectTitle:"",
-    projectDescription:""
+    industry: "",
+    projectTitle: "",
+    projectDescription: ""
   });
 
   const handleChange = (event) => {
@@ -100,6 +108,8 @@ export default function KickstartEngagement(props) {
       setEmail(event.target.value);
     } else if (event.target.name === 'phone') {
       setPhone(event.target.value);
+    } else if (event.target.name === 'phoneCode') {
+      setPhoneCode(event.target.value);
     } else if (event.target.name === 'industry') {
       setIndustry(event.target.value);
     } else if (event.target.name === 'projectTitle') {
@@ -112,6 +122,7 @@ export default function KickstartEngagement(props) {
     setErrOrganization(false);
     setErrEmail(false);
     setErrPhone(false);
+    setErrPhoneCode(false);
     setErrIndustry(false);
     setErrProjectTitle(false);
     setErrProjectDescription(false);
@@ -125,13 +136,15 @@ export default function KickstartEngagement(props) {
       values.organization === '' &&
       values.email === '' &&
       values.phone === '' &&
+      values.phoneCode === '' &&
       values.industry === '' &&
-      values.projectTitle === '' && 
+      values.projectTitle === '' &&
       values.projectDescription === '') {
       setErrName(true);
       setErrOrganization(true);
       setErrEmail(true);
       setErrPhone(true);
+      setErrPhoneCode(true);
       setErrIndustry(true);
       setErrProjectTitle(true);
       setErrProjectDescription(true);
@@ -139,6 +152,7 @@ export default function KickstartEngagement(props) {
       setErrMsgOrganization('Organization Required');
       setErrMsgEmail('Email Required');
       setErrMsgPhone('Phone Required');
+      setErrMsgPhoneCode('Phone Code Required');
       setErrMsgIndustry("Industry Required");
       setErrMsgProjectTitle("Project Title Required");
       setErrMsgProjectDescription("Project Description Required");
@@ -175,7 +189,10 @@ export default function KickstartEngagement(props) {
     } else if (values.phone.includes(values.email)) {
       setErrPhone(true);
       setErrMsgPhone('Contain Email');
-    } else if (values.industry === '') {
+    } else if (values.phoneCode === '' || values.phoneCode === null || values.phoneCode === undefined) {
+      setErrPhoneCode(true);
+      setErrMsgPhoneCode('Phone Code Required');
+    }else if (values.industry === '') {
       setErrIndustry(true);
       setErrMsgIndustry('Industry Required');
     } else if (values.projectTitle === '') {
@@ -195,15 +212,14 @@ export default function KickstartEngagement(props) {
       "organisation_name": values.organization,
       "email": values.email,
       "contact": values.phone,
+      "country_code": values.phoneCode,
       "message": "",
       "enquiry_type": props.enquiry_type,
       "industry": values.industry,
       "project": values.projectTitle,
       "project_description": values.projectDescription
     }
-
     console.log("data : ", data);
-
     axios({
       method: 'post',
       url: `${formApi}data/generic/save-enquiry/enquiry`,
@@ -220,6 +236,7 @@ export default function KickstartEngagement(props) {
           setOrganization('');
           setEmail('');
           setPhone('');
+          setPhoneCode('');
           setIndustry('');
           setProjectTitle('');
           setProjectDescription('');
@@ -230,20 +247,42 @@ export default function KickstartEngagement(props) {
   }
 
   const close = () => {
+    setValues({ ...values, name: '' });
+    setValues({ ...values, organization: '' });
+    setValues({ ...values, email: '' });
+    setValues({ ...values, phone: '' });
+    setValues({ ...values, phoneCode: '' });
+    setValues({ ...values, industry: '' });
+    setValues({ ...values, projectTitle: '' });
+    setValues({ ...values, projectDescription: '' });
+
     setName('');
     setOrganization('');
     setEmail('');
     setPhone('');
+    setPhoneCode('');
     setIndustry('');
     setProjectTitle('');
     setProjectDescription('');
+    
+    setErrName(false);
+    setErrOrganization(false);
+    setErrEmail(false);
+    setErrPhone(false);
+    setErrPhoneCode(false);
+    setErrIndustry(false);
+    setErrProjectTitle(false);
+    setErrProjectDescription(false);
+
     setIsSubmitted(false);
     props.close();
   }
 
+  const [industryList, setIndustryList] = useState([]);
   const [dimensions, setDimensions] = useState(window.innerWidth);
 
   useEffect(() => {
+    getIndustries();
     function handleResize() {
       setDimensions(window.innerWidth);
     }
@@ -251,7 +290,31 @@ export default function KickstartEngagement(props) {
     return (_) => {
       window.removeEventListener('resize', handleResize);
     };
-  });
+  }, []);
+
+
+  function getIndustries() {
+    let fetchAPI = axios({
+      method:"get",
+      url:`${baseApi}data/generic/industry_categorization/list?start=0&limit=371&filters={}`,
+      headers: {'Content-Type': 'application/json', Authorization: 'test', namespace: 'WEB'}
+    })
+
+    fetchAPI.then(result => {
+      let resData = result.data.data.list;
+      let industryTemp = []
+      resData.map((item, index) => {
+        industryTemp.push(item.name)
+      })
+      setIndustryList(industryTemp)
+    })
+  }
+
+  // console.log('industryList', industryList)
+  console.log('Values', values);
+  console.log('phone error', errPhoneCode);
+  console.log('phone error message ', errMsgPhoneCode);
+  
 
   return (
     <>
@@ -309,27 +372,47 @@ export default function KickstartEngagement(props) {
                   label={errEmail ? errMsgEmail : "Email"}
                   variant="outlined"
                   data-testid="email"
-                  className={`${errEmail && classes.errorInput} left-text-box border focus:outline-none border-gray-300 py-2 lg:px-6 px-2 rounded w-2/4 mr-2 text-sm`}
+                  className={`${errEmail && classes.errorInput} left-text-box focus:outline-none border-gray-300 py-2 lg:px-6 px-2 rounded w-2/4 text-sm`}
                 />
-                <TextField
-                  name="phone"
-                  type="text"
-                  onChange={(e) => handleChange(e)}
-                  value={phone}
-                  placeholder="Phone Number"
-                  name="phone"
-                  id="phone"
-                  label={errPhone ? errMsgPhone : "Phone Number"}
-                  variant="outlined"
-                  data-testid="phone"
-                  className={`${errPhone && classes.errorInput} right-text-box border focus:outline-none border-gray-300 py-2 lg:px-6 px-2 rounded w-2/4 mr-2 text-sm`}
-                />
+                <div className="flex right-text-box justif-between focus:outline-none border-gray-300 py-2 rounded w-2/4 text-sm">
+                  <select 
+                    name="phoneCode"
+                    value={phoneCode}
+                    onChange={(e) => handleChange(e)}
+                    className={`${errPhoneCode && classes.errorInput} flex-1 country`} 
+                  >
+                    <option> Code </option>
+                    {
+                      country.sort().map((item, index) => {
+                        return <option
+                          key={index}
+                          value={item.code + ' (' + item.dial_code + ')'}
+                        > {item.name} </option>
+                      })
+                    }
+                  </select>
+                  <TextField
+                    name="phone"
+                    type="text"
+                    onChange={(e) => handleChange(e)}
+                    value={phone}
+                    placeholder="Phone Number"
+                    id="phone"
+                    label={errPhone ? errMsgPhone : "Phone Number"}
+                    variant="outlined"
+                    data-testid="phone"
+                    className={`${errPhone && classes.errorInput}`}
+                  />
+                </div>
               </div>
-              <div className="flex items-center mt-4">
+              <div className="relative flex items-center mt-4">
                 <TextField
                   name="industry"
                   type="text"
-                  onChange={(e) => handleChange(e)}
+                  onChange={(e) => {
+                    handleChange(e);
+                    getIndustries(e.target.value);
+                  }}
                   value={industry}
                   placeholder="Industry"
                   id="industry"
@@ -338,6 +421,16 @@ export default function KickstartEngagement(props) {
                   data-testid="industry"
                   className={`${errIndustry && classes.errorInput} left-text-box border focus:outline-none border-gray-300 py-2 lg:px-6 px-2 rounded w-2/4 mr-2 text-sm`}
                 />
+                {/* <div style={{background:'rgba(177,175,229,0.1)'}} className="absolute hidden p-2 h-60 overflow-y-auto w-full">
+                  {
+                    industryList.map((item, index) => {
+                      return <p key={index}
+                      className="text-sm font-thin mt-2 hover:text-gray-500 w-full"
+                      > {item}</p>
+                    })
+                  }
+                </div> */}
+
                 <TextField
                   name="projectTitle"
                   type="text"
@@ -459,7 +552,7 @@ export default function KickstartEngagement(props) {
                 />
               </div>
               <div className="showInMobile flex items-center mt-4">
-              <TextField
+                <TextField
                   name="projectDescription"
                   type="text"
                   onChange={(e) => handleChange(e)}
