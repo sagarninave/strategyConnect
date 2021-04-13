@@ -332,7 +332,7 @@ export default function Project(props) {
       <Modal
         isOpen={props.open}
         onRequestClose={close}
-        style={dimensions > 480 ? customStyles : customMobileStyles}
+        style={dimensions > 768 ? customStyles : customMobileStyles}
         contentLabel="Example Modal"
       >
         <div className="mx-auto w-full lg:border-none px-8 lg:px-0 lg:mt-0  justify-center items-center">
