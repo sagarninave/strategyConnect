@@ -729,6 +729,9 @@
   background-color: #fff;
   margin-right:15px;
 }
+select option{
+  color:black
+}
 
 .mobile-input{
   width: 69%;

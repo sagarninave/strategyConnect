@@ -164,6 +164,9 @@ export default function Project(props) {
     } else if (!checkEmail.test(values.email)) {
       setErrEmail(true);
       setErrMsgEmail('Invalid Email');
+    } else if (values.phoneCode === '' || values.phoneCode === null || values.phoneCode === undefined) {
+      setErrPhoneCode(true);
+      setErrMsgPhoneCode('Phone Code Required');
     } else if (values.phone === '') {
       setErrPhone(true);
       setErrMsgPhone('Phone Required');
@@ -185,9 +188,6 @@ export default function Project(props) {
     } else if (values.phone.includes(values.email)) {
       setErrPhone(true);
       setErrMsgPhone('Contain Email');
-    } else if (values.phoneCode === '' || values.phoneCode === null || values.phoneCode === undefined) {
-      setErrPhoneCode(true);
-      setErrMsgPhoneCode('Phone Code Required');
     } else if (values.industry === '') {
       setErrIndustry(true);
       setErrMsgIndustry('Industry Required');
@@ -392,10 +392,10 @@ export default function Project(props) {
                     onChange={(e) => handleChange(e)}
                     className={`${errPhoneCode && classes.errorInput} flex-1 country`} 
                   >
-                    <option> Code </option>
+                    <option className="text-black-500 bg-white"> Code </option>
                     {
                       country.sort().map((item, index) => {
-                        return <option
+                        return <option className="text-black-500 bg-white"
                           key={index}
                           value={item.code + ' (' + item.dial_code + ')'}
                         > {item.name} </option>
@@ -527,10 +527,10 @@ export default function Project(props) {
                     onChange={(e) => handleChange(e)}
                     className={`${errPhoneCode && classes.errorInput} flex-1 country`} 
                   >
-                    <option> Code </option>
+                    <option className="text-black-500 bg-white"> Code </option>
                     {
                       country.sort().map((item, index) => {
-                        return <option
+                        return <option className="text-black-500 bg-white"
                           key={index}
                           value={item.code + ' (' + item.dial_code + ')'}
                         > {item.name} </option>
