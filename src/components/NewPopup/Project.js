@@ -5,6 +5,7 @@ import TextField from '@material-ui/core/TextField';
 import { makeStyles } from '@material-ui/core/styles';
 import { formApi, baseApi } from '../../services/constants';
 import { country } from './country';
+import Autocomplete from '@material-ui/lab/Autocomplete';
 
 const axios = require('axios');
 
@@ -25,6 +26,17 @@ const useStyles = makeStyles((theme) => ({
       borderColor: 'red'
     }
   },
+  industryMobile:{
+    '& .MuiFormControl-fullWidth':{
+      width:'100%!important'
+    }
+  },
+  industry:{
+    width:'100%!important',
+    '& .MuiFormControl-fullWidth':{
+      width:'100%!important'
+    }
+  }
 }));
 
 export default function Project(props) {
@@ -83,6 +95,9 @@ export default function Project(props) {
   const [errMsgProjectTitle, setErrMsgProjectTitle] = useState(null);
   const [errMsgProjectDescription, setErrMsgProjectDescription] = useState(null);
 
+  const [industryList, setIndustryList] = useState([]);
+  const [dimensions, setDimensions] = useState(window.innerWidth);
+
   const [values, setValues] = useState({
     name: "",
     organization: "",
@@ -122,6 +137,12 @@ export default function Project(props) {
     setErrIndustry(false);
     setErrProjectTitle(false);
     setErrProjectDescription(false);
+  }
+
+  function autoCompleteFunction(value){
+    console.log("autocomplete : ", value)
+    setIndustry(value);
+    setValues({ ...values, industry: value });
   }
 
   const validateForm = async e => {
@@ -246,7 +267,7 @@ export default function Project(props) {
           setIndustry('');
           setProjectTitle('');
           setProjectDescription('');
-          
+
           setErrName(false);
           setErrOrganization(false);
           setErrEmail(false);
@@ -279,7 +300,7 @@ export default function Project(props) {
     setIndustry('');
     setProjectTitle('');
     setProjectDescription('');
-    
+
     setErrName(false);
     setErrOrganization(false);
     setErrEmail(false);
@@ -293,8 +314,21 @@ export default function Project(props) {
     props.close();
   }
 
-  const [industryList, setIndustryList] = useState([]);
-  const [dimensions, setDimensions] = useState(window.innerWidth);
+  function getIndustries() {
+    let fetchAPI = axios({
+      method: "get",
+      url: `${baseApi}data/generic/industry_categorization/list?start=0&limit=371&filters={}`,
+      headers: { 'Content-Type': 'application/json', Authorization: 'test', namespace: 'WEB' }
+    })
+    fetchAPI.then(result => {
+      let resData = result.data.data.list;
+      let industryTemp = []
+      resData.map((item, index) => {
+        industryTemp.push(item.name)
+      })
+      setIndustryList(industryTemp)
+    })
+  }
 
   useEffect(() => {
     getIndustries();
@@ -308,25 +342,6 @@ export default function Project(props) {
   }, []);
 
 
-  function getIndustries() {
-    let fetchAPI = axios({
-      method:"get",
-      url:`${baseApi}data/generic/industry_categorization/list?start=0&limit=371&filters={}`,
-      headers: {'Content-Type': 'application/json', Authorization: 'test', namespace: 'WEB'}
-    })
-
-    fetchAPI.then(result => {
-      let resData = result.data.data.list;
-      let industryTemp = []
-      resData.map((item, index) => {
-        industryTemp.push(item.name)
-      })
-      setIndustryList(industryTemp)
-    })
-  }
-
-  // console.log('industryList', industryList)
-
   return (
     <>
       <Modal
@@ -335,7 +350,7 @@ export default function Project(props) {
         style={dimensions > 768 ? customStyles : customMobileStyles}
         contentLabel="Example Modal"
       >
-        <div className="mx-auto w-full lg:border-none px-8 lg:px-0 lg:mt-0  justify-center items-center">
+        <div style={{zIndex:"-999999999"}} className="mx-auto w-full lg:border-none px-8 lg:px-0 lg:mt-0  justify-center items-center">
           <span className="floatRight">
             <button onClick={close}>
               <AiOutlineCloseCircle style={{ fontSize: "1.5rem" }} />
@@ -386,11 +401,11 @@ export default function Project(props) {
                   className={`${errEmail && classes.errorInput} left-text-box focus:outline-none border-gray-300 py-2 lg:px-6 px-2 rounded w-2/4 text-sm`}
                 />
                 <div className="flex right-text-box justif-between focus:outline-none border-gray-300 py-2 rounded w-2/4 text-sm">
-                  <select 
+                  <select
                     name="phoneCode"
                     value={phoneCode}
                     onChange={(e) => handleChange(e)}
-                    className={`${errPhoneCode && classes.errorInput} flex-1 country`} 
+                    className={`${errPhoneCode && classes.errorInput} flex-1 country`}
                   >
                     <option className="text-black-500 bg-white"> Code </option>
                     {
@@ -398,7 +413,7 @@ export default function Project(props) {
                         return <option className="text-black-500 bg-white"
                           key={index}
                           value={item.code + ' (' + item.dial_code + ')'}
-                        > {item.name} </option>
+                        > {item.code + ' (' + item.dial_code + ')'} </option>
                       })
                     }
                   </select>
@@ -416,8 +431,8 @@ export default function Project(props) {
                   />
                 </div>
               </div>
-              <div className="relative flex items-center mt-4">
-                <TextField
+              <div className="flex items-center mt-4">
+                {/* <TextField
                   name="industry"
                   type="text"
                   onChange={(e) => {
@@ -431,17 +446,19 @@ export default function Project(props) {
                   variant="outlined"
                   data-testid="industry"
                   className={`${errIndustry && classes.errorInput} left-text-box border focus:outline-none border-gray-300 py-2 lg:px-6 px-2 rounded w-2/4 mr-2 text-sm`}
+                /> */}
+                <Autocomplete
+                  id="combo-box-demo"
+                  options={industryList}
+                  getOptionLabel={(option) => option}
+                  style={{ width: '100%', zIndex:"999999999" }}
+                  renderInput={(params) => <TextField {...params} label="Industries" variant="outlined" />}
+                  onChange={(event, newValue) => {
+                    autoCompleteFunction(newValue)
+                  }}
+                  className={`${errIndustry && classes.errorInput} industry left-text-box flex justif-between focus:outline-none border-gray-300 py-2 rounded w-2/4 text-sm`}
                 />
-                {/* <div style={{background:'rgba(177,175,229,0.1)'}} className="absolute hidden p-2 h-60 overflow-y-auto w-full">
-                  {
-                    industryList.map((item, index) => {
-                      return <p key={index}
-                      className="text-sm font-thin mt-2 hover:text-gray-500 w-full"
-                      > {item}</p>
-                    })
-                  }
-                </div> */}
-
+     
                 <TextField
                   name="projectTitle"
                   type="text"
@@ -453,7 +470,8 @@ export default function Project(props) {
                   label={errProjectTitle ? errMsgProjectTitle : "Project Title"}
                   variant="outlined"
                   data-testid="projectTitle"
-                  className={`${errProjectTitle && classes.errorInput} right-text-box border focus:outline-none border-gray-300 py-2 lg:px-6 px-2 rounded w-2/4 mr-2 text-sm`}
+                  style={{marginLeft: '0rem!important'}}
+                  className={`${errProjectTitle && classes.errorInput} right-text-box border focus:outline-none border-gray-300 py-2 lg:px-6 px-2 rounded w-full ml-2 text-sm`}
                 />
               </div>
               <div className="flex items-center mt-4">
@@ -521,11 +539,11 @@ export default function Project(props) {
 
               <div className="showInMobile flex items-center mt-4">
                 <div className="flex mobile-full-text-width justif-between focus:outline-none border-gray-300 py-2 rounded w-2/4 text-sm">
-                  <select 
+                  <select
                     name="phoneCode"
                     value={phoneCode}
                     onChange={(e) => handleChange(e)}
-                    className={`${errPhoneCode && classes.errorInput} flex-1 country`} 
+                    className={`${errPhoneCode && classes.errorInput} flex-1 country`}
                   >
                     <option className="text-black-500 bg-white"> Code </option>
                     {
@@ -552,7 +570,7 @@ export default function Project(props) {
                 </div>
               </div>
               <div className="showInMobile flex items-center mt-4">
-                <TextField
+                {/* <TextField
                   name="industry"
                   type="text"
                   onChange={(e) => handleChange(e)}
@@ -563,6 +581,17 @@ export default function Project(props) {
                   variant="outlined"
                   data-testid="industry"
                   className={`${errIndustry && classes.errorInput} mobile-full-text-width border focus:outline-none border-gray-300 py-2 lg:px-6 px-2 rounded w-2/4 mr-2 text-sm`}
+                /> */}
+                <Autocomplete
+                  id="combo-box-demo"
+                  options={industryList}
+                  getOptionLabel={(option) => option}
+                  style={{ width: '100%' }}
+                  renderInput={(params) => <TextField {...params} label="Industries" variant="outlined" />}
+                  onChange={(event, newValue) => {
+                    autoCompleteFunction(newValue)
+                  }}
+                  className={`${errIndustry && classes.errorInput} industryMobile mobile-full-text-width  flex justif-between focus:outline-none border-gray-300 py-2 rounded w-2/4 text-sm`}
                 />
               </div>
               <div className="showInMobile flex items-center mt-4">

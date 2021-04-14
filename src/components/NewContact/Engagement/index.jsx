@@ -363,7 +363,7 @@ function Engagement() {
                       return <option className="text-black-500 bg-white"
                         key={index}
                         value={item.code + ' (' + item.dial_code + ')'}
-                      > {item.name} </option>
+                      > {item.code + ' (' + item.dial_code + ')'} </option>
                     })
                   }
                 </select>

@@ -225,32 +225,11 @@ export default function KickstartEngagement(props) {
           setErrMessage(false);
           // console.log("send form response", result.data)
         }
-        setTimeout(() => { setIsSubmitted(false) }, 2000);
+        setTimeout(() => { close(false) }, 2000);
       });
   }
 
   const close = () => {
-    setName('');
-    setOrganization('');
-    setEmail('');
-    setPhone('');
-    setPhoneCode('');
-    setMessage('');
-
-    setValues({ ...values, name: '' });
-    setValues({ ...values, organization: '' });
-    setValues({ ...values, email: '' });
-    setValues({ ...values, phone: '' });
-    setValues({ ...values, phoneCode: '' });
-    setValues({ ...values, message: '' });
-
-    setErrName(false);
-    setErrOrganization(false);
-    setErrEmail(false);
-    setErrPhone(false);
-    setErrPhoneCode(false);
-    setErrMessage(false);
-    
     setIsSubmitted(false);
     props.close();
   }
@@ -338,7 +317,7 @@ export default function KickstartEngagement(props) {
                         return <option className="text-black-500 bg-white"
                           key={index}
                           value={item.code + ' (' + item.dial_code + ')'}
-                        > {item.name} </option>
+                        > {item.code + ' (' + item.dial_code + ')'} </option>
                       })
                     }
                   </select>
