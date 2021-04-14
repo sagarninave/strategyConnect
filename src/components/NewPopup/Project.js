@@ -26,16 +26,20 @@ const useStyles = makeStyles((theme) => ({
       borderColor: 'red'
     }
   },
-  industryMobile:{
-    '& .MuiFormControl-fullWidth':{
-      width:'100%!important'
+  industryMobile: {
+    '& .MuiFormControl-fullWidth': {
+      width: '100%!important'
     }
   },
-  industry:{
-    width:'100%!important',
-    '& .MuiFormControl-fullWidth':{
-      width:'100%!important'
+  industry: {
+    width: '100%!important',
+    '& .MuiFormControl-fullWidth': {
+      width: '100%!important'
     }
+  },
+  vinBox: {
+    width: 320,
+    marginTop: "4px"
   }
 }));
 
@@ -49,7 +53,7 @@ export default function Project(props) {
       bottom: 'auto',
       marginRight: '-50%',
       transform: 'translate(-50%, -50%)',
-      width: '50%'
+      width: '50%',
     }
   };
 
@@ -139,10 +143,9 @@ export default function Project(props) {
     setErrProjectDescription(false);
   }
 
-  function autoCompleteFunction(value){
-    console.log("autocomplete : ", value)
-    setIndustry(value);
-    setValues({ ...values, industry: value });
+  async function autoCompleteFunction(value) {
+    await setIndustry(value);
+    await setValues({ ...values, industry: value });
   }
 
   const validateForm = async e => {
@@ -330,6 +333,16 @@ export default function Project(props) {
     })
   }
 
+  const Pop = props => {
+    const { className, anchorEl, style, ...rest } = props
+    const bound = anchorEl.getBoundingClientRect()
+    return <div {...rest} style={{
+      position: 'absolute',
+      zIndex: 9999,
+      width: bound.width
+    }} />
+  }
+
   useEffect(() => {
     getIndustries();
     function handleResize() {
@@ -341,7 +354,6 @@ export default function Project(props) {
     };
   }, []);
 
-
   return (
     <>
       <Modal
@@ -350,7 +362,7 @@ export default function Project(props) {
         style={dimensions > 768 ? customStyles : customMobileStyles}
         contentLabel="Example Modal"
       >
-        <div style={{zIndex:"-999999999"}} className="mx-auto w-full lg:border-none px-8 lg:px-0 lg:mt-0  justify-center items-center">
+        <div style={{ zIndex: "-999999999" }} className="mx-auto w-full lg:border-none px-8 lg:px-0 lg:mt-0  justify-center items-center">
           <span className="floatRight">
             <button onClick={close}>
               <AiOutlineCloseCircle style={{ fontSize: "1.5rem" }} />
@@ -432,33 +444,17 @@ export default function Project(props) {
                 </div>
               </div>
               <div className="flex items-center mt-4">
-                {/* <TextField
-                  name="industry"
-                  type="text"
-                  onChange={(e) => {
-                    handleChange(e);
-                    getIndustries(e.target.value);
-                  }}
-                  value={industry}
-                  placeholder="Industry"
-                  id="industry"
-                  label={errIndustry ? errMsgIndustry : "Industry"}
-                  variant="outlined"
-                  data-testid="industry"
-                  className={`${errIndustry && classes.errorInput} left-text-box border focus:outline-none border-gray-300 py-2 lg:px-6 px-2 rounded w-2/4 mr-2 text-sm`}
-                /> */}
                 <Autocomplete
+                  PopperComponent={Pop}
                   id="combo-box-demo"
                   options={industryList}
                   getOptionLabel={(option) => option}
-                  style={{ width: '100%', zIndex:"999999999" }}
+                  value={industry}
+                  style={{ width: '100%' }}
                   renderInput={(params) => <TextField {...params} label="Industries" variant="outlined" />}
-                  onChange={(event, newValue) => {
-                    autoCompleteFunction(newValue)
-                  }}
-                  className={`${errIndustry && classes.errorInput} industry left-text-box flex justif-between focus:outline-none border-gray-300 py-2 rounded w-2/4 text-sm`}
+                  onChange={(event, newValue) => autoCompleteFunction(newValue)}
+                  className={`${errIndustry && classes.errorInput} industry left-text-box flex justif-between focus:outline-none border-gray-300 rounded w-2/4 text-sm`}
                 />
-     
                 <TextField
                   name="projectTitle"
                   type="text"
@@ -470,7 +466,7 @@ export default function Project(props) {
                   label={errProjectTitle ? errMsgProjectTitle : "Project Title"}
                   variant="outlined"
                   data-testid="projectTitle"
-                  style={{marginLeft: '0rem!important'}}
+                  style={{ marginLeft: '0rem!important' }}
                   className={`${errProjectTitle && classes.errorInput} right-text-box border focus:outline-none border-gray-300 py-2 lg:px-6 px-2 rounded w-full ml-2 text-sm`}
                 />
               </div>
@@ -570,27 +566,15 @@ export default function Project(props) {
                 </div>
               </div>
               <div className="showInMobile flex items-center mt-4">
-                {/* <TextField
-                  name="industry"
-                  type="text"
-                  onChange={(e) => handleChange(e)}
-                  value={industry}
-                  placeholder="Industry"
-                  id="industry"
-                  label={errIndustry ? errMsgIndustry : "Industry"}
-                  variant="outlined"
-                  data-testid="industry"
-                  className={`${errIndustry && classes.errorInput} mobile-full-text-width border focus:outline-none border-gray-300 py-2 lg:px-6 px-2 rounded w-2/4 mr-2 text-sm`}
-                /> */}
                 <Autocomplete
+                  PopperComponent={Pop}
                   id="combo-box-demo"
                   options={industryList}
                   getOptionLabel={(option) => option}
+                  value={industry}
                   style={{ width: '100%' }}
                   renderInput={(params) => <TextField {...params} label="Industries" variant="outlined" />}
-                  onChange={(event, newValue) => {
-                    autoCompleteFunction(newValue)
-                  }}
+                  onChange={(event, newValue) => autoCompleteFunction(newValue)}
                   className={`${errIndustry && classes.errorInput} industryMobile mobile-full-text-width  flex justif-between focus:outline-none border-gray-300 py-2 rounded w-2/4 text-sm`}
                 />
               </div>
