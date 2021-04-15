@@ -65,7 +65,7 @@ export default function index() {
 
       <Link to="/go-to-market-strategy" className="showInDesktop">
         <div style={{ backgroundColor: "#fff" }}
-          className="flex lg:py-1 py-8 lg:px-16 px-8 justify-between refined-bg md:mt-5 xl:mt-5 mt-5 mb-10 items-center">
+          className="flex lg:py-1 py-8 lg:px-16 px-8 justify-between refined-bg mt-5 md:mt-16 lg:mt-16 xl:mt-16 mb-10 items-center">
           <div className="flex lg:flex justify-start showInDesktop">
             <LazyLoadImage
               alt={GoToMarketPlanning}

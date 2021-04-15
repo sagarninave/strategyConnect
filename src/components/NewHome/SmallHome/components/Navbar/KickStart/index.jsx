@@ -111,6 +111,10 @@ export default function KickStart(props) {
     // console.log({ formValues });
   };
 
+  function close(){
+    props.setVisible(false);
+  }
+
   return (
     <Modal
       visible={props.visible}
@@ -218,12 +222,10 @@ export default function KickStart(props) {
                           placeholder="Phone Number *"
                         />
 
-                        <div className="flex items-center  mt-8">
+                        <div className="flex items-center mt-8 justify-between">
                           <p
-                            onClick={() => {
-                              props.setVisible(false);
-                            }}
-                            className="ml-3.5 py-2 px-4 text-center w-28 rounded border border-gray-300 text-gray-400 text-sm cursor-pointer"
+                            onClick={close}
+                            className="ml-0 py-2 px-4  text-center w-28 rounded border border-gray-300 text-gray-400 text-sm cursor-pointer"
                           >
                             Cancel
                           </p>

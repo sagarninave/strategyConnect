@@ -168,32 +168,32 @@ export default function Project(props) {
       setErrIndustry(true);
       setErrProjectTitle(true);
       setErrProjectDescription(true);
-      setErrMsgName('Name Required');
-      setErrMsgOrganization('Organization Required');
-      setErrMsgEmail('Email Required');
-      setErrMsgPhone('Phone Required');
-      setErrMsgPhoneCode('Phone Code Required');
-      setErrMsgIndustry("Industry Required");
-      setErrMsgProjectTitle("Project Title Required");
-      setErrMsgProjectDescription("Project Description Required");
+      setErrMsgName('Name is Required');
+      setErrMsgOrganization('Organization is Required');
+      setErrMsgEmail('Email is Required');
+      setErrMsgPhone('Phone is Required');
+      setErrMsgPhoneCode('Phone Code is Required');
+      setErrMsgIndustry("Industry is Required");
+      setErrMsgProjectTitle("Project Title is Required");
+      setErrMsgProjectDescription("Project Description is Required");
     } else if (values.name === '') {
       setErrName(true);
-      setErrMsgName('Name Required');
+      setErrMsgName('Name is Required');
     } else if (values.organization === '') {
       setErrOrganization(true);
-      setErrMsgOrganization('Organization Required');
+      setErrMsgOrganization('Organization is Required');
     } else if (values.email === '') {
       setErrEmail(true);
-      setErrMsgEmail('Email Required');
+      setErrMsgEmail('Email is Required');
     } else if (!checkEmail.test(values.email)) {
       setErrEmail(true);
       setErrMsgEmail('Invalid Email');
     } else if (values.phoneCode === '' || values.phoneCode === null || values.phoneCode === undefined) {
       setErrPhoneCode(true);
-      setErrMsgPhoneCode('Phone Code Required');
+      setErrMsgPhoneCode('Phone Code is Required');
     } else if (values.phone === '') {
       setErrPhone(true);
-      setErrMsgPhone('Phone Required');
+      setErrMsgPhone('Phone is Required');
     } else if (!checkPhone.test(values.phone)) {
       setErrPhone(true);
       setErrMsgPhone('Invalid Phone');
@@ -214,13 +214,13 @@ export default function Project(props) {
       setErrMsgPhone('Contain Email');
     } else if (values.industry === '') {
       setErrIndustry(true);
-      setErrMsgIndustry('Industry Required');
+      setErrMsgIndustry('Industry is Required');
     } else if (values.projectTitle === '') {
       setErrProjectTitle(true);
-      setErrMsgProjectTitle('Project Title Required');
+      setErrMsgProjectTitle('Project Title is Required');
     } else if (values.projectDescription === '') {
       setErrProjectDescription(true);
-      setErrMsgProjectDescription('Project Description Required');
+      setErrMsgProjectDescription('Project Description is Required');
     } else {
       submitProjectDetails();
     }

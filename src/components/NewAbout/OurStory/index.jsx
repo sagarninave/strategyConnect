@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import boys from '../../../assets/img/g-boy.png';
+import maskgroup from '../../../assets/img/MaskGroup.png';
 import shubham from '../../../assets/img/Shubham1.png';
 import haninder from '../../../assets/img/Haninder1.png';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
@@ -31,12 +32,12 @@ function OurStory() {
           <div style={{ backgroundColor: "#fff" }} className="rounded-md mr-20">
             <div style={{ borderColor: "#2EC4EA" }} className="rounded-md border-2 p-6 pb-0 imgRes">
               <LazyLoadImage
-                alt={boys}
+                alt={maskgroup}
                 effect="blur"
-                src={boys}
+                src={maskgroup}
                 style={{ height: "auto" }}
                 loading="lazy"
-                alt="boys"
+                alt="maskgroup"
                 className="h-full w-full lg:h-full h-20 ml-2.5 lg:ml-0 mb-4"
               />
             </div>
